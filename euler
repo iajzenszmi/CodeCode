@@ -1,0 +1,5 @@
+         # an ode to Euler
+         y  = 1
+         y' = y
+         print t, y, y'
+
