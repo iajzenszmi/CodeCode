@@ -1,0 +1,11 @@
+
+joke:proc options(main);
+   dcl counta fixed binary(32);
+   counta = 0;
+   do while counta .lt. 100;
+           put skip list (counta );
+           counta = counta + 1;
+   end;
+   end joke;
+         
+      
