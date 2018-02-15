@@ -1,4 +1,7 @@
        PROGRAM xlocate
+cc     copied from page 35 Numerical Recipes Example Book Fortran 
+c      second edition William T. Vetterling Saul A Teukolsky William H Press
+c      Brian P. Flannery Cambridge University Press 1994 reprint. 
 cc      driver for routine locate
        integer N
        PARAMETER(N=100)
@@ -6,6 +9,9 @@ cc      driver for routine locate
        REAL x,xx(N)
 c      create array to be searched
        do 11 i = 1,N
+c        xx(i)=exp(i/20) -74.0 caused a compile error so
+c         Ian Martin Ajzenszmidt changed this program code to the
+c         following line in February 2018 in Melbourne, Australia.
          xx(i)=exp(REAL(i/20))-74.0
   11   continue
        write(*,*) 'Result of:  j=0 indicates x to small'
