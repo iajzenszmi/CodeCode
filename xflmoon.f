@@ -39,7 +39,7 @@ c          approximate number of full moons since January 1900
               istr=1
            endif
            call caldat(j2,im,id,iy)
-           write(*,'(1x,2i3,i5,t20,i2,a,5x,a)')im,id,iy,
+           write(*,'(1x,2i3,i5,t20,i6,a,5x,a)')im,id,iy,
      *     ifrac,timstr(istr),phase(nph+1)
            if (nph .eq. 3) then
               nph=0
