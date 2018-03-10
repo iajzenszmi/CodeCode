@@ -7,23 +7,20 @@ C       DRIVER FOR ROUTINE SPCTRM
         REAL P(M),Q(M),W1(M4),W2(M)
         LOGICAL OVRLAP
         OPEN(9,FILE='SPCTRL.DAT',STATUS='OLD')       
-        K =8
+        K = 8
         OVRLAP = .TRUE.
-c        print *,P
-c       print *,"before call spctrm"
-        CALL SPCTRM(P,M,K,OVRLAP,W1,W2)
+         CALL SPCTRM(P,M,K,OVRLAP,W1,W2)
 c         CALL BACKTRACE
-c        print *,P
-c        print *,"after call spctrm"   
-        REWIND(9)
-        K = 16
-        OVRLAP = .FALSE.
-        CALL SPCTRM(Q,M,K,OVRLAP,W1,W2)   
-        CLOSE(9)
+         REWIND(9)
+         K = M
+         OVRLAP = .FALSE.
+         CALL SPCTRM(Q,M,K,OVRLAP,W1,W2)   
+         CLOSE(9)
         WRITE(*,*) 'SPECTRUM OF DATA IN FILE SPCTRL.DAT'
         WRITE(*,'(1X,T14,A,T29,A)') 'OVERLAPPED','NON-OVERLAPPED'
         DO 11 J=1,M
-            WRITE(*,'(1X,I4,2F17.10)')J, P(J),Q(J)
+c        print *,J, P(J), Q(J)
+        WRITE(*,'(1X,I4,2F17.6)')J, P(J),Q(J)
  11     CONTINUE
         END 
 !C      PAGE 428 428 CHAPTER 12 NUMERICAL RECIPIES.
@@ -31,8 +28,8 @@ c        print *,"after call spctrm"
          LOGICAL OVRLAP
          DIMENSION P(M),W1(4*M),W2(M)
 c         WINDOW(J) = (1.-ABS(((J-1)-FACM)*FACP))
-c          WINDOW(J) = 1.0    
-       WINDOW(J) = (1.-(((J-1)-FACM)*FACP)**2)
+          WINDOW(J) = 1.0    
+C       WINDOW(J) = (1.-(((J-1)-FACM)*FACP)**2)
        MM = M + M
        M4 = MM + MM
        M44 = M4+4
@@ -49,6 +46,7 @@ c          WINDOW(J) = 1.0
  12    CONTINUE
        IF(OVRLAP) THEN
        READ (9,*) (W2(J),J=1,M)
+c       PRINT *,(W2(J), J= 1,M) 
        ENDIF
        DO 18 KK=1,K
           DO 15 JOFF=-1,0,1
