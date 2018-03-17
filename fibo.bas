@@ -1,0 +1,12 @@
+
+
+10 DIM F(50)
+20 INPUT N
+30 LET F(1) = 1
+40 LET F(2) = 1
+45 PRINT F(1), F(2)
+50 FOR I = 3 TO N
+60 LET F(I) = F(I - 1) + F(I - 2)
+70 PRINT F(I),
+80 NEXT I
+100 END
