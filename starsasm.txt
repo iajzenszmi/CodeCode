@@ -1,0 +1,3 @@
+ian@ian-HP-Stream-Notebook-PC-11:~$ nasm -f elf64 stars.asm
+ian@ian-HP-Stream-Notebook-PC-11:~$ ld stars.o -o stars
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./stars
