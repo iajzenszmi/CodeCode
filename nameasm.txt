@@ -1,0 +1,5 @@
+Ian Martin Ajzenszmidt****Martin Ajzenszmidtian@ian-HP-Stream-Notebook-PC-11:~$ 
+ian@ian-HP-Stream-Notebook-PC-11:~$ nasm -f elf64 name.asm
+ian@ian-HP-Stream-Notebook-PC-11:~$ ld name.o -o name
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./name
+Ian Martin Ajzenszmidt****Martin Ajzenszmidt
