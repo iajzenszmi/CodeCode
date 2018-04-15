@@ -1,0 +1,6 @@
+ian@ian-HP-Stream-Notebook-PC-11:~$ nasm -f elf64 tx4.asm
+ian@ian-HP-Stream-Notebook-PC-11:~$ ld tx4.o -o tx4
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./tx4
+Hello, programmers!
+�̀Welcome to the world of,
+Linux assembly programming! Segmentation fault (core dumped)
