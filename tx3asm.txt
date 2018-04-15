@@ -1,0 +1,8 @@
+ian@ian-HP-Stream-Notebook-PC-11:~$ nasm -f elf64 tx3.asm
+ian@ian-HP-Stream-Notebook-PC-11:~$ ld tx3.o -o tx3
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./tx3
+Please enter a number: 4
+You have entered: 4
+ian@ian-HP-Stream-Notebook-PC-11:~$ 
+
+
