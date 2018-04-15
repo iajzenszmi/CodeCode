@@ -1,0 +1,32 @@
+ian@ian-HP-Stream-Notebook-PC-11:~$ gcc quadmathtest.c -lquadmath -o quadmathtest
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./quadmathtest
++1.41421356237309504880e+00                   
+0x1.6a09e667f3bcc908b2fb1366ea96p+0
++1.41421356237309504880e+00                   
+ian@ian-HP-Stream-Notebook-PC-11:~$
+
+#include <quadmath.h>
+#include <stdlib.h>
+#include <stdio.h>
+int main ()
+{
+__float128 r;
+int prec = 20;
+//10
+//GCC libquadmath
+int width = 46;
+char buf[128];
+r = 2.0q;
+r = sqrtq (r);
+int n = quadmath_snprintf (buf, sizeof buf, "%+-#*.20Qe", width, r);
+if ((size_t) n < sizeof buf)
+printf ("%s\n", buf);
+/* Prints: +1.41421356237309504880e+00 */
+quadmath_snprintf (buf, sizeof buf, "%Qa", r);
+if ((size_t) n < sizeof buf)
+printf ("%s\n", buf);
+/* Prints: 0x1.6a09e667f3bcc908b2fb1366ea96p+0 */
+n = quadmath_snprintf (NULL, 0, "%+-#46.*Qe", prec, r);
+if (n > -1)
+"quadmathtest.c" [New] 35L, 749C written                      1,1           Top
+
