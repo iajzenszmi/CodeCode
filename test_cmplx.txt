@@ -1,0 +1,14 @@
+program test_cmplx
+    integer :: i = 42
+    real :: x = 3.14
+    complex :: z
+    z = cmplx(i, x)
+    print *, z, cmplx(x)
+end program test_cmplx
+
+ian@ian-HP-Stream-Notebook-PC-11:~$ f77 test_cmplx.f -o test_cmplx
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./test_cmplx
+ (  42.0000000    ,  3.14000010    ) (  3.14000010    ,  0.00000000    )
+ian@ian-HP-Stream-Notebook-PC-11:~$ 
+
+
