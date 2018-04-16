@@ -1,0 +1,11 @@
+ian@ian-HP-Stream-Notebook-PC-11:~$ nasm -f elf64 equ1.asm
+ian@ian-HP-Stream-Notebook-PC-11:~$ ld equ1.o -o equ1
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./equ1
+Hello, programmers
+Welcome to the world of,
+Linux assembly programmingian@ian-HP-Stream-Notebook-PC-11:~$ 
+
+
+
+
+
