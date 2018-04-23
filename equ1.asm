@@ -30,5 +30,5 @@ msg1 db  'Hello, programmers',0xA,0xD
 len1 equ $ - msg1
 msg2 db 'Welcome to the world of,',0xA,0xD
 len2 equ $ - msg2
-msg3 db 'Linux assembly programming'
+msg3 db 'Linux assembly programming',0xA,0xD
 len3 equ $ - msg3
