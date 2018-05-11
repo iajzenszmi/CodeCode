@@ -25,7 +25,7 @@
                  p6 = 7
                  p7 = 7
        read(5,9590) arcnt1, p1, p2, p3, p4, p5, p6, p7
-9590   format(i10,i10,i10,i10,i10,i10,i10,i10)      
+9590   format(i1,i1,i1,i1,i1,i1,i1,i1)      
                  call testgen(arcnt1, p1, p2, p3, p4, p5, p6, p7)
                  end program 
                    
