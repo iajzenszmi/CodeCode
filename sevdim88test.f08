@@ -34,11 +34,11 @@
                  integer a1, a2, a3, a4, a5, a6, a7
 !                 integer arcnt, p12, p22, p21, p22, p31, p32, p41
 !                 integer p42, p51, p52, p61, p62, p71, p72
-                 integer p121, p221, p321, p421, p521, p621, p721
-                 real :: START, FINISH
-                 integer hcube(7, 7, 7, 7, 7, 7, 7)
+                 integer p121, p221, p321, p421, p521, p621
+!                 real :: START, FINISH
+                 integer h(7, 7, 7, 7, 7, 7, 7)
                  integer arcnt, recnt, iz, izy
-                 CALL CPU_TIME(START)
+!                 CALL CPU_TIME(START)
                 
                  do 100 iz = 1, arcnt
                  p11=1
@@ -54,7 +54,7 @@
                  p61=1
                  p62 = p621
                  p71=1
-                 p72= p721
+                 p72= p73
                  recnt=1
                  izy =iz
 !            write(6, 9800) izy
@@ -66,28 +66,12 @@
                    do 30 a5 = p51, p52
                     do 20 a6  = p61, p62
                      do 10 a7 = p71, p73
-                        hcube(a1,&
-                           &a2,&
-                           &a3,&
-                           &a4,&
-                           &a5,&
-                           &a6,&
-                           &a7) = & 
-                           (2*a1+&
-                           &8*a3+&
-                           &16*a4+&
-                           &32*a5+&
-                                             &64*a6+&
-                                             &128*a7)
-                          write(6,1000)  izy, recnt, hcube(a1,&
-                                           &a2,&
-                                           &a3,&
-                                           &a4,&
-                                           &a5,&
-                                           &a6,&
-                                       &a7),a1,a2,a3,a4,a5,a6,a7
-                     
-1000        format (i10,i10,i10,i10,i10,i10,i10,i10,i10,i10)
+       h(a1,a2,a3,a4,a5,a6,a7)=2*a1+4*a2+8*a3+16*a4+32*a5+64*a6+128*a7
+          write(6,1000)  izy, recnt, h(a1,a2,a3,a4,a5,a6,a7)
+          write(6,1010) a1,a2,a3,a4,a5,a6,a7
+          
+1000        format (" ",i10,i10,i10)
+1010        format("+",i10,i10,i10,i10,i10,i10,i10)
                             recnt = recnt + 1
 10                          continue
 20                     continue
@@ -99,8 +83,8 @@
             write(6, 9800) izy
 9800        format(" "," no of arrays",i10)
 100           continue
-             CALL CPU_TIME(FINISH)
-             write(6,2000)  FINISH - START
-2000          format("Time = ",F6.2, " ", "seconds")
+!             CALL CPU_TIME(FINISH)
+!             write(6,2000)  FINISH - START
+! 2000          format("Time = ",F6.2, " ", "seconds")
           return
           end subroutine

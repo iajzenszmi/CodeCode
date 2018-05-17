@@ -77,35 +77,30 @@ static integer c__1 = 1;
     static char fmt_1000[] = "(\002 \002,i10,i10,i10)";
     static char fmt_1010[] = "(\002+\002,i10,i10,i10,i10,i10,i10,i10)";
     static char fmt_9800[] = "(\002 \002,\002 no of arrays\002,i10)";
-    static char fmt_2000[] = "(\002Time = \002,f6.2,\002 \002,\002seconds"
-	    "\002)";
 
     /* System generated locals */
     integer i__1, i__2, i__3, i__4, i__5, i__6, i__7, i__8;
-    real r__1;
 
     /* Builtin functions */
     integer s_wsfe(cilist *), do_fio(integer *, char *, ftnlen), e_wsfe(void);
 
     /* Local variables */
-    extern /* Subroutine */ int cpu_time__(real *);
     static integer h__[823543]	/* was [7][7][7][7][7][7][7] */, a1, a2, a3, 
 	    a4, a5, a6, a7, p11, p12, p21, p22, p31, p32, p41, p42, p51, p52, 
 	    p61, p62, p71;
     static real p72;
-    static integer iz, p721, izy, recnt;
-    static real start, finish;
+    static integer iz, izy, recnt;
 
     /* Fortran I/O blocks */
-    static cilist io___37 = { 0, 6, 0, fmt_1000, 0 };
-    static cilist io___38 = { 0, 6, 0, fmt_1010, 0 };
-    static cilist io___39 = { 0, 6, 0, fmt_9800, 0 };
-    static cilist io___41 = { 0, 6, 0, fmt_2000, 0 };
+    static cilist io___35 = { 0, 6, 0, fmt_1000, 0 };
+    static cilist io___36 = { 0, 6, 0, fmt_1010, 0 };
+    static cilist io___37 = { 0, 6, 0, fmt_9800, 0 };
 
 
 /*                 integer arcnt, p12, p22, p21, p22, p31, p32, p41 */
 /*                 integer p42, p51, p52, p61, p62, p71, p72 */
-//    cpu_time__(&start);
+/*                 real :: START, FINISH */
+/*                 CALL CPU_TIME(START) */
     i__1 = *arcnt;
     for (iz = 1; iz <= i__1; ++iz) {
 	p11 = 1;
@@ -121,7 +116,7 @@ static integer c__1 = 1;
 	p61 = 1;
 	p62 = *p621;
 	p71 = 1;
-	p72 = (real) p721;
+	p72 = (real) (*p73);
 	recnt = 1;
 	izy = iz;
 /*            write(6, 9800) izy */
@@ -145,7 +140,7 @@ static integer c__1 = 1;
 					    137257] = (a1 << 1) + (a2 << 2) + 
 					    (a3 << 3) + (a4 << 4) + (a5 << 5) 
 					    + (a6 << 6) + (a7 << 7);
-				    s_wsfe(&io___37);
+				    s_wsfe(&io___35);
 				    do_fio(&c__1, (char *)&izy, (ftnlen)
 					    sizeof(integer));
 				    do_fio(&c__1, (char *)&recnt, (ftnlen)
@@ -155,7 +150,7 @@ static integer c__1 = 1;
 					     7) * 7) * 7) * 7 - 137257], (
 					    ftnlen)sizeof(integer));
 				    e_wsfe();
-				    s_wsfe(&io___38);
+				    s_wsfe(&io___36);
 				    do_fio(&c__1, (char *)&a1, (ftnlen)sizeof(
 					    integer));
 				    do_fio(&c__1, (char *)&a2, (ftnlen)sizeof(
@@ -186,16 +181,14 @@ static integer c__1 = 1;
 	    }
 /* L70: */
 	}
-	s_wsfe(&io___39);
+	s_wsfe(&io___37);
 	do_fio(&c__1, (char *)&izy, (ftnlen)sizeof(integer));
 	e_wsfe();
 /* L100: */
     }
-  //  cpu_time__(&finish);
-    s_wsfe(&io___41);
-    r__1 = finish - start;
-    do_fio(&c__1, (char *)&r__1, (ftnlen)sizeof(real));
-    e_wsfe();
+/*             CALL CPU_TIME(FINISH) */
+/*             write(6,2000)  FINISH - START */
+/* 2000          format("Time = ",F6.2, " ", "seconds") */
     return 0;
 } /* testgen_ */
 
