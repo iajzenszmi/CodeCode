@@ -71,7 +71,7 @@
           write(6,1010) a1,a2,a3,a4,a5,a6,a7
           
 1000        format (" ",i10,i10,i10)
-1010        format("+",i10,i10,i10,i10,i10,i10,i10)
+1010        format('+',i10,i10,i10,i10,i10,i10,i10)
                             recnt = recnt + 1
 10                          continue
 20                     continue
