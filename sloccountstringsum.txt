@@ -1,0 +1,38 @@
+  
+ian@ian-HP-Stream-Notebook-PC-11:~$ ls *.f
+100l.f  stringsum.f
+ian@ian-HP-Stream-Notebook-PC-11:~$ sloccount stringsum.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/stringsum.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+10      top_dir         fortran=10
+
+
+Totals grouped by language (dominant language first):
+fortran:         10 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 10
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.02)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.05 (0.56)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.03
+Total Estimated Cost to Develop                           = $ 215
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Notebook-PC-11:~$ 
+
