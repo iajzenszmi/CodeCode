@@ -1,4 +1,4 @@
-
+# ian martin ajzenszmidt from melbourne australia says run with  python3, not python2.
 # coding: utf-8
 
 # In[48]:
@@ -6,9 +6,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 #The next library contains the zeta(), zetazero(), and siegelz() functions
+# change by Ian Martin Ajzenszmidt , Melbourne, Australia insert 'import mpmath'
 import mpmath
 from mpmath import *
 mp.dps = 25; mp.pretty = True
+# IAN MARTIN AJZENSZMIDT , MELBOURNE, AUSTRALIA INSERTED NEXT LINE 02/2019
 xrange=[1,2,3,4,5,6,7,8,9,10,11,12,13]
 def graph_zeta(real, image_name):
     A,B,C, D = [], [], [], []
@@ -42,6 +44,7 @@ def graph_zeta(real, image_name):
     for l in leg.get_lines():
         l.set_linewidth(2.0)
     #Plot the zeroes of zeta
+    #IAN MARTIN AJZENSZMIDT MELBOURNE, AUSTRALIA  EDITED NEXT LINE
     for i in xrange:
         zero = zetazero(i)
         ax.plot(zero.imag, [0.0], "ro")
@@ -49,6 +52,7 @@ def graph_zeta(real, image_name):
     #save plot and print that it was saved 
     ax.set_ylim(-7, 7)
     plt.savefig(image_name)
+    #IAN MARTIN AJZENSZMIDT MELBOURNE, AUSTRALIA  EDITED NEXT LINE INSERTED ()
     print ("Successfully plotted %s !" % image_name)
     plt.close()
 
