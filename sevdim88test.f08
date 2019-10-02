@@ -31,7 +31,7 @@
                    
       subroutine testgen(arcnt, p121, p221, p321, p421, p521, p621, p73)
       integer p11,p12,p21,p22,p31,p32,p41,p42,p51,p52,p61,p62,p71,p73
-                 integer a1, a2, a3, a4, a5, a6, a7
+                 integer a1, a2, a3, a4, a5, a6, a7, hq
 !                 integer arcnt, p12, p22, p21, p22, p31, p32, p41
 !                 integer p42, p51, p52, p61, p62, p71, p72
                  integer p121, p221, p321, p421, p521, p621
@@ -66,7 +66,9 @@
                    do 30 a5 = p51, p52
                     do 20 a6  = p61, p62
                      do 10 a7 = p71, p73
-       h(a1,a2,a3,a4,a5,a6,a7)=2*a1+4*a2+8*a3+16*a4+32*a5+64*a6+128*a7
+        hq = 10*a1+100*a2+10**3*a3+10**4*a4+10**5*a5+10**6*a6+10**7*a7
+                          h(a1,a2,a3,a4,a5,a6,a7) = hq
+!       h(a1,a2,a3,a4,a5,a6,a7)=10*a1+100*a2+10^3*a3+10^4*a4+10^5*a5+10^6*a6+10^7*a7
           write(6,1000)  izy, recnt, h(a1,a2,a3,a4,a5,a6,a7)
           write(6,1010) a1,a2,a3,a4,a5,a6,a7
           
