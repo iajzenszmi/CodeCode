@@ -23,8 +23,10 @@ int main() {
     else
         printf("malloc() failed");
      x = 100;
-    // Will give a segmentation fault, since
-    // *b is not allocated any memory
+    // Will not give a segmentation fault, since
+    // *b is  allocated  memory
+    // We can update the value to this location, since
+    // we have allocated memory for the pointer
     *b = x;
     printf("b points to %d\n", *b);
      
