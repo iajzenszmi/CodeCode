@@ -2,31 +2,25 @@
 !         driver for routine zbrent
           integer n, nbmax
           double precision x1, x2
-          double precision bessj0, zbrent
-!          parameter(n=20,nbmax=20,x1=1.0,x2=50.0)          
+          double precision bessj0, zbrent             
           integer i,nb
-          double precision xb1(20),xb2(20),tol3,root              
+          double precision xb1(9999999),xb2(9999999),tol3,root              
 !          external  bessj0
-          n= 20
-          nbmax = 20 
-          x2 = 50.0 
-          x1 = 1.0
-          nb=20
+          parameter(n=2000,nbmax=2000,x1=1.0,x2=50.0)
           call zbrak(bessj0,x1,x2,n,xb1,xb2,nb)
           write(*,"(/1x,a)") "Roots of bessj0"
           write(*,"(/1x,t19,a/)")
-          do 11 i=1,20
+          do 11 i=1,nb
              tol3 = (1.0e-6)*(xb1(i)+xb2(i))/2.0
          root = zbrent(bessj0,xb1(i),xb2(i),tol3)
-!         write(*,"(5x,a,i2,2x,d12.6,d16.4)")"Root ",i,root,bessj0(root)
-          print *, "Root ",i, root,bessj0(root)
- 11      continue
+         write(*,"(5x,a,i2,2x,d12.6,d16.4)")"Root ",i,root,bessj0(root)
+ 011      continue
          end
           double precision FUNCTION zbrent(func,x1,x2,tol)
           INTEGER ITMAX
           double precision  tol1,x1,x2,func,EPS,tol
  !         EXTERNAL func
-          PARAMETER (ITMAX=20,EPS=3.e-8)
+          PARAMETER (ITMAX=200,EPS=3.e-8)
 ! Using Brent’s method, find the root of a function func known to lie between x1 and x2 .
 !The root, returned as zbrent , will be refined until its accuracy is tol .
 !Parameters: Maximum allowed number of iterations, and machine floating-point precision.
