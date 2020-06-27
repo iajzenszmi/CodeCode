@@ -140,12 +140,12 @@
       nb=nbb
       return
       END
-      FUNCTION bessj0(x)
-      REAL x
+      double precision FUNCTION bessj0(x)
+!      REAL x
 !     Returns the Bessel function J 0 ( x ) for any real x .
-      REAL ax,xx,z
+!      REAL ax,xx,z
       DOUBLE PRECISION p1,p2,p3,p4,p5,q1,q2,q3,q4,q5,r1,r2,r3,r4,r5,r6,&
-      s1,s2,s3,s4,s5,s6,bessj0
+      s1,s2,s3,s4,s5,s6,ax,xx,z,x,y
 !      We’ll accumulate polynomials in double precision.
       SAVE p1,p2,p3,p4,p5,q1,q2,q3,q4,q5,r1,r2,r3,r4,r5,r6,s1,s2,s3,s4,&
       s5,s6
