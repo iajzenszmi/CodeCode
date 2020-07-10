@@ -1,0 +1,526 @@
+ian@debian:~$ cat fls.f
+!//*                                                                    00000010
+!// EXEC FORT1CLG,REGION=512K                                           00000020
+!//*                                                                    00000030
+!/*JOBPARM COPIES=6                                                     00000040
+C                                                                       00000050
+C      PROGRAM FLS:                                                     00000060
+C         EQUATION NUMBERS IN COMMENT STATEMENTS REFER TO               00000070
+C         ''TIME VARYING LINEAR REGRESSION VIA FLEXIBLE LEAST SQUARES'' 00000080
+C         BY R. KALABA AND L. TESFATSION, COMPUTERS AND MATHEMATICS     00000090
+C         WITH APPLICATIONS 17, (1990), PAGES 1215-1245.                00000100
+C      LAST UPDATED: 14 JUNE 1994                                       00000110
+C                                                                       00000120
+C      MAIN PROGRAM                                                     00000130
+C                                                                       00000140
+       IMPLICIT REAL*8(A-H,O-Z)                                         00000150
+       REAL*8M                                                          00000160
+C      THIS PROGRAM IS CURRENTLY DIMENSIONED FOR A MAXIMUM OF           00000170
+C      110 OBSERVATIONS, WITH REGRESSOR VECTORS OF A MAXIMUM            00000180
+C      DIMENSION 10.                                                    00000190
+       DIMENSION X(10,110),Y(110),R(10,10)                              00000200
+       DIMENSION XN(10),Z(10,10),M(10,10,110),V(10)                     00000210
+       DIMENSION U(10),E(10,110),W(10),Q(10,10),A(10,10)                00000220
+       DIMENSION C(10,10),D(10),B(10,110),DIFVEC(10)                    00000230
+       DIMENSION VVV(10),ZZ(10,10),ZZINV(10,10),BOLSE(10)               00000240
+       DIMENSION BOLS(10),XY(10),XXT(10,10),XXTINV(10,10)               00000250
+       DIMENSION XTBOLS(110),OLSR(110)                                  00000260
+       DIMENSION TRUEB(10,110)                                          00000270
+C       THE FOLLOWING SUBROUTINE INITIALIZES THE PENALTY WEIGHT         00000280
+C       AMU, THE DIMENSION K OF THE REGRESSOR VECTORS, AND              00000290
+C       THE NUMBER OF OBSERVATIONS NCAP.  IT ALSO GENERATES             00000300
+C       THE K BY NCAP MATRIX X OF REGRESSOR VALUES AND THE              00000310
+C       NCAP BY 1 VECTOR Y OF SCALAR OBSERVATIONS.                      00000320
+        CALL INPUT(AMU,K,NCAP,X,Y,TRUEB)                                00000330
+C       INITIALIZATION FOR THE AUXILIARY MATRIX RN = QN-1 + AMU*I       00000340
+C       AT TIME N = 1                                                   00000350
+        DO 30 I=1,K                                                     00000360
+        DO 40 J=1,K                                                     00000370
+        R(I,J) = 0.0D+00                                                00000380
+        IF(I.EQ.J) R(I,J) = AMU                                         00000390
+   40   CONTINUE                                                        00000400
+   30   CONTINUE                                                        00000410
+        DO 50 N=1,NCAP                                                  00000420
+C       FORM THE REGRESSOR VECTOR XN AND THE SCALAR                     00000430
+C       OBSERVATION YN                                                  00000440
+        DO 60 I=1,K                                                     00000450
+        XN(I)=X(I,N)                                                    00000460
+   60   CONTINUE                                                        00000470
+        YN=Y(N)                                                         00000480
+C       CALCULATE THE INVERSE Z OF THE MATRIX RN+XNXNT VIA              00000490
+C       THE WOODBURY MATRIX INVERSION LEMMA                             00000500
+        CALL WOOD(K,R,XN,Z)                                             00000510
+C       CALCULATE & STORE THE K BY K MATRICES MN AND THE K BY 1         00000520
+C       VECTORS EN APPEARING IN EQUATIONS (5.7B) AND (5.7C)             00000530
+        DO 70 I=1,K                                                     00000540
+        DO 80 J=1,K                                                     00000550
+        M(I,J,N)=AMU*Z(I,J)                                             00000560
+   80   CONTINUE                                                        00000570
+   70   CONTINUE                                                        00000580
+        DO 90 I=1,K                                                     00000590
+        V(I)=XN(I)*YN                                                   00000600
+   90   CONTINUE                                                        00000610
+        DO 100 I=1,K                                                    00000620
+        IF(N.EQ.1) U(I)=0.0D+00                                         00000630
+        IF(N.GT.1) U(I)=AMU*E(I,N-1)                                    00000640
+  100   CONTINUE                                                        00000650
+        DO 110 I=1,K                                                    00000660
+        W(I)=U(I)+V(I)                                                  00000670
+  110   CONTINUE                                                        00000680
+        DO 120 I=1,K                                                    00000690
+        E(I,N)=0.0D+00                                                  00000700
+        DO 130 J=1,K                                                    00000710
+        E(I,N)=E(I,N)+Z(I,J)*W(J)                                       00000720
+  130   CONTINUE                                                        00000730
+  120   CONTINUE                                                        00000740
+        DO 140 I=1,K                                                    00000750
+        DO 150 J=1,K                                                    00000760
+        R(I,J)=-AMU*AMU*Z(I,J)                                          00000770
+        IF(I.EQ.J)R(I,J)=(2.0D+00)*AMU+R(I,J)                           00000780
+  150   CONTINUE                                                        00000790
+  140   CONTINUE                                                        00000800
+   50   CONTINUE                                                        00000810
+C       CALCULATE THE (5.15) FLS ESTIMATE BN FOR THE                    00000820
+C       FINAL TIME N = NCAP                                             00000830
+        DO 160 I=1,K                                                    00000840
+        DO 170 J=1,K                                                    00000850
+        Q(I,J)=-AMU*M(I,J,NCAP-1)                                       00000860
+        IF(I.EQ.J) Q(I,J)=Q(I,J)+AMU                                    00000870
+  170   CONTINUE                                                        00000880
+  160   CONTINUE                                                        00000890
+C       OBTAIN THE INVERSE C OF THE MATRIX A=(QN-1 + XNXNT)             00000900
+C       IN EQUATION (5.15)                                              00000910
+        DO 180 I=1,K                                                    00000920
+        DO 190 J=1,K                                                    00000930
+        A(I,J)=Q(I,J)+X(I,NCAP)*X(J,NCAP)                               00000940
+  190   CONTINUE                                                        00000950
+  180   CONTINUE                                                        00000960
+        CALL INV(K,A,C)                                                 00000970
+C       FORM THE VECTOR D=(PN-1 + XNYN) IN EQUATION (5.15)              00000980
+        DO 200 I=1,K                                                    00000990
+        D(I)=AMU*E(I,NCAP-1)+X(I,NCAP)*Y(NCAP)                          00001000
+  200   CONTINUE                                                        00001010
+C       POSTMULTIPLY C BY D TO OBTAIN BNCAP                             00001020
+        DO 210 I=1,K                                                    00001030
+        B(I,NCAP)=0.0D+00                                               00001040
+        DO 220 J=1,K                                                    00001050
+        B(I,NCAP)=B(I,NCAP)+C(I,J)*D(J)                                 00001060
+  220   CONTINUE                                                        00001070
+  210   CONTINUE                                                        00001080
+C       USE EQUATIONS (5.16) TO OBTAIN SMOOTHED FLS ESTIMATES           00001090
+C       FOR B1,...,BNCAP-1                                              00001100
+        NCAP1=NCAP-1                                                    00001110
+        DO 230 N=1,NCAP1                                                00001120
+        L=NCAP-N                                                        00001130
+        DO 240 I=1,K                                                    00001140
+        B(I,L)=E(I,L)                                                   00001150
+        DO 250 J=1,K                                                    00001160
+        B(I,L)=B(I,L)+M(I,J,L)*B(J,L+1)                                 00001170
+  250   CONTINUE                                                        00001180
+  240   CONTINUE                                                        00001190
+  230   CONTINUE                                                        00001200
+        WRITE(6,2020)                                                   00001210
+ 2020   FORMAT(1X,'HERE ARE THE FLS ESTIMATES FOR B1 AND THE            00001220
+     &  TRUE B1')                                                       00001230
+        WRITE(6,37)(B(1,N),TRUEB(1,N),N=1,NCAP)                         00001240
+        WRITE(6,2030)                                                   00001250
+ 2030   FORMAT(1X,'HERE ARE THE FLS ESTIMATES FOR B2 AND THE            00001260
+     &  TRUE B2')                                                       00001270
+        WRITE(6,37)(B(2,N),TRUEB(2,N),N=1,NCAP)                         00001280
+   37   FORMAT(1X,2D25.10)                                              00001290
+C       CALCULATING RSUBM FROM EQUATION (3.1)                           00001300
+        SUM =0.0D+00                                                    00001310
+        DO 500 N=1,NCAP                                                 00001320
+        SUM1=0.0D+00                                                    00001330
+        DO 510 J=1,K                                                    00001340
+        SUM1=SUM1+X(J,N)*B(J,N)                                         00001350
+  510   CONTINUE                                                        00001360
+        DIF=Y(N)-SUM1                                                   00001370
+        DIFSQ=DIF*DIF                                                   00001380
+        SUM=SUM+DIFSQ                                                   00001390
+  500   CONTINUE                                                        00001400
+        RSUBM=SUM                                                       00001410
+C       CALCULATING RSUBD FROM EQUATION (3.2)                           00001420
+        SUM=0.0D+00                                                     00001430
+        DO 520 N=1,NCAP1                                                00001440
+        DO 530 J=1,K                                                    00001450
+        DIFVEC(J)=B(J,N+1)-B(J,N)                                       00001460
+  530   CONTINUE                                                        00001470
+        SUM1=0.0D+00                                                    00001480
+        DO 540 J=1,K                                                    00001490
+        SUM1=SUM1+DIFVEC(J)*DIFVEC(J)                                   00001500
+  540   CONTINUE                                                        00001510
+        SUM=SUM+SUM1                                                    00001520
+  520   CONTINUE                                                        00001530
+        RSUBD=SUM                                                       00001540
+C       CALCULATING THE INCOMPATIBILITY COST AMU*RSUBD + RSUBM          00001550
+        COST=AMU*RSUBD+RSUBM                                            00001560
+        WRITE(6,580) RSUBM,RSUBD,COST                                   00001570
+  580   FORMAT(1H0,'HERE ARE RSUBM,RSUBD,COST'/1X,3D20.10)              00001580
+C       FIRST VALIDATION CHECK:                                         00001590
+C       CALCULATION OF THE ESTIMATE BOLSE FOR OLS FROM THE MATRIX       00001600
+C       AVERAGE OF THE FLS ESTIMATES GIVEN BY EQUATION (6.2)            00001610
+        DO 810 I=1,K                                                    00001620
+        VVV(I)=0.0D+00                                                  00001630
+        DO 820 N=1,NCAP                                                 00001640
+        SUM1=0.0D+00                                                    00001650
+        DO 830 J=1,K                                                    00001660
+  830   SUM1=SUM1+X(J,N)*B(J,N)                                         00001670
+  820   VVV(I)=VVV(I)+X(I,N)*SUM1                                       00001680
+  810   CONTINUE                                                        00001690
+        DO 840  J=1,K                                                   00001700
+        DO 850 I=1,K                                                    00001710
+  850   ZZ(I,J)=0.0D+00                                                 00001720
+  840   CONTINUE                                                        00001730
+        DO 860 N=1,NCAP                                                 00001740
+        DO 870 I=1,K                                                    00001750
+        DO 880 J=1,K                                                    00001760
+  880   ZZ(I,J)=X(I,N)*X(J,N)+ZZ(I,J)                                   00001770
+  870   CONTINUE                                                        00001780
+  860   CONTINUE                                                        00001790
+        CALL INV(K,ZZ,ZZINV)                                            00001800
+        DO 890 I=1,K                                                    00001810
+        BOLSE(I)=0.0D+00                                                00001820
+        DO 900 J=1,K                                                    00001830
+  900   BOLSE(I)=BOLSE(I)+ZZINV(I,J)*VVV(J)                             00001840
+  890   CONTINUE                                                        00001850
+        WRITE(6,910)                                                    00001860
+  910   FORMAT(1H0,'COMPONENTS OF BOLSE')                               00001870
+        WRITE(6,920) (BOLSE(I),I=1,K)                                   00001880
+  920   FORMAT(1X,D35.10)                                               00001890
+C       CALCULATING THE OLS ESTIMATE BOLS FROM THE USUAL                00001900
+C       FORMULA BOLS=(XXT)-1*XY                                         00001910
+        DO 1600 I=1,K                                                   00001920
+        SUM=0.0D+00                                                     00001930
+        DO 1610 N=1,NCAP                                                00001940
+ 1610   SUM=SUM+X(I,N)*Y(N)                                             00001950
+ 1600   XY(I)=SUM                                                       00001960
+        DO 1620 I=1,K                                                   00001970
+        DO 1630 J=1,K                                                   00001980
+        XXT(I,J)=0.0D+00                                                00001990
+        DO 1640 N=1,NCAP                                                00002000
+ 1640   XXT(I,J)=XXT(I,J)+X(I,N)*X(J,N)                                 00002010
+ 1630   CONTINUE                                                        00002020
+ 1620   CONTINUE                                                        00002030
+        CALL INV(K,XXT,XXTINV)                                          00002040
+        DO 1650 I=1,K                                                   00002050
+        BOLS(I)=0.0D+00                                                 00002060
+        DO 1660 J=1,K                                                   00002070
+ 1660   BOLS(I)=BOLS(I)+XXTINV(I,J)*XY(J)                               00002080
+ 1650   CONTINUE                                                        00002090
+        WRITE(6,1670)                                                   00002100
+ 1670   FORMAT(1H0,'COMPONENTS OF BOLS')                                00002110
+        WRITE(6,1671) (BOLS(I),I=1,K)                                   00002120
+ 1671   FORMAT(1X,D35.10)                                               00002130
+C       CALCULATING THE SUM OF SQUARED RESIDUAL MEASUREMENT             00002140
+C       ERRORS OLSRM FOR OLS                                            00002150
+        DO 1800 N=1,NCAP                                                00002160
+        XTBOLS(N)=0.0D+00                                               00002170
+        DO 1810 I=1,K                                                   00002180
+ 1810   XTBOLS(N)=XTBOLS(N)+X(I,N)*BOLS(I)                              00002190
+ 1800   CONTINUE                                                        00002200
+        DO 1820 N=1,NCAP                                                00002210
+ 1820   OLSR(N)=Y(N)-XTBOLS(N)                                          00002220
+        OLSRM=0.0D+00                                                   00002230
+        DO 1830 N=1,NCAP                                                00002240
+ 1830   OLSRM=OLSRM+OLSR(N)*OLSR(N)                                     00002250
+        WRITE(6,1840)                                                   00002260
+ 1840   FORMAT(1H0,'SUM OF SQUARED RESIDUAL MEASUREMENT ERRORS          00002270
+     &  FOR OLS')                                                       00002280
+        WRITE(6,1841) OLSRM                                             00002290
+ 1841   FORMAT(1X,D27.10)                                               00002300
+C       SECOND VALIDATION CHECK: FIRST-ORDER CONDITION TEST             00002310
+C       HOW WELL DO THE FLS ESTS SATISFY THE FOC CONDITIONS (A.14)      00002320
+        CALL FOCTST(AMU,K,NCAP,X,Y,B)                                   00002330
+        STOP                                                            00002340
+        END                                                             00002350
+C                                                                       00002360
+        SUBROUTINE WOOD(K,R,X,Z)                                        00002370
+C       CALCULATES THE INVERSE Z OF A MATRIX OF THE FORM R+XXT          00002380
+C       VIA THE WOODBURY MATRIX INVERSION LEMMA                         00002390
+        IMPLICIT REAL*8(A-H,O-Z)                                        00002400
+        DIMENSION R(10,10),X(10),Z(10,10),S(10,10),V(10)                00002410
+        DIMENSION XNUM(10,10),U(10,10)                                  00002420
+C       CALCULATE THE INVERSE S OF THE K BY K MATRIX R                  00002430
+        CALL INV(K,R,S)                                                 00002440
+C       CALCULATE THE K BY 1 VECTOR V=SX=R-1*X                          00002450
+        DO 10 I=1,K                                                     00002460
+        V(I)=0.0D+00                                                    00002470
+        DO 20 J=1,K                                                     00002480
+        V(I)=V(I)+S(I,J)*X(J)                                           00002490
+   20   CONTINUE                                                        00002500
+   10   CONTINUE                                                        00002510
+C       CALCULATE XNUM=VVT=R-1*XXT*R-1                                  00002520
+        DO 30 I=1,K                                                     00002530
+        DO 40 J=1,K                                                     00002540
+        XNUM(I,J)=V(I)*V(J)                                             00002550
+   40   CONTINUE                                                        00002560
+   30   CONTINUE                                                        00002570
+C       CALCULATE Y=(1+VTV)=(1+XT*R-1*X)                                00002580
+        Y=1.0D+00                                                       00002590
+        DO 50 I=1,K                                                     00002600
+        Y=Y+X(I)*V(I)                                                   00002610
+   50   CONTINUE                                                        00002620
+C       CALCULATE U=XNUM/Y                                              00002630
+        DO 60 I=1,K                                                     00002640
+        DO 70 J=1,K                                                     00002650
+        U(I,J)=XNUM(I,J)/Y                                              00002660
+   70   CONTINUE                                                        00002670
+   60   CONTINUE                                                        00002680
+C       CALCULATE Z=S-U                                                 00002690
+        DO 80 I=1,K                                                     00002700
+        DO 90 J=1,K                                                     00002710
+        Z(I,J)=S(I,J)-U(I,J)                                            00002720
+   90   CONTINUE                                                        00002730
+   80   CONTINUE                                                        00002740
+        RETURN                                                          00002750
+        END                                                             00002760
+C                                                                       00002770
+        SUBROUTINE INV(K,A,C)                                           00002780
+C       CALCULATES THE INVERSE C OF A K BY K MATRIX A                   00002790
+        IMPLICIT REAL*8(A-H,O-Z)                                        00002800
+        DIMENSION A(10,10),C(10,10),B(10,20)                            00002810
+        DO 5 J=1,K                                                      00002820
+        DO 6 I=1,K                                                      00002830
+    6   B(I,J)=A(I,J)                                                   00002840
+    5   CONTINUE                                                        00002850
+        K2=K*2                                                          00002860
+        DO 7 J=1,K                                                      00002870
+        DO 8 I=1,K                                                      00002880
+        B(I,K+J)=0.0D+00                                                00002890
+        IF(I.EQ.J) B(I,K+J)=1.0D+00                                     00002900
+    8   CONTINUE                                                        00002910
+    7   CONTINUE                                                        00002920
+C       THE PIVOT OPERATION STARTS HERE                                 00002930
+        DO 9 L=1,K                                                      00002940
+        PIVOT=B(L,L)                                                    00002950
+        DO 13 J=L,K2                                                    00002960
+   13   B(L,J)=B(L,J)/PIVOT                                             00002970
+C       TO IMPROVE THE ROWS                                             00002980
+        DO 14 I=1,K                                                     00002990
+        IF(I.EQ.L) GO TO 14                                             00003000
+        AIL=B(I,L)                                                      00003010
+        DO 15 J=L,K2                                                    00003020
+   15   B(I,J)=B(I,J)-AIL*B(L,J)                                        00003030
+   14   CONTINUE                                                        00003040
+    9   CONTINUE                                                        00003050
+        DO 45 I=1,K                                                     00003060
+        DO 46 J=1,K                                                     00003070
+   46   C(I,J)=B(I,K+J)                                                 00003080
+   45   CONTINUE                                                        00003090
+        RETURN                                                          00003100
+        END                                                             00003110
+C                                                                       00003120
+        SUBROUTINE INPUT(AMU,K,NCAP,X,Y,TRUEB)                          00003130
+        IMPLICIT REAL*8(A-H,O-Z)                                        00003140
+        DIMENSION X(10,110),Y(110),TRUEB(10,110)                        00003150
+C                                                                       00003160
+C       RUN FOR ELLIPTICAL TRUE B WITH NOISY OBSERVATIONS               00003170
+C                                                                       00003180
+        K=2                                                             00003190
+        AMU=1.0D+00                                                     00003200
+        NCAP=30                                                         00003210
+        SIGMA=0.00D+00                                                  00003220
+        DO 3030 I=1,NCAP                                                00003230
+        AI=DFLOAT(I)                                                    00003240
+        PI=(DATAN(1.0D+00))*4.0D+00                                     00003250
+        TRUEB(1,I)=.5D+00*DSIN((2.0D+00*PI/30.0D+00)*AI)                00003260
+        TRUEB(2,I)=DCOS((2.0D+00*PI/30.0D+00)*AI)                       00003270
+ 3030   CONTINUE                                                        00003280
+        X(1,1)=1.0D+00                                                  00003290
+        X(2,1)=1.0D+00                                                  00003300
+        DO 3010 I=2,NCAP                                                00003310
+        AI=DFLOAT(I)                                                    00003320
+        X(1,I)=DSIN(10.0D+00+(AI))+.01D+00                              00003330
+        X(2,I)=DCOS(10.0D+00+(AI))                                      00003340
+ 3010   CONTINUE                                                        00003350
+ 4020   CONTINUE                                                        00003360
+        DO 3020 I=1,NCAP                                                00003370
+C       THE DISCREPANCY TERM UU IN THE NEXT LINE IS SET TO ZERO; IT
+C       CAN INSTEAD BE SET EQUAL TO A PSEUDO-RANDOM NUMBER TO TEST FLS
+C       IN THE PRESENCE OF NOISE IN THE OBSERVATIONS.
+        UU = 0.0D+00                                                    00003380
+        Y(I)=X(1,I)*TRUEB(1,I)+X(2,I)*TRUEB(2,I)+UU                     00003390
+ 3020   CONTINUE                                                        00003400
+        RETURN                                                          00003410
+        END                                                             00003420
+C                                                                       00003430
+        SUBROUTINE FOCTST(AMU,K,NCAP,X,Y,B)                             00003440
+        IMPLICIT REAL*8(A-H,O-Z)                                        00003450
+        DIMENSION X(10,110),Y(110),B(10,110),DIF(10)                    00003460
+        WRITE(6,100)                                                    00003470
+  100   FORMAT(1H0,'HERE ARE THE FOC TEST RESULTS FOR EQUATIONS (A.14)')00003480
+        DO 1 N=1,NCAP                                                   00003490
+        IF (N.NE.1) GO TO 9000                                          00003500
+        SUM=0.0D+00                                                     00003510
+        DO 2 J1=1,K                                                     00003520
+        SUM=SUM+X(J1,N)*B(J1,N)                                         00003530
+    2   CONTINUE                                                        00003540
+        SUM=SUM-Y(N)                                                    00003550
+        DO 3 J1=1,K                                                     00003560
+        DIF(J1)=SUM*X(J1,N)-AMU*(B(J1,N+1)-B(J1,N))                     00003570
+    3   CONTINUE                                                        00003580
+        WRITE (6,200)  N,(DIF(J1),J1=1,K)                               00003590
+  200   FORMAT(1X,'FOR N EQUAL TO',I5/1X,6D12.3)                        00003600
+        GO TO 1                                                         00003610
+ 9000   IF (N.EQ.NCAP) GO TO 9001                                       00003620
+        SUM=0.0D+00                                                     00003630
+        DO 4 J1=1,K                                                     00003640
+        SUM=SUM+X(J1,N)*B(J1,N)                                         00003650
+    4   CONTINUE                                                        00003660
+        SUM=SUM-Y(N)                                                    00003670
+        DO 5 J1=1,K                                                     00003680
+        DIF(J1)=SUM*X(J1,N)-AMU*(B(J1,N+1)-B(J1,N))                     00003690
+     &  +AMU*(B(J1,N)-B(J1,N-1))                                        00003700
+    5   CONTINUE                                                        00003710
+        WRITE(6,200) N,(DIF(J1),J1=1,K)                                 00003720
+        GO TO 1                                                         00003730
+ 9001   SUM=0.0D+00                                                     00003740
+        DO 6 J1=1,K                                                     00003750
+        SUM=SUM+X(J1,N)*B(J1,N)                                         00003760
+    6   CONTINUE                                                        00003770
+        SUM=SUM-Y(N)                                                    00003780
+        DO 7 J1=1,K                                                     00003790
+        DIF(J1)=SUM*X(J1,N)+AMU*(B(J1,N)-B(J1,N-1))                     00003800
+    7   CONTINUE                                                        00003810
+        WRITE(6,200) N,(DIF(J1),J1=1,K)                                 00003820
+    1   CONTINUE                                                        00003830
+        RETURN                                                          00003840
+        END SUBROUTINE
+ian@debian:~$ f77 fls.f -o fls
+ian@debian:~$ ./fls
+ HERE ARE THE FLS ESTIMATES FOR B1 AND THE              TRUE B1
+          0.2664583662D+00         0.1039558454D+00
+          0.2694731181D+00         0.2033683215D+00
+          0.3316402261D+00         0.2938926261D+00
+          0.3699068596D+00         0.3715724127D+00
+          0.3953642205D+00         0.4330127019D+00
+          0.4326236760D+00         0.4755282581D+00
+          0.4605030736D+00         0.4972609477D+00
+          0.4529753669D+00         0.4972609477D+00
+          0.4207365504D+00         0.4755282581D+00
+          0.3914009494D+00         0.4330127019D+00
+          0.3484992703D+00         0.3715724127D+00
+          0.2607197346D+00         0.2938926261D+00
+          0.1728667415D+00         0.2033683215D+00
+          0.1061502112D+00         0.1039558454D+00
+          0.3113728284D-02         0.6123233996D-16
+         -0.1095330483D+00        -0.1039558454D+00
+         -0.1789458630D+00        -0.2033683215D+00
+         -0.2538268719D+00        -0.2938926261D+00
+         -0.3441702216D+00        -0.3715724127D+00
+         -0.3958057314D+00        -0.4330127019D+00
+         -0.4203932891D+00        -0.4755282581D+00
+         -0.4479204450D+00        -0.4972609477D+00
+         -0.4596577973D+00        -0.4972609477D+00
+         -0.4328820104D+00        -0.4755282581D+00
+         -0.3843627705D+00        -0.4330127019D+00
+         -0.3460810812D+00        -0.3715724127D+00
+         -0.2931581333D+00        -0.2938926261D+00
+         -0.2024471117D+00        -0.2033683215D+00
+         -0.1367832817D+00        -0.1039558454D+00
+         -0.1366870612D+00        -0.1224646799D-15
+ HERE ARE THE FLS ESTIMATES FOR B2 AND THE              TRUE B2
+          0.8186598318D+00         0.9781476007D+00
+          0.8216745837D+00         0.9135454576D+00
+          0.7298953419D+00         0.8090169944D+00
+          0.5876975259D+00         0.6691306064D+00
+          0.4437492687D+00         0.5000000000D+00
+          0.2862222235D+00         0.3090169944D+00
+          0.9637134191D-01         0.1045284633D+00
+         -0.1037199882D+00        -0.1045284633D+00
+         -0.2817904824D+00        -0.3090169944D+00
+         -0.4419070569D+00        -0.5000000000D+00
+         -0.6080218997D+00        -0.6691306064D+00
+         -0.7451037872D+00        -0.8090169944D+00
+         -0.8182393711D+00        -0.9135454576D+00
+         -0.8779069682D+00        -0.9781476007D+00
+         -0.9203720936D+00        -0.1000000000D+01
+         -0.8849817721D+00        -0.9781476007D+00
+         -0.8133885130D+00        -0.9135454576D+00
+         -0.7401421998D+00        -0.8090169944D+00
+         -0.6139096520D+00        -0.6691306064D+00
+         -0.4433775477D+00        -0.5000000000D+00
+         -0.2771113441D+00        -0.3090169944D+00
+         -0.1040209829D+00        -0.1045284633D+00
+          0.9253143197D-01         0.1045284633D+00
+          0.2885775361D+00         0.3090169944D+00
+          0.4503972622D+00         0.5000000000D+00
+          0.5900936547D+00         0.6691306064D+00
+          0.7316983686D+00         0.8090169944D+00
+          0.8276491255D+00         0.9135454576D+00
+          0.8455177477D+00         0.9781476007D+00
+          0.8454327629D+00         0.1000000000D+01
+0HERE ARE RSUBM,RSUBD,COST
+     0.6572307633D-01    0.6291822245D+00    0.6949053009D+00
+0COMPONENTS OF BOLSE
+                    0.3846260631D-01
+                    0.3743910190D-01
+0COMPONENTS OF BOLS
+                    0.3846260631D-01
+                    0.3743910190D-01
+0SUM OF SQUARED RESIDUAL MEASUREMENT ERRORS            FOR OLS
+            0.9969611789D+01
+0HERE ARE THE FOC TEST RESULTS FOR EQUATIONS (A.14)
+ FOR N EQUAL TO    1
+    0.333D-15   0.444D-15
+ FOR N EQUAL TO    2
+    0.180D-15  -0.278D-15
+ FOR N EQUAL TO    3
+    0.416D-16   0.167D-15
+ FOR N EQUAL TO    4
+   -0.118D-15  -0.139D-15
+ FOR N EQUAL TO    5
+   -0.555D-16   0.555D-16
+ FOR N EQUAL TO    6
+    0.555D-16   0.111D-15
+ FOR N EQUAL TO    7
+    0.971D-16   0.111D-15
+ FOR N EQUAL TO    8
+   -0.167D-15   0.278D-16
+ FOR N EQUAL TO    9
+   -0.278D-16  -0.278D-16
+ FOR N EQUAL TO   10
+   -0.486D-16  -0.278D-16
+ FOR N EQUAL TO   11
+    0.104D-15  -0.139D-15
+ FOR N EQUAL TO   12
+    0.139D-16   0.111D-15
+ FOR N EQUAL TO   13
+   -0.278D-16  -0.971D-16
+ FOR N EQUAL TO   14
+    0.694D-16  -0.104D-15
+ FOR N EQUAL TO   15
+   -0.278D-16   0.305D-15
+ FOR N EQUAL TO   16
+   -0.971D-16  -0.208D-16
+ FOR N EQUAL TO   17
+   -0.416D-16  -0.222D-15
+ FOR N EQUAL TO   18
+   -0.278D-16   0.194D-15
+ FOR N EQUAL TO   19
+    0.278D-16   0.278D-16
+ FOR N EQUAL TO   20
+   -0.160D-15   0.000D+00
+ FOR N EQUAL TO   21
+    0.902D-16   0.555D-16
+ FOR N EQUAL TO   22
+   -0.520D-16  -0.278D-16
+ FOR N EQUAL TO   23
+    0.625D-16   0.000D+00
+ FOR N EQUAL TO   24
+    0.382D-16  -0.111D-15
+ FOR N EQUAL TO   25
+    0.833D-16   0.833D-16
+ FOR N EQUAL TO   26
+   -0.208D-15   0.139D-15
+ FOR N EQUAL TO   27
+    0.833D-16  -0.278D-16
+ FOR N EQUAL TO   28
+   -0.416D-16  -0.236D-15
+ FOR N EQUAL TO   29
+   -0.555D-16   0.194D-15
+ FOR N EQUAL TO   30
+    0.174D-15  -0.976D-16
+ian@debian:~$ 
+
