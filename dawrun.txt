@@ -1,0 +1,154 @@
+ian@debian:~$ ls *.f
+daw.f  dawtst.f  ei.f  eitest.f  machar.f  mach.f  ren.f  semaphore2.f
+ian@debian:~$ f77 dawtst.f -c
+ian@debian:~$ f77 daw.f -c
+ian@debian:~$ f77 -o dawtst dawtst.o daw.o
+ian@debian:~$ ./dawtst
+1Test of Dawson's Integral vs Taylor expansion
+
+
+   2000 Random arguments were tested from the interval ( 0.06, 1.00)
+
+
+  F(X) was larger  2000 times,
+           agreed     0 times, and
+      was smaller     0 times.
+
+
+ There are  24 base   2 significant digits in a floating-point number
+
+
+ The maximum relative error of     0.1140E+00 =    2 **  -3.13
+    occurred for X = 0.999698E+00
+ The estimated loss of base   2 significant digits is  20.87
+
+
+ The root mean square relative error was     0.6794E-01 =    2 **  -3.88
+ The estimated loss of base   2 significant digits is  20.12
+
+
+1Test of Dawson's Integral vs Taylor expansion
+
+
+   2000 Random arguments were tested from the interval ( 1.00, 2.50)
+
+
+  F(X) was larger     0 times,
+           agreed     0 times, and
+      was smaller  2000 times.
+
+
+ There are  24 base   2 significant digits in a floating-point number
+
+
+ The maximum relative error of       Infinity =    2 **    Inf
+    occurred for X = 0.100031E+01
+ The estimated loss of base   2 significant digits is    Inf
+
+
+ The root mean square relative error was       Infinity =    2 **    Inf
+ The estimated loss of base   2 significant digits is    Inf
+
+
+1Test of Dawson's Integral vs Taylor expansion
+
+
+   2000 Random arguments were tested from the interval ( 2.50, 5.00)
+
+
+  F(X) was larger     0 times,
+           agreed     0 times, and
+      was smaller  2000 times.
+
+
+ There are  24 base   2 significant digits in a floating-point number
+
+
+ The maximum relative error of       Infinity =    2 **    Inf
+    occurred for X = 0.250050E+01
+ The estimated loss of base   2 significant digits is    Inf
+
+
+ The root mean square relative error was       Infinity =    2 **    Inf
+ The estimated loss of base   2 significant digits is    Inf
+
+
+1Test of Dawson's Integral vs Taylor expansion
+
+
+   2000 Random arguments were tested from the interval ( 5.00,10.00)
+
+
+  F(X) was larger     0 times,
+           agreed     0 times, and
+      was smaller  2000 times.
+
+
+ There are  24 base   2 significant digits in a floating-point number
+
+
+ The maximum relative error of       Infinity =    2 **    Inf
+    occurred for X = 0.500126E+01
+ The estimated loss of base   2 significant digits is    Inf
+
+
+ The root mean square relative error was       Infinity =    2 **    Inf
+ The estimated loss of base   2 significant digits is    Inf
+
+
+1Special Tests
+
+
+       Estimated loss of base  2 significant digits in
+
+        X          F(x)+F(-x)
+
+     0.222            0.00
+     3.784            0.00
+     1.036            0.00
+     1.447            0.00
+     0.893            0.00
+     3.668            0.00
+     2.438            0.00
+     0.696            0.00
+     2.983            0.00
+     0.936            0.00
+
+
+ Test of special arguments
+
+
+  F(XMIN) =  0.00000000000000000E+00
+
+ Test of Error Returns
+
+
+
+ DAW will be called with the argument 0.423691E+38
+ This should not underflow
+
+
+ DAW returned the value 0.000000E+00
+
+
+
+ DAW will be called with the argument 0.425353E+38
+ This may underflow
+
+
+ DAW returned the value 0.000000E+00
+
+
+
+ DAW will be called with the argument 0.427014E+38
+ This may underflow
+
+
+ DAW returned the value 0.000000E+00
+
+
+
+ This concludes the tests
+Note: The following floating-point exceptions are signalling: IEEE_DIVIDE_BY_ZERO IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ian@debian:~$ 
+
