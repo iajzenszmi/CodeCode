@@ -1,3 +1,7 @@
+ian@debian:~$ gfortran 498.f -std=legacy -O3 -o 498r
+ian@debian:~$ ./498r
+   2.00000000               0           0   3.49241346E-02   3.29809523      -5.30903898E-02   4.10068274    
+ian@debian:~$ cat 498.f
          real z1,ai1,bi1,aid1,bid1
          integer nfunc1, iscal1            
          z1 = 2.0
@@ -362,4 +366,6 @@ C     DIMENSION A(25)
       RETURN
       END
 
+
+ian@debian:~$ 
 

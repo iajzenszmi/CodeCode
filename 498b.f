@@ -345,8 +345,8 @@ C           EVALUATED.  (0.0 .LE. X .LE. 1.0).
 C N    -    THE NUMBER OF TERMS OF THE SERIES TO BE SUMMED.
 C A(R) -    THE CHEBYSHEV COEFFICIENTS FOR THE SERIES.
 C F    -    THE COMPUTED SUM OF THE SERIES.
-C     DIMENSION A(25)
-      real :: A(N)
+      DIMENSION A(25)
+C      real :: A(N)
       B = 0.0
       D = A(N)
       U = X + X - 1.0
