@@ -1,0 +1,57 @@
+ian@debian:~$ wget http://www.hoffman2.idre.ucla.edu/software-files/c-fortran-interop/cfun.c
+--2020-08-29 10:30:37--  http://www.hoffman2.idre.ucla.edu/software-files/c-fortran-interop/cfun.c
+Resolving www.hoffman2.idre.ucla.edu (www.hoffman2.idre.ucla.edu)... 164.67.174.59
+Connecting to www.hoffman2.idre.ucla.edu (www.hoffman2.idre.ucla.edu)|164.67.174.59|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 175 [text/plain]
+Saving to: ‘cfun.c’
+
+cfun.c              100%[===================>]     175  --.-KB/s    in 0s      
+
+2020-08-29 10:30:37 (4.53 MB/s) - ‘cfun.c’ saved [175/175]
+
+ian@debian:~$ cat cfun.c
+#include <stdio.h>
+int cfun_(int *ip, double *xp)
+{
+  int i = *ip;
+  double x = *xp;
+  printf("This is in C function...\n");
+  printf("i = %d, x = %g\n", i, x);
+  return 0;
+}
+ian@debian:~$ cc cfun.c -o cfun
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+ian@debian:~$ cc cfun.c -c
+ian@debian:~$ gfortran ffun.f -c
+gfortran: error: ffun.f: No such file or directory
+gfortran: fatal error: no input files
+compilation terminated.
+ian@debian:~$ ls fun*
+ls: cannot access 'fun*': No such file or directory
+ian@debian:~$ ls *fun*
+cfun.c  cfun.o
+ian@debian:~$ wget http://www.hoffman2.idre.ucla.edu/software-files/c-fortran-interop/f-call-c.f
+--2020-08-29 11:02:38--  http://www.hoffman2.idre.ucla.edu/software-files/c-fortran-interop/f-call-c.f
+Resolving www.hoffman2.idre.ucla.edu (www.hoffman2.idre.ucla.edu)... 164.67.174.59
+Connecting to www.hoffman2.idre.ucla.edu (www.hoffman2.idre.ucla.edu)|164.67.174.59|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 180 [text/plain]
+Saving to: ‘f-call-c.f.1’
+
+f-call-c.f.1        100%[===================>]     180  --.-KB/s    in 0s      
+
+2020-08-29 11:02:38 (4.45 MB/s) - ‘f-call-c.f.1’ saved [180/180]
+
+ian@debian:~$ gfortran -ffree-form -c f-call-c.f
+ian@debian:~$ gcc -c cfun.c
+ian@debian:~$ gfortran -o f-call-c-gcc f-call-c.o cfun.o
+ian@debian:~$ ./f-call-c-gcc
+ Fortran calling C, passing
+ i=           1 x=   3.1415901184082031     
+This is in C function...
+i = 1, x = 3.14159
+ian@debian:~$ 
+
