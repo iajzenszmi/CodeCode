@@ -1,0 +1,74 @@
+ian@debian:~/gnss$ ls
+gnss-sdr-master  master.zip
+ian@debian:~/gnss$ sloccount gnss-sdr-master
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/gnss/gnss-sdr-master/AUTHORS to top_dir
+Adding /home/ian/gnss/gnss-sdr-master/CMakeLists.txt to top_dir
+Adding /home/ian/gnss/gnss-sdr-master/CODE_OF_CONDUCT.md to top_dir
+Adding /home/ian/gnss/gnss-sdr-master/CONTRIBUTING.md to top_dir
+Adding /home/ian/gnss/gnss-sdr-master/COPYING to top_dir
+Creating filelist for LICENSES
+Adding /home/ian/gnss/gnss-sdr-master/README.md to top_dir
+Creating filelist for build
+Creating filelist for cmake
+Creating filelist for conf
+Creating filelist for data
+Creating filelist for docs
+Creating filelist for install
+Have a non-directory at the top, so creating directory src_top_dir
+Adding /home/ian/gnss/gnss-sdr-master/src/CMakeLists.txt to src_top_dir
+Creating filelist for src_algorithms
+Creating filelist for src_core
+Creating filelist for src_main
+Creating filelist for src_tests
+Creating filelist for src_utils
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+c_count ERROR - terminated in string in /home/ian/gnss/gnss-sdr-master/src/tests/unit-tests/signal-processing-blocks/acquisition/acq_performance_test.cc
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+137797  src_algorithms  cpp=118804,ansic=17771,python=751,xml=471
+34639   src_core        ansic=17949,cpp=16690
+30643   src_tests       cpp=29804,xml=839
+2459    src_utils       cpp=2452,sh=7
+160     src_main        cpp=160
+0       LICENSES        (none)
+0       build           (none)
+0       cmake           (none)
+0       conf            (none)
+0       data            (none)
+0       docs            (none)
+0       install         (none)
+0       src_top_dir     (none)
+0       top_dir         (none)
+
+
+Totals grouped by language (dominant language first):
+cpp:         167910 (81.63%)
+ansic:        35720 (17.37%)
+xml:           1310 (0.64%)
+python:         751 (0.37%)
+sh:               7 (0.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 205,698
+Development Effort Estimate, Person-Years (Person-Months) = 53.69 (644.32)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 2.43 (29.20)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 22.06
+Total Estimated Cost to Develop                           = $ 7,253,259
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@debian:~/gnss$ 
+
