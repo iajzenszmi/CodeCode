@@ -1,0 +1,2245 @@
+if have *.py file 
+get hold of shedskin-examples-0.9.5 from google code make a local directory and paste your .py file therein.
+shedskin filename.py
+make clean
+make filename 
+then run -$ time python filename.py  
+and run -$ time ./filename.
+
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ make sudoku5
+g++  -O2 -march=native -Wno-deprecated  -I. -I/usr/share/shedskin/lib -D__SS_NOBOUNDS /home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp /usr/share/shedskin/lib/re.cpp /usr/share/shedskin/lib/itertools.cpp /usr/share/shedskin/lib/builtin.cpp -lgc -lpcre  -o sudoku5
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp:1:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+/home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp: In member function ‘virtual __shedskin__::tuple2<__shedskin__::tuple2<__shedskin__::str*, __shedskin__::tuple2<int, int>*>*, __shedskin__::set<__shedskin__::tuple2<int, int>*>*>* __sudoku5__::list_comp_4::__get_next()’:
+/home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp:138:22: warning: control reaches end of non-void function [-Wreturn-type]
+     __stop_iteration = true;
+     ~~~~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/share/shedskin/lib/builtin.hpp:1215,
+                 from /home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp:1:
+/usr/share/shedskin/lib/builtin/function.hpp: In member function ‘A __shedskin__::__ss_reverse<A>::__get_next() [with A = __shedskin__::tuple2<__shedskin__::str*, __shedskin__::tuple2<int, int>*>*]’:
+/usr/share/shedskin/lib/builtin/function.hpp:232:9: warning: control reaches end of non-void function [-Wreturn-type]
+         this->__stop_iteration = true;
+         ^~~~
+/home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp: In member function ‘virtual __shedskin__::str* __sudoku5__::list_comp_6::__get_next()’:
+/home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp:172:22: warning: control reaches end of non-void function [-Wreturn-type]
+     __stop_iteration = true;
+     ~~~~~~~~~~~~~~~~~^~~~~~
+/home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp: In member function ‘virtual __shedskin__::list<__shedskin__::list<int>*>* __sudoku5__::__gen_solve_sudoku::__get_next()’:
+/home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp:257:26: warning: control reaches end of non-void function [-Wreturn-type]
+         __stop_iteration = true;
+         ~~~~~~~~~~~~~~~~~^~~~~~
+/home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp: In member function ‘virtual __shedskin__::list<__shedskin__::tuple2<int, int>*>* __sudoku5__::__gen_solve::__get_next()’:
+/home/ian/shedskin/shedskin-examples-0.9.4/sudoku5.cpp:353:26: warning: control reaches end of non-void function [-Wreturn-type]
+         __stop_iteration = true;
+         ~~~~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /usr/share/shedskin/lib/re.hpp:9,
+                 from /usr/share/shedskin/lib/re.cpp:3:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /usr/share/shedskin/lib/itertools.hpp:6,
+                 from /usr/share/shedskin/lib/itertools.cpp:3:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /usr/share/shedskin/lib/builtin.cpp:3:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ time ./sudoku5
+Segmentation fault
+
+real	0m0.024s
+user	0m0.017s
+sys	0m0.001s
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ ls
+ac_encode.py     go.py                ml               sat.py
+adatron.py       gs_main.py           mm               scene.txt
+amaze.py         gtp.py               msp_ss.py        score4.py
+ant              hq2x.py              mwmatching.py    sha.py
+ant.cpp          imageproc_lib        nbody.py         sieve.py
+ant.hpp          imageproc.py         neural1.py       smallpic.tga
+ant.py           intkarat.t64         neural2.py       sokoban.py
+astar_main.py    kanoodle.py          oliva2.py        solitaire.py
+astar.py         kmeanspp.py          othello.py       stereo_main.py
+bh.py            L.bmp                path_tracing.py  stereo.py
+block.py         lib                  pisang.py        sudoku1.py
+brainfuck.py     life.py              plcfrs.py        sudoku2.py
+c64              linalg.py            pygasus_main.py  sudoku3.py
+c64_main.py      loop.py              pygasus.py       sudoku4.py
+chaos.py         LZ2.py               pygmy.py         sudoku5
+chess.py         Makefile             pylife_main.py   sudoku5.cpp
+chull.py         Makefile2            pylife.py        sudoku5.hpp
+circle_main.py   mandelbrot           pylot            sudoku5.hpp.gch
+circle.py        mandelbrot2_main.py  pylot_main.py    sudoku5.py
+colorsys.py      mandelbrot2.py       pystone.py       TarsaLZP.py
+com              mandelbrot.cpp       quameon          testdata
+dijkstra2.py     mandelbrot.hpp       randam.ppm       tictactoe.py
+dijkstra.py      mandelbrot.hpp.gch   R.bmp            tiger1.jpg
+DISCO            mandelbrot.py        rdb.py           timsort.py
+disco.py         mao.py               README           TonyJpegDecoder.py
+fysphun_main.py  mario_bros.nes       richards.py      voronoi2.py
+fysphun.py       mastermind2.py       ROM              voronoi.py
+genetic2.py      mastermind_main.py   rsync.py         yopyra.py
+genetic.py       minilight.py         rubik2.py
+Gh0stenstein     minpng.py            rubik.py
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ ./sudoku5
+Segmentation fault
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ python chess.py
+(0, 33571891)
+(0, 33567556)
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ python circle.py
+2.7.16 (default, Oct 10 2019, 22:02:15) 
+[GCC 8.3.0]
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ python djikstra.py
+python: can't open file 'djikstra.py': [Errno 2] No such file or directory
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ python dijkstra.py
+dijkstra 99 ---> 81:  [56, 8, 77, 69, 81] 117.801824349
+	 => dijkstra 56 ---> 81:  [8, 77, 69, 81] 78.132967333
+	 => dijkstra 8 ---> 81:  [77, 69, 81] 66.2269765765
+	 => dijkstra 77 ---> 81:  [69, 81] 44.6164522479
+	 => dijkstra 69 ---> 81:  [81] 32.1330849267
+dijkstra 85 ---> 42:  [42] 29.1008505699
+dijkstra 50 ---> 20:  [78, 70, 15, 69, 20] 166.449875235
+	 => dijkstra 78 ---> 20:  [70, 15, 69, 20] 97.6210639557
+	 => dijkstra 70 ---> 20:  [15, 69, 20] 61.5842010196
+	 => dijkstra 15 ---> 20:  [69, 20] 46.2213522553
+	 => dijkstra 69 ---> 20:  [20] 29.7963897834
+dijkstra 75 ---> 33:  [68, 33] 62.9326302613
+	 => dijkstra 68 ---> 33:  [33] 24.1901762168
+dijkstra 3 ---> 37:  [12, 45, 37] 63.8368331297
+	 => dijkstra 12 ---> 37:  [45, 37] 30.7395287097
+	 => dijkstra 45 ---> 37:  [37] 17.6904533095
+dijkstra 12 ---> 90:  [56, 14, 94, 90] 75.5633241078
+	 => dijkstra 56 ---> 90:  [14, 94, 90] 50.2322384836
+	 => dijkstra 14 ---> 90:  [94, 90] 35.453285595
+	 => dijkstra 94 ---> 90:  [90] 12.4648237757
+dijkstra 38 ---> 30:  [53, 30] 108.845640596
+	 => dijkstra 53 ---> 30:  [30] 68.2271758468
+dijkstra 76 ---> 85:  [10, 15, 85] 65.0925101108
+	 => dijkstra 10 ---> 85:  [15, 85] 46.6320199493
+	 => dijkstra 15 ---> 85:  [85] 13.1921104708
+dijkstra 13 ---> 34:  [30, 71, 2, 85, 34] 136.142508255
+	 => dijkstra 30 ---> 34:  [71, 2, 85, 34] 99.136023648
+	 => dijkstra 71 ---> 34:  [2, 85, 34] 50.7079853871
+	 => dijkstra 2 ---> 34:  [85, 34] 24.8339871964
+	 => dijkstra 85 ---> 34:  [34] 14.3865281067
+dijkstra 78 ---> 63:  [11, 75, 63] 64.9695294918
+	 => dijkstra 11 ---> 63:  [75, 63] 47.3680122882
+	 => dijkstra 75 ---> 63:  [63] 10.4173690939
+dijkstra 91 ---> 99:  [99] 13.8282875156
+dijkstra 96 ---> 82:  [47, 82] 49.7003967785
+	 => dijkstra 47 ---> 82:  [82] 12.4180119159
+dijkstra 46 ---> 85:  [58, 85] 127.337085159
+	 => dijkstra 58 ---> 85:  [85] 72.5370079587
+dijkstra 2 ---> 10:  [12, 10] 47.2198438471
+	 => dijkstra 12 ---> 10:  [10] 16.4062110884
+dijkstra 69 ---> 83:  [39, 19, 29, 54, 83] 131.983005468
+	 => dijkstra 39 ---> 83:  [19, 29, 54, 83] 116.910140871
+	 => dijkstra 19 ---> 83:  [29, 54, 83] 87.1864608022
+	 => dijkstra 29 ---> 83:  [54, 83] 58.4999034193
+	 => dijkstra 54 ---> 83:  [83] 31.488853975
+dijkstra 80 ---> 72:  [46, 94, 72] 80.4419123973
+	 => dijkstra 46 ---> 72:  [94, 72] 36.9545962126
+	 => dijkstra 94 ---> 72:  [72] 13.8120676304
+dijkstra 49 ---> 80:  [71, 87, 80] 50.5389871602
+	 => dijkstra 71 ---> 80:  [87, 80] 35.525512211
+	 => dijkstra 87 ---> 80:  [80] 20.6030501982
+dijkstra 62 ---> 66:  [80, 91, 66] 130.047442181
+	 => dijkstra 80 ---> 66:  [91, 66] 104.027991705
+	 => dijkstra 91 ---> 66:  [66] 89.1405685457
+dijkstra 10 ---> 77:  [43, 57, 77] 105.549670949
+	 => dijkstra 43 ---> 77:  [57, 77] 69.1561158893
+	 => dijkstra 57 ---> 77:  [77] 28.9361790602
+dijkstra 34 ---> 9:  [83, 41, 9] 103.181548403
+	 => dijkstra 83 ---> 9:  [41, 9] 78.8422766483
+	 => dijkstra 41 ---> 9:  [9] 29.4212052587
+dijkstra 78 ---> 36:  [73, 26, 66, 36] 87.9336288477
+	 => dijkstra 73 ---> 36:  [26, 66, 36] 65.7080375845
+	 => dijkstra 26 ---> 36:  [66, 36] 42.5818099052
+	 => dijkstra 66 ---> 36:  [36] 23.3978913478
+dijkstra 44 ---> 85:  [51, 59, 85] 67.5423312705
+	 => dijkstra 51 ---> 85:  [59, 85] 54.0929534983
+	 => dijkstra 59 ---> 85:  [85] 28.5044985102
+dijkstra 39 ---> 24:  [60, 81, 66, 24] 77.7023850798
+	 => dijkstra 60 ---> 24:  [81, 66, 24] 64.3404876369
+	 => dijkstra 81 ---> 24:  [66, 24] 52.4938094423
+	 => dijkstra 66 ---> 24:  [24] 34.2816172336
+dijkstra 45 ---> 94:  [77, 83, 94] 112.754267874
+	 => dijkstra 77 ---> 94:  [83, 94] 43.1743839409
+	 => dijkstra 83 ---> 94:  [94] 29.2644222631
+dijkstra 35 ---> 75:  [84, 83, 56, 5, 75] 125.298155623
+	 => dijkstra 84 ---> 75:  [83, 56, 5, 75] 98.6869674485
+	 => dijkstra 83 ---> 75:  [56, 5, 75] 69.4833489713
+	 => dijkstra 56 ---> 75:  [5, 75] 31.3272465192
+	 => dijkstra 5 ---> 75:  [75] 16.4721189593
+dijkstra 7 ---> 87:  [36, 74, 65, 54, 5, 87] 125.450138192
+	 => dijkstra 36 ---> 87:  [74, 65, 54, 5, 87] 85.4292924199
+	 => dijkstra 74 ---> 87:  [65, 54, 5, 87] 69.9644366255
+	 => dijkstra 65 ---> 87:  [54, 5, 87] 51.4905049272
+	 => dijkstra 54 ---> 87:  [5, 87] 38.5907680584
+	 => dijkstra 5 ---> 87:  [87] 20.9059610541
+dijkstra 75 ---> 95:  [49, 18, 34, 69, 95] 89.7798546624
+	 => dijkstra 49 ---> 95:  [18, 34, 69, 95] 79.1040565839
+	 => dijkstra 18 ---> 95:  [34, 69, 95] 68.9792870843
+	 => dijkstra 34 ---> 95:  [69, 95] 56.4238670652
+	 => dijkstra 69 ---> 95:  [95] 40.7745927658
+dijkstra 29 ---> 21:  [21] 93.4594644443
+dijkstra 13 ---> 91:  [55, 54, 91] 70.7900841755
+	 => dijkstra 55 ---> 91:  [54, 91] 59.5078213846
+	 => dijkstra 54 ---> 91:  [91] 16.8088121315
+dijkstra 9 ---> 89:  [88, 21, 77, 89] 88.1939790428
+	 => dijkstra 88 ---> 89:  [21, 77, 89] 76.6066126778
+	 => dijkstra 21 ---> 89:  [77, 89] 39.0905375434
+	 => dijkstra 77 ---> 89:  [89] 27.7873349806
+dijkstra 87 ---> 55:  [62, 71, 34, 55] 172.130129989
+	 => dijkstra 62 ---> 55:  [71, 34, 55] 132.276877814
+	 => dijkstra 71 ---> 55:  [34, 55] 110.229262652
+	 => dijkstra 34 ---> 55:  [55] 35.603067886
+dijkstra 69 ---> 84:  [26, 84] 79.9847315042
+	 => dijkstra 26 ---> 84:  [84] 10.2387082097
+dijkstra 14 ---> 64:  [27, 64] 57.0007050787
+	 => dijkstra 27 ---> 64:  [64] 13.0628012669
+dijkstra 54 ---> 41:  [78, 40, 41] 78.8811321156
+	 => dijkstra 78 ---> 41:  [40, 41] 34.7019133112
+	 => dijkstra 40 ---> 41:  [41] 18.9346153321
+dijkstra 93 ---> 59:  [30, 59] 68.3405745276
+	 => dijkstra 30 ---> 59:  [59] 52.1079060221
+dijkstra 65 ---> 27:  [90, 52, 27] 90.978752715
+	 => dijkstra 90 ---> 27:  [52, 27] 64.1873308484
+	 => dijkstra 52 ---> 27:  [27] 32.1038051597
+dijkstra 42 ---> 12:  [74, 12] 64.1515872646
+	 => dijkstra 74 ---> 12:  [12] 52.9180539856
+dijkstra 77 ---> 41:  [90, 13, 41] 69.4053990797
+	 => dijkstra 90 ---> 41:  [13, 41] 51.6478509672
+	 => dijkstra 13 ---> 41:  [41] 15.3801357556
+dijkstra 10 ---> 32:  [43, 59, 16, 32] 94.6232834644
+	 => dijkstra 43 ---> 32:  [59, 16, 32] 48.4356330468
+	 => dijkstra 59 ---> 32:  [16, 32] 34.9164991605
+	 => dijkstra 16 ---> 32:  [32] 12.7345611903
+dijkstra 54 ---> 37:  [96, 47, 24, 37] 112.641923822
+	 => dijkstra 96 ---> 37:  [47, 24, 37] 86.3259877232
+	 => dijkstra 47 ---> 37:  [24, 37] 70.5390128763
+	 => dijkstra 24 ---> 37:  [37] 41.389971226
+dijkstra 53 ---> 27:  [40, 70, 45, 38, 27] 108.789828646
+	 => dijkstra 40 ---> 27:  [70, 45, 38, 27] 92.0659932635
+	 => dijkstra 70 ---> 27:  [45, 38, 27] 71.1855316719
+	 => dijkstra 45 ---> 27:  [38, 27] 42.1844334594
+	 => dijkstra 38 ---> 27:  [27] 20.6185131467
+dijkstra 20 ---> 100:  [25, 46, 100] 78.6921820914
+	 => dijkstra 25 ---> 100:  [46, 100] 41.7693149431
+	 => dijkstra 46 ---> 100:  [100] 12.8075697568
+dijkstra 87 ---> 69:  [53, 78, 82, 59, 69] 166.146248183
+	 => dijkstra 53 ---> 69:  [78, 82, 59, 69] 113.023363602
+	 => dijkstra 78 ---> 69:  [82, 59, 69] 90.6657169679
+	 => dijkstra 82 ---> 69:  [59, 69] 70.1822641424
+	 => dijkstra 59 ---> 69:  [69] 29.6025489659
+dijkstra 70 ---> 39:  [39] 41.502107383
+dijkstra 33 ---> 89:  [71, 35, 74, 89] 135.412897599
+	 => dijkstra 71 ---> 89:  [35, 74, 89] 100.117329369
+	 => dijkstra 35 ---> 89:  [74, 89] 83.0141435563
+	 => dijkstra 74 ---> 89:  [89] 45.0572173171
+dijkstra 13 ---> 68:  [68] 36.4238524512
+dijkstra 28 ---> 61:  [18, 24, 42, 1, 61] 140.643644176
+	 => dijkstra 18 ---> 61:  [24, 42, 1, 61] 96.3296340693
+	 => dijkstra 24 ---> 61:  [42, 1, 61] 67.1673728927
+	 => dijkstra 42 ---> 61:  [1, 61] 49.7962487976
+	 => dijkstra 1 ---> 61:  [61] 36.5381986564
+dijkstra 60 ---> 39:  [53, 39] 76.4943272141
+	 => dijkstra 53 ---> 39:  [39] 46.4706534873
+dijkstra 63 ---> 36:  [36] 71.4917377105
+dijkstra 67 ---> 62:  [1, 83, 62] 77.2982939703
+	 => dijkstra 1 ---> 62:  [83, 62] 57.6029669749
+	 => dijkstra 83 ---> 62:  [62] 34.7626231643
+dijkstra 82 ---> 14:  [13, 75, 14] 79.7778419666
+	 => dijkstra 13 ---> 14:  [75, 14] 57.2613640612
+	 => dijkstra 75 ---> 14:  [14] 17.1541743364
+dijkstra 98 ---> 83:  [37, 48, 81, 83] 75.6236900793
+	 => dijkstra 37 ---> 83:  [48, 81, 83] 64.2486038899
+	 => dijkstra 48 ---> 83:  [81, 83] 38.8325137065
+	 => dijkstra 81 ---> 83:  [83] 19.0137615793
+dijkstra 12 ---> 78:  [88, 23, 57, 78] 68.7200497179
+	 => dijkstra 88 ---> 78:  [23, 57, 78] 56.3496067821
+	 => dijkstra 23 ---> 78:  [57, 78] 24.0807753086
+	 => dijkstra 57 ---> 78:  [78] 10.9691085474
+dijkstra 13 ---> 92:  [36, 86, 60, 92] 99.4777641579
+	 => dijkstra 36 ---> 92:  [86, 60, 92] 76.8703739222
+	 => dijkstra 86 ---> 92:  [60, 92] 62.5095947161
+	 => dijkstra 60 ---> 92:  [92] 27.5687232527
+dijkstra 43 ---> 13:  [75, 11, 13] 103.372691867
+	 => dijkstra 75 ---> 13:  [11, 13] 55.9296698327
+	 => dijkstra 11 ---> 13:  [13] 29.3507609689
+dijkstra 99 ---> 85:  [16, 85] 73.7758890705
+	 => dijkstra 16 ---> 85:  [85] 30.2217007288
+dijkstra 59 ---> 98:  [2, 26, 48, 98] 116.310613029
+	 => dijkstra 2 ---> 98:  [26, 48, 98] 71.4990042273
+	 => dijkstra 26 ---> 98:  [48, 98] 33.169578432
+	 => dijkstra 48 ---> 98:  [98] 11.5773798564
+dijkstra 70 ---> 40:  [58, 67, 40] 108.459699732
+	 => dijkstra 58 ---> 40:  [67, 40] 74.215993523
+	 => dijkstra 67 ---> 40:  [40] 47.8103285228
+dijkstra 71 ---> 69:  [90, 3, 80, 69] 83.2446303127
+	 => dijkstra 90 ---> 69:  [3, 80, 69] 62.7774625917
+	 => dijkstra 3 ---> 69:  [80, 69] 45.2177643335
+	 => dijkstra 80 ---> 69:  [69] 15.4331168239
+dijkstra 81 ---> 49:  [94, 49] 87.0760386606
+	 => dijkstra 94 ---> 49:  [49] 71.1726668633
+dijkstra 34 ---> 15:  [100, 69, 15] 86.5603914377
+	 => dijkstra 100 ---> 15:  [69, 15] 73.0279439495
+	 => dijkstra 69 ---> 15:  [15] 37.3784842928
+dijkstra 79 ---> 68:  [12, 32, 68] 116.966306714
+	 => dijkstra 12 ---> 68:  [32, 68] 91.1813785527
+	 => dijkstra 32 ---> 68:  [68] 40.3089814202
+dijkstra 24 ---> 8:  [20, 75, 98, 8] 97.2290279767
+	 => dijkstra 20 ---> 8:  [75, 98, 8] 64.0694526757
+	 => dijkstra 75 ---> 8:  [98, 8] 49.8790194167
+	 => dijkstra 98 ---> 8:  [8] 16.9500664267
+dijkstra 43 ---> 30:  [26, 30] 92.020723112
+	 => dijkstra 26 ---> 30:  [30] 49.0700807258
+dijkstra 7 ---> 40:  [18, 50, 40] 99.1919377315
+	 => dijkstra 18 ---> 40:  [50, 40] 79.9171422921
+	 => dijkstra 50 ---> 40:  [40] 57.8823212609
+dijkstra 47 ---> 49:  [36, 10, 49] 75.4894018149
+	 => dijkstra 36 ---> 49:  [10, 49] 61.9999511474
+	 => dijkstra 10 ---> 49:  [49] 30.892369799
+dijkstra 92 ---> 100:  [43, 33, 98, 70, 100] 109.159262709
+	 => dijkstra 43 ---> 100:  [33, 98, 70, 100] 96.6144336629
+	 => dijkstra 33 ---> 100:  [98, 70, 100] 66.4741706556
+	 => dijkstra 98 ---> 100:  [70, 100] 47.2710764252
+	 => dijkstra 70 ---> 100:  [100] 31.4997189643
+dijkstra 66 ---> 72:  [72] 12.4940700502
+dijkstra 15 ---> 10:  [96, 10] 91.6755312043
+	 => dijkstra 96 ---> 10:  [10] 63.3283502042
+dijkstra 22 ---> 25:  [79, 66, 25] 77.3724670359
+	 => dijkstra 79 ---> 25:  [66, 25] 54.1912988681
+	 => dijkstra 66 ---> 25:  [25] 30.5908047918
+dijkstra 44 ---> 22:  [58, 77, 22] 117.594112222
+	 => dijkstra 58 ---> 22:  [77, 22] 101.334291225
+	 => dijkstra 77 ---> 22:  [22] 64.7794178009
+dijkstra 97 ---> 37:  [47, 34, 37] 78.6358972634
+	 => dijkstra 47 ---> 37:  [34, 37] 43.7099520447
+	 => dijkstra 34 ---> 37:  [37] 23.5435194708
+dijkstra 81 ---> 70:  [70] 66.6103011
+dijkstra 34 ---> 11:  [90, 24, 28, 32, 11] 120.963039496
+	 => dijkstra 90 ---> 11:  [24, 28, 32, 11] 86.8966169764
+	 => dijkstra 24 ---> 11:  [28, 32, 11] 62.7231511503
+	 => dijkstra 28 ---> 11:  [32, 11] 50.0715893666
+	 => dijkstra 32 ---> 11:  [11] 26.8202815506
+dijkstra 15 ---> 72:  [49, 88, 72] 103.543954529
+	 => dijkstra 49 ---> 72:  [88, 72] 61.5985448876
+	 => dijkstra 88 ---> 72:  [72] 40.3842240591
+dijkstra 38 ---> 1:  [51, 2, 33, 57, 1] 100.34758795
+	 => dijkstra 51 ---> 1:  [2, 33, 57, 1] 80.7131320996
+	 => dijkstra 2 ---> 1:  [33, 57, 1] 55.5480496602
+	 => dijkstra 33 ---> 1:  [57, 1] 42.5949257545
+	 => dijkstra 57 ---> 1:  [1] 15.9333967386
+dijkstra 12 ---> 76:  [72, 76] 131.0275614
+	 => dijkstra 72 ---> 76:  [76] 97.8935613905
+dijkstra 52 ---> 95:  [95] 12.0057272732
+dijkstra 69 ---> 62:  [62] 84.2787608812
+dijkstra 84 ---> 88:  [95, 88] 93.2962502483
+	 => dijkstra 95 ---> 88:  [88] 24.2413110889
+dijkstra 67 ---> 66:  [37, 85, 48, 14, 66] 103.158059564
+	 => dijkstra 37 ---> 66:  [85, 48, 14, 66] 87.6591020023
+	 => dijkstra 85 ---> 66:  [48, 14, 66] 74.0832119772
+	 => dijkstra 48 ---> 66:  [14, 66] 58.6383366796
+	 => dijkstra 14 ---> 66:  [66] 20.0179628661
+dijkstra 56 ---> 1:  [28, 30, 1] 82.3368658018
+	 => dijkstra 28 ---> 1:  [30, 1] 54.659395257
+	 => dijkstra 30 ---> 1:  [1] 11.2101305855
+dijkstra 49 ---> 63:  [67, 63] 25.2565228865
+	 => dijkstra 67 ---> 63:  [63] 14.972676738
+dijkstra 53 ---> 52:  [76, 26, 52] 87.7856074681
+	 => dijkstra 76 ---> 52:  [26, 52] 74.1125741627
+	 => dijkstra 26 ---> 52:  [52] 38.4132969808
+dijkstra 39 ---> 43:  [25, 21, 81, 43] 88.727396556
+	 => dijkstra 25 ---> 43:  [21, 81, 43] 68.6302165332
+	 => dijkstra 21 ---> 43:  [81, 43] 52.8745623676
+	 => dijkstra 81 ---> 43:  [43] 24.8265947939
+dijkstra 54 ---> 88:  [44, 2, 31, 88] 104.83041295
+	 => dijkstra 44 ---> 88:  [2, 31, 88] 45.7974251042
+	 => dijkstra 2 ---> 88:  [31, 88] 29.4495552628
+	 => dijkstra 31 ---> 88:  [88] 15.8232291826
+dijkstra 19 ---> 35:  [35] 42.0604892478
+dijkstra 51 ---> 15:  [69, 65, 5, 15] 96.8234817203
+	 => dijkstra 69 ---> 15:  [65, 5, 15] 75.2136900569
+	 => dijkstra 65 ---> 15:  [5, 15] 48.5453172665
+	 => dijkstra 5 ---> 15:  [15] 37.9341661787
+dijkstra 12 ---> 93:  [47, 8, 94, 93] 97.9325584225
+	 => dijkstra 47 ---> 93:  [8, 94, 93] 46.8625009151
+	 => dijkstra 8 ---> 93:  [94, 93] 32.5062834526
+	 => dijkstra 94 ---> 93:  [93] 16.8344916241
+dijkstra 53 ---> 16:  [6, 40, 16] 84.6668225546
+	 => dijkstra 6 ---> 16:  [40, 16] 52.0109071516
+	 => dijkstra 40 ---> 16:  [16] 28.0760703601
+dijkstra 27 ---> 50:  [58, 80, 28, 66, 50] 100.148155835
+	 => dijkstra 58 ---> 50:  [80, 28, 66, 50] 67.8973327547
+	 => dijkstra 80 ---> 50:  [28, 66, 50] 50.8617010058
+	 => dijkstra 28 ---> 50:  [66, 50] 30.9654712474
+	 => dijkstra 66 ---> 50:  [50] 19.0807005423
+dijkstra 73 ---> 7:  [44, 81, 12, 82, 7] 145.521442693
+	 => dijkstra 44 ---> 7:  [81, 12, 82, 7] 130.465930854
+	 => dijkstra 81 ---> 7:  [12, 82, 7] 117.493666623
+	 => dijkstra 12 ---> 7:  [82, 7] 26.6775959567
+	 => dijkstra 82 ---> 7:  [7] 14.2653861435
+dijkstra 17 ---> 43:  [44, 29, 100, 43] 60.9640531012
+	 => dijkstra 44 ---> 43:  [29, 100, 43] 49.2358505499
+	 => dijkstra 29 ---> 43:  [100, 43] 33.8249085423
+	 => dijkstra 100 ---> 43:  [43] 14.6578230933
+dijkstra 31 ---> 34:  [60, 34] 83.7929790977
+	 => dijkstra 60 ---> 34:  [34] 47.8479621858
+dijkstra 87 ---> 43:  [58, 71, 43] 55.9063104077
+	 => dijkstra 58 ---> 43:  [71, 43] 34.6647643353
+	 => dijkstra 71 ---> 43:  [43] 11.3019430254
+dijkstra 75 ---> 3:  [94, 95, 3] 89.7393688814
+	 => dijkstra 94 ---> 3:  [95, 3] 71.1597968772
+	 => dijkstra 95 ---> 3:  [3] 55.0210367097
+dijkstra 100 ---> 16:  [92, 89, 68, 56, 16] 91.7450840355
+	 => dijkstra 92 ---> 16:  [89, 68, 56, 16] 81.6718128431
+	 => dijkstra 89 ---> 16:  [68, 56, 16] 42.5759266855
+	 => dijkstra 68 ---> 16:  [56, 16] 29.8236435041
+	 => dijkstra 56 ---> 16:  [16] 18.2310692456
+dijkstra 22 ---> 76:  [77, 76] 55.135092484
+	 => dijkstra 77 ---> 76:  [76] 43.4343026963
+dijkstra 25 ---> 75:  [60, 22, 98, 75] 112.667157049
+	 => dijkstra 60 ---> 75:  [22, 98, 75] 98.8458894641
+	 => dijkstra 22 ---> 75:  [98, 75] 80.0650728266
+	 => dijkstra 98 ---> 75:  [75] 15.3688805327
+dijkstra 94 ---> 83:  [70, 97, 83] 56.9100417556
+	 => dijkstra 70 ---> 83:  [97, 83] 33.4544721522
+	 => dijkstra 97 ---> 83:  [83] 19.3441568343
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ time python dijkstra.py
+dijkstra 30 ---> 54:  [67, 76, 22, 52, 54] 216.67066309
+	 => dijkstra 67 ---> 54:  [76, 22, 52, 54] 205.34863291
+	 => dijkstra 76 ---> 54:  [22, 52, 54] 174.349621938
+	 => dijkstra 22 ---> 54:  [52, 54] 107.933877333
+	 => dijkstra 52 ---> 54:  [54] 13.809999111
+dijkstra 68 ---> 51:  [17, 49, 51] 98.9164156119
+	 => dijkstra 17 ---> 51:  [49, 51] 57.381254749
+	 => dijkstra 49 ---> 51:  [51] 46.104594777
+dijkstra 93 ---> 38:  [66, 69, 38] 76.5524605411
+	 => dijkstra 66 ---> 38:  [69, 38] 64.0898967057
+	 => dijkstra 69 ---> 38:  [38] 11.9742831295
+dijkstra 59 ---> 3:  [52, 3] 90.5154202792
+	 => dijkstra 52 ---> 3:  [3] 75.1946720676
+dijkstra 46 ---> 55:  [23, 15, 55] 133.267901776
+	 => dijkstra 23 ---> 55:  [15, 55] 105.691983102
+	 => dijkstra 15 ---> 55:  [55] 52.5739868332
+dijkstra 55 ---> 33:  [15, 33] 46.6850921401
+	 => dijkstra 15 ---> 33:  [33] 33.2926247592
+dijkstra 8 ---> 80:  [80] 46.5896386703
+dijkstra 2 ---> 45:  [93, 68, 45] 84.4063373474
+	 => dijkstra 93 ---> 45:  [68, 45] 72.3467051981
+	 => dijkstra 68 ---> 45:  [45] 31.4887771331
+dijkstra 29 ---> 89:  [24, 89] 91.2145186472
+	 => dijkstra 24 ---> 89:  [89] 44.1181688936
+dijkstra 80 ---> 99:  [94, 44, 99] 54.0018162693
+	 => dijkstra 94 ---> 99:  [44, 99] 30.8648565575
+	 => dijkstra 44 ---> 99:  [99] 11.5999334311
+dijkstra 83 ---> 47:  [74, 12, 47] 112.427062562
+	 => dijkstra 74 ---> 47:  [12, 47] 40.5375784891
+	 => dijkstra 12 ---> 47:  [47] 21.0974258129
+dijkstra 41 ---> 63:  [51, 63] 70.662852336
+	 => dijkstra 51 ---> 63:  [63] 14.0297489496
+dijkstra 64 ---> 61:  [93, 61] 30.02877948
+	 => dijkstra 93 ---> 61:  [61] 11.276691647
+dijkstra 43 ---> 40:  [48, 53, 40] 68.4647486131
+	 => dijkstra 48 ---> 40:  [53, 40] 50.8502497971
+	 => dijkstra 53 ---> 40:  [40] 10.9585229793
+dijkstra 28 ---> 32:  [26, 32] 81.3718195127
+	 => dijkstra 26 ---> 32:  [32] 36.4580373186
+dijkstra 49 ---> 78:  [54, 8, 6, 31, 78] 83.2069071925
+	 => dijkstra 54 ---> 78:  [8, 6, 31, 78] 73.2044685104
+	 => dijkstra 8 ---> 78:  [6, 31, 78] 33.7532574163
+	 => dijkstra 6 ---> 78:  [31, 78] 23.4999119903
+	 => dijkstra 31 ---> 78:  [78] 13.463502731
+dijkstra 85 ---> 26:  [76, 32, 65, 71, 26] 87.2457106957
+	 => dijkstra 76 ---> 26:  [32, 65, 71, 26] 75.2119879797
+	 => dijkstra 32 ---> 26:  [65, 71, 26] 59.6562270897
+	 => dijkstra 65 ---> 26:  [71, 26] 24.612848779
+	 => dijkstra 71 ---> 26:  [26] 11.8022407777
+dijkstra 18 ---> 14:  [38, 25, 1, 14] 93.4055245087
+	 => dijkstra 38 ---> 14:  [25, 1, 14] 71.7309382934
+	 => dijkstra 25 ---> 14:  [1, 14] 28.6612295561
+	 => dijkstra 1 ---> 14:  [14] 17.0635974822
+dijkstra 44 ---> 33:  [3, 33] 31.7406606867
+	 => dijkstra 3 ---> 33:  [33] 16.2950866806
+dijkstra 58 ---> 49:  [9, 96, 49] 83.5369366203
+	 => dijkstra 9 ---> 49:  [96, 49] 44.4397052975
+	 => dijkstra 96 ---> 49:  [49] 32.3291909835
+dijkstra 51 ---> 87:  [36, 57, 87] 64.1528630492
+	 => dijkstra 36 ---> 87:  [57, 87] 53.526853466
+	 => dijkstra 57 ---> 87:  [87] 17.493044676
+dijkstra 85 ---> 80:  [17, 80] 79.724485566
+	 => dijkstra 17 ---> 80:  [80] 61.2391169862
+dijkstra 84 ---> 67:  [45, 79, 73, 67] 112.744449359
+	 => dijkstra 45 ---> 67:  [79, 73, 67] 98.8839081712
+	 => dijkstra 79 ---> 67:  [73, 67] 70.8404042925
+	 => dijkstra 73 ---> 67:  [67] 43.2557977958
+dijkstra 17 ---> 53:  [30, 53] 52.5799787887
+	 => dijkstra 30 ---> 53:  [53] 38.1486335707
+dijkstra 53 ---> 75:  [6, 47, 22, 16, 75] 101.247653099
+	 => dijkstra 6 ---> 75:  [47, 22, 16, 75] 64.5646604702
+	 => dijkstra 47 ---> 75:  [22, 16, 75] 51.3775507328
+	 => dijkstra 22 ---> 75:  [16, 75] 29.2354289669
+	 => dijkstra 16 ---> 75:  [75] 18.5554169384
+dijkstra 85 ---> 13:  [8, 13] 44.9137602332
+	 => dijkstra 8 ---> 13:  [13] 23.3148147198
+dijkstra 13 ---> 65:  [91, 25, 18, 73, 65] 158.187184331
+	 => dijkstra 91 ---> 65:  [25, 18, 73, 65] 125.622833634
+	 => dijkstra 25 ---> 65:  [18, 73, 65] 97.9779130134
+	 => dijkstra 18 ---> 65:  [73, 65] 83.8038033701
+	 => dijkstra 73 ---> 65:  [65] 67.8769189861
+dijkstra 80 ---> 18:  [73, 98, 56, 18] 95.2530266717
+	 => dijkstra 73 ---> 18:  [98, 56, 18] 74.2260220801
+	 => dijkstra 98 ---> 18:  [56, 18] 59.2044225466
+	 => dijkstra 56 ---> 18:  [18] 46.7676338371
+dijkstra 23 ---> 29:  [29] 37.7224562546
+dijkstra 44 ---> 82:  [22, 99, 82] 80.259704998
+	 => dijkstra 22 ---> 82:  [99, 82] 34.0869295681
+	 => dijkstra 99 ---> 82:  [82] 10.4269078224
+dijkstra 86 ---> 46:  [8, 46] 99.6231033908
+	 => dijkstra 8 ---> 46:  [46] 85.5214103227
+dijkstra 81 ---> 71:  [24, 62, 54, 71] 90.8553948656
+	 => dijkstra 24 ---> 71:  [62, 54, 71] 79.197916125
+	 => dijkstra 62 ---> 71:  [54, 71] 53.3318578964
+	 => dijkstra 54 ---> 71:  [71] 18.3718026804
+dijkstra 46 ---> 50:  [28, 25, 93, 50] 60.008491516
+	 => dijkstra 28 ---> 50:  [25, 93, 50] 49.6598252642
+	 => dijkstra 25 ---> 50:  [93, 50] 35.6420534785
+	 => dijkstra 93 ---> 50:  [50] 10.8808066346
+dijkstra 39 ---> 38:  [11, 9, 92, 38] 82.5402732642
+	 => dijkstra 11 ---> 38:  [9, 92, 38] 49.4041110356
+	 => dijkstra 9 ---> 38:  [92, 38] 38.9320627111
+	 => dijkstra 92 ---> 38:  [38] 19.6658386281
+dijkstra 92 ---> 24:  [2, 63, 24] 53.636096845
+	 => dijkstra 2 ---> 24:  [63, 24] 37.9828402886
+	 => dijkstra 63 ---> 24:  [24] 10.2737452802
+dijkstra 65 ---> 78:  [33, 45, 37, 78] 87.1897051936
+	 => dijkstra 33 ---> 78:  [45, 37, 78] 68.2466358246
+	 => dijkstra 45 ---> 78:  [37, 78] 50.4514223407
+	 => dijkstra 37 ---> 78:  [78] 14.4960120942
+dijkstra 68 ---> 37:  [5, 65, 37] 92.8944807575
+	 => dijkstra 5 ---> 37:  [65, 37] 59.8669995331
+	 => dijkstra 65 ---> 37:  [37] 11.5070878773
+dijkstra 10 ---> 66:  [37, 47, 70, 82, 66] 99.3073447056
+	 => dijkstra 37 ---> 66:  [47, 70, 82, 66] 81.5350938181
+	 => dijkstra 47 ---> 66:  [70, 82, 66] 62.463556976
+	 => dijkstra 70 ---> 66:  [82, 66] 39.4173969954
+	 => dijkstra 82 ---> 66:  [66] 25.0070043078
+dijkstra 38 ---> 83:  [86, 17, 46, 29, 83] 98.1627823051
+	 => dijkstra 86 ---> 83:  [17, 46, 29, 83] 72.9957577503
+	 => dijkstra 17 ---> 83:  [46, 29, 83] 60.0173945887
+	 => dijkstra 46 ---> 83:  [29, 83] 44.1822233616
+	 => dijkstra 29 ---> 83:  [83] 31.9192329899
+dijkstra 84 ---> 83:  [86, 56, 72, 45, 83] 106.124575294
+	 => dijkstra 86 ---> 83:  [56, 72, 45, 83] 94.7330396861
+	 => dijkstra 56 ---> 83:  [72, 45, 83] 77.0913349244
+	 => dijkstra 72 ---> 83:  [45, 83] 53.0127164627
+	 => dijkstra 45 ---> 83:  [83] 38.4813408043
+dijkstra 54 ---> 100:  [26, 50, 100] 100.151360035
+	 => dijkstra 26 ---> 100:  [50, 100] 80.869277021
+	 => dijkstra 50 ---> 100:  [100] 48.5097656295
+dijkstra 16 ---> 37:  [37] 41.6471618913
+dijkstra 93 ---> 5:  [61, 71, 5] 120.904048287
+	 => dijkstra 61 ---> 5:  [71, 5] 91.8736535064
+	 => dijkstra 71 ---> 5:  [5] 67.8293565309
+dijkstra 14 ---> 35:  [35] 61.0607612878
+dijkstra 11 ---> 92:  [29, 92] 99.0657792256
+	 => dijkstra 29 ---> 92:  [92] 85.8037284775
+dijkstra 55 ---> 22:  [95, 79, 22] 41.623319257
+	 => dijkstra 95 ---> 22:  [79, 22] 31.1353797719
+	 => dijkstra 79 ---> 22:  [22] 19.4829018218
+dijkstra 74 ---> 83:  [35, 25, 71, 83] 64.3534267302
+	 => dijkstra 35 ---> 83:  [25, 71, 83] 44.2213761597
+	 => dijkstra 25 ---> 83:  [71, 83] 32.7590790261
+	 => dijkstra 71 ---> 83:  [83] 20.165262297
+dijkstra 93 ---> 63:  [79, 21, 63] 93.5712562132
+	 => dijkstra 79 ---> 63:  [21, 63] 40.7743832948
+	 => dijkstra 21 ---> 63:  [63] 24.5682310172
+dijkstra 79 ---> 72:  [76, 43, 72] 54.7426131806
+	 => dijkstra 76 ---> 72:  [43, 72] 43.6111599275
+	 => dijkstra 43 ---> 72:  [72] 26.6130066114
+dijkstra 94 ---> 27:  [27] 59.7908294453
+dijkstra 50 ---> 58:  [36, 1, 20, 35, 58] 111.644187264
+	 => dijkstra 36 ---> 58:  [1, 20, 35, 58] 64.7625927676
+	 => dijkstra 1 ---> 58:  [20, 35, 58] 53.5403532802
+	 => dijkstra 20 ---> 58:  [35, 58] 42.0056737548
+	 => dijkstra 35 ---> 58:  [58] 17.0429142737
+dijkstra 70 ---> 32:  [54, 99, 32] 69.5932279411
+	 => dijkstra 54 ---> 32:  [99, 32] 45.032046908
+	 => dijkstra 99 ---> 32:  [32] 12.9955225903
+dijkstra 89 ---> 84:  [4, 84] 53.0037077098
+	 => dijkstra 4 ---> 84:  [84] 27.0040449418
+dijkstra 75 ---> 37:  [82, 37] 106.998128673
+	 => dijkstra 82 ---> 37:  [37] 57.9790111946
+dijkstra 52 ---> 35:  [35] 43.0272633559
+dijkstra 89 ---> 13:  [10, 58, 8, 13] 149.625056215
+	 => dijkstra 10 ---> 13:  [58, 8, 13] 69.6053386574
+	 => dijkstra 58 ---> 13:  [8, 13] 58.8229180976
+	 => dijkstra 8 ---> 13:  [13] 42.227259249
+dijkstra 37 ---> 39:  [12, 18, 39] 104.941122141
+	 => dijkstra 12 ---> 39:  [18, 39] 51.5551146782
+	 => dijkstra 18 ---> 39:  [39] 29.3816398901
+dijkstra 33 ---> 92:  [26, 71, 49, 92] 71.6262309976
+	 => dijkstra 26 ---> 92:  [71, 49, 92] 55.0635884944
+	 => dijkstra 71 ---> 92:  [49, 92] 41.3112341337
+	 => dijkstra 49 ---> 92:  [92] 25.4949737725
+dijkstra 3 ---> 74:  [2, 57, 78, 74] 75.6373465371
+	 => dijkstra 2 ---> 74:  [57, 78, 74] 64.7604008755
+	 => dijkstra 57 ---> 74:  [78, 74] 37.8031021423
+	 => dijkstra 78 ---> 74:  [74] 17.6868135318
+dijkstra 97 ---> 98:  [98] 69.473841479
+dijkstra 86 ---> 39:  [40, 18, 94, 39] 130.425112449
+	 => dijkstra 40 ---> 39:  [18, 94, 39] 106.664831713
+	 => dijkstra 18 ---> 39:  [94, 39] 88.3117847032
+	 => dijkstra 94 ---> 39:  [39] 10.3065685055
+dijkstra 6 ---> 79:  [61, 83, 79] 80.82526752
+	 => dijkstra 61 ---> 79:  [83, 79] 58.6704838761
+	 => dijkstra 83 ---> 79:  [79] 12.8990555476
+dijkstra 89 ---> 65:  [66, 65] 97.4428767737
+	 => dijkstra 66 ---> 65:  [65] 59.3146861554
+dijkstra 69 ---> 62:  [90, 87, 60, 62] 106.521533737
+	 => dijkstra 90 ---> 62:  [87, 60, 62] 85.4656688074
+	 => dijkstra 87 ---> 62:  [60, 62] 73.2459338078
+	 => dijkstra 60 ---> 62:  [62] 35.3577687005
+dijkstra 54 ---> 67:  [92, 32, 24, 67] 74.3899063034
+	 => dijkstra 92 ---> 67:  [32, 24, 67] 55.8975735629
+	 => dijkstra 32 ---> 67:  [24, 67] 42.8773066359
+	 => dijkstra 24 ---> 67:  [67] 15.741126297
+dijkstra 19 ---> 32:  [88, 9, 32] 54.2654000524
+	 => dijkstra 88 ---> 32:  [9, 32] 42.9951863597
+	 => dijkstra 9 ---> 32:  [32] 14.3252035976
+dijkstra 96 ---> 3:  [13, 44, 3] 66.4560654661
+	 => dijkstra 13 ---> 3:  [44, 3] 29.6731900505
+	 => dijkstra 44 ---> 3:  [3] 19.1842549896
+dijkstra 73 ---> 26:  [13, 83, 92, 26] 129.877698732
+	 => dijkstra 13 ---> 26:  [83, 92, 26] 106.106011955
+	 => dijkstra 83 ---> 26:  [92, 26] 93.8213750715
+	 => dijkstra 92 ---> 26:  [26] 42.6207666366
+dijkstra 62 ---> 67:  [94, 67] 121.769796427
+	 => dijkstra 94 ---> 67:  [67] 64.4458762899
+dijkstra 73 ---> 53:  [70, 46, 53] 63.0160242168
+	 => dijkstra 70 ---> 53:  [46, 53] 42.4797026028
+	 => dijkstra 46 ---> 53:  [53] 28.6134829779
+dijkstra 22 ---> 16:  [68, 16] 89.176303911
+	 => dijkstra 68 ---> 16:  [16] 34.9365196523
+dijkstra 41 ---> 24:  [78, 24] 68.8976512002
+	 => dijkstra 78 ---> 24:  [24] 28.7051731282
+dijkstra 72 ---> 34:  [95, 46, 34] 111.801194225
+	 => dijkstra 95 ---> 34:  [46, 34] 87.9011899042
+	 => dijkstra 46 ---> 34:  [34] 66.5474466132
+dijkstra 59 ---> 95:  [95] 74.3462606318
+dijkstra 30 ---> 84:  [32, 51, 19, 84] 107.768503276
+	 => dijkstra 32 ---> 84:  [51, 19, 84] 96.8517278572
+	 => dijkstra 51 ---> 84:  [19, 84] 78.7141998794
+	 => dijkstra 19 ---> 84:  [84] 59.0817424141
+dijkstra 31 ---> 76:  [100, 76] 131.59029239
+	 => dijkstra 100 ---> 76:  [76] 94.0737374734
+dijkstra 89 ---> 35:  [67, 38, 55, 35] 141.421243679
+	 => dijkstra 67 ---> 35:  [38, 55, 35] 72.6882634974
+	 => dijkstra 38 ---> 35:  [55, 35] 60.8564209023
+	 => dijkstra 55 ---> 35:  [35] 12.9383938096
+dijkstra 84 ---> 56:  [97, 17, 56] 91.6778850584
+	 => dijkstra 97 ---> 56:  [17, 56] 56.064120668
+	 => dijkstra 17 ---> 56:  [56] 15.8849858649
+dijkstra 14 ---> 30:  [31, 30] 83.9788386442
+	 => dijkstra 31 ---> 30:  [30] 29.4475602439
+dijkstra 8 ---> 48:  [24, 79, 95, 44, 48] 113.121818291
+	 => dijkstra 24 ---> 48:  [79, 95, 44, 48] 101.241678644
+	 => dijkstra 79 ---> 48:  [95, 44, 48] 87.5606397431
+	 => dijkstra 95 ---> 48:  [44, 48] 50.1201501319
+	 => dijkstra 44 ---> 48:  [48] 24.4280369258
+dijkstra 55 ---> 80:  [22, 47, 68, 80] 108.181457516
+	 => dijkstra 22 ---> 80:  [47, 68, 80] 54.54698654
+	 => dijkstra 47 ---> 80:  [68, 80] 37.1031479121
+	 => dijkstra 68 ---> 80:  [80] 14.5382637341
+dijkstra 32 ---> 49:  [64, 34, 49] 73.7506181532
+	 => dijkstra 64 ---> 49:  [34, 49] 44.7025453239
+	 => dijkstra 34 ---> 49:  [49] 19.4206927049
+dijkstra 98 ---> 83:  [47, 64, 83] 82.8534926671
+	 => dijkstra 47 ---> 83:  [64, 83] 68.4435827623
+	 => dijkstra 64 ---> 83:  [83] 20.9526012501
+dijkstra 66 ---> 77:  [76, 58, 77] 83.263076376
+	 => dijkstra 76 ---> 77:  [58, 77] 41.3377310212
+	 => dijkstra 58 ---> 77:  [77] 18.1706468402
+dijkstra 57 ---> 40:  [40] 53.4660013537
+dijkstra 92 ---> 35:  [34, 47, 35] 95.4731099454
+	 => dijkstra 34 ---> 35:  [47, 35] 73.0146401398
+	 => dijkstra 47 ---> 35:  [35] 61.2388887007
+dijkstra 37 ---> 48:  [48] 78.8482151737
+dijkstra 52 ---> 44:  [75, 44] 77.8697222825
+	 => dijkstra 75 ---> 44:  [44] 43.7390722723
+dijkstra 11 ---> 81:  [76, 81] 32.2305704066
+	 => dijkstra 76 ---> 81:  [81] 11.2590325875
+dijkstra 92 ---> 95:  [75, 48, 95] 59.9402813461
+	 => dijkstra 75 ---> 95:  [48, 95] 36.1604518783
+	 => dijkstra 48 ---> 95:  [95] 17.333141466
+dijkstra 29 ---> 78:  [52, 67, 78] 106.753312071
+	 => dijkstra 52 ---> 78:  [67, 78] 91.6059709404
+	 => dijkstra 67 ---> 78:  [78] 28.4061480188
+dijkstra 85 ---> 13:  [20, 13] 47.192797352
+	 => dijkstra 20 ---> 13:  [13] 26.0345424876
+dijkstra 97 ---> 18:  [70, 32, 37, 50, 18] 127.246082439
+	 => dijkstra 70 ---> 18:  [32, 37, 50, 18] 82.2011766051
+	 => dijkstra 32 ---> 18:  [37, 50, 18] 57.8526370296
+	 => dijkstra 37 ---> 18:  [50, 18] 46.0775075576
+	 => dijkstra 50 ---> 18:  [18] 27.5457679684
+dijkstra 47 ---> 84:  [21, 84] 126.721966813
+	 => dijkstra 21 ---> 84:  [84] 72.611494773
+dijkstra 13 ---> 78:  [78] 26.4105428027
+dijkstra 92 ---> 17:  [5, 77, 85, 17] 62.300877254
+	 => dijkstra 5 ---> 17:  [77, 85, 17] 48.8281460883
+	 => dijkstra 77 ---> 17:  [85, 17] 30.3899795566
+	 => dijkstra 85 ---> 17:  [17] 18.9200893167
+dijkstra 59 ---> 95:  [98, 2, 24, 95] 99.4364615405
+	 => dijkstra 98 ---> 95:  [2, 24, 95] 78.5444921249
+	 => dijkstra 2 ---> 95:  [24, 95] 49.4021005988
+	 => dijkstra 24 ---> 95:  [95] 33.3947760016
+dijkstra 8 ---> 97:  [76, 60, 54, 97] 99.1267761578
+	 => dijkstra 76 ---> 97:  [60, 54, 97] 66.0936878134
+	 => dijkstra 60 ---> 97:  [54, 97] 27.8205898414
+	 => dijkstra 54 ---> 97:  [97] 13.7141799547
+dijkstra 97 ---> 81:  [78, 81] 60.2944999122
+	 => dijkstra 78 ---> 81:  [81] 27.4557156421
+dijkstra 29 ---> 70:  [18, 66, 44, 70] 130.474241973
+	 => dijkstra 18 ---> 70:  [66, 44, 70] 86.8057459978
+	 => dijkstra 66 ---> 70:  [44, 70] 75.4472483136
+	 => dijkstra 44 ---> 70:  [70] 15.0172981107
+
+real	0m3.137s
+user	0m3.121s
+sys	0m0.013s
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ make dijkstra
+make: *** No rule to make target 'dijkstra'.  Stop.
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ make dijkstra.py
+make: Nothing to be done for 'dijkstra.py'.
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ make clean
+rm -f sudoku5 sudoku5_prof sudoku5_debug
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ make dijkstra
+make: *** No rule to make target 'dijkstra'.  Stop.
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ shedskin -b dijkstra.py
+*** SHED SKIN Python-to-C++ Compiler 0.9.4 ***
+Copyright 2005-2011 Mark Dufour; License GNU GPL version 3 (See LICENSE)
+
+[analyzing types..]
+********************************100% 
+[generating c++ code..]
+*WARNING* dijkstra.py:24: 'isinstance' is not supported; always returns True
+*WARNING* dijkstra.py:25: 'isinstance' is not supported; always returns True
+*WARNING* dijkstra.py:26: 'isinstance' is not supported; always returns True
+*WARNING* dijkstra.py:30: Function (class Edge, '__str__') not called!
+*WARNING* dijkstra.py:32: Function (class Edge, '__repr__') not called!
+*WARNING* dijkstra.py:89: 'del' has no effect without refcounting
+[elapsed time: 16.79 seconds]
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ make dijkstra
+g++  -O2 -march=native -Wno-deprecated  -I. -I/usr/share/shedskin/lib -D__SS_NOBOUNDS /home/ian/shedskin/shedskin-examples-0.9.4/dijkstra.cpp /usr/share/shedskin/lib/time.cpp /usr/share/shedskin/lib/re.cpp /usr/share/shedskin/lib/random.cpp /usr/share/shedskin/lib/math.cpp /usr/share/shedskin/lib/builtin.cpp -lgc -lpcre  -o dijkstra
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /home/ian/shedskin/shedskin-examples-0.9.4/dijkstra.cpp:1:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /usr/share/shedskin/lib/time.hpp:6,
+                 from /usr/share/shedskin/lib/time.cpp:3:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /usr/share/shedskin/lib/re.hpp:9,
+                 from /usr/share/shedskin/lib/re.cpp:3:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /usr/share/shedskin/lib/random.hpp:6,
+                 from /usr/share/shedskin/lib/random.cpp:3:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /usr/share/shedskin/lib/math.hpp:6,
+                 from /usr/share/shedskin/lib/math.cpp:3:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+In file included from /usr/share/shedskin/lib/builtin.hpp:1216,
+                 from /usr/share/shedskin/lib/builtin.cpp:3:
+/usr/share/shedskin/lib/builtin/complex.hpp: In member function ‘__shedskin__::complex& __shedskin__::complex::operator=(double)’:
+/usr/share/shedskin/lib/builtin/complex.hpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_int __shedskin__::__cmp(T, T) [with T = __shedskin__::complex; __shedskin__::__ss_int = int]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:107:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_int __cmp(complex a, complex b) {} /* unused, satisfy templates */
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__gt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:108:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __gt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__ge(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:109:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __ge(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__lt(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:110:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __lt(complex a, complex b) {}
+                                                         ^
+/usr/share/shedskin/lib/builtin/complex.hpp: In function ‘__shedskin__::__ss_bool __shedskin__::__le(T, T) [with T = __shedskin__::complex]’:
+/usr/share/shedskin/lib/builtin/complex.hpp:111:57: warning: no return statement in function returning non-void [-Wreturn-type]
+ template<> inline __ss_bool __le(complex a, complex b) {}
+                                                         ^
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ time ./dijkstra
+dijkstra 35 ---> 54:  [16, 14, 54] 94.4590402427
+	 => dijkstra 16 ---> 54:  [14, 54] 39.0008233863
+	 => dijkstra 14 ---> 54:  [54] 15.3754436077
+dijkstra 23 ---> 76:  [62, 22, 76] 76.9428667687
+	 => dijkstra 62 ---> 76:  [22, 76] 59.5029137093
+	 => dijkstra 22 ---> 76:  [76] 29.7340167475
+dijkstra 60 ---> 91:  [9, 100, 54, 91] 78.7399003398
+	 => dijkstra 9 ---> 91:  [100, 54, 91] 56.2436354381
+	 => dijkstra 100 ---> 91:  [54, 91] 37.2557344538
+	 => dijkstra 54 ---> 91:  [91] 15.1234687118
+dijkstra 79 ---> 19:  [45, 12, 61, 19] 78.8697345357
+	 => dijkstra 45 ---> 19:  [12, 61, 19] 53.1484584485
+	 => dijkstra 12 ---> 19:  [61, 19] 28.1759120193
+	 => dijkstra 61 ---> 19:  [19] 15.2100602601
+dijkstra 6 ---> 78:  [61, 97, 78] 71.2793985079
+	 => dijkstra 61 ---> 78:  [97, 78] 51.2226490447
+	 => dijkstra 97 ---> 78:  [78] 37.882837529
+dijkstra 87 ---> 32:  [53, 100, 90, 21, 32] 114.539294643
+	 => dijkstra 53 ---> 32:  [100, 90, 21, 32] 83.0282111072
+	 => dijkstra 100 ---> 32:  [90, 21, 32] 55.3403079571
+	 => dijkstra 90 ---> 32:  [21, 32] 30.7369914076
+	 => dijkstra 21 ---> 32:  [32] 14.3411726908
+dijkstra 12 ---> 56:  [95, 56] 107.601580804
+	 => dijkstra 95 ---> 56:  [56] 63.7234228734
+dijkstra 21 ---> 76:  [60, 78, 52, 76] 97.1704278037
+	 => dijkstra 60 ---> 76:  [78, 52, 76] 86.5893635525
+	 => dijkstra 78 ---> 76:  [52, 76] 50.6172797641
+	 => dijkstra 52 ---> 76:  [76] 33.1019322691
+dijkstra 12 ---> 44:  [58, 93, 23, 44] 79.2511470425
+	 => dijkstra 58 ---> 44:  [93, 23, 44] 48.3778417793
+	 => dijkstra 93 ---> 44:  [23, 44] 38.0357345142
+	 => dijkstra 23 ---> 44:  [44] 26.2857409416
+dijkstra 42 ---> 56:  [58, 90, 80, 57, 56] 123.71126318
+	 => dijkstra 58 ---> 56:  [90, 80, 57, 56] 84.6767698023
+	 => dijkstra 90 ---> 56:  [80, 57, 56] 66.7063815676
+	 => dijkstra 80 ---> 56:  [57, 56] 39.4359015307
+	 => dijkstra 57 ---> 56:  [56] 22.8736990068
+dijkstra 58 ---> 93:  [60, 14, 65, 73, 93] 98.2165848842
+	 => dijkstra 60 ---> 93:  [14, 65, 73, 93] 59.335042605
+	 => dijkstra 14 ---> 93:  [65, 73, 93] 46.5247273846
+	 => dijkstra 65 ---> 93:  [73, 93] 31.9264419511
+	 => dijkstra 73 ---> 93:  [93] 16.8602873503
+dijkstra 34 ---> 54:  [45, 40, 54] 65.0647855929
+	 => dijkstra 45 ---> 54:  [40, 54] 32.121926595
+	 => dijkstra 40 ---> 54:  [54] 14.637608655
+dijkstra 13 ---> 60:  [39, 60] 33.9088965053
+	 => dijkstra 39 ---> 60:  [60] 18.8636212526
+dijkstra 97 ---> 84:  [87, 30, 84] 47.2931398966
+	 => dijkstra 87 ---> 84:  [30, 84] 30.7822570276
+	 => dijkstra 30 ---> 84:  [84] 16.6280644511
+dijkstra 91 ---> 66:  [70, 46, 66] 116.718919657
+	 => dijkstra 70 ---> 66:  [46, 66] 75.5179227694
+	 => dijkstra 46 ---> 66:  [66] 33.4937743922
+dijkstra 94 ---> 15:  [63, 15] 98.5226673387
+	 => dijkstra 63 ---> 15:  [15] 34.5252475431
+dijkstra 21 ---> 44:  [15, 44] 76.8008089427
+	 => dijkstra 15 ---> 44:  [44] 18.5304300014
+dijkstra 19 ---> 66:  [16, 96, 66] 66.436357784
+	 => dijkstra 16 ---> 66:  [96, 66] 35.8819345614
+	 => dijkstra 96 ---> 66:  [66] 18.7758565392
+dijkstra 42 ---> 54:  [36, 83, 72, 11, 54] 102.636711545
+	 => dijkstra 36 ---> 54:  [83, 72, 11, 54] 78.9559620949
+	 => dijkstra 83 ---> 54:  [72, 11, 54] 66.6123680451
+	 => dijkstra 72 ---> 54:  [11, 54] 47.8933333525
+	 => dijkstra 11 ---> 54:  [54] 19.7789039144
+dijkstra 63 ---> 65:  [30, 69, 38, 65] 102.232156398
+	 => dijkstra 30 ---> 65:  [69, 38, 65] 78.3535636256
+	 => dijkstra 69 ---> 65:  [38, 65] 34.4769512984
+	 => dijkstra 38 ---> 65:  [65] 24.2339783995
+dijkstra 70 ---> 42:  [42] 19.4731649962
+dijkstra 5 ---> 96:  [53, 96] 69.6122731466
+	 => dijkstra 53 ---> 96:  [96] 21.589409879
+dijkstra 69 ---> 57:  [62, 57] 25.7254302587
+	 => dijkstra 62 ---> 57:  [57] 15.5783225564
+dijkstra 49 ---> 7:  [79, 47, 7] 59.405416006
+	 => dijkstra 79 ---> 7:  [47, 7] 48.2421939849
+	 => dijkstra 47 ---> 7:  [7] 28.9509232856
+dijkstra 22 ---> 7:  [7] 20.4746897528
+dijkstra 2 ---> 59:  [59] 15.0904064841
+dijkstra 41 ---> 86:  [4, 3, 86] 60.9971900215
+	 => dijkstra 4 ---> 86:  [3, 86] 41.4130401889
+	 => dijkstra 3 ---> 86:  [86] 10.5953771919
+dijkstra 44 ---> 78:  [28, 78] 55.5928460169
+	 => dijkstra 28 ---> 78:  [78] 22.0246327289
+dijkstra 56 ---> 68:  [29, 61, 68] 94.4252319762
+	 => dijkstra 29 ---> 68:  [61, 68] 78.4220925805
+	 => dijkstra 61 ---> 68:  [68] 29.3846726264
+dijkstra 10 ---> 52:  [74, 52] 41.1771681244
+	 => dijkstra 74 ---> 52:  [52] 21.8486118303
+dijkstra 61 ---> 55:  [34, 94, 31, 44, 55] 109.678323508
+	 => dijkstra 34 ---> 55:  [94, 31, 44, 55] 82.2763163724
+	 => dijkstra 94 ---> 55:  [31, 44, 55] 67.1625650084
+	 => dijkstra 31 ---> 55:  [44, 55] 40.8540873495
+	 => dijkstra 44 ---> 55:  [55] 11.6767797187
+dijkstra 82 ---> 35:  [51, 34, 73, 35] 107.295269241
+	 => dijkstra 51 ---> 35:  [34, 73, 35] 76.1512754456
+	 => dijkstra 34 ---> 35:  [73, 35] 56.6516788267
+	 => dijkstra 73 ---> 35:  [35] 30.4487355296
+dijkstra 81 ---> 61:  [75, 61] 78.8561999316
+	 => dijkstra 75 ---> 61:  [61] 15.3908980067
+dijkstra 11 ---> 95:  [73, 84, 62, 20, 57, 95] 188.092220278
+	 => dijkstra 73 ---> 95:  [84, 62, 20, 57, 95] 167.467358214
+	 => dijkstra 84 ---> 95:  [62, 20, 57, 95] 152.202501153
+	 => dijkstra 62 ---> 95:  [20, 57, 95] 140.865821641
+	 => dijkstra 20 ---> 95:  [57, 95] 50.1110018689
+	 => dijkstra 57 ---> 95:  [95] 21.0373544584
+dijkstra 35 ---> 23:  [56, 23] 62.7689998044
+	 => dijkstra 56 ---> 23:  [23] 51.0316347265
+dijkstra 41 ---> 80:  [80] 34.3217228086
+dijkstra 40 ---> 49:  [71, 88, 49] 52.0166073205
+	 => dijkstra 71 ---> 49:  [88, 49] 38.3981238186
+	 => dijkstra 88 ---> 49:  [49] 22.888368715
+dijkstra 65 ---> 54:  [14, 54] 118.957523602
+	 => dijkstra 14 ---> 54:  [54] 91.2903971342
+dijkstra 67 ---> 66:  [81, 56, 66] 66.7230204528
+	 => dijkstra 81 ---> 66:  [56, 66] 41.9793311277
+	 => dijkstra 56 ---> 66:  [66] 20.8293292306
+dijkstra 76 ---> 32:  [6, 32] 139.850804623
+	 => dijkstra 6 ---> 32:  [32] 57.5663350775
+dijkstra 61 ---> 70:  [39, 58, 4, 76, 70] 111.019447637
+	 => dijkstra 39 ---> 70:  [58, 4, 76, 70] 95.7644661204
+	 => dijkstra 58 ---> 70:  [4, 76, 70] 79.0898750069
+	 => dijkstra 4 ---> 70:  [76, 70] 68.9706984193
+	 => dijkstra 76 ---> 70:  [70] 34.6766798821
+dijkstra 79 ---> 4:  [70, 43, 4] 103.09270517
+	 => dijkstra 70 ---> 4:  [43, 4] 87.3880063162
+	 => dijkstra 43 ---> 4:  [4] 71.3693439675
+dijkstra 73 ---> 61:  [94, 95, 47, 50, 61] 81.0179490775
+	 => dijkstra 94 ---> 61:  [95, 47, 50, 61] 60.5280228264
+	 => dijkstra 95 ---> 61:  [47, 50, 61] 36.9662905489
+	 => dijkstra 47 ---> 61:  [50, 61] 25.0730122659
+	 => dijkstra 50 ---> 61:  [61] 13.7489692481
+dijkstra 53 ---> 69:  [95, 81, 18, 69] 70.2229212495
+	 => dijkstra 95 ---> 69:  [81, 18, 69] 46.8317095907
+	 => dijkstra 81 ---> 69:  [18, 69] 34.6269132012
+	 => dijkstra 18 ---> 69:  [69] 12.7418424155
+dijkstra 57 ---> 100:  [34, 100] 42.6508800629
+	 => dijkstra 34 ---> 100:  [100] 27.9418695088
+dijkstra 35 ---> 75:  [57, 75] 54.2476744142
+	 => dijkstra 57 ---> 75:  [75] 23.5553172917
+dijkstra 81 ---> 18:  [33, 18] 96.4658404485
+	 => dijkstra 33 ---> 18:  [18] 50.4274796593
+dijkstra 67 ---> 54:  [64, 70, 54] 81.1981502696
+	 => dijkstra 64 ---> 54:  [70, 54] 55.9516821727
+	 => dijkstra 70 ---> 54:  [54] 27.9169301394
+dijkstra 11 ---> 30:  [44, 81, 30] 75.6433918799
+	 => dijkstra 44 ---> 30:  [81, 30] 31.0149686346
+	 => dijkstra 81 ---> 30:  [30] 19.6356464384
+dijkstra 46 ---> 64:  [39, 95, 16, 7, 64] 156.595878844
+	 => dijkstra 39 ---> 64:  [95, 16, 7, 64] 137.714720438
+	 => dijkstra 95 ---> 64:  [16, 7, 64] 96.5025919358
+	 => dijkstra 16 ---> 64:  [7, 64] 61.944945651
+	 => dijkstra 7 ---> 64:  [64] 43.363453601
+dijkstra 56 ---> 12:  [81, 21, 12] 71.9625146662
+	 => dijkstra 81 ---> 12:  [21, 12] 36.6846739001
+	 => dijkstra 21 ---> 12:  [12] 18.1364305839
+dijkstra 52 ---> 32:  [88, 49, 24, 32] 84.3613890778
+	 => dijkstra 88 ---> 32:  [49, 24, 32] 66.2631756996
+	 => dijkstra 49 ---> 32:  [24, 32] 44.8843302406
+	 => dijkstra 24 ---> 32:  [32] 21.2335181743
+dijkstra 87 ---> 20:  [46, 29, 20] 164.175625313
+	 => dijkstra 46 ---> 20:  [29, 20] 148.747073474
+	 => dijkstra 29 ---> 20:  [20] 92.4141779804
+dijkstra 100 ---> 91:  [30, 60, 89, 91] 86.0608149362
+	 => dijkstra 30 ---> 91:  [60, 89, 91] 62.1256349902
+	 => dijkstra 60 ---> 91:  [89, 91] 42.1619010817
+	 => dijkstra 89 ---> 91:  [91] 29.5955898375
+dijkstra 89 ---> 78:  [20, 78] 71.0158949975
+	 => dijkstra 20 ---> 78:  [78] 34.3511016541
+dijkstra 60 ---> 39:  [39] 72.1612766102
+dijkstra 47 ---> 7:  [71, 63, 18, 19, 7] 131.532599382
+	 => dijkstra 71 ---> 7:  [63, 18, 19, 7] 114.699705091
+	 => dijkstra 63 ---> 7:  [18, 19, 7] 97.2959796353
+	 => dijkstra 18 ---> 7:  [19, 7] 86.4480689769
+	 => dijkstra 19 ---> 7:  [7] 27.8717253164
+dijkstra 13 ---> 28:  [19, 45, 5, 28] 59.0361662859
+	 => dijkstra 19 ---> 28:  [45, 5, 28] 44.6416094199
+	 => dijkstra 45 ---> 28:  [5, 28] 33.6041358673
+	 => dijkstra 5 ---> 28:  [28] 14.1307474573
+dijkstra 24 ---> 46:  [56, 46] 105.586149197
+	 => dijkstra 56 ---> 46:  [46] 38.2849243386
+dijkstra 92 ---> 39:  [31, 95, 33, 64, 38, 39] 97.5865828836
+	 => dijkstra 31 ---> 39:  [95, 33, 64, 38, 39] 75.4697108805
+	 => dijkstra 95 ---> 39:  [33, 64, 38, 39] 61.9742941524
+	 => dijkstra 33 ---> 39:  [64, 38, 39] 42.0880771214
+	 => dijkstra 64 ---> 39:  [38, 39] 25.1189530664
+	 => dijkstra 38 ---> 39:  [39] 14.0753092195
+dijkstra 43 ---> 52:  [68, 52] 95.4795701804
+	 => dijkstra 68 ---> 52:  [52] 68.0431967167
+dijkstra 24 ---> 61:  [10, 84, 61] 69.7186411748
+	 => dijkstra 10 ---> 61:  [84, 61] 56.1368336321
+	 => dijkstra 84 ---> 61:  [61] 20.6253082569
+dijkstra 76 ---> 67:  [87, 67] 83.8225191069
+	 => dijkstra 87 ---> 67:  [67] 65.7142792929
+dijkstra 6 ---> 96:  [69, 26, 23, 65, 96] 109.996895592
+	 => dijkstra 69 ---> 96:  [26, 23, 65, 96] 80.4499416419
+	 => dijkstra 26 ---> 96:  [23, 65, 96] 68.1512868611
+	 => dijkstra 23 ---> 96:  [65, 96] 31.6690254844
+	 => dijkstra 65 ---> 96:  [96] 13.9528254786
+dijkstra 92 ---> 23:  [56, 23] 67.16844364
+	 => dijkstra 56 ---> 23:  [23] 51.4697308002
+dijkstra 80 ---> 18:  [89, 85, 79, 18] 97.4153169467
+	 => dijkstra 89 ---> 18:  [85, 79, 18] 51.7619253779
+	 => dijkstra 85 ---> 18:  [79, 18] 38.4049819789
+	 => dijkstra 79 ---> 18:  [18] 27.1771314744
+dijkstra 66 ---> 7:  [7] 78.8395977615
+dijkstra 54 ---> 1:  [97, 61, 49, 60, 1] 110.027193189
+	 => dijkstra 97 ---> 1:  [61, 49, 60, 1] 68.4495943604
+	 => dijkstra 61 ---> 1:  [49, 60, 1] 48.2094616909
+	 => dijkstra 49 ---> 1:  [60, 1] 25.8894932288
+	 => dijkstra 60 ---> 1:  [1] 12.6935332708
+dijkstra 26 ---> 45:  [39, 37, 45] 61.3700261834
+	 => dijkstra 39 ---> 45:  [37, 45] 40.2814131905
+	 => dijkstra 37 ---> 45:  [45] 12.3716023297
+dijkstra 95 ---> 63:  [50, 4, 39, 42, 63] 172.013331463
+	 => dijkstra 50 ---> 63:  [4, 39, 42, 63] 148.596309034
+	 => dijkstra 4 ---> 63:  [39, 42, 63] 137.779278968
+	 => dijkstra 39 ---> 63:  [42, 63] 111.076053168
+	 => dijkstra 42 ---> 63:  [63] 96.3010482092
+dijkstra 11 ---> 99:  [90, 13, 99] 60.3821228191
+	 => dijkstra 90 ---> 99:  [13, 99] 33.0256211208
+	 => dijkstra 13 ---> 99:  [99] 10.5327200673
+dijkstra 21 ---> 89:  [89] 70.638605545
+dijkstra 33 ---> 67:  [1, 67] 93.2522789488
+	 => dijkstra 1 ---> 67:  [67] 69.557821498
+dijkstra 75 ---> 67:  [67] 20.5408503412
+dijkstra 97 ---> 82:  [41, 94, 82] 73.8938225823
+	 => dijkstra 41 ---> 82:  [94, 82] 58.1440879616
+	 => dijkstra 94 ---> 82:  [82] 42.8279245414
+dijkstra 97 ---> 91:  [53, 19, 51, 93, 91] 167.478416985
+	 => dijkstra 53 ---> 91:  [19, 51, 93, 91] 107.456732119
+	 => dijkstra 19 ---> 91:  [51, 93, 91] 95.3891015287
+	 => dijkstra 51 ---> 91:  [93, 91] 75.6230342998
+	 => dijkstra 93 ---> 91:  [91] 15.3041738252
+dijkstra 24 ---> 42:  [46, 17, 42] 149.776867263
+	 => dijkstra 46 ---> 42:  [17, 42] 55.3701240465
+	 => dijkstra 17 ---> 42:  [42] 43.2072478644
+dijkstra 29 ---> 78:  [78] 56.3604710324
+dijkstra 80 ---> 5:  [34, 5] 102.914116301
+	 => dijkstra 34 ---> 5:  [5] 42.0981717702
+dijkstra 72 ---> 40:  [37, 16, 73, 40] 100.392654101
+	 => dijkstra 37 ---> 40:  [16, 73, 40] 69.9613831525
+	 => dijkstra 16 ---> 40:  [73, 40] 41.3599751724
+	 => dijkstra 73 ---> 40:  [40] 22.3387409165
+dijkstra 97 ---> 98:  [1, 80, 58, 43, 98] 93.1906207695
+	 => dijkstra 1 ---> 98:  [80, 58, 43, 98] 83.0654072488
+	 => dijkstra 80 ---> 98:  [58, 43, 98] 72.6915392429
+	 => dijkstra 58 ---> 98:  [43, 98] 57.3300853522
+	 => dijkstra 43 ---> 98:  [98] 18.2521615973
+dijkstra 25 ---> 65:  [85, 9, 65] 58.9299402594
+	 => dijkstra 85 ---> 65:  [9, 65] 46.6609962383
+	 => dijkstra 9 ---> 65:  [65] 14.6438522613
+dijkstra 98 ---> 17:  [44, 40, 69, 65, 17] 88.6436766154
+	 => dijkstra 44 ---> 17:  [40, 69, 65, 17] 63.1914523948
+	 => dijkstra 40 ---> 17:  [69, 65, 17] 52.0598316346
+	 => dijkstra 69 ---> 17:  [65, 17] 36.7067756026
+	 => dijkstra 65 ---> 17:  [17] 16.1699676843
+dijkstra 37 ---> 13:  [13] 25.0298475809
+dijkstra 39 ---> 82:  [56, 10, 55, 23, 95, 82] 98.4470720946
+	 => dijkstra 56 ---> 82:  [10, 55, 23, 95, 82] 78.8234341232
+	 => dijkstra 10 ---> 82:  [55, 23, 95, 82] 62.0711556766
+	 => dijkstra 55 ---> 82:  [23, 95, 82] 48.6247696199
+	 => dijkstra 23 ---> 82:  [95, 82] 36.8504075767
+	 => dijkstra 95 ---> 82:  [82] 12.5936867091
+dijkstra 97 ---> 57:  [47, 67, 57] 105.273943267
+	 => dijkstra 47 ---> 57:  [67, 57] 52.6911374612
+	 => dijkstra 67 ---> 57:  [57] 41.9527364529
+dijkstra 34 ---> 47:  [93, 47] 59.2851587623
+	 => dijkstra 93 ---> 47:  [47] 36.3598541281
+dijkstra 73 ---> 57:  [48, 14, 57] 93.9366938901
+	 => dijkstra 48 ---> 57:  [14, 57] 57.497328404
+	 => dijkstra 14 ---> 57:  [57] 28.7831710141
+dijkstra 51 ---> 49:  [30, 29, 49] 70.3270260961
+	 => dijkstra 30 ---> 49:  [29, 49] 58.1975135195
+	 => dijkstra 29 ---> 49:  [49] 33.3289357702
+dijkstra 43 ---> 59:  [69, 59] 87.0561449491
+	 => dijkstra 69 ---> 59:  [59] 49.1399216755
+dijkstra 93 ---> 48:  [98, 12, 84, 48] 128.787905556
+	 => dijkstra 98 ---> 48:  [12, 84, 48] 117.444041429
+	 => dijkstra 12 ---> 48:  [84, 48] 101.531767673
+	 => dijkstra 84 ---> 48:  [48] 32.0511082082
+dijkstra 67 ---> 33:  [33] 72.6299791192
+dijkstra 72 ---> 62:  [48, 50, 62] 139.406630197
+	 => dijkstra 48 ---> 62:  [50, 62] 83.8188380222
+	 => dijkstra 50 ---> 62:  [62] 69.3585107269
+dijkstra 96 ---> 41:  [73, 41] 53.6041952831
+	 => dijkstra 73 ---> 41:  [41] 17.4232919167
+dijkstra 15 ---> 66:  [7, 62, 76, 66] 187.949021074
+	 => dijkstra 7 ---> 66:  [62, 76, 66] 168.693368795
+	 => dijkstra 62 ---> 66:  [76, 66] 122.720467455
+	 => dijkstra 76 ---> 66:  [66] 90.1285452029
+dijkstra 37 ---> 57:  [96, 41, 57] 120.716600729
+	 => dijkstra 96 ---> 57:  [41, 57] 66.8957014606
+	 => dijkstra 41 ---> 57:  [57] 37.3065621584
+dijkstra 6 ---> 92:  [58, 13, 92] 88.3629935061
+	 => dijkstra 58 ---> 92:  [13, 92] 78.2591014568
+	 => dijkstra 13 ---> 92:  [92] 49.6493210101
+dijkstra 28 ---> 78:  [46, 3, 78] 50.2004466016
+	 => dijkstra 46 ---> 78:  [3, 78] 31.3209492513
+	 => dijkstra 3 ---> 78:  [78] 14.1531926413
+dijkstra 68 ---> 28:  [21, 28] 34.9524871309
+	 => dijkstra 21 ---> 28:  [28] 23.5531711564
+dijkstra 25 ---> 77:  [48, 64, 50, 77] 118.403267933
+	 => dijkstra 48 ---> 77:  [64, 50, 77] 94.543453187
+	 => dijkstra 64 ---> 77:  [50, 77] 81.567651364
+	 => dijkstra 50 ---> 77:  [77] 58.329123064
+
+real	0m0.291s
+user	0m0.277s
+sys	0m0.029s
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ python dijkstra.py
+dijkstra 92 ---> 67:  [30, 67] 53.4846616726
+	 => dijkstra 30 ---> 67:  [67] 40.9513567212
+dijkstra 24 ---> 21:  [96, 21] 63.3188030963
+	 => dijkstra 96 ---> 21:  [21] 49.9767532552
+dijkstra 35 ---> 28:  [46, 80, 52, 86, 28] 123.543791307
+	 => dijkstra 46 ---> 28:  [80, 52, 86, 28] 97.3916532084
+	 => dijkstra 80 ---> 28:  [52, 86, 28] 72.3024243863
+	 => dijkstra 52 ---> 28:  [86, 28] 50.9266122007
+	 => dijkstra 86 ---> 28:  [28] 17.7250111646
+dijkstra 44 ---> 69:  [69] 24.9132067295
+dijkstra 90 ---> 73:  [19, 57, 73] 70.6475418364
+	 => dijkstra 19 ---> 73:  [57, 73] 52.4141255287
+	 => dijkstra 57 ---> 73:  [73] 19.7686735978
+dijkstra 13 ---> 80:  [47, 23, 31, 38, 40, 80] 94.804201212
+	 => dijkstra 47 ---> 80:  [23, 31, 38, 40, 80] 75.9135148244
+	 => dijkstra 23 ---> 80:  [31, 38, 40, 80] 64.6971542718
+	 => dijkstra 31 ---> 80:  [38, 40, 80] 48.7826003363
+	 => dijkstra 38 ---> 80:  [40, 80] 20.7763452896
+	 => dijkstra 40 ---> 80:  [80] 10.7761294324
+dijkstra 14 ---> 29:  [12, 87, 29] 83.9016365295
+	 => dijkstra 12 ---> 29:  [87, 29] 70.9141412794
+	 => dijkstra 87 ---> 29:  [29] 37.3828651028
+dijkstra 17 ---> 70:  [13, 80, 89, 70] 80.2163103607
+	 => dijkstra 13 ---> 70:  [80, 89, 70] 59.2862157134
+	 => dijkstra 80 ---> 70:  [89, 70] 41.0130313289
+	 => dijkstra 89 ---> 70:  [70] 30.7956943524
+dijkstra 87 ---> 48:  [54, 95, 48] 121.328903726
+	 => dijkstra 54 ---> 48:  [95, 48] 104.36048958
+	 => dijkstra 95 ---> 48:  [48] 91.4765512085
+dijkstra 93 ---> 31:  [74, 46, 26, 31] 156.798014388
+	 => dijkstra 74 ---> 31:  [46, 26, 31] 133.544580436
+	 => dijkstra 46 ---> 31:  [26, 31] 40.2898513571
+	 => dijkstra 26 ---> 31:  [31] 26.7649665411
+dijkstra 22 ---> 62:  [52, 49, 62] 135.972230724
+	 => dijkstra 52 ---> 62:  [49, 62] 62.1441171485
+	 => dijkstra 49 ---> 62:  [62] 32.4397640253
+dijkstra 91 ---> 18:  [18] 66.1771133493
+dijkstra 13 ---> 83:  [23, 60, 83] 97.2549523783
+	 => dijkstra 23 ---> 83:  [60, 83] 37.492060434
+	 => dijkstra 60 ---> 83:  [83] 19.1836706025
+dijkstra 48 ---> 55:  [100, 55] 118.733916224
+	 => dijkstra 100 ---> 55:  [55] 63.1389987488
+dijkstra 93 ---> 81:  [65, 29, 43, 81] 148.607357115
+	 => dijkstra 65 ---> 81:  [29, 43, 81] 114.419018657
+	 => dijkstra 29 ---> 81:  [43, 81] 86.8109046385
+	 => dijkstra 43 ---> 81:  [81] 65.9485241435
+dijkstra 77 ---> 3:  [23, 40, 93, 3] 120.372373943
+	 => dijkstra 23 ---> 3:  [40, 93, 3] 96.1998954282
+	 => dijkstra 40 ---> 3:  [93, 3] 76.7940632063
+	 => dijkstra 93 ---> 3:  [3] 57.5577323173
+dijkstra 39 ---> 34:  [34] 72.2013133068
+dijkstra 5 ---> 38:  [22, 38] 58.9778529813
+	 => dijkstra 22 ---> 38:  [38] 37.7631288694
+dijkstra 90 ---> 69:  [23, 84, 69] 48.7621372703
+	 => dijkstra 23 ---> 69:  [84, 69] 32.7058634761
+	 => dijkstra 84 ---> 69:  [69] 12.6069591912
+dijkstra 98 ---> 50:  [94, 28, 9, 50] 112.854617212
+	 => dijkstra 94 ---> 50:  [28, 9, 50] 66.1832010227
+	 => dijkstra 28 ---> 50:  [9, 50] 45.192365942
+	 => dijkstra 9 ---> 50:  [50] 28.8934388329
+dijkstra 41 ---> 58:  [69, 58] 104.077118467
+	 => dijkstra 69 ---> 58:  [58] 77.8209285118
+dijkstra 18 ---> 14:  [82, 14] 67.3893357139
+	 => dijkstra 82 ---> 14:  [14] 44.4002914703
+dijkstra 91 ---> 73:  [23, 73] 88.5065443769
+	 => dijkstra 23 ---> 73:  [73] 20.8487566763
+dijkstra 44 ---> 62:  [75, 62] 59.8767013331
+	 => dijkstra 75 ---> 62:  [62] 17.1648507501
+dijkstra 31 ---> 54:  [43, 87, 39, 54] 126.309362022
+	 => dijkstra 43 ---> 54:  [87, 39, 54] 102.591518271
+	 => dijkstra 87 ---> 54:  [39, 54] 49.8535782911
+	 => dijkstra 39 ---> 54:  [54] 35.5331214546
+dijkstra 57 ---> 17:  [28, 80, 17] 81.2090240606
+	 => dijkstra 28 ---> 17:  [80, 17] 39.7558795868
+	 => dijkstra 80 ---> 17:  [17] 25.7640500082
+dijkstra 30 ---> 47:  [7, 21, 47] 81.9859390783
+	 => dijkstra 7 ---> 47:  [21, 47] 42.7470330923
+	 => dijkstra 21 ---> 47:  [47] 21.8270160338
+dijkstra 94 ---> 4:  [55, 33, 53, 26, 4] 104.43186044
+	 => dijkstra 55 ---> 4:  [33, 53, 26, 4] 87.0304491993
+	 => dijkstra 33 ---> 4:  [53, 26, 4] 70.0234418929
+	 => dijkstra 53 ---> 4:  [26, 4] 59.8089566149
+	 => dijkstra 26 ---> 4:  [4] 30.1362636332
+dijkstra 45 ---> 50:  [96, 75, 40, 33, 50] 84.7078709666
+	 => dijkstra 96 ---> 50:  [75, 40, 33, 50] 71.8666230878
+	 => dijkstra 75 ---> 50:  [40, 33, 50] 54.2636255898
+	 => dijkstra 40 ---> 50:  [33, 50] 35.2887612159
+	 => dijkstra 33 ---> 50:  [50] 12.9572852023
+dijkstra 5 ---> 21:  [38, 24, 28, 94, 21] 100.743195649
+	 => dijkstra 38 ---> 21:  [24, 28, 94, 21] 78.4317935224
+	 => dijkstra 24 ---> 21:  [28, 94, 21] 51.8783977058
+	 => dijkstra 28 ---> 21:  [94, 21] 39.7698545761
+	 => dijkstra 94 ---> 21:  [21] 16.4075568281
+dijkstra 55 ---> 73:  [65, 73] 59.6137412451
+	 => dijkstra 65 ---> 73:  [73] 25.4528859695
+dijkstra 82 ---> 19:  [84, 60, 19] 144.727130869
+	 => dijkstra 84 ---> 19:  [60, 19] 110.556341808
+	 => dijkstra 60 ---> 19:  [19] 15.3462297987
+dijkstra 1 ---> 18:  [21, 80, 19, 18] 80.4046428064
+	 => dijkstra 21 ---> 18:  [80, 19, 18] 44.5652453704
+	 => dijkstra 80 ---> 18:  [19, 18] 34.3332188743
+	 => dijkstra 19 ---> 18:  [18] 19.5733768608
+dijkstra 73 ---> 66:  [71, 89, 66] 66.9641784208
+	 => dijkstra 71 ---> 66:  [89, 66] 40.9597908194
+	 => dijkstra 89 ---> 66:  [66] 19.7562232665
+dijkstra 60 ---> 79:  [5, 4, 79] 76.6750036253
+	 => dijkstra 5 ---> 79:  [4, 79] 56.3889201596
+	 => dijkstra 4 ---> 79:  [79] 12.3622551441
+dijkstra 96 ---> 84:  [48, 66, 84] 98.2992659097
+	 => dijkstra 48 ---> 84:  [66, 84] 81.885040712
+	 => dijkstra 66 ---> 84:  [84] 59.7124674532
+dijkstra 50 ---> 93:  [36, 31, 93] 123.571338077
+	 => dijkstra 36 ---> 93:  [31, 93] 40.4710644546
+	 => dijkstra 31 ---> 93:  [93] 26.5431813108
+dijkstra 87 ---> 89:  [85, 89] 76.986206103
+	 => dijkstra 85 ---> 89:  [89] 11.8558222494
+dijkstra 20 ---> 11:  [66, 36, 11] 73.9417224086
+	 => dijkstra 66 ---> 11:  [36, 11] 59.7366855786
+	 => dijkstra 36 ---> 11:  [11] 30.2496948584
+dijkstra 80 ---> 2:  [65, 2] 65.6826101744
+	 => dijkstra 65 ---> 2:  [2] 23.4048642918
+dijkstra 57 ---> 72:  [28, 51, 72] 121.300307969
+	 => dijkstra 28 ---> 72:  [51, 72] 99.6992342274
+	 => dijkstra 51 ---> 72:  [72] 79.0823809836
+dijkstra 38 ---> 26:  [29, 55, 33, 26] 75.1463123487
+	 => dijkstra 29 ---> 26:  [55, 33, 26] 60.5446896319
+	 => dijkstra 55 ---> 26:  [33, 26] 34.0389125747
+	 => dijkstra 33 ---> 26:  [26] 15.0765989586
+dijkstra 100 ---> 90:  [15, 90] 82.7295597041
+	 => dijkstra 15 ---> 90:  [90] 22.6152282834
+dijkstra 19 ---> 21:  [21] 20.9830497401
+dijkstra 96 ---> 43:  [56, 65, 43] 85.1989859029
+	 => dijkstra 56 ---> 43:  [65, 43] 54.9981542298
+	 => dijkstra 65 ---> 43:  [43] 40.7205555755
+dijkstra 19 ---> 56:  [32, 55, 56] 98.0069342909
+	 => dijkstra 32 ---> 56:  [55, 56] 63.5922187669
+	 => dijkstra 55 ---> 56:  [56] 18.719853465
+dijkstra 93 ---> 77:  [39, 7, 41, 77] 69.6349602128
+	 => dijkstra 39 ---> 77:  [7, 41, 77] 58.1465607447
+	 => dijkstra 7 ---> 77:  [41, 77] 38.4125703534
+	 => dijkstra 41 ---> 77:  [77] 27.4314672857
+dijkstra 4 ---> 98:  [77, 98] 105.373086188
+	 => dijkstra 77 ---> 98:  [98] 54.885871619
+dijkstra 80 ---> 74:  [100, 36, 74] 110.112853278
+	 => dijkstra 100 ---> 74:  [36, 74] 70.1014100071
+	 => dijkstra 36 ---> 74:  [74] 39.7523654342
+dijkstra 6 ---> 32:  [20, 70, 32] 85.0243726643
+	 => dijkstra 20 ---> 32:  [70, 32] 48.5251940289
+	 => dijkstra 70 ---> 32:  [32] 15.4033658001
+dijkstra 13 ---> 6:  [57, 63, 90, 6] 248.908283656
+	 => dijkstra 57 ---> 6:  [63, 90, 6] 237.414463761
+	 => dijkstra 63 ---> 6:  [90, 6] 192.165309944
+	 => dijkstra 90 ---> 6:  [6] 93.708652731
+dijkstra 20 ---> 93:  [25, 32, 96, 93] 64.3134618403
+	 => dijkstra 25 ---> 93:  [32, 96, 93] 46.2712542594
+	 => dijkstra 32 ---> 93:  [96, 93] 35.9663041704
+	 => dijkstra 96 ---> 93:  [93] 12.3464531073
+dijkstra 8 ---> 53:  [15, 28, 53] 106.793282878
+	 => dijkstra 15 ---> 53:  [28, 53] 88.9205040426
+	 => dijkstra 28 ---> 53:  [53] 48.8034135647
+dijkstra 49 ---> 42:  [35, 8, 3, 64, 42] 97.855154138
+	 => dijkstra 35 ---> 42:  [8, 3, 64, 42] 87.1747545955
+	 => dijkstra 8 ---> 42:  [3, 64, 42] 73.1766706483
+	 => dijkstra 3 ---> 42:  [64, 42] 60.3732265055
+	 => dijkstra 64 ---> 42:  [42] 47.0841983334
+dijkstra 65 ---> 76:  [22, 76] 43.7301229657
+	 => dijkstra 22 ---> 76:  [76] 21.4873677129
+dijkstra 40 ---> 85:  [28, 14, 85] 83.8413698651
+	 => dijkstra 28 ---> 85:  [14, 85] 65.0403201136
+	 => dijkstra 14 ---> 85:  [85] 48.3483540254
+dijkstra 81 ---> 61:  [16, 18, 61] 64.6829172992
+	 => dijkstra 16 ---> 61:  [18, 61] 43.7335493657
+	 => dijkstra 18 ---> 61:  [61] 10.0093063827
+dijkstra 37 ---> 48:  [39, 64, 80, 67, 48] 94.1943351721
+	 => dijkstra 39 ---> 48:  [64, 80, 67, 48] 81.2818617443
+	 => dijkstra 64 ---> 48:  [80, 67, 48] 50.5742154256
+	 => dijkstra 80 ---> 48:  [67, 48] 32.7539675298
+	 => dijkstra 67 ---> 48:  [48] 12.9735805021
+dijkstra 8 ---> 12:  [67, 42, 38, 12] 101.614018016
+	 => dijkstra 67 ---> 12:  [42, 38, 12] 76.7158466935
+	 => dijkstra 42 ---> 12:  [38, 12] 45.4876182412
+	 => dijkstra 38 ---> 12:  [12] 10.0739570079
+dijkstra 65 ---> 39:  [98, 1, 31, 39] 54.5542649666
+	 => dijkstra 98 ---> 39:  [1, 31, 39] 41.6122754634
+	 => dijkstra 1 ---> 39:  [31, 39] 29.0384418904
+	 => dijkstra 31 ---> 39:  [39] 14.4144909897
+dijkstra 43 ---> 35:  [90, 48, 19, 35] 101.842054267
+	 => dijkstra 90 ---> 35:  [48, 19, 35] 81.9084426058
+	 => dijkstra 48 ---> 35:  [19, 35] 57.7347565639
+	 => dijkstra 19 ---> 35:  [35] 34.1814126149
+dijkstra 10 ---> 9:  [98, 34, 9] 71.3568949892
+	 => dijkstra 98 ---> 9:  [34, 9] 36.9579292248
+	 => dijkstra 34 ---> 9:  [9] 16.5714131273
+dijkstra 37 ---> 50:  [24, 50] 124.222325077
+	 => dijkstra 24 ---> 50:  [50] 64.2637318551
+dijkstra 2 ---> 93:  [67, 38, 57, 93] 116.118634345
+	 => dijkstra 67 ---> 93:  [38, 57, 93] 105.999514159
+	 => dijkstra 38 ---> 93:  [57, 93] 49.9160392962
+	 => dijkstra 57 ---> 93:  [93] 23.2214330301
+dijkstra 61 ---> 35:  [40, 35] 62.5647455494
+	 => dijkstra 40 ---> 35:  [35] 41.7333774389
+dijkstra 85 ---> 43:  [17, 89, 43] 113.07726898
+	 => dijkstra 17 ---> 43:  [89, 43] 97.5202632283
+	 => dijkstra 89 ---> 43:  [43] 73.2652204139
+dijkstra 54 ---> 57:  [57] 18.8986927188
+dijkstra 50 ---> 30:  [37, 30] 67.8711734723
+	 => dijkstra 37 ---> 30:  [30] 38.8643602428
+dijkstra 79 ---> 78:  [21, 65, 76, 78] 152.352244154
+	 => dijkstra 21 ---> 78:  [65, 76, 78] 54.3094127716
+	 => dijkstra 65 ---> 78:  [76, 78] 29.7911713433
+	 => dijkstra 76 ---> 78:  [78] 17.667541534
+dijkstra 18 ---> 36:  [74, 99, 62, 2, 36] 95.9378939793
+	 => dijkstra 74 ---> 36:  [99, 62, 2, 36] 76.6042397054
+	 => dijkstra 99 ---> 36:  [62, 2, 36] 62.458902086
+	 => dijkstra 62 ---> 36:  [2, 36] 36.830739892
+	 => dijkstra 2 ---> 36:  [36] 25.6629860736
+dijkstra 68 ---> 32:  [18, 32] 87.6102811618
+	 => dijkstra 18 ---> 32:  [32] 74.1251247603
+dijkstra 35 ---> 43:  [32, 29, 43] 88.112599898
+	 => dijkstra 32 ---> 43:  [29, 43] 53.2274163982
+	 => dijkstra 29 ---> 43:  [43] 28.2866455659
+dijkstra 28 ---> 74:  [6, 74] 124.509243709
+	 => dijkstra 6 ---> 74:  [74] 75.2219660103
+dijkstra 68 ---> 63:  [87, 63] 77.264781689
+	 => dijkstra 87 ---> 63:  [63] 19.2323348903
+dijkstra 21 ---> 94:  [18, 40, 20, 94] 137.932096179
+	 => dijkstra 18 ---> 94:  [40, 20, 94] 74.9639330242
+	 => dijkstra 40 ---> 94:  [20, 94] 60.7613963886
+	 => dijkstra 20 ---> 94:  [94] 11.0281762325
+dijkstra 43 ---> 92:  [52, 33, 92] 96.230011609
+	 => dijkstra 52 ---> 92:  [33, 92] 82.4240070962
+	 => dijkstra 33 ---> 92:  [92] 72.2734110045
+dijkstra 64 ---> 51:  [51] 14.3402327521
+dijkstra 28 ---> 38:  [67, 83, 40, 57, 38] 160.686087107
+	 => dijkstra 67 ---> 38:  [83, 40, 57, 38] 145.531658419
+	 => dijkstra 83 ---> 38:  [40, 57, 38] 101.698082983
+	 => dijkstra 40 ---> 38:  [57, 38] 73.2441061237
+	 => dijkstra 57 ---> 38:  [38] 59.2813961579
+dijkstra 84 ---> 46:  [62, 46] 88.9491921179
+	 => dijkstra 62 ---> 46:  [46] 40.5933357669
+dijkstra 77 ---> 12:  [32, 78, 48, 12] 137.958183009
+	 => dijkstra 32 ---> 12:  [78, 48, 12] 90.5516899184
+	 => dijkstra 78 ---> 12:  [48, 12] 23.4891530784
+	 => dijkstra 48 ---> 12:  [12] 12.4230858961
+dijkstra 62 ---> 6:  [63, 6] 64.1415315774
+	 => dijkstra 63 ---> 6:  [6] 23.2042670178
+dijkstra 43 ---> 96:  [73, 48, 78, 65, 96] 103.279503309
+	 => dijkstra 73 ---> 96:  [48, 78, 65, 96] 87.5574896521
+	 => dijkstra 48 ---> 96:  [78, 65, 96] 62.2655130237
+	 => dijkstra 78 ---> 96:  [65, 96] 50.2540167061
+	 => dijkstra 65 ---> 96:  [96] 27.4250318664
+dijkstra 91 ---> 28:  [2, 62, 28] 40.6046722445
+	 => dijkstra 2 ---> 28:  [62, 28] 26.3515380646
+	 => dijkstra 62 ---> 28:  [28] 11.936947672
+dijkstra 82 ---> 11:  [11] 21.8187233107
+dijkstra 42 ---> 58:  [37, 58] 105.302652773
+	 => dijkstra 37 ---> 58:  [58] 27.4638148918
+dijkstra 11 ---> 66:  [56, 34, 85, 66] 126.082272443
+	 => dijkstra 56 ---> 66:  [34, 85, 66] 88.2357264531
+	 => dijkstra 34 ---> 66:  [85, 66] 69.0672430426
+	 => dijkstra 85 ---> 66:  [66] 55.4227168597
+dijkstra 76 ---> 80:  [80] 81.0901438074
+dijkstra 85 ---> 61:  [22, 89, 61] 62.4408227287
+	 => dijkstra 22 ---> 61:  [89, 61] 45.064414648
+	 => dijkstra 89 ---> 61:  [61] 15.3467813684
+dijkstra 86 ---> 14:  [85, 37, 4, 14] 103.477619725
+	 => dijkstra 85 ---> 14:  [37, 4, 14] 73.3397325881
+	 => dijkstra 37 ---> 14:  [4, 14] 53.1238700329
+	 => dijkstra 4 ---> 14:  [14] 13.6904598249
+dijkstra 5 ---> 39:  [47, 50, 37, 80, 39] 101.264049128
+	 => dijkstra 47 ---> 39:  [50, 37, 80, 39] 72.2245532218
+	 => dijkstra 50 ---> 39:  [37, 80, 39] 60.6055152667
+	 => dijkstra 37 ---> 39:  [80, 39] 38.1874233815
+	 => dijkstra 80 ---> 39:  [39] 14.8172920591
+dijkstra 65 ---> 33:  [25, 33] 44.936574686
+	 => dijkstra 25 ---> 33:  [33] 23.3161803573
+dijkstra 36 ---> 20:  [70, 9, 20] 80.1297503995
+	 => dijkstra 70 ---> 20:  [9, 20] 52.7362904453
+	 => dijkstra 9 ---> 20:  [20] 25.7098486481
+dijkstra 86 ---> 100:  [15, 100] 67.9849881905
+	 => dijkstra 15 ---> 100:  [100] 10.3094320214
+dijkstra 45 ---> 39:  [33, 67, 82, 90, 39] 85.759910845
+	 => dijkstra 33 ---> 39:  [67, 82, 90, 39] 66.6220958312
+	 => dijkstra 67 ---> 39:  [82, 90, 39] 53.6349602882
+	 => dijkstra 82 ---> 39:  [90, 39] 40.4569540892
+	 => dijkstra 90 ---> 39:  [39] 26.6262301283
+dijkstra 84 ---> 68:  [10, 53, 37, 68] 99.329641983
+	 => dijkstra 10 ---> 68:  [53, 37, 68] 73.4918802394
+	 => dijkstra 53 ---> 68:  [37, 68] 61.3495050876
+	 => dijkstra 37 ---> 68:  [68] 18.1814790847
+dijkstra 38 ---> 35:  [21, 39, 35] 135.582716938
+	 => dijkstra 21 ---> 35:  [39, 35] 96.9173439723
+	 => dijkstra 39 ---> 35:  [35] 80.5967134213
+dijkstra 95 ---> 80:  [59, 54, 80] 168.225147448
+	 => dijkstra 59 ---> 80:  [54, 80] 104.936354893
+	 => dijkstra 54 ---> 80:  [80] 23.0644051833
+dijkstra 63 ---> 67:  [14, 67] 42.1042729789
+	 => dijkstra 14 ---> 67:  [67] 26.604310757
+dijkstra 61 ---> 88:  [35, 94, 88] 73.4869681833
+	 => dijkstra 35 ---> 88:  [94, 88] 45.6288692769
+	 => dijkstra 94 ---> 88:  [88] 30.5988308708
+dijkstra 26 ---> 75:  [75] 86.578309181
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ time python dijkstra.py
+dijkstra 20 ---> 44:  [62, 73, 44] 102.075281061
+	 => dijkstra 62 ---> 44:  [73, 44] 30.7358368054
+	 => dijkstra 73 ---> 44:  [44] 13.7552845067
+dijkstra 17 ---> 79:  [56, 49, 79] 65.8442989584
+	 => dijkstra 56 ---> 79:  [49, 79] 37.4937484518
+	 => dijkstra 49 ---> 79:  [79] 12.8116271444
+dijkstra 26 ---> 27:  [43, 36, 27] 58.8369800454
+	 => dijkstra 43 ---> 27:  [36, 27] 37.1536764197
+	 => dijkstra 36 ---> 27:  [27] 12.5320412794
+dijkstra 85 ---> 63:  [4, 63] 62.1457235291
+	 => dijkstra 4 ---> 63:  [63] 49.6257037199
+dijkstra 48 ---> 38:  [93, 19, 32, 38] 110.748140816
+	 => dijkstra 93 ---> 38:  [19, 32, 38] 90.2252390992
+	 => dijkstra 19 ---> 38:  [32, 38] 44.509207732
+	 => dijkstra 32 ---> 38:  [38] 23.2021536056
+dijkstra 36 ---> 65:  [11, 99, 65] 59.9545476731
+	 => dijkstra 11 ---> 65:  [99, 65] 47.9465077562
+	 => dijkstra 99 ---> 65:  [65] 17.1650258234
+dijkstra 76 ---> 31:  [5, 28, 50, 31] 109.306459699
+	 => dijkstra 5 ---> 31:  [28, 50, 31] 68.7934256667
+	 => dijkstra 28 ---> 31:  [50, 31] 34.6459372895
+	 => dijkstra 50 ---> 31:  [31] 16.1302790908
+dijkstra 72 ---> 92:  [49, 65, 14, 71, 92] 94.8588111204
+	 => dijkstra 49 ---> 92:  [65, 14, 71, 92] 75.9566503183
+	 => dijkstra 65 ---> 92:  [14, 71, 92] 52.692867777
+	 => dijkstra 14 ---> 92:  [71, 92] 38.131534489
+	 => dijkstra 71 ---> 92:  [92] 25.9336000566
+dijkstra 48 ---> 4:  [97, 4] 70.9065274977
+	 => dijkstra 97 ---> 4:  [4] 46.4866725639
+dijkstra 30 ---> 35:  [55, 8, 71, 34, 39, 35] 187.780970982
+	 => dijkstra 55 ---> 35:  [8, 71, 34, 39, 35] 157.825721735
+	 => dijkstra 8 ---> 35:  [71, 34, 39, 35] 143.042271963
+	 => dijkstra 71 ---> 35:  [34, 39, 35] 125.58871481
+	 => dijkstra 34 ---> 35:  [39, 35] 66.5800885777
+	 => dijkstra 39 ---> 35:  [35] 48.5683410368
+dijkstra 56 ---> 9:  [45, 9] 34.5549666024
+	 => dijkstra 45 ---> 9:  [9] 18.4055478108
+dijkstra 58 ---> 84:  [57, 80, 84] 97.6698945291
+	 => dijkstra 57 ---> 84:  [80, 84] 86.3810890435
+	 => dijkstra 80 ---> 84:  [84] 34.5720075767
+dijkstra 65 ---> 85:  [41, 32, 85] 72.1303455631
+	 => dijkstra 41 ---> 85:  [32, 85] 46.6848190773
+	 => dijkstra 32 ---> 85:  [85] 24.39393393
+dijkstra 79 ---> 17:  [73, 37, 17] 76.3602086277
+	 => dijkstra 73 ---> 17:  [37, 17] 34.4016924285
+	 => dijkstra 37 ---> 17:  [17] 13.9808981138
+dijkstra 74 ---> 49:  [95, 42, 49] 63.9984239236
+	 => dijkstra 95 ---> 49:  [42, 49] 41.6955099369
+	 => dijkstra 42 ---> 49:  [49] 10.4940948677
+dijkstra 85 ---> 18:  [91, 9, 73, 18] 76.5860307862
+	 => dijkstra 91 ---> 18:  [9, 73, 18] 63.0474043071
+	 => dijkstra 9 ---> 18:  [73, 18] 51.5805697145
+	 => dijkstra 73 ---> 18:  [18] 33.2438531312
+dijkstra 38 ---> 79:  [81, 79] 94.89952101
+	 => dijkstra 81 ---> 79:  [79] 11.6619924043
+dijkstra 93 ---> 14:  [8, 14] 156.815374459
+	 => dijkstra 8 ---> 14:  [14] 73.1462254915
+dijkstra 93 ---> 87:  [18, 24, 6, 87] 112.094358825
+	 => dijkstra 18 ---> 87:  [24, 6, 87] 49.9346661267
+	 => dijkstra 24 ---> 87:  [6, 87] 36.8322068609
+	 => dijkstra 6 ---> 87:  [87] 13.3898614697
+dijkstra 100 ---> 98:  [96, 98] 68.5808720968
+	 => dijkstra 96 ---> 98:  [98] 32.7183316818
+dijkstra 90 ---> 66:  [34, 74, 66] 63.6184648152
+	 => dijkstra 34 ---> 66:  [74, 66] 38.1082561057
+	 => dijkstra 74 ---> 66:  [66] 26.244593964
+dijkstra 80 ---> 4:  [42, 43, 4] 63.9251418663
+	 => dijkstra 42 ---> 4:  [43, 4] 40.9613164254
+	 => dijkstra 43 ---> 4:  [4] 18.090818971
+dijkstra 13 ---> 78:  [15, 47, 23, 90, 78] 84.9346017269
+	 => dijkstra 15 ---> 78:  [47, 23, 90, 78] 74.3327705005
+	 => dijkstra 47 ---> 78:  [23, 90, 78] 51.4868386721
+	 => dijkstra 23 ---> 78:  [90, 78] 26.4484001566
+	 => dijkstra 90 ---> 78:  [78] 13.7341734499
+dijkstra 21 ---> 52:  [27, 37, 52] 96.7584170658
+	 => dijkstra 27 ---> 52:  [37, 52] 53.395580265
+	 => dijkstra 37 ---> 52:  [52] 35.3253562946
+dijkstra 57 ---> 91:  [91] 24.5288491054
+dijkstra 87 ---> 9:  [52, 10, 9] 66.2826645831
+	 => dijkstra 52 ---> 9:  [10, 9] 43.5092578611
+	 => dijkstra 10 ---> 9:  [9] 31.6815842315
+dijkstra 51 ---> 70:  [87, 3, 70] 86.390674144
+	 => dijkstra 87 ---> 70:  [3, 70] 74.3733653905
+	 => dijkstra 3 ---> 70:  [70] 51.8677643429
+dijkstra 17 ---> 84:  [23, 84] 95.8890002743
+	 => dijkstra 23 ---> 84:  [84] 72.3655928225
+dijkstra 41 ---> 83:  [64, 12, 83] 83.3404348928
+	 => dijkstra 64 ---> 83:  [12, 83] 60.7125244093
+	 => dijkstra 12 ---> 83:  [83] 36.9669740687
+dijkstra 82 ---> 61:  [33, 61] 76.4112523192
+	 => dijkstra 33 ---> 61:  [61] 31.9458093928
+dijkstra 32 ---> 82:  [82] 26.9875153356
+dijkstra 64 ---> 32:  [7, 85, 4, 32] 63.512765976
+	 => dijkstra 7 ---> 32:  [85, 4, 32] 45.0654627865
+	 => dijkstra 85 ---> 32:  [4, 32] 27.1155752287
+	 => dijkstra 4 ---> 32:  [32] 11.79062837
+dijkstra 66 ---> 36:  [9, 39, 36] 97.2460254448
+	 => dijkstra 9 ---> 36:  [39, 36] 56.0083940124
+	 => dijkstra 39 ---> 36:  [36] 33.9118983571
+dijkstra 36 ---> 10:  [92, 10] 69.6959021706
+	 => dijkstra 92 ---> 10:  [10] 55.0587229679
+dijkstra 24 ---> 65:  [87, 41, 65] 57.3671726643
+	 => dijkstra 87 ---> 65:  [41, 65] 37.6017023133
+	 => dijkstra 41 ---> 65:  [65] 27.5901304511
+dijkstra 3 ---> 30:  [25, 89, 2, 26, 30] 115.802944472
+	 => dijkstra 25 ---> 30:  [89, 2, 26, 30] 57.4244171128
+	 => dijkstra 89 ---> 30:  [2, 26, 30] 39.6731445586
+	 => dijkstra 2 ---> 30:  [26, 30] 28.0627384609
+	 => dijkstra 26 ---> 30:  [30] 15.3917455316
+dijkstra 11 ---> 67:  [92, 23, 55, 67] 79.8854366117
+	 => dijkstra 92 ---> 67:  [23, 55, 67] 41.5169110331
+	 => dijkstra 23 ---> 67:  [55, 67] 31.0375949003
+	 => dijkstra 55 ---> 67:  [67] 17.5143686109
+dijkstra 68 ---> 67:  [91, 67] 57.0036422667
+	 => dijkstra 91 ---> 67:  [67] 10.0429349485
+dijkstra 39 ---> 12:  [37, 95, 12] 95.9728512302
+	 => dijkstra 37 ---> 12:  [95, 12] 73.0768359747
+	 => dijkstra 95 ---> 12:  [12] 20.1437075329
+dijkstra 41 ---> 52:  [9, 84, 52] 62.2028273956
+	 => dijkstra 9 ---> 52:  [84, 52] 39.5226627866
+	 => dijkstra 84 ---> 52:  [52] 27.3413495675
+dijkstra 81 ---> 40:  [50, 40] 90.1421741522
+	 => dijkstra 50 ---> 40:  [40] 69.8788594619
+dijkstra 96 ---> 63:  [6, 50, 26, 63] 145.958502079
+	 => dijkstra 6 ---> 63:  [50, 26, 63] 111.833108455
+	 => dijkstra 50 ---> 63:  [26, 63] 67.6130604322
+	 => dijkstra 26 ---> 63:  [63] 47.9861406056
+dijkstra 14 ---> 28:  [32, 11, 28] 116.63973735
+	 => dijkstra 32 ---> 28:  [11, 28] 62.5780920507
+	 => dijkstra 11 ---> 28:  [28] 29.3479947419
+dijkstra 37 ---> 56:  [35, 43, 26, 59, 56] 110.094823574
+	 => dijkstra 35 ---> 56:  [43, 26, 59, 56] 60.5851819694
+	 => dijkstra 43 ---> 56:  [26, 59, 56] 49.4236719953
+	 => dijkstra 26 ---> 56:  [59, 56] 33.2798055945
+	 => dijkstra 59 ---> 56:  [56] 22.1668513095
+dijkstra 33 ---> 40:  [41, 13, 14, 37, 40] 90.8683106852
+	 => dijkstra 41 ---> 40:  [13, 14, 37, 40] 65.6317002617
+	 => dijkstra 13 ---> 40:  [14, 37, 40] 45.9493857367
+	 => dijkstra 14 ---> 40:  [37, 40] 27.2955784747
+	 => dijkstra 37 ---> 40:  [40] 11.7666101484
+dijkstra 2 ---> 47:  [50, 35, 12, 47] 110.390479091
+	 => dijkstra 50 ---> 47:  [35, 12, 47] 82.5632082556
+	 => dijkstra 35 ---> 47:  [12, 47] 59.3857459937
+	 => dijkstra 12 ---> 47:  [47] 20.7594046038
+dijkstra 35 ---> 48:  [88, 48] 66.0429534272
+	 => dijkstra 88 ---> 48:  [48] 51.8021718539
+dijkstra 75 ---> 3:  [10, 6, 29, 3] 96.787682299
+	 => dijkstra 10 ---> 3:  [6, 29, 3] 64.3085298043
+	 => dijkstra 6 ---> 3:  [29, 3] 53.8194226929
+	 => dijkstra 29 ---> 3:  [3] 29.7227131814
+dijkstra 64 ---> 56:  [56] 63.3392024638
+dijkstra 35 ---> 64:  [6, 20, 64] 105.937781558
+	 => dijkstra 6 ---> 64:  [20, 64] 86.9587111632
+	 => dijkstra 20 ---> 64:  [64] 33.7562240928
+dijkstra 91 ---> 27:  [67, 46, 7, 27] 101.791512673
+	 => dijkstra 67 ---> 27:  [46, 7, 27] 70.037786738
+	 => dijkstra 46 ---> 27:  [7, 27] 29.1417394915
+	 => dijkstra 7 ---> 27:  [27] 18.755936455
+dijkstra 28 ---> 27:  [97, 31, 27] 59.4360879274
+	 => dijkstra 97 ---> 27:  [31, 27] 41.2095898759
+	 => dijkstra 31 ---> 27:  [27] 24.4510483329
+dijkstra 7 ---> 77:  [28, 53, 35, 75, 77] 118.354616216
+	 => dijkstra 28 ---> 77:  [53, 35, 75, 77] 92.9860506612
+	 => dijkstra 53 ---> 77:  [35, 75, 77] 72.0593808419
+	 => dijkstra 35 ---> 77:  [75, 77] 49.2794153957
+	 => dijkstra 75 ---> 77:  [77] 13.5446541376
+dijkstra 18 ---> 76:  [66, 57, 54, 22, 76] 153.496545215
+	 => dijkstra 66 ---> 76:  [57, 54, 22, 76] 121.60567428
+	 => dijkstra 57 ---> 76:  [54, 22, 76] 103.98646543
+	 => dijkstra 54 ---> 76:  [22, 76] 93.5853923521
+	 => dijkstra 22 ---> 76:  [76] 78.6839256723
+dijkstra 39 ---> 53:  [20, 29, 53] 83.4660676012
+	 => dijkstra 20 ---> 53:  [29, 53] 68.670555448
+	 => dijkstra 29 ---> 53:  [53] 54.5178436849
+dijkstra 33 ---> 34:  [80, 34] 168.019979639
+	 => dijkstra 80 ---> 34:  [34] 88.6615904543
+dijkstra 10 ---> 80:  [47, 80] 49.0299683451
+	 => dijkstra 47 ---> 80:  [80] 37.978600915
+dijkstra 42 ---> 17:  [100, 95, 61, 17] 112.217390377
+	 => dijkstra 100 ---> 17:  [95, 61, 17] 87.2037339728
+	 => dijkstra 95 ---> 17:  [61, 17] 48.3840427856
+	 => dijkstra 61 ---> 17:  [17] 20.7180009963
+dijkstra 16 ---> 99:  [86, 91, 99] 46.2458394739
+	 => dijkstra 86 ---> 99:  [91, 99] 31.4641659882
+	 => dijkstra 91 ---> 99:  [99] 13.4738410676
+dijkstra 78 ---> 65:  [87, 47, 22, 65] 89.6979156098
+	 => dijkstra 87 ---> 65:  [47, 22, 65] 69.1284231844
+	 => dijkstra 47 ---> 65:  [22, 65] 48.9356880294
+	 => dijkstra 22 ---> 65:  [65] 17.4843165975
+dijkstra 83 ---> 89:  [74, 89] 65.2778428911
+	 => dijkstra 74 ---> 89:  [89] 20.7196374077
+dijkstra 9 ---> 89:  [44, 97, 24, 89] 83.1029138285
+	 => dijkstra 44 ---> 89:  [97, 24, 89] 64.5638961597
+	 => dijkstra 97 ---> 89:  [24, 89] 52.701119984
+	 => dijkstra 24 ---> 89:  [89] 10.7644178991
+dijkstra 31 ---> 70:  [70] 17.2172416266
+dijkstra 55 ---> 90:  [2, 4, 90] 65.491980008
+	 => dijkstra 2 ---> 90:  [4, 90] 47.3687307464
+	 => dijkstra 4 ---> 90:  [90] 20.7780977978
+dijkstra 72 ---> 9:  [24, 88, 50, 87, 9] 111.218178692
+	 => dijkstra 24 ---> 9:  [88, 50, 87, 9] 98.5086475761
+	 => dijkstra 88 ---> 9:  [50, 87, 9] 82.2805196223
+	 => dijkstra 50 ---> 9:  [87, 9] 46.3457475977
+	 => dijkstra 87 ---> 9:  [9] 30.8312579402
+dijkstra 6 ---> 82:  [62, 73, 68, 8, 17, 82] 117.138267031
+	 => dijkstra 62 ---> 82:  [73, 68, 8, 17, 82] 90.4907553162
+	 => dijkstra 73 ---> 82:  [68, 8, 17, 82] 69.7914209149
+	 => dijkstra 68 ---> 82:  [8, 17, 82] 52.0984174354
+	 => dijkstra 8 ---> 82:  [17, 82] 37.7703426333
+	 => dijkstra 17 ---> 82:  [82] 26.1794468587
+dijkstra 78 ---> 56:  [15, 69, 77, 29, 9, 56] 109.25511593
+	 => dijkstra 15 ---> 56:  [69, 77, 29, 9, 56] 90.1774128566
+	 => dijkstra 69 ---> 56:  [77, 29, 9, 56] 68.8595925469
+	 => dijkstra 77 ---> 56:  [29, 9, 56] 52.3969600179
+	 => dijkstra 29 ---> 56:  [9, 56] 40.44205399
+	 => dijkstra 9 ---> 56:  [56] 30.0385989224
+dijkstra 8 ---> 98:  [29, 16, 98] 67.1461948822
+	 => dijkstra 29 ---> 98:  [16, 98] 37.4067841448
+	 => dijkstra 16 ---> 98:  [98] 23.9730679399
+dijkstra 61 ---> 93:  [97, 76, 50, 93] 74.5051076599
+	 => dijkstra 97 ---> 93:  [76, 50, 93] 57.4933916209
+	 => dijkstra 76 ---> 93:  [50, 93] 35.7393592435
+	 => dijkstra 50 ---> 93:  [93] 21.9984501207
+dijkstra 66 ---> 58:  [38, 86, 58] 80.7612236786
+	 => dijkstra 38 ---> 58:  [86, 58] 58.8644749179
+	 => dijkstra 86 ---> 58:  [58] 27.7489350373
+dijkstra 95 ---> 17:  [99, 75, 24, 92, 17] 112.51574102
+	 => dijkstra 99 ---> 17:  [75, 24, 92, 17] 76.3346220993
+	 => dijkstra 75 ---> 17:  [24, 92, 17] 60.4209510268
+	 => dijkstra 24 ---> 17:  [92, 17] 40.169442227
+	 => dijkstra 92 ---> 17:  [17] 17.5919778762
+dijkstra 52 ---> 94:  [91, 94] 82.3874770248
+	 => dijkstra 91 ---> 94:  [94] 37.956894215
+dijkstra 100 ---> 81:  [54, 5, 81] 63.0891119364
+	 => dijkstra 54 ---> 81:  [5, 81] 51.6779072199
+	 => dijkstra 5 ---> 81:  [81] 26.8426321288
+dijkstra 56 ---> 86:  [27, 36, 67, 86] 58.0340370998
+	 => dijkstra 27 ---> 86:  [36, 67, 86] 45.3569353888
+	 => dijkstra 36 ---> 86:  [67, 86] 31.0860962353
+	 => dijkstra 67 ---> 86:  [86] 18.1898104652
+dijkstra 83 ---> 73:  [22, 46, 60, 73] 78.668763331
+	 => dijkstra 22 ---> 73:  [46, 60, 73] 63.4211038533
+	 => dijkstra 46 ---> 73:  [60, 73] 48.3700248026
+	 => dijkstra 60 ---> 73:  [73] 25.7735679631
+dijkstra 76 ---> 19:  [18, 9, 69, 98, 19] 169.791692059
+	 => dijkstra 18 ---> 19:  [9, 69, 98, 19] 155.700581791
+	 => dijkstra 9 ---> 19:  [69, 98, 19] 130.433742908
+	 => dijkstra 69 ---> 19:  [98, 19] 49.6905403395
+	 => dijkstra 98 ---> 19:  [19] 29.1304379604
+dijkstra 83 ---> 85:  [33, 78, 85] 91.5675254432
+	 => dijkstra 33 ---> 85:  [78, 85] 74.9686517291
+	 => dijkstra 78 ---> 85:  [85] 56.0501228561
+dijkstra 32 ---> 99:  [35, 83, 40, 99] 128.39286272
+	 => dijkstra 35 ---> 99:  [83, 40, 99] 72.7743263349
+	 => dijkstra 83 ---> 99:  [40, 99] 58.9937511341
+	 => dijkstra 40 ---> 99:  [99] 18.0585687842
+dijkstra 40 ---> 52:  [62, 52] 54.1748791393
+	 => dijkstra 62 ---> 52:  [52] 13.698699121
+dijkstra 20 ---> 51:  [65, 59, 85, 34, 26, 51] 130.882574424
+	 => dijkstra 65 ---> 51:  [59, 85, 34, 26, 51] 120.354335699
+	 => dijkstra 59 ---> 51:  [85, 34, 26, 51] 108.489211803
+	 => dijkstra 85 ---> 51:  [34, 26, 51] 94.0348726071
+	 => dijkstra 34 ---> 51:  [26, 51] 82.3630945657
+	 => dijkstra 26 ---> 51:  [51] 54.4790846073
+dijkstra 84 ---> 25:  [18, 31, 25] 102.483825144
+	 => dijkstra 18 ---> 25:  [31, 25] 91.5615635393
+	 => dijkstra 31 ---> 25:  [25] 31.0260336028
+dijkstra 53 ---> 60:  [60] 31.1298193348
+dijkstra 29 ---> 33:  [33] 71.4284768111
+dijkstra 22 ---> 62:  [4, 36, 70, 58, 62] 91.1347019517
+	 => dijkstra 4 ---> 62:  [36, 70, 58, 62] 80.6834497427
+	 => dijkstra 36 ---> 62:  [70, 58, 62] 66.0884561759
+	 => dijkstra 70 ---> 62:  [58, 62] 35.4790114677
+	 => dijkstra 58 ---> 62:  [62] 15.8188754241
+dijkstra 22 ---> 4:  [99, 89, 4] 81.7605175189
+	 => dijkstra 99 ---> 4:  [89, 4] 71.2584232441
+	 => dijkstra 89 ---> 4:  [4] 12.7083573737
+dijkstra 58 ---> 70:  [91, 5, 74, 51, 70] 119.257115076
+	 => dijkstra 91 ---> 70:  [5, 74, 51, 70] 84.439580187
+	 => dijkstra 5 ---> 70:  [74, 51, 70] 61.2250224062
+	 => dijkstra 74 ---> 70:  [51, 70] 48.1764740154
+	 => dijkstra 51 ---> 70:  [70] 30.6707178808
+dijkstra 42 ---> 28:  [47, 66, 28] 97.9880718501
+	 => dijkstra 47 ---> 28:  [66, 28] 73.5439799832
+	 => dijkstra 66 ---> 28:  [28] 58.183188977
+dijkstra 55 ---> 68:  [77, 97, 68] 87.3121531799
+	 => dijkstra 77 ---> 68:  [97, 68] 64.4759569761
+	 => dijkstra 97 ---> 68:  [68] 15.9435161769
+dijkstra 54 ---> 79:  [39, 67, 94, 79] 83.7475241849
+	 => dijkstra 39 ---> 79:  [67, 94, 79] 67.2263573635
+	 => dijkstra 67 ---> 79:  [94, 79] 56.5728977711
+	 => dijkstra 94 ---> 79:  [79] 37.8968147659
+dijkstra 15 ---> 52:  [94, 64, 29, 52] 145.453867297
+	 => dijkstra 94 ---> 52:  [64, 29, 52] 120.991678198
+	 => dijkstra 64 ---> 52:  [29, 52] 96.2488003413
+	 => dijkstra 29 ---> 52:  [52] 16.6242967497
+dijkstra 13 ---> 41:  [35, 65, 41] 64.3348556111
+	 => dijkstra 35 ---> 41:  [65, 41] 25.4681262604
+	 => dijkstra 65 ---> 41:  [41] 15.136829183
+dijkstra 15 ---> 38:  [16, 3, 70, 38] 89.0306124205
+	 => dijkstra 16 ---> 38:  [3, 70, 38] 78.532665255
+	 => dijkstra 3 ---> 38:  [70, 38] 37.4353724302
+	 => dijkstra 70 ---> 38:  [38] 19.1518761435
+dijkstra 58 ---> 10:  [44, 97, 41, 26, 10] 101.186655271
+	 => dijkstra 44 ---> 10:  [97, 41, 26, 10] 76.6305290042
+	 => dijkstra 97 ---> 10:  [41, 26, 10] 65.4565079387
+	 => dijkstra 41 ---> 10:  [26, 10] 33.5573789597
+	 => dijkstra 26 ---> 10:  [10] 11.8972625577
+dijkstra 83 ---> 92:  [28, 13, 92] 78.541813625
+	 => dijkstra 28 ---> 92:  [13, 92] 61.4610889348
+	 => dijkstra 13 ---> 92:  [92] 10.9855029284
+dijkstra 45 ---> 83:  [83] 67.7404509547
+dijkstra 79 ---> 42:  [30, 62, 42] 87.2503251158
+	 => dijkstra 30 ---> 42:  [62, 42] 63.6103027766
+	 => dijkstra 62 ---> 42:  [42] 39.6428618737
+dijkstra 59 ---> 91:  [18, 91] 75.1983084071
+	 => dijkstra 18 ---> 91:  [91] 22.5337270941
+dijkstra 11 ---> 77:  [70, 82, 14, 77] 90.6557469613
+	 => dijkstra 70 ---> 77:  [82, 14, 77] 45.3558840487
+	 => dijkstra 82 ---> 77:  [14, 77] 32.2473149915
+	 => dijkstra 14 ---> 77:  [77] 20.9818350024
+dijkstra 92 ---> 10:  [80, 38, 94, 10] 100.70507245
+	 => dijkstra 80 ---> 10:  [38, 94, 10] 84.0300922665
+	 => dijkstra 38 ---> 10:  [94, 10] 58.2900461324
+	 => dijkstra 94 ---> 10:  [10] 42.8821043118
+dijkstra 62 ---> 37:  [55, 70, 72, 37] 112.663034455
+	 => dijkstra 55 ---> 37:  [70, 72, 37] 89.4762685112
+	 => dijkstra 70 ---> 37:  [72, 37] 76.4940387316
+	 => dijkstra 72 ---> 37:  [37] 11.0963350218
+
+real	0m3.555s
+user	0m3.526s
+sys	0m0.024s
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ time ./dijkstra
+dijkstra 16 ---> 72:  [49, 95, 72] 114.521658952
+	 => dijkstra 49 ---> 72:  [95, 72] 101.195279985
+	 => dijkstra 95 ---> 72:  [72] 61.6460457386
+dijkstra 15 ---> 58:  [35, 58] 69.2699651532
+	 => dijkstra 35 ---> 58:  [58] 43.4058702232
+dijkstra 13 ---> 90:  [17, 82, 67, 90] 86.7490694231
+	 => dijkstra 17 ---> 90:  [82, 67, 90] 72.3857169191
+	 => dijkstra 82 ---> 90:  [67, 90] 53.092016213
+	 => dijkstra 67 ---> 90:  [90] 16.1202126557
+dijkstra 81 ---> 88:  [56, 41, 95, 88] 99.7691832196
+	 => dijkstra 56 ---> 88:  [41, 95, 88] 89.6105599627
+	 => dijkstra 41 ---> 88:  [95, 88] 31.3456484123
+	 => dijkstra 95 ---> 88:  [88] 17.7347639348
+dijkstra 93 ---> 15:  [31, 15] 89.7659081198
+	 => dijkstra 31 ---> 15:  [15] 19.9055525459
+dijkstra 64 ---> 31:  [31] 65.3642999098
+dijkstra 99 ---> 4:  [4] 34.1488965963
+dijkstra 79 ---> 67:  [3, 36, 4, 67] 130.109845611
+	 => dijkstra 3 ---> 67:  [36, 4, 67] 91.7635841078
+	 => dijkstra 36 ---> 67:  [4, 67] 62.5612673952
+	 => dijkstra 4 ---> 67:  [67] 15.5143381276
+dijkstra 31 ---> 49:  [98, 95, 5, 49] 103.654149769
+	 => dijkstra 98 ---> 49:  [95, 5, 49] 59.1076530982
+	 => dijkstra 95 ---> 49:  [5, 49] 32.1868298888
+	 => dijkstra 5 ---> 49:  [49] 21.6857358934
+dijkstra 44 ---> 59:  [61, 11, 96, 8, 59] 89.2837707628
+	 => dijkstra 61 ---> 59:  [11, 96, 8, 59] 63.4551162219
+	 => dijkstra 11 ---> 59:  [96, 8, 59] 45.2321346749
+	 => dijkstra 96 ---> 59:  [8, 59] 31.4023024452
+	 => dijkstra 8 ---> 59:  [59] 11.5678189349
+dijkstra 34 ---> 49:  [9, 49] 120.795979414
+	 => dijkstra 9 ---> 49:  [49] 41.6957331864
+dijkstra 49 ---> 55:  [33, 55] 76.424586696
+	 => dijkstra 33 ---> 55:  [55] 29.8680934663
+dijkstra 10 ---> 68:  [69, 28, 68] 124.502843043
+	 => dijkstra 69 ---> 68:  [28, 68] 85.1145754695
+	 => dijkstra 28 ---> 68:  [68] 20.8133866026
+dijkstra 44 ---> 24:  [85, 37, 24] 53.9084924746
+	 => dijkstra 85 ---> 24:  [37, 24] 30.1339823725
+	 => dijkstra 37 ---> 24:  [24] 18.349067984
+dijkstra 56 ---> 10:  [52, 45, 16, 10] 81.3913263901
+	 => dijkstra 52 ---> 10:  [45, 16, 10] 62.4367242346
+	 => dijkstra 45 ---> 10:  [16, 10] 42.0836077599
+	 => dijkstra 16 ---> 10:  [10] 21.2967934891
+dijkstra 72 ---> 34:  [78, 94, 27, 34] 74.5902971021
+	 => dijkstra 78 ---> 34:  [94, 27, 34] 63.0788887577
+	 => dijkstra 94 ---> 34:  [27, 34] 25.5341199997
+	 => dijkstra 27 ---> 34:  [34] 11.2656879067
+dijkstra 52 ---> 21:  [21] 20.1637627564
+dijkstra 54 ---> 44:  [75, 49, 40, 44] 123.582272574
+	 => dijkstra 75 ---> 44:  [49, 40, 44] 103.215576854
+	 => dijkstra 49 ---> 44:  [40, 44] 79.5099096112
+	 => dijkstra 40 ---> 44:  [44] 67.1865629421
+dijkstra 56 ---> 80:  [10, 70, 71, 80] 71.1460622984
+	 => dijkstra 10 ---> 80:  [70, 71, 80] 45.3033953858
+	 => dijkstra 70 ---> 80:  [71, 80] 31.6599735822
+	 => dijkstra 71 ---> 80:  [80] 15.1578302342
+dijkstra 65 ---> 67:  [47, 67] 48.0515902481
+	 => dijkstra 47 ---> 67:  [67] 17.0771872719
+dijkstra 20 ---> 56:  [44, 49, 56] 73.5133156924
+	 => dijkstra 44 ---> 56:  [49, 56] 51.2316529681
+	 => dijkstra 49 ---> 56:  [56] 34.7220804729
+dijkstra 37 ---> 17:  [48, 17] 87.9138573842
+	 => dijkstra 48 ---> 17:  [17] 60.6517721851
+dijkstra 84 ---> 24:  [24] 79.2743739752
+dijkstra 66 ---> 92:  [20, 92] 56.8822270504
+	 => dijkstra 20 ---> 92:  [92] 39.1218823638
+dijkstra 92 ---> 89:  [80, 6, 7, 89] 161.518726792
+	 => dijkstra 80 ---> 89:  [6, 7, 89] 93.246478979
+	 => dijkstra 6 ---> 89:  [7, 89] 56.3064074318
+	 => dijkstra 7 ---> 89:  [89] 36.1583413173
+dijkstra 79 ---> 34:  [62, 34] 149.903147823
+	 => dijkstra 62 ---> 34:  [34] 91.6254757384
+dijkstra 96 ---> 91:  [26, 83, 93, 91] 118.102143892
+	 => dijkstra 26 ---> 91:  [83, 93, 91] 86.2213916472
+	 => dijkstra 83 ---> 91:  [93, 91] 56.257651212
+	 => dijkstra 93 ---> 91:  [91] 36.4997428912
+dijkstra 82 ---> 6:  [87, 37, 84, 6] 102.653758556
+	 => dijkstra 87 ---> 6:  [37, 84, 6] 84.7966894128
+	 => dijkstra 37 ---> 6:  [84, 6] 69.1400633588
+	 => dijkstra 84 ---> 6:  [6] 43.9028642393
+dijkstra 13 ---> 36:  [36] 63.9493699251
+dijkstra 65 ---> 100:  [61, 100] 137.239940728
+	 => dijkstra 61 ---> 100:  [100] 99.8600302784
+dijkstra 17 ---> 14:  [32, 87, 14] 84.8264416799
+	 => dijkstra 32 ---> 14:  [87, 14] 34.6944190936
+	 => dijkstra 87 ---> 14:  [14] 15.7891797033
+dijkstra 54 ---> 57:  [32, 56, 57] 75.7158594473
+	 => dijkstra 32 ---> 57:  [56, 57] 55.4085519236
+	 => dijkstra 56 ---> 57:  [57] 12.3583803542
+dijkstra 53 ---> 1:  [1] 50.9410679524
+dijkstra 44 ---> 8:  [79, 20, 8] 103.685830608
+	 => dijkstra 79 ---> 8:  [20, 8] 85.5245746333
+	 => dijkstra 20 ---> 8:  [8] 45.7234966242
+dijkstra 14 ---> 10:  [32, 60, 30, 6, 10] 130.371699786
+	 => dijkstra 32 ---> 10:  [60, 30, 6, 10] 100.479643536
+	 => dijkstra 60 ---> 10:  [30, 6, 10] 85.5750275138
+	 => dijkstra 30 ---> 10:  [6, 10] 74.6010208871
+	 => dijkstra 6 ---> 10:  [10] 55.2737181017
+dijkstra 34 ---> 20:  [94, 20] 86.5687865325
+	 => dijkstra 94 ---> 20:  [20] 26.7707199054
+dijkstra 90 ---> 11:  [65, 15, 29, 11] 121.227924643
+	 => dijkstra 65 ---> 11:  [15, 29, 11] 89.4927705829
+	 => dijkstra 15 ---> 11:  [29, 11] 67.2178822056
+	 => dijkstra 29 ---> 11:  [11] 36.9358118355
+dijkstra 90 ---> 34:  [98, 34] 77.0032257461
+	 => dijkstra 98 ---> 34:  [34] 13.861609176
+dijkstra 48 ---> 67:  [3, 98, 67] 95.5878016445
+	 => dijkstra 3 ---> 67:  [98, 67] 46.8642858939
+	 => dijkstra 98 ---> 67:  [67] 18.5092559181
+dijkstra 25 ---> 38:  [12, 38] 55.5333715257
+	 => dijkstra 12 ---> 38:  [38] 32.2693118821
+dijkstra 86 ---> 8:  [88, 8] 39.5933174224
+	 => dijkstra 88 ---> 8:  [8] 14.8692204696
+dijkstra 73 ---> 64:  [81, 3, 6, 64] 143.224147622
+	 => dijkstra 81 ---> 64:  [3, 6, 64] 71.8705265754
+	 => dijkstra 3 ---> 64:  [6, 64] 61.4686352689
+	 => dijkstra 6 ---> 64:  [64] 13.7257434755
+dijkstra 49 ---> 15:  [33, 93, 15] 77.1272361714
+	 => dijkstra 33 ---> 15:  [93, 15] 66.6508567679
+	 => dijkstra 93 ---> 15:  [15] 23.9988375322
+dijkstra 70 ---> 18:  [63, 84, 18] 55.6690132178
+	 => dijkstra 63 ---> 18:  [84, 18] 37.872834599
+	 => dijkstra 84 ---> 18:  [18] 13.7193675414
+dijkstra 98 ---> 45:  [54, 45] 44.8897260172
+	 => dijkstra 54 ---> 45:  [45] 30.6630210493
+dijkstra 21 ---> 28:  [96, 5, 47, 28] 92.2925931402
+	 => dijkstra 96 ---> 28:  [5, 47, 28] 79.0570055701
+	 => dijkstra 5 ---> 28:  [47, 28] 55.7318287695
+	 => dijkstra 47 ---> 28:  [28] 42.2725584588
+dijkstra 94 ---> 82:  [77, 89, 12, 82] 105.895776752
+	 => dijkstra 77 ---> 82:  [89, 12, 82] 75.1903864581
+	 => dijkstra 89 ---> 82:  [12, 82] 42.6708099764
+	 => dijkstra 12 ---> 82:  [82] 25.0269778462
+dijkstra 87 ---> 73:  [59, 12, 86, 46, 73] 95.1035566207
+	 => dijkstra 59 ---> 73:  [12, 86, 46, 73] 83.2505278911
+	 => dijkstra 12 ---> 73:  [86, 46, 73] 71.6444500294
+	 => dijkstra 86 ---> 73:  [46, 73] 48.7378441726
+	 => dijkstra 46 ---> 73:  [73] 32.0902478565
+dijkstra 33 ---> 10:  [97, 22, 48, 10] 115.685938778
+	 => dijkstra 97 ---> 10:  [22, 48, 10] 95.4300813374
+	 => dijkstra 22 ---> 10:  [48, 10] 38.3360590434
+	 => dijkstra 48 ---> 10:  [10] 22.0609407199
+dijkstra 31 ---> 52:  [33, 47, 6, 52] 94.9450862264
+	 => dijkstra 33 ---> 52:  [47, 6, 52] 84.0318392874
+	 => dijkstra 47 ---> 52:  [6, 52] 69.7669703702
+	 => dijkstra 6 ---> 52:  [52] 51.6703524507
+dijkstra 48 ---> 51:  [22, 51] 43.4061559447
+	 => dijkstra 22 ---> 51:  [51] 17.5485844717
+dijkstra 65 ---> 2:  [54, 48, 2] 119.761115766
+	 => dijkstra 54 ---> 2:  [48, 2] 64.1551998879
+	 => dijkstra 48 ---> 2:  [2] 10.0191773245
+dijkstra 49 ---> 58:  [93, 74, 58] 51.0276746738
+	 => dijkstra 93 ---> 58:  [74, 58] 22.7686299564
+	 => dijkstra 74 ---> 58:  [58] 12.6735205134
+dijkstra 5 ---> 8:  [92, 85, 80, 36, 8] 129.625297648
+	 => dijkstra 92 ---> 8:  [85, 80, 36, 8] 97.5320492408
+	 => dijkstra 85 ---> 8:  [80, 36, 8] 55.8936474994
+	 => dijkstra 80 ---> 8:  [36, 8] 35.4628866732
+	 => dijkstra 36 ---> 8:  [8] 11.7132078144
+dijkstra 62 ---> 15:  [33, 18, 15] 60.9538890689
+	 => dijkstra 33 ---> 15:  [18, 15] 45.3198346651
+	 => dijkstra 18 ---> 15:  [15] 22.5173224175
+dijkstra 91 ---> 33:  [76, 64, 66, 33] 110.310079062
+	 => dijkstra 76 ---> 33:  [64, 66, 33] 87.2724338705
+	 => dijkstra 64 ---> 33:  [66, 33] 74.4820268478
+	 => dijkstra 66 ---> 33:  [33] 50.3512949259
+dijkstra 20 ---> 76:  [51, 64, 76] 76.4815090475
+	 => dijkstra 51 ---> 76:  [64, 76] 64.5499888743
+	 => dijkstra 64 ---> 76:  [76] 16.2846300547
+dijkstra 90 ---> 12:  [20, 12] 82.6280234287
+	 => dijkstra 20 ---> 12:  [12] 13.9994380638
+dijkstra 73 ---> 45:  [34, 92, 45] 82.7701102558
+	 => dijkstra 34 ---> 45:  [92, 45] 56.9491344995
+	 => dijkstra 92 ---> 45:  [45] 32.7710567115
+dijkstra 76 ---> 21:  [38, 22, 21] 189.968160198
+	 => dijkstra 38 ---> 21:  [22, 21] 169.779276357
+	 => dijkstra 22 ---> 21:  [21] 83.2022596053
+dijkstra 75 ---> 87:  [5, 93, 87] 80.3725153508
+	 => dijkstra 5 ---> 87:  [93, 87] 57.706259365
+	 => dijkstra 93 ---> 87:  [87] 42.8699934944
+dijkstra 17 ---> 96:  [82, 33, 54, 96] 165.996227716
+	 => dijkstra 82 ---> 96:  [33, 54, 96] 133.720593494
+	 => dijkstra 33 ---> 96:  [54, 96] 105.331202575
+	 => dijkstra 54 ---> 96:  [96] 30.5474819023
+dijkstra 62 ---> 59:  [93, 23, 45, 4, 59] 111.411449437
+	 => dijkstra 93 ---> 59:  [23, 45, 4, 59] 100.020977563
+	 => dijkstra 23 ---> 59:  [45, 4, 59] 87.6080660788
+	 => dijkstra 45 ---> 59:  [4, 59] 67.2847356909
+	 => dijkstra 4 ---> 59:  [59] 28.8688921277
+dijkstra 62 ---> 10:  [61, 3, 10] 77.9061625807
+	 => dijkstra 61 ---> 10:  [3, 10] 42.4246124218
+	 => dijkstra 3 ---> 10:  [10] 14.242971351
+dijkstra 27 ---> 62:  [98, 64, 18, 62] 81.3996014381
+	 => dijkstra 98 ---> 62:  [64, 18, 62] 58.6257786926
+	 => dijkstra 64 ---> 62:  [18, 62] 46.2440541878
+	 => dijkstra 18 ---> 62:  [62] 13.1838630693
+dijkstra 14 ---> 88:  [25, 88] 65.8773914382
+	 => dijkstra 25 ---> 88:  [88] 47.4810289418
+dijkstra 61 ---> 41:  [87, 41] 91.5868083546
+	 => dijkstra 87 ---> 41:  [41] 25.5542146624
+dijkstra 35 ---> 59:  [51, 49, 59] 71.8960860784
+	 => dijkstra 51 ---> 59:  [49, 59] 43.0304754692
+	 => dijkstra 49 ---> 59:  [59] 14.8919683566
+dijkstra 48 ---> 80:  [18, 59, 80] 71.8444236782
+	 => dijkstra 18 ---> 80:  [59, 80] 47.638120091
+	 => dijkstra 59 ---> 80:  [80] 20.918497193
+dijkstra 43 ---> 24:  [78, 76, 24] 78.1384370677
+	 => dijkstra 78 ---> 24:  [76, 24] 48.0301273086
+	 => dijkstra 76 ---> 24:  [24] 31.0463793082
+dijkstra 44 ---> 17:  [80, 10, 17] 83.8971027622
+	 => dijkstra 80 ---> 17:  [10, 17] 64.9196416227
+	 => dijkstra 10 ---> 17:  [17] 45.6440176179
+dijkstra 30 ---> 40:  [81, 99, 40] 118.129689366
+	 => dijkstra 81 ---> 40:  [99, 40] 79.6446573049
+	 => dijkstra 99 ---> 40:  [40] 18.7961673096
+dijkstra 84 ---> 82:  [23, 82] 111.371866161
+	 => dijkstra 23 ---> 82:  [82] 75.5634606397
+dijkstra 26 ---> 17:  [17] 74.4588026424
+dijkstra 86 ---> 51:  [100, 91, 78, 51] 80.7617193511
+	 => dijkstra 100 ---> 51:  [91, 78, 51] 34.5195330051
+	 => dijkstra 91 ---> 51:  [78, 51] 24.1297233114
+	 => dijkstra 78 ---> 51:  [51] 13.4030173532
+dijkstra 64 ---> 83:  [75, 12, 25, 83] 126.046196164
+	 => dijkstra 75 ---> 83:  [12, 25, 83] 78.4962892588
+	 => dijkstra 12 ---> 83:  [25, 83] 61.1088405462
+	 => dijkstra 25 ---> 83:  [83] 30.382177688
+dijkstra 18 ---> 40:  [39, 40] 34.572024537
+	 => dijkstra 39 ---> 40:  [40] 14.8804880532
+dijkstra 31 ---> 60:  [60] 27.4489195263
+dijkstra 56 ---> 82:  [18, 7, 45, 82] 109.529977875
+	 => dijkstra 18 ---> 82:  [7, 45, 82] 96.9097594568
+	 => dijkstra 7 ---> 82:  [45, 82] 68.6304147925
+	 => dijkstra 45 ---> 82:  [82] 32.2400975018
+dijkstra 23 ---> 59:  [53, 59] 44.0107067947
+	 => dijkstra 53 ---> 59:  [59] 13.7893741773
+dijkstra 43 ---> 57:  [57] 13.6006423108
+dijkstra 16 ---> 48:  [77, 48] 84.9969628697
+	 => dijkstra 77 ---> 48:  [48] 24.2937870415
+dijkstra 78 ---> 50:  [6, 92, 50] 96.007021351
+	 => dijkstra 6 ---> 50:  [92, 50] 27.3881089279
+	 => dijkstra 92 ---> 50:  [50] 10.2218759171
+dijkstra 58 ---> 82:  [4, 57, 13, 82] 103.880089147
+	 => dijkstra 4 ---> 82:  [57, 13, 82] 83.2503546806
+	 => dijkstra 57 ---> 82:  [13, 82] 66.7495266675
+	 => dijkstra 13 ---> 82:  [82] 18.4163487167
+dijkstra 13 ---> 31:  [55, 71, 40, 7, 31] 94.5350273982
+	 => dijkstra 55 ---> 31:  [71, 40, 7, 31] 80.8101674769
+	 => dijkstra 71 ---> 31:  [40, 7, 31] 58.9748721265
+	 => dijkstra 40 ---> 31:  [7, 31] 36.9386818911
+	 => dijkstra 7 ---> 31:  [31] 12.0431629808
+dijkstra 74 ---> 79:  [97, 57, 79] 54.6474250671
+	 => dijkstra 97 ---> 79:  [57, 79] 42.3253221314
+	 => dijkstra 57 ---> 79:  [79] 27.0755776418
+dijkstra 52 ---> 44:  [55, 68, 44] 110.025369799
+	 => dijkstra 55 ---> 44:  [68, 44] 94.8547778162
+	 => dijkstra 68 ---> 44:  [44] 40.40761752
+dijkstra 68 ---> 71:  [3, 11, 98, 71] 105.248452543
+	 => dijkstra 3 ---> 71:  [11, 98, 71] 50.3746775073
+	 => dijkstra 11 ---> 71:  [98, 71] 32.5282396385
+	 => dijkstra 98 ---> 71:  [71] 19.7233854121
+dijkstra 53 ---> 84:  [17, 97, 16, 84] 95.3760472576
+	 => dijkstra 17 ---> 84:  [97, 16, 84] 83.0116178792
+	 => dijkstra 97 ---> 84:  [16, 84] 60.932949794
+	 => dijkstra 16 ---> 84:  [84] 24.3828495295
+dijkstra 27 ---> 26:  [5, 100, 15, 26] 61.2382445553
+	 => dijkstra 5 ---> 26:  [100, 15, 26] 49.9814452173
+	 => dijkstra 100 ---> 26:  [15, 26] 39.1509313444
+	 => dijkstra 15 ---> 26:  [26] 16.3933748572
+dijkstra 46 ---> 87:  [18, 90, 87] 70.6182536286
+	 => dijkstra 18 ---> 87:  [90, 87] 42.0634281551
+	 => dijkstra 90 ---> 87:  [87] 30.4870406599
+dijkstra 43 ---> 31:  [36, 21, 31] 71.2115433446
+	 => dijkstra 36 ---> 31:  [21, 31] 35.5737876374
+	 => dijkstra 21 ---> 31:  [31] 17.899649081
+dijkstra 95 ---> 72:  [91, 72] 134.247858419
+	 => dijkstra 91 ---> 72:  [72] 52.2784598298
+dijkstra 13 ---> 42:  [58, 39, 42] 73.9281440042
+	 => dijkstra 58 ---> 42:  [39, 42] 55.5661271101
+	 => dijkstra 39 ---> 42:  [42] 34.7553573547
+dijkstra 70 ---> 87:  [71, 30, 96, 25, 87] 117.563083174
+	 => dijkstra 71 ---> 87:  [30, 96, 25, 87] 101.892109252
+	 => dijkstra 30 ---> 87:  [96, 25, 87] 67.5443059036
+	 => dijkstra 96 ---> 87:  [25, 87] 50.0759869267
+	 => dijkstra 25 ---> 87:  [87] 16.663137942
+dijkstra 100 ---> 51:  [93, 37, 6, 51] 146.72329095
+	 => dijkstra 93 ---> 51:  [37, 6, 51] 108.617303961
+	 => dijkstra 37 ---> 51:  [6, 51] 83.6762284222
+	 => dijkstra 6 ---> 51:  [51] 69.2139049276
+dijkstra 63 ---> 8:  [17, 98, 25, 8] 130.632890717
+	 => dijkstra 17 ---> 8:  [98, 25, 8] 100.246680765
+	 => dijkstra 98 ---> 8:  [25, 8] 87.6732154489
+	 => dijkstra 25 ---> 8:  [8] 23.8238568085
+dijkstra 4 ---> 39:  [41, 92, 61, 49, 25, 39] 117.260675211
+	 => dijkstra 41 ---> 39:  [92, 61, 49, 25, 39] 105.064857865
+	 => dijkstra 92 ---> 39:  [61, 49, 25, 39] 88.2482240554
+	 => dijkstra 61 ---> 39:  [49, 25, 39] 69.548888661
+	 => dijkstra 49 ---> 39:  [25, 39] 50.2279161063
+	 => dijkstra 25 ---> 39:  [39] 32.1947423339
+dijkstra 5 ---> 24:  [75, 24] 81.2483549389
+	 => dijkstra 75 ---> 24:  [24] 71.2280689157
+dijkstra 62 ---> 8:  [97, 9, 8] 102.455597325
+	 => dijkstra 97 ---> 8:  [9, 8] 90.0436562764
+	 => dijkstra 9 ---> 8:  [8] 15.4183337923
+
+real	0m0.315s
+user	0m0.310s
+sys	0m0.018s
+ian@debian:~/shedskin/shedskin-examples-0.9.4$ 
+
