@@ -1,0 +1,25 @@
+ian@debian:~$ gfortran fget1.f08  -o fget 
+ian@debian:~$ ./fget 
+5 
+5ian@debian:~$  
+ian@debian:~$ cat fget.f08 
+cat: fget.f08: No such file or directory 
+ian@debian:~$ cat fget1.f08 
+!run only from terminal, not ide/editor. 
+                  
+                 CHARACTER  C 
+                 INTEGER Status1 
+                 CALL Fget(C, Status1) 
+                 CALL Fput(C, Status1) 
+                 !write(6,9000)C, Status1 
+                 !9000 format(" ",a4,i4) 
+                 !print *,C 
+                 !PRINT *,Status1 
+                 end program 
+                   
+ian@debian:~$  
+
+~                                                                               
+~                                                                               
+-- VISUAL --                                        21        21,0-1        All
+
