@@ -1,0 +1,82 @@
+ian@debian:~$ espeak 
+ian@debian:~$ sloccount 967
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/967/967.head to top_dir
+Adding /home/ian/967/AUTHORS to top_dir
+Adding /home/ian/967/COPYING to top_dir
+Adding /home/ian/967/ChangeLog to top_dir
+Adding /home/ian/967/INSTALL to top_dir
+Adding /home/ian/967/MakeVariables.in to top_dir
+Adding /home/ian/967/Makefile to top_dir
+Adding /home/ian/967/Makefile.am to top_dir
+Adding /home/ian/967/Makefile.in to top_dir
+Adding /home/ian/967/NEWS to top_dir
+Adding /home/ian/967/README to top_dir
+Adding /home/ian/967/aclocal.m4 to top_dir
+Adding /home/ian/967/autogen.sh to top_dir
+Creating filelist for autom4te.cache
+Creating filelist for build-aux
+Adding /home/ian/967/config.h.in to top_dir
+Adding /home/ian/967/config.h.in~ to top_dir
+Adding /home/ian/967/config.log to top_dir
+Adding /home/ian/967/configure to top_dir
+Adding /home/ian/967/configure.ac to top_dir
+Creating filelist for examples
+Creating filelist for include
+Creating filelist for m4
+Creating filelist for scripts
+Have a non-directory at the top, so creating directory src_top_dir
+Adding /home/ian/967/src/cheb_utils.cpp to src_top_dir
+Adding /home/ian/967/src/device_wrapper.cpp to src_top_dir
+Adding /home/ian/967/src/fmm_gll.cpp to src_top_dir
+Adding /home/ian/967/src/fmm_gll.o to src_top_dir
+Adding /home/ian/967/src/fmm_pts_gpu.cu to src_top_dir
+Adding /home/ian/967/src/legendre_rule.cpp to src_top_dir
+Adding /home/ian/967/src/mat_utils.cpp to src_top_dir
+Adding /home/ian/967/src/math_utils.cpp to src_top_dir
+Adding /home/ian/967/src/mem_mgr.cpp to src_top_dir
+Adding /home/ian/967/src/mortonid.cpp to src_top_dir
+Adding /home/ian/967/src/profile.cpp to src_top_dir
+Adding /home/ian/967/src/tree_node.cpp to src_top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+4364    build-aux       sh=4364
+2850    include         cpp=2567,ansic=283
+2542    src_top_dir     cpp=2542
+1429    scripts         sh=1429
+1050    top_dir         sh=1050
+867     examples        cpp=867
+0       autom4te.cache  (none)
+0       m4              (none)
+
+
+Totals grouped by language (dominant language first):
+sh:            6843 (52.23%)
+cpp:           5976 (45.61%)
+ansic:          283 (2.16%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 13,102
+Development Effort Estimate, Person-Years (Person-Months) = 2.98 (35.76)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.81 (9.73)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 3.67
+Total Estimated Cost to Develop                           = $ 402,574
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@debian:~$ 
+
+
