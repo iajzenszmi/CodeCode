@@ -1,0 +1,19 @@
+ian@debian:~$ gcc shining.c -o shining
+ian@debian:~$ bash shining
+shining: shining: cannot execute binary file
+ian@debian:~$ ./shining
+
+From sea to shining Cian@debian:~$ gcc shining.c -o shining
+ian@debian:~$ ./shining
+
+From sea to shining C.
+ian@debian:~$ gcc shining.c -o shining
+ian@debian:~$ ./shining
+From sea to shining C.
+ian@debian:~$ cat shining.c
+#include <stdio.h>
+int main(){
+	printf("%s\n","From sea to shining C.");
+}
+ian@debian:~$ 
+
