@@ -9,18 +9,18 @@ C                   for routine spctrm
           K1=8
           OVRLAP1 =.TRUE.
           CALL SPCTRM(P1,M1,K1,OVRLAP1,W11,W21)
-          print *, "              SPECTRUM OF DATA IN FILE SPCTRL.DAT"     
-          print *,"               OVERLAPPED      " , "  NON-OVERLAPPED"
-          DO 17 J=1,M1 
-              print *, J, P1(J), Q1(J)
- 17      continue             
+ !         print *, "              SPECTRUM OF DATA IN FILE SPCTRL.DAT"     
+ !         print *,"               OVERLAPPED      " , "  NON-OVERLAPPED"
+  !        DO 17 J=1,M1 
+   !           print *, J, P1(J), Q1(J)
+ !17      continue             
           REWIND(9)
           K1=16
           OVRLAP1 = .FALSE.
           CALL SPCTRM(Q1,M1,K1,OVRLAP1,W11,W21)
-!          CLOSE(9)
+          CLOSE(9)
           print *, "               SPECTRUM OF DATA IN FILE SPCTRL.DAT"     
-          print *,"                OVERLAPPED" , "       NON-OVERLAPPED"
+          print *,"                OVERLAPPED   " , "    NON-OVERLAPPED"
           DO 11 J=1,M1 
               print *, J, P1(J), Q1(J)
  11       CONTINUE   
@@ -100,7 +100,7 @@ C                   for routine spctrm
          REAL*8 WR,WI,WPR,WPI,WTEMP,THETA
        DIMENSION DATA(2*NN)
        N=2*NN
-       PRINT *," NN ", NN
+!       PRINT *," NN ", NN
        J=1
        DO 11 I=1,N,2
             IF(J.GT.I)THEN
