@@ -1,0 +1,3 @@
+ian@debian:~$ echo one two three four five | awk '{print  $3}'
+three
+
