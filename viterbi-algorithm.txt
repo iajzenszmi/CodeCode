@@ -1,0 +1,108 @@
+Jupyter Notebook
+viterbi_algorithm
+(unsaved changes)
+Current Kernel Logo
+Python 3 
+File
+Edit
+View
+Insert
+Cell
+Kernel
+Widgets
+Help
+
+Markdown
+Probabilistic Reasoning over Time
+Finding the Most Likely Sequence with Viterbi Algorithm
+Introduction
+An Hidden Markov Model (HMM) network is parameterized by two distributions:
+
+the emission or sensor probabilties giving the conditional probability of observing evidence values for each hidden state;
+the transition probabilities giving the conditional probability of moving between states during the sequence.
+Additionally, an initial distribution describes the probability of a sequence starting in each state.
+
+At each time t, Xt represents the hidden state and Et represents an observation at that time.
+
+from probability import *
+%psource HiddenMarkovModel
+Finding the Most Likely Sequence
+There is a linear-time algorithm for finding the most likely sequence: the easiest way to think about the problem is to view each sequence as a path through a graph whose nodes are the possible states at each time step. Now consider the task of finding the most likely path through this graph, where the likelihood of any path is the product of the transition probabilities along the path and the probabilities of the given observations at each state. There is a recursive relationship between most likely paths to each state xt+1 and most likely paths to each state xt . We can write this relationship as an equation connecting the probabilities of the paths:
+
+m1:t+1=maxx1:tP(x1:t,Xt+1|e1:t+1)=αP(et+1|Xt+1)maxxt(P(Xt+1|xt)maxx1:t−1P(x1:t−1,xt|e1:t))
+The Viterbi algorithm is a dynamic programming algorithm for finding the most likely sequence of hidden states, called the Viterbi path, that results in a sequence of observed events in the context of HMMs. This algorithms is useful in many applications, including speech recognition, where the aim is to find the most likely sequence of words, given a series of sounds and the reconstruction of bit strings transmitted over a noisy channel.
+
+%psource viterbi
+Umbrella World
+You are the security guard stationed at a secret under-ground installation. Each day, you try to guess whether it’s raining today, but your only access to the outside world occurs each morning when you see the director coming in with, or without, an umbrella.
+
+In this problem t corresponds to each day of the week, the hidden state Xt represent the weather outside at day t (whether it is rainy or sunny) and observations record Et whether at day t the security guard sees the director carrying an umbrella or not.
+
+Observation Emission or Sensor Probabilities P(Et:=Umbrellat|Xt:=Weathert)
+We need to assume that we have some prior knowledge about the director's behavior to estimate the emission probabilities for each hidden state:
+
+yes	no
+Sunny	0.10	0.90
+Rainy	0.80	0.20
+Initial Probability P(X0:=Weather0)
+We will assume that we don't know anything useful about the likelihood of a sequence starting in either state. If the sequences start each week on Monday and end each week on Friday (so each week is a new sequence), then this assumption means that it's equally likely that the weather on a Monday may be Rainy or Sunny. We can assign equal probability to each starting state:
+
+Sunny	Rainy
+0.5	0.5
+State Transition Probabilities P(Xt:=Weathert|Xt−1:=Weathert−1)
+Finally, we will assume that we can estimate transition probabilities from something like historical weather data for the area. Under this assumption, we get the conditional probability:
+
+Sunny	Rainy
+Sunny	0.70	0.30
+Rainy	0.30	0.70
+umbrella_transition = [[0.7, 0.3], [0.3, 0.7]]
+umbrella_sensor = [[0.9, 0.2], [0.1, 0.8]]
+umbrellaHMM = HiddenMarkovModel(umbrella_transition, umbrella_sensor)
+from graphviz import Digraph
+dot = Digraph()
+​
+dot.node('I', 'Start', shape='doublecircle')
+dot.node('R', 'Rainy')
+dot.node('S','Sunny')
+​
+dot.edge('I', 'R', label='0.5')
+dot.edge('I', 'S', label='0.5')
+​
+dot.edge('R', 'S', label='0.2')
+dot.edge('S', 'R', label='0.4')
+​
+dot.node('Y', 'Yes')
+dot.node('N', 'No')
+​
+dot.edge('R', 'R', label='0.6')
+dot.edge('R', 'Y', label='0.8')
+dot.edge('R', 'N', label='0.2')
+​
+dot.edge('S', 'S', label='0.8')
+dot.edge('S', 'Y', label='0.1')
+dot.edge('S', 'N', label='0.9')
+​
+dot
+Start
+Rainy
+0.5
+Sunny
+0.5
+0.6
+0.2
+Yes
+0.8
+No
+0.2
+0.4
+0.8
+0.1
+0.9
+Suppose that  [true,true,false,true,true]  is the umbrella sequence for the security guard’s first five days on the job. What is the weather sequence most likely to explain this?
+
+from utils import rounder
+umbrella_evidence = [True, True, False, True, True]
+​
+rounder(viterbi(umbrellaHMM, umbrella_evidence))
+​
+
