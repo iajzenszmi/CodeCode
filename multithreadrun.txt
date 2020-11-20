@@ -1,0 +1,72 @@
+/ $
+/ $ export PATH=/busybox-virtual:/data/user/0/com.n0n3m4.droidc/files/:/data/user/0/com.n0n3m4.droidc/files/gcc/bin:/data/user/0/com.n0n3m4.droidc/files/gcc/debugger:/data/user/0/com.n0n3m4.droidc/files/gcc/arm-linux-androideabi/bin/:$PATH
+/ $ export CFLAGS="-Os -s -pie"
+/ $ export CXXFLAGS="-Os -s -pie"
+/ $ export SHELL="/data/user/0/com.n0n3m4.droidc/files/sh"
+/ $ export TMPDIR=/data/user/0/com.n0n3m4.droidc/files/gcc/tmpdir
+/ $ export CONFIG_SHELL="sh"
+/ $ export PKG_CONFIG_PATH=/data/user/0/com.n0n3m4.droidc/files/gcc/arm-linux-androideabi/lib/pkgconfig
+/ $ cd "/storage/emulated/0"
+/storage/emulated/0 $ cat mul2.cpp
+#include <iostream>
+#include <thread>
+#include <unistd.h>
+void start1();
+using namespace std;
+
+pthread_mutex_t t_mutex = PTHREAD_MUTEX_INITIALIZER;
+
+
+void* showNumber (void* number) {
+    //lock access for other threads
+    pthread_mutex_lock(&t_mutex);
+
+    sleep(1);
+    cout << *(int *)number << " ";
+
+    pthread_mutex_unlock(&t_mutex);
+    return number;
+}
+
+void start1() {
+        printf("\n%s","started");
+    //start ten threads
+    for (int i = 1; i <= 10; i++) {
+        int *number = new int;
+        *number = i;
+        pthread_t t1;
+        pthread_create(&t1, NULL, showNumber, number);
+        printf("\n%s%d"," number = ",number);        printf("\n%s%d"," *number = ",
+        *number);
+    }
+}
+int main(){
+ start1();
+}
+
+//result without lock: 31254678910,,,,,,,, ,,
+//result with lock: 1, 2, 3, 4, 6, 5, 7, 8, 9, 10,/storage/emulated/0 $ g++ mul2
+/storage/emulated/0 $ g++ mul2.cpp -pie -o mul2
+/storage/emulated/0 $ ./mul2
+
+started
+ number = -1330605792
+ *number = 1
+ number = -1330605784
+ *number = 2
+ number = -1330605776
+ *number = 3
+ number = -1330605768
+ *number = 4
+ number = -1330605760
+ *number = 5
+ number = -1330605752
+ *number = 6
+ number = -1330605744
+ *number = 7
+ number = -1330605736
+ *number = 8
+ number = -1330605728
+ *number = 9
+ number = -1330605720
+/storage/emulated/0 $
