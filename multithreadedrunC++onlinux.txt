@@ -1,3 +1,31 @@
+ian@debian:~$ g++ mul2.cpp -o mul
+/usr/bin/ld: /tmp/cckPCu0a.o: in function `start1()':
+mul2.cpp:(.text+0xb6): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+ian@debian:~$ g++ mul2.cpp -lpthread -o mul2
+ian@debian:~$ ./mul2
+
+started
+ number = -1527082368
+ *number = 1
+ number = -1527082032
+ *number = 2
+ number = -1527081696
+ *number = 3
+ number = -1527081360
+ *number = 4
+ number = -1527081024
+ *number = 5
+ number = -1527080688
+ *number = 6
+ number = -1527080352
+ *number = 7
+ number = -1527080016
+ *number = 8
+ number = -1527079680
+ *number = 9
+ number = -1527079344
+ *number = 10ian@debian:~$ cat mul2.cpp
 #include <iostream>
 #include <thread>
 #include <unistd.h>
@@ -36,3 +64,5 @@ int main(){
 
 //result without lock: 31254678910,,,,,,,, ,,
 //result with lock: 1, 2, 3, 4, 6, 5, 7, 8, 9, 10,
+ian@debian:~$ 
+
