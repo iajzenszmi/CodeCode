@@ -1,0 +1,22 @@
+ian@ian:~$ gfortran addagoodone.f -o addagoodone
+gfortran: error: addagoodone.f: No such file or directory
+ian@ian:~$ git clone https://github.com/iajzenszmi/CodeCode.git
+Cloning into 'CodeCode'...
+remote: Enumerating objects: 932, done.
+remote: Total 932 (delta 0), reused 0 (delta 0), pack-reused 932
+Receiving objects: 100% (932/932), 18.34 MiB | 2.53 MiB/s, done.
+Resolving deltas: 100% (354/354), done.
+ian@ian:~$ cd CodeCode
+ian@ian:~/CodeCode$ gfortran addagoodone.f -o addagoodone
+ian@ian:~/CodeCode$ ./addagoodone
+ spell it out and add it up
+  sum =            2  one            1  + 1
+ian@ian:~/CodeCode$ cat addagoodone.f
+        integer one, sum1
+        one = 1
+        print *,"spell it out and add it up"
+        sum1 = one + 1
+        print *, " sum = ",sum1 , " one " , one, " + 1"
+        end program
+ian@ian:~/CodeCode$ 
+
