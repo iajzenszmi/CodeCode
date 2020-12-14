@@ -1,0 +1,170 @@
+ian@ian:~$ mpifort mpitest.f08 -S
+ian@ian:~$ cat mpitest.f08
+PROGRAM hello_world_mpi
+!include "mpif.h"
+
+
+integer process_Rank, size_Of_Cluster, ierror
+
+call MPI_INIT(ierror)
+call MPI_COMM_SIZE(MPI_COMM_WORLD, size_Of_Cluster, ierror)
+call MPI_COMM_RANK(MPI_COMM_WORLD, process_Rank, ierror)
+
+DO i = 0, 3, 1
+    IF(i == process_Rank) THEN
+        print *, 'Hello World from process: ', process_Rank, 'of ', size_Of_Cluster
+    END IF
+    call MPI_BARRIER( MPI_COMM_WORLD, i_error)
+END DO
+
+call MPI_FINALIZE(ierror)
+END PROGRAM
+
+ian@ian:~$ cat mpitest.s
+	.file	"mpitest.f08"
+	.text
+	.section	.rodata
+.LC0:
+	.string	"mpitest.f08"
+.LC1:
+	.ascii	"Hello World from process: "
+.LC2:
+	.ascii	"of "
+	.text
+	.type	MAIN__, @function
+MAIN__:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$512, %rsp
+	leaq	-12(%rbp), %rax
+	movq	%rax, %rdi
+	call	mpi_init_@PLT
+	leaq	-12(%rbp), %rdx
+	leaq	-24(%rbp), %rcx
+	leaq	-16(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	mpi_comm_size_@PLT
+	leaq	-12(%rbp), %rdx
+	leaq	-20(%rbp), %rcx
+	leaq	-16(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	mpi_comm_rank_@PLT
+	movl	$0, -4(%rbp)
+.L4:
+	cmpl	$3, -4(%rbp)
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L5
+	movl	-20(%rbp), %eax
+	cmpl	%eax, -4(%rbp)
+	jne	.L3
+	leaq	.LC0(%rip), %rax
+	movq	%rax, -504(%rbp)
+	movl	$13, -496(%rbp)
+	movl	$128, -512(%rbp)
+	movl	$6, -508(%rbp)
+	leaq	-512(%rbp), %rax
+	movq	%rax, %rdi
+	call	_gfortran_st_write@PLT
+	leaq	-512(%rbp), %rax
+	movl	$26, %edx
+	leaq	.LC1(%rip), %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-20(%rbp), %rcx
+	leaq	-512(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-512(%rbp), %rax
+	movl	$3, %edx
+	leaq	.LC2(%rip), %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-24(%rbp), %rcx
+	leaq	-512(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-512(%rbp), %rax
+	movq	%rax, %rdi
+	call	_gfortran_st_write_done@PLT
+.L3:
+	leaq	-8(%rbp), %rdx
+	leaq	-16(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	mpi_barrier_@PLT
+	addl	$1, -4(%rbp)
+	jmp	.L4
+.L5:
+	nop
+	leaq	-12(%rbp), %rax
+	movq	%rax, %rdi
+	call	mpi_finalize_@PLT
+	nop
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	MAIN__, .-MAIN__
+	.globl	main
+	.type	main, @function
+main:
+.LFB1:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movl	%edi, -4(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-16(%rbp), %rdx
+	movl	-4(%rbp), %eax
+	movq	%rdx, %rsi
+	movl	%eax, %edi
+	call	_gfortran_set_args@PLT
+	leaq	options.1.3517(%rip), %rsi
+	movl	$7, %edi
+	call	_gfortran_set_options@PLT
+	call	MAIN__
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE1:
+	.size	main, .-main
+	.section	.rodata
+	.align 16
+	.type	options.1.3517, @object
+	.size	options.1.3517, 28
+options.1.3517:
+	.long	68
+	.long	1023
+	.long	0
+	.long	1
+	.long	1
+	.long	0
+	.long	31
+	.ident	"GCC: (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0"
+	.section	.note.GNU-stack,"",@progbits
+ian@ian:~$ as mpitest.s -c
+ian@ian:~$ mpifort -o mpitest2 mpitest.o
+ian@ian:~$ ./mpitest2
+ Hello World from process:            0 of            1
+ian@ian:~$ 
+
