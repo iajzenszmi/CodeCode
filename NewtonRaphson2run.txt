@@ -1,0 +1,144 @@
+ian@ian-Aspire-One-753:~$ sudo apt remove scala-library scala
+[sudo] password for ian: 
+Sorry, try again.
+[sudo] password for ian: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  festival festival-freebsoft-utils festlex-cmu festlex-poslex fonts-lmodern libestools2.5 libjline2-java libqt5scripttools5 qtscript5-dev
+  scala-parser-combinators scala-xml tex-common
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  scala scala-library
+0 to upgrade, 0 to newly install, 2 to remove and 0 not to upgrade.
+After this operation, 27.1 MB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 572249 files and directories currently installed.)
+Removing scala (2.11.12-4~18.04) ...
+Removing scala-library (2.11.12-4~18.04) ...
+ian@ian-Aspire-One-753:~$ wget https://downloads.lightbend.com/scala/2.13.4/scala-2.13.4.deb
+--2020-12-20 19:19:17--  https://downloads.lightbend.com/scala/2.13.4/scala-2.13.4.deb
+Resolving downloads.lightbend.com (downloads.lightbend.com)... 13.224.183.18, 13.224.183.78, 13.224.183.28, ...
+Connecting to downloads.lightbend.com (downloads.lightbend.com)|13.224.183.18|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 669909088 (639M) [application/octet-stream]
+Saving to: 'scala-2.13.4.deb’
+
+scala-2.13.4.deb                      100%[=======================================================================>] 638.88M  5.78MB/s    in 1m 57s  
+
+2020-12-20 19:21:16 (5.45 MB/s) - 'scala-2.13.4.deb’ saved [669909088/669909088]
+
+ian@ian-Aspire-One-753:~$ sudo dpkg -i scala-2.13.4.deb
+Selecting previously unselected package scala.
+(Reading database ... 572174 files and directories currently installed.)
+Preparing to unpack scala-2.13.4.deb ...
+Unpacking scala (2.13.4-400) ...
+Setting up scala (2.13.4-400) ...
+Creating system group: scala
+Creating system user: scala in scala with scala daemon-user and shell /bin/false
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+ian@ian-Aspire-One-753:~$ scala newtonraphson.scala
+newtonraphson.scala:6: warning: match may not be exhaustive.
+It would fail on the following inputs: Cons(), Empty
+  def within(epsilon: Double, s: Stream[Double]): Double = s match {
+                                                           ^
+warning: 5 deprecations (since 2.13.0); re-run with -deprecation for details
+8.000001273385879
+4.001219512195122
+645.0000000119895
+ian@ian-Aspire-One-753:~$ git clone https://github.com/GimleDigital/Scala-Tidbits.git
+Cloning into 'Scala-Tidbits'...
+remote: Enumerating objects: 170, done.
+remote: Total 170 (delta 0), reused 0 (delta 0), pack-reused 170
+Receiving objects: 100% (170/170), 2.04 MiB | 1.38 MiB/s, done.
+Resolving deltas: 100% (50/50), done.
+ian@ian-Aspire-One-753:~$ cd Scala-Tidbits
+ian@ian-Aspire-One-753:~/Scala-Tidbits$ ls
+bondcalc  eurostat  holydays  LICENSE  margincalls  newtonraphson  pdestimation  README.md  surfacechart
+ian@ian-Aspire-One-753:~/Scala-Tidbits$ cd newtonraphson
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson$ ls
+build.sbt  LICENCE  src
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson$ cd src
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson/src$ ls
+main
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson/src$ cd main
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson/src/main$ ls
+scala
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson/src/main$ cd scala
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson/src/main/scala$ ls
+NewtonRaphson.scala
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson/src/main/scala$ scala NewtonRaphson.scala
+NewtonRaphson.scala:1: error: illegal start of definition
+package newtonraphson
+^
+ian@ian-Aspire-One-753:~/Scala-Tidbits/newtonraphson/src/main/scala$ cd
+ian@ian-Aspire-One-753:~$ scala NewtonRaphson2.scala
+warning: 2 deprecations (since 2.13.0); re-run with -deprecation for details
+0.3333333333333333
+0.3601707135776337
+0.36042168047601975
+0.3604217029603242
+ian@ian-Aspire-One-753:~$ cat NewtonRaphson2.scala
+object NewtonsMethod {
+
+  def main(args: Array[String]) {
+    driver
+  }
+  
+  /**
+   * A "driver" function to test Newton's method.
+   * Start with (a) the desired f(x) and f'(x) equations,
+   * (b) an initial guess and (c) tolerance values. 
+   */
+  def driver {
+    
+    // i pulled these f(x) and f'(x) functions from my old
+    // Applied Numerical Analysis book
+    
+    // the f(x) and f'(x) functions
+    val fx = (x: Double) => 3*x + Math.sin(x) - scala.math.pow(Math.E, x)
+    val fxPrime = (x: Double) => 3 + Math.cos(x) - scala.math.pow(Math.E, x)
+
+    val initialGuess = 0.0
+    val tolerance = 0.00005
+    
+    // pass f(x) and f'(x) to the Newton's Method function, along with the initial guess
+    // and tolerance
+    val answer = newtonsMethod(fx, fxPrime, initialGuess, tolerance)
+
+    println(answer)
+  }
+
+  /**
+   * Newton's Method for solving equations.
+   * TODO: check that |f(xNext)| is greater than a second tolerance value
+   * TODO: check that f'(x) != 0
+   */
+  def newtonsMethod(fx: Double => Double, 
+                    fxPrime: Double => Double,
+                    x: Double,
+                    tolerance: Double): Double = {
+    var x1 = x
+    var xNext = newtonsMethodHelper(fx, fxPrime, x1)
+    while (Math.abs(xNext - x1) > tolerance) {
+      x1 = xNext
+      println(xNext) // debugging (intermediate values)
+      xNext = newtonsMethodHelper(fx, fxPrime, x1)
+    }
+    
+    return xNext
+  }
+
+  /**
+   * This is the "x2 = x1 - f(x1)/f'(x1)" calculation 
+   */
+  def newtonsMethodHelper(fx: Double => Double, 
+                          fxPrime: Double => Double,
+                          x: Double): Double = {
+    return x - fx(x) / fxPrime(x)
+  }
+
+}
+ian@ian-Aspire-One-753:~$ 
+
