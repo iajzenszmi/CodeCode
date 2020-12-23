@@ -1,0 +1,57 @@
+<pre><font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~/colorprint</b></font>$ ls
+ANSI-color-codes.h  ansi_colors.mod  ansif90   ansif90.f90  colorprin.f     princolor.f90  testmain.c
+ansi_colors.f90     ansi_colors.o    ansi.f90  ansi.o       colorprint.f08  <font color="#8AE234"><b>testmain</b></font>
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~/colorprint</b></font>$ gfortran ansi_colors.f90 ansif90.f90 -o ansif90
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~/colorprint</b></font>$ ./ansif90
+<font color="#CC0000">Red</font>
+<font color="#4E9A06">Green</font>
+<font color="#C4A000">Yellow</font>
+<font color="#3465A4">Blue</font>
+<font color="#75507B">Magenta</font>
+<font color="#06989A">Cyan</font>
+<font color="#D3D7CF">White</font>
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~/colorprint</b></font>$ cat ansi_colors.f90
+         module ansi_colors
+         implicit none
+
+        character(len=1), parameter :: c_esc = achar(27)
+        character(len=2), parameter :: c_start = c_esc // &apos;[&apos;
+        character(len=1), parameter :: c_end = &apos;m&apos;
+        character(len=*), parameter :: c_black = &apos;30&apos;
+        character(len=*), parameter :: c_red = &apos;31&apos;
+        character(len=*), parameter :: c_green = &apos;32&apos;
+        character(len=*), parameter :: c_yellow = &apos;33&apos;
+        character(len=*), parameter :: c_blue = &apos;34&apos;
+        character(len=*), parameter :: c_magenta = &apos;35&apos;
+        character(len=*), parameter :: c_cyan = &apos;36&apos;
+        character(len=*), parameter :: c_white = &apos;37&apos;
+        character(len=*), parameter :: c_clear = c_start // &apos;0&apos; // c_end
+
+        contains
+
+        function color(str, code) result(out)
+         character(len=*), intent(in) :: str
+        character(len=*), intent(in) :: code
+        character(len=:), allocatable :: out
+        out = c_start // code // c_end // str // c_clear
+       end function color
+
+      end module ansi_colors
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~/colorprint</b></font>$ cat ansif90.f90
+        program ansif90
+        use ansi_colors
+        implicit none
+
+         character(len=*), parameter :: endl = new_line(&apos;a&apos;)
+
+       print &apos;(a)&apos;, &amp;
+       color(&apos;Red&apos;,     c_red)     // endl // &amp;
+       color(&apos;Green&apos;,   c_green)   // endl // &amp;
+       color(&apos;Yellow&apos;,  c_yellow)  // endl // &amp;
+       color(&apos;Blue&apos;,    c_blue)    // endl // &amp;
+       color(&apos;Magenta&apos;, c_magenta) // endl // &amp;
+       color(&apos;Cyan&apos;,    c_cyan)    // endl // &amp;
+       color(&apos;White&apos;,   c_white)
+       end program 
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~/colorprint</b></font>$ 
+</pre>
