@@ -1,0 +1,75 @@
+ian@ian-Aspire-One-753:~/pl1$ cd samples
+bash: cd: samples: No such file or directory
+ian@ian-Aspire-One-753:~/pl1$ ls
+pli-0.9.10c  pli-0.9.10c.tgz  pli-0.9.10c.tgz.1
+ian@ian-Aspire-One-753:~/pl1$ cd pli-0.9.10c
+ian@ian-Aspire-One-753:~/pl1/pli-0.9.10c$ ls
+Iron-SpringFileFormats.pdf        library_linux.html  readme_linux.html
+Iron-SpringSortRoutine.pdf        library_os2.html    readme_os2.html
+Iron-SpringUsingIndexedFiles.pdf  makefile            sam.lst
+islogo.gif                        plic                samples
+lgpl.html                         plic.exe            samples1
+lib                               prog_guide.html
+ian@ian-Aspire-One-753:~/pl1/pli-0.9.10c$ cd samples
+ian@ian-Aspire-One-753:~/pl1/pli-0.9.10c/samples$ ls
+bse.inc       hexdump.pli         numwrd.lst         sample.def
+encard.pli    LCC_make            numwrd.map         samples
+filedump      LC_make             numwrd.pli         samples.html
+filedump.lst  libver              pl1                sort.dat
+filedump.map  libver.lst          pm.def             sorttest.pli
+filedump.pli  libver.map          pmhanoi.pli        spawn.pli
+filefind.lst  libver.pli          print_listing      spawntest.pli
+filefind.o    loadsamp.dat        print_listing.lst  task.lst
+filefind.pli  loadsamp.pli        print_listing.map  task.pli
+hanoi         Makefile            print_listing.pli  updtsamp.dat
+hanoi.lst     Makefile.isam       readu              updtsamp.pli
+hanoi.map     Makefile.Linux      readu.lst          vfile.dat
+hanoi.pli     Makefile.OS2DLL     readu.map
+hexdump.lst   Makefile.OS2Static  readu.pli
+hexdump.o     numwrd              SA_make
+ian@ian-Aspire-One-753:~/pl1/pli-0.9.10c/samples$ ./hanoi
+
+move             1      ->             3
+move             1      ->             2
+move             3      ->             2
+move             1      ->             3
+move             2      ->             1
+move             2      ->             3
+move             1      ->             3
+ian@ian-Aspire-One-753:~/pl1/pli-0.9.10c/samples$ cat hanoi.pli
+ /* hanoi                                                 */
+ /*********************************************************/
+ /*                                                       */
+ /* Module:   hanoi                                       */
+ /*           (author unknown)                            */
+ /*                                                       */
+ /* Function: 'Towers of Hanoi' problem.                  */
+ /*                                                       */
+ /* Usage:    hanoi                                       */
+ /*                                                       */
+ /* Dependencies:                                         */
+ /*           none                                        */
+ /*                                                       */
+ /*********************************************************/
+ hanoi:proc options(main);
+
+  call dohanoi(3, 1, 3, 2);
+
+  dohanoi:proc(n, f, t, u) recursive;
+    dcl(n, f, t, u) fixed bin(31);
+    if n > 0 then
+    do;
+      call dohanoi(n-1, f, u, t);
+      call movedisk(f, t);
+      call dohanoi(n-1, u, t, f);
+    end;
+  end dohanoi;
+
+  movedisk:proc(f, t);
+    dcl (f, t) fixed bin(31);
+    put skip list('move' || f, '->' || t);
+  end movedisk;
+
+ end hanoi;
+ian@ian-Aspire-One-753:~/pl1/pli-0.9.10c/samples$ 
+
