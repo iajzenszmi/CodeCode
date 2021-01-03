@@ -1,0 +1,223 @@
+       PROGRAM FIXPOINT
+!C     NUMERICAL METHODS: FORTRAN Programs, (c) John H. Mathews 1994
+!C     To accompany the text:
+!C     NUMERICAL METHODS for Mathematics, Science and Engineering, 2nd Ed, 1992
+!C     Prentice Hall, Englewood Cliffs, New Jersey, 07632, U.S.A.
+!C     This free software is complements of the author.
+!C
+!C     Algorithm 2.1  (Fixed Point Iteration).
+!C     Section 2.1, Iteration for Solving  x = g(x), Page  51
+!C
+!C     Edited by Ian Martin Ajzenszmidt on 28 December 2020 in order to
+!C     make the program run and generate output. Please critique!. The
+!C     read input unit was changed from 9 to 5 and the write output unit
+!C     was changed from 9 to 6. some variable names were altered for
+!C     problem free parameter passing in subroutine calls. 
+!C     Further changes were made in January 2021 to edit the program to fortran 90
+!      standard.
+!           
+!C     iajzenszmi@gmail.com
+!C     Melbourne. Australia
+!C     Original code Sourced from http://www.netlib.org/textbook/mathews/chap2.f
+          
+                !PARAMETER( Tol1=0.00000001,  Max11=500)
+        
+      INTEGER :: Cond1,K1
+      CHARACTER :: ANS
+      REAL :: P01,Pnew1
+      REAL :: Pterm1
+      EXTERNAL :: G
+!     PARAMETER( Tol1=0.00000001,  Max11=500)
+      real, parameter::Tol1=0.00000001
+      integer,parameter::Max11=500
+      ANS = "Y"
+      DO WHILE(ANS == "Y" .OR. ANS == "y")
+      CALL GETPOINT(P01,Pterm1)
+      CALL ITERATE(G,Pterm1,Max11,Tol1,Pnew1,Cond1,K1)
+      CALL RESULTS(P01,Max11,Tol1,Pnew1,Pterm1,Cond1,K1)
+      WRITE(6,*) "     WANT TO DO ANOTHER ONE <Y/N> ? "
+      READ(5,"(A)") ANS
+!      IF(ANS == "Y" .OR. ANS == "y") 
+      END DO
+      STOP
+      END program
+       REAL FUNCTION G(X)
+                 REAL :: X
+        G=0.9 + X - 0.4*X*X
+      RETURN 
+      end 
+      
+      
+
+      SUBROUTINE PRINTFN
+        WRITE(6,*)'G(X) = 0.9 + X - 0.4*X*X'
+      RETURN
+      END
+
+      SUBROUTINE ITERATE(G,Pterm,Max12,Tol,Pnew,Cond,K)
+      PARAMETER(Big=1E10,Small=1E-20)
+      INTEGER Cond,K,Max12
+      Real :: Pterm,Tol
+      REAL :: Dx,Dg,Pold,RelErr,Slope
+      EXTERNAL :: G
+      REAL :: Pnew
+      K=0
+      RelErr=1
+      Pnew=G(Pterm)
+      DO WHILE ((RelErr.GE.Tol).AND.(K.LE.Max12).AND.(ABS(Pnew).LT.Big))
+        Pold=Pterm
+        Pterm=Pnew
+        Pnew=G(Pterm)
+        Dg=Pnew-Pterm
+        RelErr=ABS(Dg)/(ABS(Pnew)+Small)
+        K=K+1
+        WRITE(6,1000) K,Pnew
+ !     REPEAT
+      END DO
+      Dx=Pterm-Pold
+      IF (Dx.NE.0) THEN
+          Slope=Dg/Dx
+        ELSE
+          Slope=6.023E23
+        ENDIF
+ !     ENDIF
+      IF (ABS(Slope).LT.1) THEN
+        Cond=1
+        IF (Slope.LT.0) Cond=2
+      ELSE
+        Cond=3
+        IF (Slope.LT.0) Cond=4
+      ENDIF
+      IF (RelErr.LT.Tol) THEN
+        IF ((Cond.EQ.3).OR.(Cond.EQ.4)) Cond=5
+      ENDIF
+ !     PAUSE
+      RETURN
+1000  FORMAT(I2,4X,F15.7)
+      END
+
+      SUBROUTINE XITERATE(G,Pterm,Max15,Tol,Pnew,Cond,K)
+!     This subroutine uses simulated WHILE loop(s).
+!     PARAMETER (Big=1E10,Small=1E-20)
+      real, parameter::Big=1E10
+      real, parameter::Small=1E-20      
+      INTEGER :: Cond,K,Max15
+      REAL :: Pnew,Pterm,Tol
+      REAL :: Dx,Dg,Pold,RelErr,Slope
+      K=0
+      RelErr=1
+      Pnew=G(Pterm)
+       DO while((RelErr.GE.Tol).AND.(K.LE.Max15)) 
+        Pold=Pterm
+        Pterm=Pnew
+        Pnew=G(Pterm)
+        Dg=Pnew-Pterm
+        RelErr=ABS(Dg)/(ABS(Pnew)+Small)
+        K=K+1
+      DO WHILE ((Pnew.GE.(-Big)).OR.(Big.GT.Pnew)) 
+        WRITE(6,1000) K,Pnew
+      END DO
+!       !GOTO 10 This is a Comment
+      !20    CONTINUE  !Precludes Overflow
+      IF (Dg.EQ.0) THEN
+        Slope=0
+      ELSE
+        Dx=Pterm-Pold
+        IF (Dx.NE.0) THEN
+          Slope=Dg/Dx
+        ELSE
+          Slope=6.023E23
+        ENDIF
+      ENDIF
+      IF (ABS(Slope).LT.1) THEN
+        Cond=1
+        IF (Slope.LT.0) Cond=2
+      ELSE
+        Cond=3
+        IF (Slope.LT.0) Cond=4
+      ENDIF
+      IF (RelErr.LT.Tol) THEN
+        IF ((Cond.EQ.3).OR.(Cond.EQ.4)) Cond=5
+      ENDIF
+!      PAUSE
+      RETURN
+1000  FORMAT(I2,4X,F15.7)
+      END DO
+      END SUBROUTINE
+
+      SUBROUTINE GETPOINT(P0, Pterm)
+      REAL :: P0,Pterm
+      DO  I=1,17
+        WRITE(6,*)' '
+!10    CONTINUE
+      END DO
+      WRITE(6,*)'FIXED POINT ITERATION IS USED TO FIND'
+      WRITE(6,*)' '
+      WRITE(6,*)'A FIXED POINT OF THE FUNCTION'
+      WRITE(6,*)' '
+      CALL PRINTFN
+      WRITE(6,*)' '
+      WRITE(6,*)'ENTER THE STARTING VALUE P0 = '
+      READ(5,*)P0
+      Pterm=P0
+      WRITE(6,*)' '
+      RETURN
+      END
+
+      SUBROUTINE RESULTS(P0,Max14,Tol,Pnew,Pterm,Cond,K)
+!      PARAMETER(Small=1E-20)
+      real, parameter::Big=1E10
+      real, parameter::Small=1E-20
+
+      INTEGER :: Cond,I,K,Max14
+      REAL :: Delta,P0,Pnew,Pterm,RelErr,Tol
+       
+      DO  I=1,12
+        WRITE(6,*)' '
+!10     CONTINUE
+      END DO
+      WRITE(6,*)"FIXED POINT ITERATION WAS USED TO FIND FIXED POINT OF"
+      WRITE(6,*)' '
+      CALL PRINTFN
+      WRITE(6,*)' '
+      WRITE(6,*)'THE STARTING POINT WAS  P(0) =',P0
+      WRITE(6,*)' '
+      Delta=ABS(Pnew-Pterm)
+      RelErr=Delta/(ABS(Pnew)+Small)
+      IF (RelErr.LE.Tol) THEN
+        WRITE(6,*)'AFTER ',K,' ITERATIONS THE FIXED POINT WAS FOUND'
+        WRITE(6,*)' '
+        WRITE(6,*)'    P  =',Pnew
+        WRITE(6,*)' '
+        WRITE(6,*)'ITERATION WAS SUCCESSFUL.'
+      ELSE
+        WRITE(6,*)'THE LOCATION OF THE FIXED POINT IS IN DOUBT.'
+        WRITE(6,*)' '
+        WRITE(6,*)'THE APPROXIMATION AFTER ',K,' ITERATIONS IS'
+        WRITE(6,*)' '
+        WRITE(6,*)'P(',K,') =',Pnew
+       ENDIF
+       WRITE(6,*)' '
+       WRITE(6,*)'        ',Pnew,' = G(',Pterm,'  )'
+      WRITE(6,*)' '
+      WRITE(6,*)'CONSECUTIVE ITERATES ARE WITHIN',Delta
+      WRITE(6,*)' '
+      IF (K.GE.Max14) THEN
+        WRITE(6,*)'THE MAXIMUM NUMBER OF ITERATIONS WAS EXCEEDED'
+        WRITE(6,*)' '
+      ENDIF
+      IF (Cond.EQ.1) THEN
+        WRITE(6,*)'THE SEQUENCE EXHIBITS MONOTONE CONVERGENCE.'
+      ELSEIF (Cond.EQ.2) THEN
+        WRITE(6,*)'THE SEQUENCE EXHIBITS OSCILLATING CONVERGENCE.'
+      ELSEIF (Cond.EQ.3) THEN
+        WRITE(6,*)'THE SEQUENCE EXHIBITS MONOTONE DIVERGENCE.'
+      ELSEIF (Cond.EQ.4) THEN
+        WRITE(6,*)'THE SEQUENCE EXHIBITS OSCILLATING DIVERGENCE.'
+      ENDIF
+      DO  I=1,1
+        WRITE(6,*)' '
+! 20      CONTINUE
+       END DO 
+      RETURN
+      END SUBROUTINE
