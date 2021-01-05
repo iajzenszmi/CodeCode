@@ -1,0 +1,24 @@
+ian@ian-Aspire-One-753:~$ gcc timestamp.c -o timestamp
+ian@ian-Aspire-One-753:~$ ./timestamp
+x0ce80424b7f
+ian@ian-Aspire-One-753:~$ cat timestamp.c
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int main(){
+  
+unsigned long long int msr;
+
+asm volatile ( "rdtsc\n\t"    // Returns the time in EDX:EAX.
+        "shl $32, %%rdx\n\t"  // Shift the upper bits left.
+        "or %%rdx, %0"        // 'Or' in the lower bits.
+        : "=a" (msr)
+        : 
+        : "rdx");
+
+printf("%s%llx\n","x0", msr);
+}
+ian@ian-Aspire-One-753:~$ 
+
+
