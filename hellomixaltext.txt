@@ -1,0 +1,75 @@
+ian@ian-Aspire-One-753:~$ ls *.mixar
+ls: cannot access '*.mixar': No such file or directory
+ian@ian-Aspire-One-753:~$ ls *.mixal
+addo.mixal  algoa.mixal  hello.mixal
+ian@ian-Aspire-One-753:~$ mixasm hello.mixal
+ian@ian-Aspire-One-753:~$ mixvm -r -d hello
+Program loaded. Start address: 3000
+Running ...
+MIXAL HELLO WORLD                                                     
+... done
+rA: + 00 00 00 00 00 (0000000000)
+rX: + 00 00 00 00 00 (0000000000)
+rJ: + 00 00 (0000)
+rI1: + 00 00 (0000)	rI2: + 00 00 (0000)	
+rI3: + 00 00 (0000)	rI4: + 00 00 (0000)	
+rI5: + 00 00 (0000)	rI6: + 00 00 (0000)	
+Overflow: F
+Cmp: E
+ian@ian-Aspire-One-753:~$ vim hello.mixal
+ian@ian-Aspire-One-753:~$ mixasm -r -d hello
+mixasm: invalid option -- 'r'
+(Try: mixasm -h)
+ian@ian-Aspire-One-753:~$ mixasm hello.mixal
+ian@ian-Aspire-One-753:~$ mixvm -r -d hello
+Program loaded. Start address: 3000
+Running ...
+MIXAL HELLO WORLD   FROM IAN  MARTIN AJZENSMIDT                       
+... done
+rA: + 00 00 00 00 00 (0000000000)
+rX: + 00 00 00 00 00 (0000000000)
+rJ: + 00 00 (0000)
+rI1: + 00 00 (0000)	rI2: + 00 00 (0000)	
+rI3: + 00 00 (0000)	rI4: + 00 00 (0000)	
+rI5: + 00 00 (0000)	rI6: + 00 00 (0000)	
+Overflow: F
+Cmp: E
+ian@ian-Aspire-One-753:~$ cat hello.mixal
+*                                                        
+* hello.mixal: say 'hello world' in MIXAL                
+*                                                        
+* label ins    operand     comment                       
+TERM    EQU    19          
+             ORIG   3000        
+START   OUT    MSG(TERM)   
+             HLT                
+MSG     ALF    "MIXAL"                                   
+             ALF    " HELL"     
+             ALF    "O WOR"     
+             ALF    "LD   "
+             ALF    "FROM "
+             ALF    "IAN  "
+             ALF    "MARTI"
+             ALF    "N AJZ"
+             ALF    "ENSMI"
+             ALF    "DT   "
+             END    START       
+
+ 
+ian@ian-Aspire-One-753:~$ mixasm hello.mixal
+ian@ian-Aspire-One-753:~$ mixvm -r -d hello
+Program loaded. Start address: 3000
+Running ...
+MIXAL HELLO WORLD   FROM IAN  MARTIN AJZENSMIDT                       
+... done
+rA: + 00 00 00 00 00 (0000000000)
+rX: + 00 00 00 00 00 (0000000000)
+rJ: + 00 00 (0000)
+rI1: + 00 00 (0000)	rI2: + 00 00 (0000)	
+rI3: + 00 00 (0000)	rI4: + 00 00 (0000)	
+rI5: + 00 00 (0000)	rI6: + 00 00 (0000)	
+Overflow: F
+Cmp: E
+ian@ian-Aspire-One-753:~$ 
+
+
