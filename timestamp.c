@@ -3,8 +3,7 @@
 
 
 int main(){
-  
-unsigned long long int msr;
+unsigned  long long int msr;
 
 asm volatile ( "rdtsc\n\t"    // Returns the time in EDX:EAX.
         "shl $32, %%rdx\n\t"  // Shift the upper bits left.
@@ -13,5 +12,5 @@ asm volatile ( "rdtsc\n\t"    // Returns the time in EDX:EAX.
         : 
         : "rdx");
 
-printf("%s%llx\n","x0", msr);
+printf("%lld\n", msr);
 }
