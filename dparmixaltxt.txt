@@ -1,0 +1,62 @@
+ian@ian-Aspire-One-753:~$ cat dpar.mixal
+TERM  EQU 19  
+  ORIG 3000
+BYTE EQU 1(4:4)
+QQ   EQU BYTE*BYTE/2
+EXPD EQU 1
+ABS  EQU 1
+SIGN EQU 1
+EXITDF EQU 1
+TEMP EQU 1
+ARG  EQU 1
+ARGX EQU 1
+ACCX EQU 1
+ACC  EQU 1
+EXPO  EQU 1
+DFMUL STJ EXITDF
+      STA TEMP
+      SLAX 2
+      STA ARG
+      STX ARGX
+      LDA TEMP(EXPD)
+      ADD ACC(EXPD)
+      STA EXPO
+      ENT2 -QQ
+      LDA  ACC
+      LDX ACCX
+      SLAX  2
+      STA ACC
+      STX ACCX
+      MUL ARGX
+      STA  TEMP
+      LDA  ARG(ABS)
+      MUL  ACCX(ABS)
+      SRA  1
+      ADD  TEMP(1:4)
+      STA TEMP
+      LDA ARG(ABS)
+      MUL ACCX(ABS)
+      SRA 1
+      ADD TEMP(1:4)
+      STA TEMP
+      LDA ARG
+      MUL ACC
+      STA TEMP(SIGN)
+      STA ACC
+      STX ACCX
+      END DFMUL
+ian@ian-Aspire-One-753:~$ mixasm dpar.mixal
+ian@ian-Aspire-One-753:~$ mixvm -r -d dpar
+Program loaded. Start address: 3000
+Running ...
+... done
+rA: + 00 00 00 00 00 (0000000000)
+rX: + 00 00 00 00 00 (0000000000)
+rJ: + 00 00 (0000)
+rI1: + 00 00 (0000)	rI2: - 32 00 (2048)	
+rI3: + 00 00 (0000)	rI4: + 00 00 (0000)	
+rI5: + 00 00 (0000)	rI6: + 00 00 (0000)	
+Overflow: F
+Cmp: E
+ian@ian-Aspire-One-753:~$ 
+
