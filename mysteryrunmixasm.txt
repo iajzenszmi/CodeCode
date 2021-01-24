@@ -1,0 +1,171 @@
+ian@ian-Aspire-One-753:~$ mixasm mystery.mixal
+mystery.mixal:4: error: invalid operation field: ent1
+mystery.mixal:5: error: invalid operation field: ent2
+mystery.mixal:6: error: invalid operation field: ldx
+mystery.mixal:7: error: invalid operation field: ent3
+mystery.mixal:8: error: invalid operation field: stz
+mystery.mixal:9: error: invalid operation field: inc2
+mystery.mixal:10: error: invalid operation field: dec3
+mystery.mixal:11: error: invalid operation field: j3p
+mystery.mixal:12: error: invalid operation field: stx
+mystery.mixal:13: error: invalid operation field: inc2
+mystery.mixal:14: error: invalid operation field: inc1
+mystery.mixal:15: error: invalid operation field: cmp1
+mystery.mixal:16: error: invalid operation field: jl
+mystery.mixal:17: error: invalid operation field: enn2
+mystery.mixal:18: error: invalid operation field: out
+mystery.mixal:18: error: undefined symbol: term
+mystery.mixal:18: error: invalid f-specification: )
+mystery.mixal:19: error: invalid operation field: inc2
+mystery.mixal:20: error: invalid operation field: j2n
+mystery.mixal:21: error: invalid operation field: hlt
+mystery.mixal:24: error: undefined symbol: 1b
+(0 warning(s), 21 error(s))
+ian@ian-Aspire-One-753:~$ mixasm  mystery.mixal
+mystery.mixal:4: error: invalid operation field: ent1
+mystery.mixal:5: error: invalid operation field: ent2
+mystery.mixal:6: error: invalid operation field: ldx
+mystery.mixal:7: error: invalid operation field: ent3
+mystery.mixal:8: error: invalid operation field: stz
+mystery.mixal:9: error: invalid operation field: inc2
+mystery.mixal:10: error: invalid operation field: dec3
+mystery.mixal:11: error: invalid operation field: j3p
+mystery.mixal:12: error: invalid operation field: stx
+mystery.mixal:13: error: invalid operation field: inc2
+mystery.mixal:14: error: invalid operation field: inc1
+mystery.mixal:15: error: invalid operation field: cmp1
+mystery.mixal:16: error: invalid operation field: jl
+mystery.mixal:17: error: invalid operation field: enn2
+mystery.mixal:18: error: invalid operation field: out
+mystery.mixal:19: error: invalid operation field: inc2
+mystery.mixal:20: error: invalid operation field: j2n
+mystery.mixal:21: error: invalid operation field: hlt
+mystery.mixal:24: error: undefined symbol: 1b
+(0 warning(s), 19 error(s))
+ian@ian-Aspire-One-753:~$ mixasm mystery.mixal
+mystery.mixal:18: error: undefined symbol: buf
+mystery.mixal:18: error: undefined symbol: term
+mystery.mixal:18: error: invalid f-specification: )
+mystery.mixal:24: error: undefined symbol: 1b
+(0 warning(s), 4 error(s))
+ian@ian-Aspire-One-753:~$ mixasm mystery.mixal
+mystery.mixal:24: error: undefined symbol: 1b
+(0 warning(s), 1 error(s))
+ian@ian-Aspire-One-753:~$ mixasm mystery.mixal
+mystery.mixal:24: error: undefined symbol: 1b
+(0 warning(s), 1 error(s))
+ian@ian-Aspire-One-753:~$ mixasm mystery.mixal
+ian@ian-Aspire-One-753:~$ mixvm -r -d mystery
+Program loaded. Start address: 3000
+Running ...
+     AAAAA          AAAAA               AAAAA                    AAAAA
+          AAAAA                                   AAAAA               
+                         AAAAA                                        
+                    AAAAA                                             
+                                   AAAAA                              
+                                                                      
+                                   AAAAA                              
+     AAAAA                                                            
+                                                                      
+                                                                 AAAAA
+                                                       AAAAA          
+                                                  AAAAA               
+                                                  AAAAA               
+                                                       AAAAA          
+                                                                 AAAAA
+                                                                      
+                                                                      
+                                                                      
+     AAAAA                                                            
+                                   AAAAA                              
+                                                                      
+                                                                      
+                                                                      
+                                   AAAAA                              
+                                                                      
+                                                                      
+                    AAAAA                                             
+                                                                      
+                                                                      
+                         AAAAA                                        
+                                                                      
+                                                                      
+                                                  AAAAA               
+                                                                      
+          AAAAA                                                       
+                                                                      
+                                                                      
+                                                                 AAAAA
+                                                                      
+                                        AAAAA                         
+                                                                      
+                    AAAAA                                             
+                                                                      
+     AAAAA                                                            
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+     AAAAA                                                            
+                                                                      
+                    AAAAA                                             
+                                                                      
+                                        AAAAA                         
+                                                                      
+                                                                 AAAAA
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+          AAAAA                                                       
+                                                                      
+                                                  AAAAA               
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                         AAAAA                                        
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                    AAAAA                                             
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                   AAAAA                              
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                   AAAAA                              
+                                                                      
+                                                                      
+     AAAAA                                                            
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+                                                                      
+... done
+rA: + 00 00 00 00 00 (0000000000)
+rX: + 01 01 01 01 01 (0017043521)
+rJ: + 47 09 (3017)
+rI1: + 01 11 (0075)	rI2: + 00 00 (0000)	
+rI3: + 00 00 (0000)	rI4: + 00 00 (0000)	
+rI5: + 00 00 (0000)	rI6: + 00 00 (0000)	
+Overflow: F
+Cmp: E
+ian@ian-Aspire-One-753:~$ 
+
