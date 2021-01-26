@@ -1,0 +1,136 @@
+ian@ian-Aspire-One-753:~$ cobc 100doors.cob -x -o 100doorscob
+ian@ian-Aspire-One-753:~$ ./100doorscob
+001 is open.
+002 is closed.
+003 is closed.
+004 is open.
+005 is closed.
+006 is closed.
+007 is closed.
+008 is closed.
+009 is open.
+010 is closed.
+011 is closed.
+012 is closed.
+013 is closed.
+014 is closed.
+015 is closed.
+016 is open.
+017 is closed.
+018 is closed.
+019 is closed.
+020 is closed.
+021 is closed.
+022 is closed.
+023 is closed.
+024 is closed.
+025 is open.
+026 is closed.
+027 is closed.
+028 is closed.
+029 is closed.
+030 is closed.
+031 is closed.
+032 is closed.
+033 is closed.
+034 is closed.
+035 is closed.
+036 is open.
+037 is closed.
+038 is closed.
+039 is closed.
+040 is closed.
+041 is closed.
+042 is closed.
+043 is closed.
+044 is closed.
+045 is closed.
+046 is closed.
+047 is closed.
+048 is closed.
+049 is open.
+050 is closed.
+051 is closed.
+052 is closed.
+053 is closed.
+054 is closed.
+055 is closed.
+056 is closed.
+057 is closed.
+058 is closed.
+059 is closed.
+060 is closed.
+061 is closed.
+062 is closed.
+063 is closed.
+064 is open.
+065 is closed.
+066 is closed.
+067 is closed.
+068 is closed.
+069 is closed.
+070 is closed.
+071 is closed.
+072 is closed.
+073 is closed.
+074 is closed.
+075 is closed.
+076 is closed.
+077 is closed.
+078 is closed.
+079 is closed.
+080 is closed.
+081 is open.
+082 is closed.
+083 is closed.
+084 is closed.
+085 is closed.
+086 is closed.
+087 is closed.
+088 is closed.
+089 is closed.
+090 is closed.
+091 is closed.
+092 is closed.
+093 is closed.
+094 is closed.
+095 is closed.
+096 is closed.
+097 is closed.
+098 is closed.
+099 is closed.
+100 is open.
+ian@ian-Aspire-One-753:~$ cat 100doors.cob
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. 100Doors.
+ 
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 Current-n      PIC 9(3).
+       01 StepSize       PIC 9(3).
+       01 DoorTable.
+          02 Doors       PIC 9(1)   OCCURS 100 TIMES.
+             88 ClosedDoor          VALUE ZERO.
+       01 Idx            PIC 9(3).
+ 
+       PROCEDURE DIVISION.
+       Begin.
+           INITIALIZE DoorTable
+           PERFORM VARYING StepSize FROM 1 BY 1 UNTIL StepSize > 100
+             PERFORM VARYING Current-n FROM StepSize BY StepSize
+                     UNTIL Current-n > 100
+           SUBTRACT Doors(Current-n) FROM 1 GIVING Doors(Current-n)
+             END-PERFORM
+           END-PERFORM.
+ 
+           PERFORM VARYING Idx FROM 1 BY 1
+                   UNTIL Idx > 100
+             IF ClosedDoor(Idx)
+               DISPLAY Idx " is closed."
+             ELSE
+               DISPLAY Idx " is open."
+             END-IF
+           END-PERFORM
+           STOP RUN.
+ian@ian-Aspire-One-753:~$ 
+
