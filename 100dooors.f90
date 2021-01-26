@@ -1,10 +1,12 @@
       PROGRAM DOORS
  
        INTEGER, PARAMETER :: n = 100    ! Number of doors
-       INTEGER :: i
+       INTEGER :: i, v
+       real :: k
         LOGICAL :: door(n) = .TRUE.      ! Initially closed
- 
-       DO i = 1, SQRT(REAL(n))
+        k = sqrt(real(n))
+        v=int(k)
+       DO i = 1,v
         door(i*i) = .FALSE.
       END DO  
  
