@@ -1,0 +1,10 @@
+ian@ian-Aspire-One-753:~$ cat perthdance.f
+         write(6,9000)
+ 9000    format(" ","The Duke Of Perth")
+         end program         
+ian@ian-Aspire-One-753:~$ gfortran perthdance.f -o perthdance
+ian@ian-Aspire-One-753:~$ ./perthdance
+ The Duke Of Perth
+ian@ian-Aspire-One-753:~$ 
+
+
