@@ -1,0 +1,12 @@
+ian@ian-Aspire-One-753:~$ gcc dukeofperthc.c -o dukeofperth
+ian@ian-Aspire-One-753:~$ ./dukeofperth
+Duke of Perth
+ian@ian-Aspire-One-753:~$ cat dukeofperthc.c
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+     char dukeofperth[]= "Duke of Perth";
+     printf("%s\n",dukeofperth);
+      }
+ian@ian-Aspire-One-753:~$ 
+
