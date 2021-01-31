@@ -1,0 +1,72 @@
+ian@ian-Aspire-One-753:~$ ls gf*
+gfortranprimes  gfortranprimes.f08  gfortranprimes.o
+ian@ian-Aspire-One-753:~$ gfortran gfortranprimes.f08 -o gfortranprimes
+ian@ian-Aspire-One-753:~$ ./gfortranprimes
+ Prime numbers: 
+  
+           3
+           5
+           7
+          11
+          13
+          17
+          19
+          23
+          29
+          31
+          37
+          41
+          43
+          47
+          53
+          59
+          61
+          67
+          71
+          73
+          79
+          83
+          89
+          97
+
+ian@ian-Aspire-One-753:~$ cat gfortranprimes.f08
+PROGRAM  Primes
+IMPLICIT NONE
+   
+   ! declare integers
+   INTEGER  :: Range, OptimusPrime, Divisor   
+   
+   ! declare strings
+   CHARACTER(LEN = 15) :: strLine1
+   
+   ! set string 
+   strLine1 = 'Prime numbers: '
+
+   ! display string
+   PRINT *, strLine1
+   PRINT *, " "
+      
+   ! set range value
+   Range = 100
+   
+   ! evaluate for prime number
+   DO OptimusPrime = 3, Range, 2
+      Divisor = 3                    
+      DO
+         ! not prime
+         IF (Divisor*Divisor > OptimusPrime .OR. MOD(OptimusPrime,Divisor) == 0)  EXIT
+         Divisor = Divisor + 2          
+      END DO   
+
+      IF (Divisor*Divisor > OptimusPrime) THEN         
+         ! display prime
+         PRINT *, OptimusPrime
+      END IF
+   END DO
+
+READ(*,*)
+
+! end program
+END PROGRAM  Primes
+ian@ian-Aspire-One-753:~$ 
+
