@@ -1,0 +1,10 @@
+PRINTER EQU 6
+TAG     EQU 1:1
+NEXT    EQU 4:5
+NAME    EQU 0:5
+PBUF    ALF FILE
+        ALF EMPTY
+        ORIG PBUF+24
+BEGIN   LD2 TOP
+        J2Z 2F
+                
