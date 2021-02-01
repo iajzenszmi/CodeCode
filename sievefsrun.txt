@@ -1,0 +1,28 @@
+ian@ian-Aspire-One-753:~$ gforth sieve.fs
+Primes: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 Gforth 0.7.3, Copyright (C) 1995-2008 Free Software Foundation, Inc.
+Gforth comes with ABSOLUTELY NO WARRANTY; for details type `license'
+Type `bye' to exit
+bye 
+ian@ian-Aspire-One-753:~$ cat sieve.fs
+: prime? ( n -- ? ) here + c@ 0= ;
+: composite! ( n -- ) here + 1 swap c! ;
+
+: sieve ( n -- )
+  here over erase
+  2
+  begin
+    2dup dup * >
+  while
+    dup prime? if
+      2dup dup * do
+        i composite!
+      dup +loop
+    then
+    1+
+  repeat
+  drop
+  ." Primes: " 2 do i prime? if i . then loop ;
+
+100 sieve
+ian@ian-Aspire-One-753:~$ http://rosettacode.org/wiki/Sieve_of_Eratosthenes#Forth ref.
+
