@@ -1,3 +1,5 @@
+ian@ian-Aspire-One-753:~$ gfortran tictactoef.f08 -o tictactoef
+ian@ian-Aspire-One-753:~$ cat tictactoef.f08
 !=={{header|Fortran}}==
 !Edited by Ian Martin Ajzenszmidt Melbourne Australia 8 Feb 2021 to remove comma
 ! in  Read and Write statements before I/O item lists which were flagged as legacy extensions!
@@ -104,3 +106,60 @@ program tictactoe
       player = 3-player
    enddo mainloop
 end program
+ian@ian-Aspire-One-753:~$ ./tictactoef
+  .  .  .     1  2  3
+  .  .  .     4  5  6
+  .  .  .     7  8  9
+
+You have O, I have X. You enter 0: game ends.
+
+Your move? (0..9) 5
+
+My move:   3
+  .  .  X     1  2  3
+  .  O  .     4  5  6
+  .  .  .     7  8  9
+
+Your move? (0..9) 9
+
+My move:   1
+  X  .  X     1  2  3
+  .  O  .     4  5  6
+  .  .  O     7  8  9
+
+Your move? (0..9) 2
+
+My move:   8
+  X  O  X     1  2  3
+  .  O  .     4  5  6
+  .  X  O     7  8  9
+
+Your move? (0..9) 7
+
+My move:   4
+  X  O  X     1  2  3
+  X  O  .     4  5  6
+  O  X  O     7  8  9
+
+Your move? (0..9) 6
+
+My move:   4
+  X  O  X     1  2  3
+  X  O  O     4  5  6
+  O  X  O     7  8  9
+***** Draw *****
+
+  .  .  .     1  2  3
+  .  .  .     4  5  6
+  .  .  .     7  8  9
+
+You have O, I have X. You enter 0: game ends.
+
+My move:   9
+  .  .  .     1  2  3
+  .  .  .     4  5  6
+  .  .  X     7  8  9
+
+Your move? (0..9) 0
+ian@ian-Aspire-One-753:~$ 
+
