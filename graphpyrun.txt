@@ -1,0 +1,242 @@
+<pre><font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~</b></font>$ python3 graph.py
+
+Ex1
+       0-1: Colour: 0, 1
+       0-2: Colour: 0, 2
+       1-2: Colour: 1, 2
+         3: Colour: 0
+    #Nodes: 4
+    #Edges: 3
+  #Colours: 3
+
+Ex2
+       1-6: Colour: 0, 1
+       1-7: Colour: 0, 1
+       1-8: Colour: 0, 1
+       2-5: Colour: 0, 1
+       2-7: Colour: 0, 1
+       2-8: Colour: 0, 1
+       3-5: Colour: 0, 1
+       3-6: Colour: 0, 1
+       3-8: Colour: 0, 1
+       4-5: Colour: 0, 1
+       4-6: Colour: 0, 1
+       4-7: Colour: 0, 1
+    #Nodes: 8
+    #Edges: 12
+  #Colours: 2
+
+Ex3
+       1-4: Colour: 0, 1
+       1-6: Colour: 0, 1
+       1-8: Colour: 0, 1
+       2-3: Colour: 1, 0
+       2-5: Colour: 1, 0
+       2-7: Colour: 1, 0
+       3-6: Colour: 0, 1
+       3-8: Colour: 0, 1
+       4-5: Colour: 1, 0
+       4-7: Colour: 1, 0
+       5-8: Colour: 0, 1
+       6-7: Colour: 1, 0
+    #Nodes: 8
+    #Edges: 12
+  #Colours: 2
+
+Ex4
+       1-6: Colour: 0, 1
+       1-7: Colour: 0, 1
+       1-8: Colour: 0, 1
+       2-5: Colour: 2, 0
+       2-7: Colour: 2, 1
+       2-8: Colour: 2, 1
+       3-5: Colour: 2, 0
+       3-6: Colour: 2, 1
+       3-8: Colour: 2, 1
+       4-5: Colour: 2, 0
+       4-6: Colour: 2, 1
+       4-7: Colour: 2, 1
+    #Nodes: 8
+    #Edges: 12
+  #Colours: 3
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~</b></font>$ cat graph.py
+#ref ad source http://www.rosettacode.org/wiki/Graph_colouring#Python
+import re
+from collections import defaultdict
+from itertools import count
+ 
+ 
+connection_re = r&quot;&quot;&quot;
+    (?: (?P&lt;N1&gt;\d+) - (?P&lt;N2&gt;\d+) | (?P&lt;N&gt;\d+) (?!\s*-))
+    &quot;&quot;&quot;
+ 
+class Graph:
+ 
+    def __init__(self, name, connections):
+        self.name = name
+        self.connections = connections
+        g = self.graph = defaultdict(list)  # maps vertex to direct connections
+ 
+        matches = re.finditer(connection_re, connections,
+                              re.MULTILINE | re.VERBOSE)
+        for match in matches:
+            n1, n2, n = match.groups()
+            if n:
+                g[n] += []
+            else:
+                g[n1].append(n2)    # Each the neighbour of the other
+                g[n2].append(n1)
+ 
+    def greedy_colour(self, order=None):
+        &quot;Greedy colourisation algo.&quot;
+        if order is None:
+            order = self.graph      # Choose something
+        colour = self.colour = {}
+        neighbours = self.graph
+        for node in order:
+            used_neighbour_colours = (colour[nbr] for nbr in neighbours[node]
+                                      if nbr in colour)
+            colour[node] = first_avail_int(used_neighbour_colours)
+        self.pp_colours()
+        return colour
+ 
+    def pp_colours(self):
+        print(f&quot;\n{self.name}&quot;)
+        c = self.colour
+        e = canonical_edges = set()
+        for n1, neighbours in sorted(self.graph.items()):
+            if neighbours:
+                for n2 in neighbours:
+                    edge = tuple(sorted([n1, n2]))
+                    if edge not in canonical_edges:
+                        print(f&quot;       {n1}-{n2}: Colour: {c[n1]}, {c[n2]}&quot;)
+                        canonical_edges.add(edge)
+            else:
+                print(f&quot;         {n1}: Colour: {c[n1]}&quot;)
+        lc = len(set(c.values()))
+        print(f&quot;    #Nodes: {len(c)}\n    #Edges: {len(e)}\n  #Colours: {lc}&quot;)
+ 
+ 
+def first_avail_int(data):
+    &quot;return lowest int 0... not in data&quot;
+    d = set(data)
+    for i in count():
+        if i not in d:
+            return i
+ 
+ 
+if __name__ == &apos;__main__&apos;:
+    for name, connections in [
+            (&apos;Ex1&apos;, &quot;0-1 1-2 2-0 3&quot;),
+            (&apos;Ex2&apos;, &quot;1-6 1-7 1-8 2-5 2-7 2-8 3-5 3-6 3-8 4-5 4-6 4-7&quot;),
+            (&apos;Ex3&apos;, &quot;1-4 1-6 1-8 3-2 3-6 3-8 5-2 5-4 5-8 7-2 7-4 7-6&quot;),
+            (&apos;Ex4&apos;, &quot;1-6 7-1 8-1 5-2 2-7 2-8 3-5 6-3 3-8 4-5 4-6 4-7&quot;),
+            ]:
+        g = Graph(name, connections)
+        g.greedy_colour()
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~</b></font>$ time graph.py
+graph.py: command not found
+
+real	0m0.359s
+user	0m0.217s
+sys	0m0.094s
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~</b></font>$ time python3 graph.py
+
+Ex1
+       0-1: Colour: 0, 1
+       0-2: Colour: 0, 2
+       1-2: Colour: 1, 2
+         3: Colour: 0
+    #Nodes: 4
+    #Edges: 3
+  #Colours: 3
+
+Ex2
+       1-6: Colour: 0, 1
+       1-7: Colour: 0, 1
+       1-8: Colour: 0, 1
+       2-5: Colour: 0, 1
+       2-7: Colour: 0, 1
+       2-8: Colour: 0, 1
+       3-5: Colour: 0, 1
+       3-6: Colour: 0, 1
+       3-8: Colour: 0, 1
+       4-5: Colour: 0, 1
+       4-6: Colour: 0, 1
+       4-7: Colour: 0, 1
+    #Nodes: 8
+    #Edges: 12
+  #Colours: 2
+
+Ex3
+       1-4: Colour: 0, 1
+       1-6: Colour: 0, 1
+       1-8: Colour: 0, 1
+       2-3: Colour: 1, 0
+       2-5: Colour: 1, 0
+       2-7: Colour: 1, 0
+       3-6: Colour: 0, 1
+       3-8: Colour: 0, 1
+       4-5: Colour: 1, 0
+       4-7: Colour: 1, 0
+       5-8: Colour: 0, 1
+       6-7: Colour: 1, 0
+    #Nodes: 8
+    #Edges: 12
+  #Colours: 2
+
+Ex4
+       1-6: Colour: 0, 1
+       1-7: Colour: 0, 1
+       1-8: Colour: 0, 1
+       2-5: Colour: 2, 0
+       2-7: Colour: 2, 1
+       2-8: Colour: 2, 1
+       3-5: Colour: 2, 0
+       3-6: Colour: 2, 1
+       3-8: Colour: 2, 1
+       4-5: Colour: 2, 0
+       4-6: Colour: 2, 1
+       4-7: Colour: 2, 1
+    #Nodes: 8
+    #Edges: 12
+  #Colours: 3
+
+real	0m0.070s
+user	0m0.056s
+sys	0m0.012s
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~</b></font>$ sloccount graph.py
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/graph.py to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+60      top_dir         python=60
+
+
+Totals grouped by language (dominant language first):
+python:          60 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 60
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.13)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.09 (1.13)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.11
+Total Estimated Cost to Develop                           = $ 1,408
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as &quot;generated using David A. Wheeler&apos;s &apos;SLOCCount&apos;.&quot;
+<font color="#8AE234"><b>ian@ian-Aspire-One-753</b></font>:<font color="#729FCF"><b>~</b></font>$ 
+</pre>
