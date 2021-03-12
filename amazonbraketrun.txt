@@ -1,0 +1,480 @@
+ian@ian-Aspire-One-753:~$ cd Downloads
+ian@ian-Aspire-One-753:~/Downloads$ cd
+ian@ian-Aspire-One-753:~$ mkdir AmazonBraket
+ian@ian-Aspire-One-753:~$ cd AmazonBraket
+ian@ian-Aspire-One-753:~/AmazonBraket$ wget https://github.com/aws/amazon-braket-sdk-python/archive/main.zip
+--2021-03-12 13:56:13--  https://github.com/aws/amazon-braket-sdk-python/archive/main.zip
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/aws/amazon-braket-sdk-python/zip/main [following]
+--2021-03-12 13:56:13--  https://codeload.github.com/aws/amazon-braket-sdk-python/zip/main
+Resolving codeload.github.com (codeload.github.com)... 52.63.100.255
+Connecting to codeload.github.com (codeload.github.com)|52.63.100.255|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: 'main.zip’
+
+main.zip                [ <=>                ] 166.30K  --.-KB/s    in 0.06s   
+
+2021-03-12 13:56:13 (2.68 MB/s) - 'main.zip’ saved [170287]
+
+ian@ian-Aspire-One-753:~/AmazonBraket$ unzip main.zip
+Archive:  main.zip
+9fea0d9416b404953f89df8265250b4c82b439ea
+   creating: amazon-braket-sdk-python-main/
+  inflating: amazon-braket-sdk-python-main/.coveragerc  
+   creating: amazon-braket-sdk-python-main/.github/
+   creating: amazon-braket-sdk-python-main/.github/ISSUE_TEMPLATE/
+  inflating: amazon-braket-sdk-python-main/.github/ISSUE_TEMPLATE/bug_report.md  
+  inflating: amazon-braket-sdk-python-main/.github/ISSUE_TEMPLATE/config.yml  
+  inflating: amazon-braket-sdk-python-main/.github/ISSUE_TEMPLATE/documentation_request.md  
+  inflating: amazon-braket-sdk-python-main/.github/ISSUE_TEMPLATE/feature_request.md  
+  inflating: amazon-braket-sdk-python-main/.github/pull_request_template.md  
+   creating: amazon-braket-sdk-python-main/.github/workflows/
+  inflating: amazon-braket-sdk-python-main/.github/workflows/publish-to-pypi.yml  
+  inflating: amazon-braket-sdk-python-main/.github/workflows/python-package.yml  
+  inflating: amazon-braket-sdk-python-main/.github/workflows/stale_issue.yml  
+  inflating: amazon-braket-sdk-python-main/.gitignore  
+  inflating: amazon-braket-sdk-python-main/.pre-commit-config.yaml  
+  inflating: amazon-braket-sdk-python-main/.readthedocs.yml  
+  inflating: amazon-braket-sdk-python-main/CHANGELOG.md  
+  inflating: amazon-braket-sdk-python-main/CODEOWNERS  
+  inflating: amazon-braket-sdk-python-main/CODE_OF_CONDUCT.md  
+  inflating: amazon-braket-sdk-python-main/CONTRIBUTING.md  
+  inflating: amazon-braket-sdk-python-main/LICENSE  
+ extracting: amazon-braket-sdk-python-main/NOTICE  
+  inflating: amazon-braket-sdk-python-main/README.md  
+   creating: amazon-braket-sdk-python-main/bin/
+  inflating: amazon-braket-sdk-python-main/bin/apply-header.py  
+   creating: amazon-braket-sdk-python-main/doc/
+  inflating: amazon-braket-sdk-python-main/doc/Makefile  
+  inflating: amazon-braket-sdk-python-main/doc/conf.py  
+  inflating: amazon-braket-sdk-python-main/doc/index.rst  
+  inflating: amazon-braket-sdk-python-main/doc/requirements.txt  
+   creating: amazon-braket-sdk-python-main/examples/
+  inflating: amazon-braket-sdk-python-main/examples/bell.py  
+  inflating: amazon-braket-sdk-python-main/examples/bell_result_types.py  
+  inflating: amazon-braket-sdk-python-main/examples/debug_bell.py  
+  inflating: amazon-braket-sdk-python-main/examples/local_bell.py  
+ extracting: amazon-braket-sdk-python-main/pyproject.toml  
+  inflating: amazon-braket-sdk-python-main/setup.cfg  
+  inflating: amazon-braket-sdk-python-main/setup.py  
+   creating: amazon-braket-sdk-python-main/src/
+   creating: amazon-braket-sdk-python-main/src/braket/
+   creating: amazon-braket-sdk-python-main/src/braket/_sdk/
+  inflating: amazon-braket-sdk-python-main/src/braket/_sdk/__init__.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/_sdk/_version.py  
+   creating: amazon-braket-sdk-python-main/src/braket/annealing/
+  inflating: amazon-braket-sdk-python-main/src/braket/annealing/__init__.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/annealing/problem.py  
+   creating: amazon-braket-sdk-python-main/src/braket/aws/
+  inflating: amazon-braket-sdk-python-main/src/braket/aws/__init__.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/aws/aws_device.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/aws/aws_quantum_task.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/aws/aws_quantum_task_batch.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/aws/aws_session.py  
+   creating: amazon-braket-sdk-python-main/src/braket/circuits/
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/__init__.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/angled_gate.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/ascii_circuit_diagram.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/circuit.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/circuit_diagram.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/circuit_helpers.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/gate.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/gates.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/instruction.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/moments.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/observable.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/observables.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/operator.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/quantum_operator.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/quantum_operator_helpers.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/qubit.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/qubit_set.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/result_type.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/circuits/result_types.py  
+   creating: amazon-braket-sdk-python-main/src/braket/devices/
+  inflating: amazon-braket-sdk-python-main/src/braket/devices/__init__.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/devices/device.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/devices/local_simulator.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/ipython_utils.py  
+   creating: amazon-braket-sdk-python-main/src/braket/tasks/
+  inflating: amazon-braket-sdk-python-main/src/braket/tasks/__init__.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/tasks/annealing_quantum_task_result.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/tasks/gate_model_quantum_task_result.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/tasks/local_quantum_task.py  
+  inflating: amazon-braket-sdk-python-main/src/braket/tasks/quantum_task.py  
+   creating: amazon-braket-sdk-python-main/test/
+   creating: amazon-braket-sdk-python-main/test/integ_tests/
+  inflating: amazon-braket-sdk-python-main/test/integ_tests/conftest.py  
+  inflating: amazon-braket-sdk-python-main/test/integ_tests/gate_model_device_testing_utils.py  
+  inflating: amazon-braket-sdk-python-main/test/integ_tests/test_aws_session_s3.py  
+  inflating: amazon-braket-sdk-python-main/test/integ_tests/test_device_creation.py  
+  inflating: amazon-braket-sdk-python-main/test/integ_tests/test_local_braket_simulator.py  
+  inflating: amazon-braket-sdk-python-main/test/integ_tests/test_simulator_quantum_task.py  
+  inflating: amazon-braket-sdk-python-main/test/integ_tests/test_tensor_network_simulator.py  
+   creating: amazon-braket-sdk-python-main/test/unit_tests/
+   creating: amazon-braket-sdk-python-main/test/unit_tests/braket/
+   creating: amazon-braket-sdk-python-main/test/unit_tests/braket/annealing/
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/annealing/test_problem.py  
+   creating: amazon-braket-sdk-python-main/test/unit_tests/braket/aws/
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/aws/common_test_utils.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/aws/test_aws_device.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/aws/test_aws_quantum_task.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/aws/test_aws_quantum_task_batch.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/aws/test_aws_session.py  
+   creating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_angled_gate.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_ascii_circuit_diagram.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_circuit.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_circuit_helpers.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_gate.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_gates.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_instruction.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_moments.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_observable.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_observables.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_quantum_operator.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_quantum_operator_helpers.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_qubit.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_qubit_set.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_result_type.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/circuits/test_result_types.py  
+   creating: amazon-braket-sdk-python-main/test/unit_tests/braket/devices/
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/devices/test_local_simulator.py  
+   creating: amazon-braket-sdk-python-main/test/unit_tests/braket/tasks/
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/tasks/test_annealing_quantum_task_result.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/tasks/test_gate_model_quantum_task_result.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/tasks/test_local_quantum_task.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/tasks/test_tasks_init.py  
+  inflating: amazon-braket-sdk-python-main/test/unit_tests/braket/test_ipython_utils.py  
+  inflating: amazon-braket-sdk-python-main/tox.ini  
+ian@ian-Aspire-One-753:~/AmazonBraket$ ls
+amazon-braket-sdk-python-main  main.zip
+ian@ian-Aspire-One-753:~/AmazonBraket$ cd amazon-braket-sdk-python-main
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ ls
+bin                 CONTRIBUTING.md  NOTICE          setup.py
+CHANGELOG.md        doc              pyproject.toml  src
+CODE_OF_CONDUCT.md  examples         README.md       test
+CODEOWNERS          LICENSE          setup.cfg       tox.ini
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ cd bin
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/bin$ ls
+apply-header.py
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/bin$ python3 apply-header.py
+Applying content to ./apply-header.py...
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/bin$ cd examples
+bash: cd: examples: No such file or directory
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/bin$ cd
+ian@ian-Aspire-One-753:~$ cd such file or directory
+bash: cd: too many arguments
+ian@ian-Aspire-One-753:~$ ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main
+bash: ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main: No such file or directory
+ian@ian-Aspire-One-753:~$ cd such file or directory
+bash: cd: too many arguments
+ian@ian-Aspire-One-753:~$ cd ~/AmazonBraket/amazon-braket-sdk-python-main
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ ls
+bin                 CONTRIBUTING.md  NOTICE          setup.py
+CHANGELOG.md        doc              pyproject.toml  src
+CODE_OF_CONDUCT.md  examples         README.md       test
+CODEOWNERS          LICENSE          setup.cfg       tox.ini
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ cd examplesian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/examples$ lsbell.py  bell_result_types.py  debug_bell.py  local_bell.py
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/examples$ python3 bell.py
+Traceback (most recent call last):
+  File "/home/ian/AmazonBraket/amazon-braket-sdk-python-main/examples/bell.py", line 14, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/examples$ lsbell.py  bell_result_types.py  debug_bell.py  local_bell.py
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/examples$ python3 *.py
+Traceback (most recent call last):
+  File "/home/ian/AmazonBraket/amazon-braket-sdk-python-main/examples/bell.py", line 14, in <module>
+    import boto3
+ModuleNotFoundError: No module named 'boto3'
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/examples$ python local_bell.py
+Traceback (most recent call last):
+  File "local_bell.py", line 14, in <module>
+    from braket.circuits import Circuit
+ImportError: No module named braket.circuits
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main/examples$ cdian@ian-Aspire-One-753:~$ cd ~/AmazonBraket/amazon-braket-sdk-python-main
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ ls
+bin                 CONTRIBUTING.md  NOTICE          setup.py
+CHANGELOG.md        doc              pyproject.toml  src
+CODE_OF_CONDUCT.md  examples         README.md       test
+CODEOWNERS          LICENSE          setup.cfg       tox.ini
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ python3 setup.py
+usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
+
+error: no commands supplied
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ cat README.md
+# Amazon Braket Python SDK
+
+[![Latest Version](https://img.shields.io/pypi/v/amazon-braket-sdk.svg)](https://pypi.python.org/pypi/amazon-braket-sdk)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/amazon-braket-sdk.svg)](https://pypi.python.org/pypi/amazon-braket-sdk)
+[![Build Status](https://img.shields.io/github/workflow/status/aws/amazon-braket-sdk-python/Python%20package/main?logo=github)](https://github.com/aws/amazon-braket-sdk-python/actions?query=workflow%3A%22Python+package%22)
+[![codecov](https://codecov.io/gh/aws/amazon-braket-sdk-python/branch/main/graph/badge.svg?token=1lsqkZL3Ll)](https://codecov.io/gh/aws/amazon-braket-sdk-python)
+[![Documentation Status](https://img.shields.io/readthedocs/amazon-braket-sdk-python.svg?logo=read-the-docs)](https://amazon-braket-sdk-python.readthedocs.io/en/latest/?badge=latest)
+[![Code Style: Black](https://img.shields.io/badge/code_style-black-000000.svg)](https://github.com/psf/black)
+
+The Amazon Braket Python SDK is an open source library that provides a framework that you can use to interact with quantum computing hardware devices through Amazon Braket.
+
+## Prerequisites
+Before you begin working with the Amazon Braket SDK, make sure that you've installed or configured the following prerequisites.
+
+### Python 3.7.2 or greater
+Download and install Python 3.7.2 or greater from [Python.org](https://www.python.org/downloads/).
+
+### Git
+Install Git from https://git-scm.com/downloads. Installation instructions are provided on the download page.
+
+### IAM user or role with required permissions
+As a managed service, Amazon Braket performs operations on your behalf on the AWS hardware that is managed by Amazon Braket. Amazon Braket can perform only operations that the user permits. You can read more about which permissions are necessary in the AWS Documentation.
+
+The Braket Python SDK should not require any additional permissions aside from what is required for using Braket. However, if you are using an IAM role with a path in it, you should grant permission for iam:GetRole.
+
+To learn more about IAM user, roles, and policies, see [Adding and Removing IAM Identity Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html).
+
+### Boto3 and setting up AWS credentials
+
+Follow the installation [instructions](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html) for Boto3 and setting up AWS credentials.
+
+**Note:** Make sure that your AWS region is set to one supported by Amazon Braket. You can check this in your AWS configuration file, which is located by default at `~/.aws/config`.
+
+### Configure your AWS account with the resources necessary for Amazon Braket
+If you are new to Amazon Braket, onboard to the service and create the resources necessary to use Amazon Braket using the [AWS console](https://console.aws.amazon.com/braket/home ).
+
+## Installing the Amazon Braket Python SDK
+
+The Amazon Braket Python SDK can be installed with pip as follows:
+
+```bash
+pip install amazon-braket-sdk
+```
+
+You can also install from source by cloning this repository and running a pip install command in the root directory of the repository:
+
+```bash
+git clone https://github.com/aws/amazon-braket-sdk-python.git
+cd amazon-braket-sdk-python
+pip install .
+```
+
+### Check the version you have installed
+You can view the version of the amazon-braket-sdk you have installed by using the following command:
+```bash
+pip show amazon-braket-sdk
+```
+
+You can also check your version of `amazon-braket-sdk` from within Python:
+
+```
+>>> import braket._sdk as braket_sdk
+>>> braket_sdk.__version__
+```
+
+## Usage
+
+### Running a circuit on an AWS simulator
+
+```python
+import boto3
+from braket.aws import AwsDevice
+from braket.circuits import Circuit
+
+device = AwsDevice("arn:aws:braket:::device/quantum-simulator/amazon/sv1")
+s3_folder = (f"amazon-braket-Your-Bucket-Name", "folder-name") # Use the S3 bucket you created during onboarding
+
+bell = Circuit().h(0).cnot(0, 1)
+task = device.run(bell, s3_folder, shots=100)
+print(task.result().measurement_counts)
+```
+
+The code sample imports the Amazon Braket framework, then defines the device to use (the SV1 AWS simulator). The `s3_folder` statement defines the Amazon S3 bucket for the task result and the folder in the bucket to store the task result. This folder is created when you run the task. It then creates a Bell Pair circuit, executes the circuit on the simulator and prints the results of the job. This example can be found in `../examples/bell.py`.
+
+### Running multiple tasks at once
+
+Many quantum algorithms need to run multiple independent circuits, and submitting the circuits in parallel can be faster than submitting them one at a time. In particular, parallel task processing provides a significant speed up when using simulator devices. The following example shows how to run a batch of tasks on SV1:
+
+```python
+circuits = [bell for _ in range(5)]
+batch = device.run_batch(circuits, s3_folder, shots=100)
+print(batch.results()[0].measurement_counts)  # The result of the first task in the batch
+```
+
+### Available Simulators
+Amazon Braket provides access to two types of simulators: fully managed simulators, available through the Amazon Braket service, and the local simulator that is part of the Amazon Braket SDK.
+
+- Fully managed simulators offer high-performance circuit simulations. These simulators can handle circuits larger than circuits that run on quantum hardware. For example, the SV1 state vector simulator shown in the previous examples requires approximately 1 or 2 hours to complete a 34-qubit, dense, and square circuit (circuit depth = 34), depending on the type of gates used and other factors. For a list of available simulators and their features, consult the [Amazon Braket Developer Guide](https://docs.aws.amazon.com/braket/latest/developerguide/braket-devices.html).
+
+- The Amazon Braket Python SDK includes an implementation of a quantum simulator that can run circuits on your local, classic hardware. The local simulator is well suited for rapid prototyping on small circuits up to 25 qubits, depending on the hardware specifications of your Braket notebook instance or your local environment. An example of how to execute the task locally is included in the repository `../examples/local_bell.py`.
+
+### Debugging logs
+
+Tasks sent to QPUs don't always run right away. To view task status, you can enable debugging logs. An example of how to enable these logs is included in repo: `../examples/debug_bell.py`. This example enables task logging so that status updates are continuously printed to the terminal after a quantum task is executed. The logs can also be configured to save to a file or output to another stream. You can use the debugging example to get information on the tasks you submit, such as the current status, so that you know when your task completes.
+
+### Running a Quantum Algorithm on a Quantum Computer
+With Amazon Braket, you can run your quantum circuit on a physical quantum computer.
+
+The following example executes the same Bell Pair example described to validate your configuration on a Rigetti quantum computer.
+
+```python
+import boto3
+from braket.circuits import Circuit
+from braket.aws import AwsDevice
+
+device = AwsDevice("arn:aws:braket:::device/qpu/rigetti/Aspen-8")
+s3_folder = (f"amazon-braket-Your-Bucket-Name", "RIGETTI") # Use the S3 bucket you created during onboarding
+
+bell = Circuit().h(0).cnot(0, 1)
+task = device.run(bell, s3_folder) 
+print(task.result().measurement_counts)
+```
+
+When you execute your task, Amazon Braket polls for a result. By default, Braket polls for 5 days; however, it is possible to change this by modifying the `poll_timeout_seconds` parameter in `AwsDevice.run`, as in the example below. Keep in mind that if your polling timeout is too short, results may not be returned within the polling time, such as when a QPU is unavailable, and a local timeout error is returned. You can always restart the polling by using `task.result()`.
+
+```python
+task = device.run(bell, s3_folder, poll_timeout_seconds=86400)  # 1 day 
+print(task.result().measurement_counts)
+```
+
+To select a quantum hardware device, specify its ARN as the value of the `device_arn` argument. A list of available quantum devices and their features can be found in the [Amazon Braket Developer Guide](https://docs.aws.amazon.com/braket/latest/developerguide/braket-devices.html).
+
+**Important** Tasks may not run immediately on the QPU. The QPUs only execute tasks during execution windows. To find their execution windows, please refer to the [AWS console](https://console.aws.amazon.com/braket/home) in the "Devices" tab.
+
+### Using Amazon Braket with D-Wave QPU
+If you want to use [Ocean](https://docs.ocean.dwavesys.com/en/latest/) with the D-Wave QPU, you can install the [amazon-braket-ocean-plugin-python](https://github.com/aws/amazon-braket-ocean-plugin-python). Information about how to install the plugin is provided in the [README](https://github.com/aws/amazon-braket-ocean-plugin-python/blob/master/README.md) for the repo.
+
+## Sample Notebooks
+Sample Jupyter notebooks can be found in the [amazon-braket-examples](https://github.com/aws/amazon-braket-examples/) repo.
+
+## Braket Python SDK API Reference Documentation
+
+The API reference, can be found on [Read the Docs](https://amazon-braket-sdk-python.readthedocs.io/en/latest/).
+
+**To generate the API Reference HTML in your local environment**
+
+To generate the HTML, first change directories (`cd`) to position the cursor in the `amazon-braket-sdk-python` directory. Then, run the following command to generate the HTML documentation files:
+
+```bash
+pip install tox
+tox -e docs
+```
+
+To view the generated documentation, open the following file in a browser:
+`../amazon-braket-sdk-python/build/documentation/html/index.html`
+
+## Testing
+
+This repository has both unit and integration tests.
+
+To run the tests, make sure to install test dependencies first:
+
+```bash
+pip install -e "amazon-braket-sdk-python[test]"
+```
+
+### Unit Tests
+
+To run the unit tests:
+
+```bash
+tox -e unit-tests
+```
+
+You can also pass in various pytest arguments to run selected tests:
+
+```bash
+tox -e unit-tests -- your-arguments
+```
+
+For more information, please see [pytest usage](https://docs.pytest.org/en/stable/usage.html).
+
+To run linters and doc generators and unit tests:
+
+```bash
+tox
+```
+
+### Integration Tests
+
+First, configure a profile to use your account to interact with AWS. To learn more, see [Configure AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).
+
+After you create a profile, use the following command to set the `AWS_PROFILE` so that all future commands can access your AWS account and resources.
+
+```bash
+export AWS_PROFILE=YOUR_PROFILE_NAME
+```
+
+Run the tests:
+
+```bash
+tox -e integ-tests
+```
+
+As with unit tests, you can also pass in various pytest arguments:
+
+```bash
+tox -e integ-tests -- your-arguments
+```
+
+## License
+This project is licensed under the Apache-2.0 License.
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ export AWS_PROFILE=Ian1
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ tox -e integ-tests
+
+Command 'tox' not found, but can be installed with:
+
+sudo apt install tox
+
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ sudo apt install tox
+[sudo] password for ian: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  python3-virtualenv virtualenv
+The following NEW packages will be installed:
+  python3-virtualenv tox virtualenv
+0 to upgrade, 3 to newly install, 0 to remove and 4 not to upgrade.
+Need to get 197 kB of archives.
+After this operation, 1,490 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://au.archive.ubuntu.com/ubuntu bionic/universe amd64 python3-virtualenv all 15.1.0+ds-1.1 [43.4 kB]
+Get:2 http://au.archive.ubuntu.com/ubuntu bionic/universe amd64 virtualenv all 15.1.0+ds-1.1 [4,476 B]
+Get:3 http://au.archive.ubuntu.com/ubuntu bionic/universe amd64 tox all 2.5.0-1 [149 kB]
+Fetched 197 kB in 1s (175 kB/s)
+Selecting previously unselected package python3-virtualenv.
+(Reading database ... 698043 files and directories currently installed.)
+Preparing to unpack .../python3-virtualenv_15.1.0+ds-1.1_all.deb ...
+Unpacking python3-virtualenv (15.1.0+ds-1.1) ...
+Selecting previously unselected package virtualenv.
+Preparing to unpack .../virtualenv_15.1.0+ds-1.1_all.deb ...
+Unpacking virtualenv (15.1.0+ds-1.1) ...
+Selecting previously unselected package tox.
+Preparing to unpack .../archives/tox_2.5.0-1_all.deb ...
+Unpacking tox (2.5.0-1) ...
+Setting up python3-virtualenv (15.1.0+ds-1.1) ...
+Setting up virtualenv (15.1.0+ds-1.1) ...
+Setting up tox (2.5.0-1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for doc-base (0.10.8) ...
+Processing 1 added doc-base file...
+Registering documents with scrollkeeper...
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ tox -e unit-tests
+GLOB sdist-make: /home/ian/AmazonBraket/amazon-braket-sdk-python-main/setup.py
+ERROR: invocation failed (exit code 1), logfile: /home/ian/AmazonBraket/amazon-braket-sdk-python-main/.tox/log/tox-0.log
+ERROR: actionid: tox
+msg: packaging
+cmdargs: ['/usr/bin/python3', local('/home/ian/AmazonBraket/amazon-braket-sdk-python-main/setup.py'), 'sdist', '--formats=zip', '--dist-dir', local('/home/ian/AmazonBraket/amazon-braket-sdk-python-main/.tox/dist')]
+env: None
+
+Traceback (most recent call last):
+  File "setup.py", line 14, in <module>
+    from setuptools import find_namespace_packages, setup
+ImportError: cannot import name 'find_namespace_packages'
+
+ERROR: FAIL could not package project - v = InvocationError('/usr/bin/python3 /home/ian/AmazonBraket/amazon-braket-sdk-python-main/setup.py sdist --formats=zip --dist-dir /home/ian/AmazonBraket/amazon-braket-sdk-python-main/.tox/dist (see /home/ian/AmazonBraket/amazon-braket-sdk-python-main/.tox/log/tox-0.log)', 1)
+ian@ian-Aspire-One-753:~/AmazonBraket/amazon-braket-sdk-python-main$ 
+
