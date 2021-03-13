@@ -1,0 +1,161 @@
+Welcome to Termux!
+
+Community forum: https://termux.com/community
+Gitter chat:     https://gitter.im/termux/termux
+IRC channel:     #termux on freenode
+
+Working with packages:
+
+ * Search packages:   pkg search <query>
+ * Install a package: pkg install <package>
+ * Upgrade packages:  pkg upgrade
+
+Subscribing to additional repositories:
+
+ * Root:     pkg install root-repo
+ * Unstable: pkg install unstable-repo
+ * X11:      pkg install x11-repo
+
+Report issues at https://termux.com/issues
+
+The Google Play version of the Termux app no longer
+receives updates. For more information, visit:
+https://wiki.termux.com/wiki/Termux_Google_Play
+
+$ cc
+The program cc is not installed. Install it by executing:
+ pkg install clang
+$ pkg install clang
+Testing the available mirrors:
+[*] https://termux.org/packages: ok
+[*] https://10.via0.com/ipns/k51qzi5uqu5dg9vawh923wejqffxiu9bhqlze5f508msk0h7ylpac27fdgaskx: ok
+[*] https://termux.mentality.rip/termux-packages-24: ok
+[*] https://ipfs.io/ipns/k51qzi5uqu5dg9vawh923wejqffxiu9bhqlze5f508msk0h7ylpac27fdgaskx: ok
+[*] https://grimler.se/termux-packages-24: ok
+Picking mirror: https://termux.mentality.rip/termux-packages-24
+Ign:1 https://termux.mentality.rip/termux-packages-24 stable InRelease
+Get:2 https://grimler.se/game-packages-24 games InRelease [12.5 kB]
+Get:3 https://termux.mentality.rip/termux-packages-24 stable Release [8255 B]
+Get:4 https://grimler.se/science-packages-24 science InRelease [13.3 kB]
+Get:5 https://termux.mentality.rip/termux-packages-24 stable Release.gpg [821 B]
+Get:6 https://grimler.se/game-packages-24 games/stable arm Packages [4644 B]
+Get:7 https://termux.mentality.rip/termux-packages-24 stable/main arm Packages [128 kB]
+Get:8 https://grimler.se/science-packages-24 science/stable arm Packages [28.1 kB]
+Fetched 196 kB in 8s (24.9 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  binutils libffi libllvm ndk-sysroot
+The following NEW packages will be installed:
+  binutils clang libffi libllvm ndk-sysroot
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 41.9 MB of archives.
+After this operation, 207 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 https://termux.mentality.rip/termux-packages-24 stable/main arm binutils arm 2.36.1 [2221 kB]
+Get:2 https://termux.mentality.rip/termux-packages-24 stable/main arm ndk-sysroot arm 21d [1643 kB]
+Get:3 https://termux.mentality.rip/termux-packages-24 stable/main arm libffi arm 3.3-2 [31.1 kB]
+Get:4 https://termux.mentality.rip/termux-packages-24 stable/main arm libllvm arm 11.1.0 [19.1 MB]
+Get:5 https://termux.mentality.rip/termux-packages-24 stable/main arm clang arm 11.1.0 [18.9 MB]
+Fetched 41.9 MB in 29s (1467 kB/s)
+Selecting previously unselected package binutils.
+(Reading database ... 6304 files and directories currently installed.)
+Preparing to unpack .../binutils_2.36.1_arm.deb ...
+Unpacking binutils (2.36.1) ...
+Selecting previously unselected package ndk-sysroot.
+Preparing to unpack .../ndk-sysroot_21d_arm.deb ...
+Unpacking ndk-sysroot (21d) ...
+Selecting previously unselected package libffi.
+Preparing to unpack .../archives/libffi_3.3-2_arm.deb ...
+Unpacking libffi (3.3-2) ...
+Selecting previously unselected package libllvm.
+Preparing to unpack .../libllvm_11.1.0_arm.deb ...
+Unpacking libllvm (11.1.0) ...
+Selecting previously unselected package clang.
+Preparing to unpack .../archives/clang_11.1.0_arm.deb ...
+Unpacking clang (11.1.0) ...
+Setting up ndk-sysroot (21d) ...
+Setting up binutils (2.36.1) ...
+Setting up libffi (3.3-2) ...
+Setting up libllvm (11.1.0) ...
+Setting up clang (11.1.0) ...
+$ ls
+hello.sh
+$ cd sdcard
+bash: cd: sdcard: No such file or directory
+$ vim
+$ cp crypt crypt.c
+$ cc crypt.c -o crypt
+$ ./crypt
+WARNING: linker: /data/data/com.termux/files/home/crypt: unsupported flags DT_FLAGS_1=0x8000001
+
+A 2
+B 1
+$ vim crypt.c
+$ cc crypt.c -o.crypt
+$ ./crypt
+WARNING: linker: /data/data/com.termux/files/home/crypt: unsupported flags DT_FLAGS_1=0x8000001
+
+A 2
+B 1
+D 1$ cat crypt.c
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+        int i;
+        int j;
+//      int x;
+//      int np;
+        int ac;
+        int bc;
+        int dc;
+        const   char * table[1000];
+const   char * buf1[15];
+ac = 0;
+bc = 0;
+dc = 0;
+                table[0]= "w";
+        table[1]="e";
+        table[2]=" ";
+        table[3]= "a";
+        table[4] = "r";
+        table[5] = "e";
+        table[6] = " ";
+        table[7] = "b";
+        table[8]= "a";
+        table[9] = "d";
+        table[10] = "£";
+        table[11] =" ";
+        table[12] =" ";
+        table[13]=" ";
+        for(i=0;i<=13;i++){
+                buf1[i]=table[i];
+
+        }
+
+
+
+        for(j=0;j<=13;j++)
+        {
+        if( strcmp(buf1[j],"£") !=0) {
+//              printf("\n%d%c%d%c%d",i,j,x);
+                if (strcmp(buf1[j],"a")==0){
+                        ac =ac+ 1;
+}
+         if(strcmp(buf1[j],"b")==0) bc = bc + 1;   if(strcmp(buf1[j],"d")==0) dc = dc + 1;
+
+        }
+        }
+        printf("\n%s%d","A ",ac);
+        printf("\n%s%d","B ",bc);
+        printf("\n%s%d\n","D ",dc);
+
+}
+$
