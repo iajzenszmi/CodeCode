@@ -1,0 +1,17 @@
+ian@Ian2:~$ f95 abstest.f90 -o abstest
+ian@Ian2:~$ ./abstest
+          -1  -1.00000000                (-1.00000000,0.00000000)
+           1   1.00000000                 (1.00000000,0.00000000)
+ian@Ian2:~$ cat abstest.f90
+            program test_abs
+            integer :: i = -1
+            real :: x = -1.e0
+            complex :: z = (-1.e0,0.e0)
+            print *,i, x, z
+            i = abs(i)
+            x = abs(x)
+            z = abs(z)
+            print *,i,x, z
+          end program test_abs
+ian@Ian2:~$ 
+
