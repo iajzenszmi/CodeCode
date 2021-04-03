@@ -1,0 +1,20 @@
+ian@Ian2:~$ gforth fib.fs
+1 , 1 , 2 , 3 , 5 , 8 , 13 , 21 , 34 , 55 , 89 , 144 , 233 , 377 , 610 , 987 , ...Gforth 0.7.3, Copyright (C) 1995-2008 Free Software Foundation, Inc.
+Gforth comes with ABSOLUTELY NO WARRANTY; for details type `license'
+Type `bye' to exit
+bye 
+ian@Ian2:~$ cat fib.fs
+: fib-iter
+  0 1 rot 0 ?do over + swap loop drop ;
+ 
+: lp
+  1 do
+    i dup fib-iter . ." , "
+  loop drop ;
+ 
+17 lp
+." ..."
+
+ian@Ian2:~$ ^C
+ian@Ian2:~$ 
+
