@@ -1,0 +1,65 @@
+ian@Ian2:~$ pforth additiveprimes.fs
+PForth V21
+pForth loading dictionary from file /usr/lib/pforth/pforth.dic
+     File format version is 8 
+     Name space size = 120000 
+     Code space size = 300000 
+     Entry Point     = 0 
+     Little  Endian Dictionary
+Begin AUTO.INIT ------
+Including: additiveprimes.fs
+Additive primes less than 1000:
+  2   3   5   7  11  23  29  41  43  47
+ 61  67  83  89 101 113 131 137 139 151
+157 173 179 191 193 197 199 223 227 229
+241 263 269 281 283 311 313 317 331 337
+353 359 373 379 397 401 409 421 443 449
+461 463 467 487 557 571 577 593 599 601
+607 641 643 647 661 683 719 733 739 751
+757 773 797 809 821 823 827 829 863 881
+883 887 911 919 937 953 971 977 991 
+89 additive primes found.
+End AUTO.TERM ------
+ian@Ian2:~$ cat additiveprimes.fs
+: prime? ( n -- ? ) here + c@ 0= ;
+: notprime! ( n -- ) here + 1 swap c! ;
+ 
+: prime_sieve ( n -- )
+  here over erase
+  0 notprime!
+  1 notprime!
+  2
+  begin
+    2dup dup * >
+  while
+    dup prime? if
+      2dup dup * do
+        i notprime!
+      dup +loop
+    then
+    1+
+  repeat
+  2drop ;
+ 
+: digit_sum ( u -- u )
+  dup 10 < if exit then
+  10 /mod recurse + ;
+ 
+: print_additive_primes ( n -- )
+  ." Additive primes less than " dup 1 .r ." :" cr
+  dup prime_sieve
+  0 swap
+  1 do
+    i prime? if
+      i digit_sum prime? if
+        i 3 .r
+        1+ dup 10 mod 0= if cr else space then
+      then
+    then
+  loop
+  cr . ." additive primes found." cr ;
+ 
+1000 print_additive_primes
+bye
+ian@Ian2:~$ 
+
