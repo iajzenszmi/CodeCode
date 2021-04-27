@@ -1,0 +1,12 @@
+ write(6, 9010) gamma(1.0)
+ write(6, 9010) gamma(2.0)
+ write(6, 9010) gamma(3.0)
+ write(6, 9010) gamma(4.0)
+ write(6, 9010) gamma(5.0)
+ write(6, 9010) gamma(6.0)
+ write(6, 9010) gamma(7.0)
+ write(6, 9010) gamma(8.0)
+ write(6, 9010) gamma(9.0)
+ write(6, 9010) gamma(10.0) 
+ 9010 format(" ",f12.4)
+ end program

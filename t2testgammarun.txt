@@ -1,0 +1,60 @@
+ian@Ian2:~$ cat t2testgamma.f08
+ write(6, 9010) gamma(1.0)
+ write(6, 9010) gamma(2.0)
+ write(6, 9010) gamma(3.0)
+ write(6, 9010) gamma(4.0)
+ write(6, 9010) gamma(5.0)
+ write(6, 9010) gamma(6.0)
+ write(6, 9010) gamma(7.0)
+ write(6, 9010) gamma(8.0)
+ write(6, 9010) gamma(9.0)
+ write(6, 9010) gamma(10.0) 
+ 9010 format(" ",f12.4)
+ end program
+ian@Ian2:~$ cat testgamma.c
+/* tgamma example */
+#include <stdio.h>      /* printf */
+#include <math.h>       /* tgamma */
+
+int main ()
+{
+ // double param, result;
+//  param = 0.5;
+  printf("\n%10.2f",tgamma(1.0));
+  printf("\n%10.2f",tgamma(2.0));
+  printf("\n%10.2f",tgamma(3.0));
+  printf("\n%10.2f",tgamma(4.0));
+  printf("\n%10.2f",tgamma(5.0));
+  printf("\n%10.2f",tgamma(6.0));
+  printf("\n%10.2f",tgamma(7.0));
+  printf("\n%10.2f",tgamma(8.0));
+  printf("\n%10.2f",tgamma(9.0));
+  printf("\n%10.2f",tgamma(10.0));
+  return 0;
+}
+ian@Ian2:~$ gfortran t2testgamma.f08 -o t2testgammaf08
+ian@Ian2:~$ gcc testgamma.c -o testgammac
+ian@Ian2:~$ ./t2testgammaf08
+       1.0000
+       1.0000
+       2.0000
+       6.0000
+      24.0000
+     120.0000
+     720.0000
+    5040.0000
+   40320.0000
+  362880.0000
+ian@Ian2:~$ ./testgammac
+
+      1.00
+      1.00
+      2.00
+      6.00
+     24.00
+    120.00
+    720.00
+   5040.00
+  40320.00
+ 362880.00ian@Ian2:~$ 
+
