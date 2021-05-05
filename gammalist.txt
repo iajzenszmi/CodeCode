@@ -1,0 +1,93 @@
+ian@Ian2:~/gammatest$ ls
+calltgamma.c        calltgammatest.o  gammatest      libbblas.a  testmat.o
+calltgamma_.c       ctgt              gammatest.f08  makefile    testret.cc
+calltgamma.o        driver            gammatext.txt  Makefile    testret.o
+calltgamma_.o       driver.f          gammattest.c   testdot.cc  txt.out
+calltgammatest      driver.o          gt             testdot.o
+calltgammatest.f08  gammajob.txt      g.txt          testmat.cc
+ian@Ian2:~/gammatest$ gfortran calltgammatest.f08 -o calltgammatest
+calltgammatest.f08:3:27:
+
+    3 |        read(5,9000) tgamma(0)
+      |                           1
+Warning: Array reference at (1) is out of bounds (0 < 1) in dimension 1
+calltgammatest.f08:5:28:
+
+    5 |        read(5, 9000) tgamma(v)
+      |                            1
+Warning: Legacy Extension: REAL array index at (1)
+calltgammatest.f08:4:11:
+
+    4 |        do  v=1,10,1
+      |           1
+Warning: Deleted feature: Loop variable at (1) must be integer
+calltgammatest.f08:10:33:
+
+   10 |        print *,n,gamma(n),tgamma(n)
+      |                                 1
+Warning: Legacy Extension: REAL array index at (1)
+calltgammatest.f08:9:10:
+
+    9 |        do n = 1, 10, 1
+      |          1
+Warning: Deleted feature: Loop variable at (1) must be integer
+ian@Ian2:~/gammatest$ ./calltgammatest < g.txt
+  n gamman  tgamma(n)
+   1.00000000       1.00000000       1.00000000    
+   2.00000000       1.00000000       1.00000000    
+   3.00000000       2.00000024       2.00000000    
+   4.00000000       6.00000048       6.00000000    
+   5.00000000       24.0000000       24.0000000    
+   6.00000000       120.000008       120.000000    
+   7.00000000       720.000000       720.000000    
+   8.00000000       5040.00000       5040.00000    
+   9.00000000       40320.0000       40320.0000    
+   10.0000000       362880.031       362880.000    
+ian@Ian2:~/gammatest$ cat calltgammatest.f08
+     
+       real  n, tgamma(10),v
+       read(5,9000) tgamma(0)
+       do  v=1,10,1
+       read(5, 9000) tgamma(v)
+ 9000  format(f10.2)
+       end do
+       print *," n ", "gamman "," tgamma(n)"
+       do n = 1, 10, 1
+       print *,n,gamma(n),tgamma(n)
+       end do
+       end program
+ian@Ian2:~/gammatest$ cat gammattest.c
+/* tgamma example */
+#include <stdio.h>      /* printf */
+#include <math.h>       /* tgamma */
+
+int main ()
+{
+  printf("\n%10.2f",tgamma(1.0));
+  printf("\n%10.2f",tgamma(2.0));
+  printf("\n%10.2f",tgamma(3.0));
+  printf("\n%10.2f",tgamma(4.0));
+  printf("\n%10.2f",tgamma(5.0));
+  printf("\n%10.2f",tgamma(6.0));
+  printf("\n%10.2f",tgamma(7.0));
+  printf("\n%10.2f",tgamma(8.0));
+  printf("\n%10.2f",tgamma(9.0));
+  printf("\n%10.2f",tgamma(10.0));
+  return 0;
+}
+ian@Ian2:~/gammatest$ gcc gammattest.c -o gammatest
+ian@Ian2:~/gammatest$ ./gammatest > g.txt
+ian@Ian2:~/gammatest$ ./calltgammatest < g.txt
+  n gamman  tgamma(n)
+   1.00000000       1.00000000       1.00000000    
+   2.00000000       1.00000000       1.00000000    
+   3.00000000       2.00000024       2.00000000    
+   4.00000000       6.00000048       6.00000000    
+   5.00000000       24.0000000       24.0000000    
+   6.00000000       120.000008       120.000000    
+   7.00000000       720.000000       720.000000    
+   8.00000000       5040.00000       5040.00000    
+   9.00000000       40320.0000       40320.0000    
+   10.0000000       362880.031       362880.000    
+ian@Ian2:~/gammatest$ 
+
