@@ -1,0 +1,309 @@
+ian@Ian2:~$ cd acm*
+ian@Ian2:~/acmcalgo$ ls
+calgo.acm.org
+ian@Ian2:~/acmcalgo$ cd ca*
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ls
+ 1               564           730
+ 100.zip         565           731
+ 101.zip         566           732
+ 125             567           733
+ 133             568           734
+ 133algrun.f08   569           735
+ 133d            570           736
+ 133.sh          571           737
+ 133test1        572           738
+ 133test1.f08    573.zip       739
+ 133test1.o      574           740
+ 133tr.f         575           741
+ 133tr.f08       576           742
+ 179             577           743
+ 2               578           744
+ 266             579           745
+ 280             580           746
+ 3               581           747
+ 322             582           748
+ 326             583           749
+ 332             584           750
+ 343             585           751
+ 344             586           752
+ 347             587           753
+ 351             588           754
+ 352             589           755.zip
+ 353             590           756.zip
+ 358             591           757
+ 359             592           758
+ 365             593           759
+ 370.zip         594           760
+ 379             595           761
+ 380             596           762
+ 382             597           763
+ 384             598           764
+ 385             599           765
+ 386             6             766
+ 392             600           767
+ 4               601           768
+ 400             602           769
+ 403             603           770
+ 404             604           771
+ 406             605           772
+ 407             606           773
+ 408             607           774
+ 410             608           775
+ 413             609           776
+ 414             610           777
+ 419             611           778
+ 420             612           778.zip
+ 421             613           779
+ 422             614           780
+ 422run.f08      615           781
+ 422.sh          616           782
+ 423             617           783
+ 424             618           784
+ 425             619           785
+ 427             620.bib.zip   786
+ 429             620.zip       787
+ 431             621           788
+ 432             622           789
+ 433             623           790
+ 434             624           791
+ 435             625           792
+ 436             626           793
+ 437             627           794
+ 438             628           795
+ 439             629           796
+ 441             630           797
+ 443             631           798
+ 446             632           799
+ 448             633           800
+ 449             634           800.f
+ 450             635           800run.sh
+ 451             635.f         801
+ 452             636           802
+ 453             637           803
+ 454             638           804
+ 456             639           805
+ 458             640           806.tgz
+ 460             641           806.zip
+ 461             642           807
+ 462             643           808
+ 463             644           809
+ 467             645           810
+ 468             646           811
+ 470             647           812
+ 473             648           813
+ 474             649           814
+ 475             650           815
+ 476             651           816
+ 478             652           817
+ 479             653           818
+ 481             654           819
+ 483             655           820
+ 484             656           821
+ 485             657           822
+ 487             658           823.zip
+ 488             659           824
+ 490             660           825
+ 493             661           826
+ 494             662           827
+ 495             663           828
+ 496             664           829
+ 497             665           830
+ 498             666           831
+ 499             667           832.zip
+ 5               668           833
+ 500             669           834
+ 501             670           835
+ 502             671           836
+ 503             672           837.zip
+ 504             673.zip       838
+ 505             674           839.zip
+ 506             675           840
+ 507             676           841
+ 508             677           842.zip
+ 509             678           843.zip
+ 510             679           844.zip
+ 511             680.zip       845.zip
+ 512             681           846.zip
+ 513             682           847.zip
+ 514             683           848.zip
+ 515             684           849.zip
+ 516             685           850.zip
+ 517             686           851.zip
+ 518             687           852.zip
+ 519             688           853.zip
+ 520             689           854.zip
+ 521             690           855.zip
+ 522             691           856.zip
+ 523             692           857.zip
+ 524             693           858.zip
+ 525             694           859.zip
+ 526             695           860.zip
+ 527             696           861.zip
+ 527.f           697           862.zip
+ 527.f08         698           863.zip
+ 528             699           864.zip
+ 529             699.f         865.zip
+ 530             699run        866.zip
+ 531             699run.txt    867.zip
+ 532             7             868.zip
+ 533             700           869.zip
+ 534             701           870.zip
+ 535             702           871.zip
+ 536             703           872.zip
+ 537             704           873.zip
+ 538             705           874.zip
+ 539.zip         706           875.zip
+ 540             707           876.zip
+ 541             708           877.zip
+ 542             709.zip       878.zip
+ 543             710           879.zip
+ 544             711           880.zip
+ 545             712           881.zip
+ 546             713           882.zip
+ 547             714           883.zip
+ 548             715           884.zip
+ 549             716           885.zip
+ 550             717           886.zip
+ 551             718           887.zip
+ 552             719           888.zip
+ 553             720           889.zip
+ 554             721           890.zip
+ 555             722           acmlogo.gif
+ 556             723           alg133.mod
+ 557             724           Doc
+ 558             725          'downloadSupplement?doi=10.1145%2F210232.210235'
+ 559             726           Fortran77
+ 560             727           index.html
+ 561             728           robots.txt
+ 562             729           Sp
+ 563             729.f         wget-log
+ian@Ian2:~/acmcalgo/calgo.acm.org$ cd 133d
+ian@Ian2:~/acmcalgo/calgo.acm.org/133d$ ls
+133  133alg.f  133alg.f08  133.sh  Sp
+ian@Ian2:~/acmcalgo/calgo.acm.org/133d$ cd
+ian@Ian2:~$ cd ac*
+ian@Ian2:~/acmcalgo$ cd cal*
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ls 133*
+133            133.sh    133test1.f08  133tr.f
+133algrun.f08  133test1  133test1.o    133tr.f08
+
+133d:
+133  133alg.f  133alg.f08  133.sh  Sp
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ls alg*
+alg133.mod
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ls 133*
+133            133.sh    133test1.f08  133tr.f
+133algrun.f08  133test1  133test1.o    133tr.f08
+
+133d:
+133  133alg.f  133alg.f08  133.sh  Sp
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ls 133test*
+133test1  133test1.f08  133test1.o
+ian@Ian2:~/acmcalgo/calgo.acm.org$ gfortran 133test1.f08 -o 133test1
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ./133test1.f08
+bash: ./133test1.f08: Permission denied
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ./133test1
+ 5000th number determined correctly
+ian@Ian2:~/acmcalgo/calgo.acm.org$ cat 133test1.f08
+!     ALGORITHM 133, COLLECTED ALGORITHMS FROM ACM.
+!     ALGORITHM APPEARED IN CACM, VOL 5, NO. 11,
+!     NOV., 1962, P. 553.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!
+!!!!  UNDER NO CIRCUMSTANCES SHOULD THIS RANDOM NUMBER
+!!!!  GENERATOR BE USED FOR SERIOUS COMPUTING
+!!!!
+!!!!  Code provided solely for archival purposes
+!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+module alg133
+  integer :: x(2)
+
+contains
+  subroutine setseed(y)
+  integer, intent(in) :: y(2)
+  
+! set the initial seed of the generator. This value is
+! stored as y(1)*2**20 + y(2).
+!
+! Thus the value 28 395 423 107 is stored as
+! y(1) = 27079; y(2) = 1033603
+!
+  x = y
+
+  end subroutine setseed
+
+  real function random(a, b)
+  real, intent(in) :: a, b
+
+!
+! Implementation of acm algorithm 133. This is provided
+! purely for historical reasons and should never be used
+! in practice.
+!
+! The implementation assumes that the default integer is
+! at least 23 bits (excluding the sign).
+!
+! The returned value is in the range (a,b).
+!
+! The generator used is
+!   x(n+1) = 5*x(n) mod 2^35
+! which has a period of 2^33.
+!
+! mscale = 2^20, topscale = 2^(35-20) = 2^15;
+! mrecip = 1.0/2^35; toprecip = 1.0/2^15
+!
+  integer, parameter :: mult = 5, mscale = 1048576, topscale = 32768
+  real, parameter :: mrecip = 2.0**(-35), toprecip = 2.0**(-15)
+
+  x = mult * x
+
+! Add overflow from x(2) and remove it from x(2)
+  if (x(2) >= mscale) then
+    x(1) = x(1) + x(2)/mscale
+    x(2) = mod(x(2), mscale)
+  endif
+
+! Possibly need to tidy up x(1)
+  if (x(1) >= topscale) then
+    x(1) = mod(x(1), topscale)
+  endif
+
+! Generate a real value in the required range
+  random = (x(1)*toprecip + x(2)*mrecip)*(b-a) + a
+
+  end function random
+
+end module
+
+
+
+
+program test
+
+use alg133
+
+integer :: i
+real :: xval
+
+integer, parameter :: nvals = 5000
+integer :: seed(2) = (/0, 32767/)
+
+
+call setseed(seed)
+
+do i = 1, nvals
+  xval = random(0.0e0, 1.0e0)
+end do
+
+! Check 5000th number is as expected
+if (x(1) == 23089 .and. x(2) == 808991) then
+  write(6,*) "5000th number determined correctly"
+else
+  write(6,*) "IMPLEMENTATION ERROR"
+endif
+
+end program test
+ian@Ian2:~/acmcalgo/calgo.acm.org$ 
+
