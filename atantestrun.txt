@@ -1,0 +1,28 @@
+ian@Ian2:~/acmcalgo/calgo.acm.org$ f77 atantest.f -o atantest
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ./atantest
+ian@Ian2:~/acmcalgo/calgo.acm.org$ f77 atantest.f -o atantest
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ./atantest
+   1.2350854374578792     
+ian@Ian2:~/acmcalgo/calgo.acm.org$ f77 atantest.f -o atantest
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ./atantest
+   1.2350854374578792     
+   1.2350854374578792       0.40689445743676528       -8.9960579661213513E+239
+ian@Ian2:~/acmcalgo/calgo.acm.org$ f77 atantest.f -o atantest
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ./atantest
+ x =   1.2350854374578792     
+  x =    1.2350854374578792       y =   0.40689445743676528       z=   -6.2681912768832704E-300
+ian@Ian2:~/acmcalgo/calgo.acm.org$ cat atantest.f
+       program test_atan
+       real(8) :: x = 2.866_8
+       real(8) :: y = 2.866_8
+       real(8) :: z
+       x = atan(x)
+       print *,"x =",x
+       y = atan(x,y)
+       print *," x = ",x, " y = ",y, " z= ",z                  
+       end program test_atan
+
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ^C
+ian@Ian2:~/acmcalgo/calgo.acm.org$ ^C
+ian@Ian2:~/acmcalgo/calgo.acm.org$ 
+
