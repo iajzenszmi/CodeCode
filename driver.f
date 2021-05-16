@@ -2,177 +2,131 @@
 
 c***********************************************************************
 c
-cc TOMS438_PRB tests TOMS438.
+cc TOMS441_PRB tests DIPOLE.
 c
       implicit none
 
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) 'TOMS438_PRB'
-      write ( *, '(a)' ) '  Test TOMS algorithm 438, product-type'
-      write ( *, '(a)' ) '  two point Gauss-Legendre Simpson'
-      write ( *, '(a)' ) '  integration.'
+      integer sample_num
+      integer test_num
 
-      call test01
-      call test02
+      parameter ( sample_num = 1000 )
+      parameter ( test_num = 3 )
+
+      real a
+      real alpha_test(test_num)
+      real alpha
+      real b
+      real dipole
+      integer i
+      real mean
+      real r
+      real r_test(test_num)
+      integer seed
+      integer test
+      real variance
+      real x(sample_num)
+      real xmax
+      real xmin
+
+      save alpha_test
+      save r_test
+
+      data alpha_test / 0.0, 0.785398163397448, 1.57079632679490 /
+      data r_test / 1.0, 0.5, 0.0 /
+
+      seed = 123456789
 
       write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) 'TOMS438_PRB'
+      write ( *, '(a)' ) 'TOMS441_PRB'
+      write ( *, '(a)' ) '  Test TOMS algorithm 441, generating'
+      write ( *, '(a)' ) '  random deviates from the dipole '
+      write ( *, '(a)' ) '  distribution.'
+
+      do test = 1, test_num
+
+        alpha = alpha_test(test)
+        r = r_test(test)
+
+        a = r * cos ( alpha )
+        b = r * sin ( alpha )
+
+        write ( *, '(a)' ) ' '
+        write ( *, '(a,g14.6)' ) ' A = ', a
+        write ( *, '(a,g14.6)' ) ' B = ', b
+
+        xmax = -1.0E+30
+        xmin = +1.0D+30
+        mean = 0.0D+00
+
+        do i = 1, sample_num
+          x(i) = dipole ( a, b, seed )
+          xmax = max ( xmax, x(i) )
+          xmin = min ( xmin, x(i) )
+          mean = mean + x(i)
+        end do
+
+        mean = mean / real ( sample_num )
+
+        variance = 0.0
+        do i = 1, sample_num
+          variance = variance + ( x(i) - mean )**2
+        end do
+        variance = variance / real ( sample_num - 1 )
+
+        write ( *, '(a)' ) ' '
+        write ( *, '(a,i6)'    ) '  Sample size =     ', sample_num
+        write ( *, '(a,g14.6)' ) '  Sample mean =     ', mean
+        write ( *, '(a,g14.6)' ) '  Sample variance = ', variance
+        write ( *, '(a,g14.6)' ) '  Sample maximum =  ', xmax
+        write ( *, '(a,g14.6)' ) '  Sample minimum =  ', xmin
+
+      end do
+
+      write ( *, '(a)' ) ' '
+      write ( *, '(a)' ) 'TOMS441_PRB'
       write ( *, '(a)' ) '  Normal end of execution.'
 
       stop
       end
-      subroutine test01
+      function r11 ( seed )
 
-c***********************************************************************
+c*******************************************************************************
 c
-cc TEST01 tests the rule with one factor equal to 1.
+cc R11 returns a pseudorandom number between -1 and +1.
 c
-      implicit none
-
-      double precision a
-      double precision b
-      double precision exact
-      double precision fn00, gn00
-      external fn00
-      external gn00
-      integer n
-      double precision vint
-
-      a = -4.0D+00
-      b =  4.0D+00
-      exact = 2.0D+00 * atan ( 4.0D+00 )
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) 'TEST01'
-      write ( *, '(a)' ) '  Integral of F(X) * G(X) from -1 to 1,'
-      write ( *, '(a)' ) '  with F(X) = 1, G(X) = 1/(1+x**2 )'
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) '       N    VINT'
-      write ( *, '(a)' ) ' '
-
-      do n = 1, 10
-        call p2pgs ( a, b, n, fn00, gn00, vint )
-        write ( *, '(2x,i6,2x,g14.6)' ) n, vint
-      end do
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a,g14.6)' ) '  Exact:  ', exact
-
-      return
-      end
-      subroutine test02
-
-c***********************************************************************
+c  Modified:
 c
-cc TEST02 tests the rule with factors exp(-x) and cos(x).
+c    06 December 2005
+c
+c  Author:
+c
+c    John Burkardt
+c
+c  Parameters:
+c
+c    Input/output, integer SEED, the "seed" value, which should NOT be 0.
+c    On output, SEED has been updated.
+c
+c    Output, real RD11, a new pseudorandom variate, strictly between -1 and 1.
 c
       implicit none
 
-      double precision a
-      double precision b
-      double precision exact
-      double precision gn01, gn02
-      external gn01
-      external gn02
-      integer n
-      double precision vint
+      integer k
+      real r11
+      integer seed
 
-      a =  0.0D+00
-      b =  3.141592653589793D+00
+      k = seed / 127773
 
-      exact = 0.5 * exp ( -b ) * ( sin ( b ) - cos ( b ) )
-     &      - ( 0.5 * exp ( -a ) * ( sin ( a ) - cos ( a ) ) )
+      seed = 16807 * ( seed - k * 127773 ) - k * 2836
 
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) 'TEST02'
-      write ( *, '(a)' ) '  Integral of F(X) * G(X) from 0 to PI,'
-      write ( *, '(a)' ) '  with F(X) = EXP(-X), G(X) = COS(X)'
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) '       N    VINT'
-      write ( *, '(a)' ) ' '
-
-      do n = 1, 10
-        call p2pgs ( a, b, n, gn01, gn02, vint )
-        write ( *, '(2x,i6,2x,g14.6)' ) n, vint
-      end do
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a,g14.6)' ) '  Exact:  ', exact
-
-      return
-      end
-      function fn00 ( x )
-
-c***********************************************************************
+      if ( seed < 0 ) then
+        seed = seed + 2147483647
+      end if
 c
-cc FN00 evaluates the function 1.
+c  Although SEED can be represented exactly as a 32 bit integer,
+c  it generally cannot be represented exactly as a 32 bit real number!
 c
-      implicit none
-
-      double precision fn00
-      double precision x
-
-      fn00 = 1.0D+00
-
-      return
-      end
-      function fn01 ( x )
-
-c***********************************************************************
-c
-cc FN01 evaluates the function X.
-c
-      implicit none
-
-      double precision fn01
-      double precision x
-
-      fn01 = x
-
-      return
-      end
-      function gn00 ( x )
-
-c***********************************************************************
-c
-cc GN00 evaluates the function 1/(1+X**2).
-c
-      implicit none
-
-      double precision gn00
-      double precision x
-
-      gn00 = 1.0D+00 / ( 1.0D+00 + x * x )
-
-      return
-      end
-      function gn01 ( x )
-
-c***********************************************************************
-c
-cc GN01 evaluates the function exp(-x).
-c
-      implicit none
-
-      double precision gn01
-      double precision x
-
-      gn01 = exp ( - x )
-
-      return
-      end
-      function gn02 ( x )
-
-c***********************************************************************
-c
-cc GN02 evaluates the function cos(x).
-c
-      implicit none
-
-      double precision gn02
-      double precision x
-
-      gn02 = cos ( x )
+      r11 = 2.0 * real ( dble ( seed ) * 4.656612875D-10 ) - 1.0
 
       return
       end
