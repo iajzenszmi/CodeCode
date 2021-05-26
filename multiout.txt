@@ -1,0 +1,29 @@
+ian@ian-HP-Stream-Notebook-PC-11:~$ gfortran multi.f
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./a.out
+2
+4
+           2
+           4
+           8
+ian@ian-HP-Stream-Notebook-PC-11:~$ cat multi
+cat: multi: No such file or directory
+ian@ian-HP-Stream-Notebook-PC-11:~$ cat multi.f
+           integer mult1
+           integer mult2
+           integer mult3
+           read *, mult1
+           read *, mult2
+           mult3 = mult1 * mult2
+           print *,mult1
+           print *,mult2
+           print *,mult3
+           end program
+ian@ian-HP-Stream-Notebook-PC-11:~$ gfortran multi.f -o multi
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./multi
+6
+9
+           6
+           9
+          54
+ian@ian-HP-Stream-Notebook-PC-11:~$ 
+
