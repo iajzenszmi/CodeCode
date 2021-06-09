@@ -1,0 +1,2448 @@
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ csplit 524.f /"C TEST PROGRAM FOR MP PACKAGE"/
+181128
+176168
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ ls
+524  524.f  xx00  xx01
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ cp xx00 524f1.f
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ f77 524f1.f -std=legacy -c
+524f1.f:4233:19:
+
+ 4233 |       CALL MPMAXR (X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4997:8:
+
+ 4996 |       DO 20 I = 2, T2
+      |                                                                        2
+ 4997 |    20 Y(I) = X(I)
+      |        1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:4997:15:
+
+ 4996 |       DO 20 I = 2, T2
+      |                                                                        2
+ 4997 |    20 Y(I) = X(I)
+      |               1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:4007:8:
+
+ 4006 |       DO 180 I = 1, T
+      |                                                                        2
+ 4007 |   180 Z(I+2) = R(I)
+      |        1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:936:8:
+
+  935 |       DO 50 I = 2, T
+      |                                                                        2
+  936 |    50 Z(I+1) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:1383:22:
+
+ 1383 |    40 CALL MPCIM (I1, Q)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1660:8:
+
+ 1657 |       DO 90 K = 2, KH
+      |                                                                        2
+......
+ 1660 |       R(K) = C/J
+      |        1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1661:21:
+
+ 1657 |       DO 90 K = 2, KH
+      |                                                                        2
+......
+ 1661 |    90 C = B*(C - J*R(K))
+      |                     1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1384:32:
+
+ 1384 |       IF (J1.NE.1) CALL MPDIVI (Q, J1, Q)
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3826:19:
+
+ 3826 |       CALL MPDIVI (X, JS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3827:19:
+
+ 3827 |       CALL MPMUL2 (Y, IS, Y, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3830:19:
+
+ 3830 |    50 CALL MPDIVI (X, IS*JS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:202:26:
+
+  202 |   110 CALL MPNZR (RS, RE, Z, TRUNC)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:191:12:
+
+  190 |       DO 80 J = 1, T
+      |                                                                        2
+  191 |       IF (X(J+2) - Y(J+2)) 100, 80, 130
+      |            1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:191:21:
+
+  190 |       DO 80 J = 1, T
+      |                                                                        2
+  191 |       IF (X(J+2) - Y(J+2)) 100, 80, 130
+      |                     1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:3805:19:
+
+ 3805 |       CALL MPMUL2 (X, IY, Z, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4279:24:
+
+ 4279 |       CALL MPART1 (239, X)
+      |                        1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5005:19:
+
+ 5005 |       CALL MPADD2 (X, Y, Z, Y1, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1238:27:
+
+ 1237 |       DO 10 I = 1, T
+      |                                                                        2
+ 1238 |       RZ = RB*RZ + FLOAT(X(I+2))
+      |                           1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:4283:18:
+
+ 4283 |       CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1114:26:
+
+ 1114 |       CALL MPNZR (XS, X2, Y, 1)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4451:21:
+
+ 4451 |    10 CALL MPCIM (1, X)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1428:26:
+
+ 1428 |       CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1437:19:
+
+ 1437 |       CALL MPDIVI (Z, TP, Z)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4372:21:
+
+ 4372 |    10 CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3787:26:
+
+ 3787 |    60 CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4548:18:
+
+ 4548 |    30 CALL MPMUL (X, R(I2), R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:123:19:
+
+  123 |       CALL MPADD2 (X, Y, Z, Y, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4392:30:
+
+ 4392 |       IF (N.LT.0) CALL MPREC (Y, Y)
+      |                              1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4395:21:
+
+ 4395 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4399:36:
+
+ 4399 |       IF ((2*N2).NE.NS) CALL MPMUL (Y, R(I2), Y)
+      |                                    1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4653:18:
+
+ 4653 |       CALL MPMUL (X, R(I3), R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4687:18:
+
+ 4687 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4485:19:
+
+ 4485 |       CALL MPROOT (X, LS, X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3431:28:
+
+ 3431 |       CALL MPL235 (1, 0, 0, X)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3456:42:
+
+ 3456 |       IF (IK.EQ.3) CALL MPL235 (IA, 1, 0, X)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3457:44:
+
+ 3457 |       IF (IK.EQ.4) CALL MPL235 (IA+2, 0, 0, X)
+      |                                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3458:42:
+
+ 3458 |       IF (IK.EQ.5) CALL MPL235 (IA, 0, 1, X)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3459:44:
+
+ 3459 |       IF (IK.EQ.6) CALL MPL235 (IA+1, 1, 0, X)
+      |                                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3502:26:
+
+ 3502 |       CALL MPADD2 (R(I3), X, X, X, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3506:18:
+
+ 3506 |   170 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2433:25:
+
+ 2433 |    90 CALL MPMUL (R(I2), Y, Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1303:12:
+
+ 1302 |       DO 50 I = 2, T2
+      |                                                                        2
+ 1303 |       IF (X(I) - Y(I)) 60, 50, 70
+      |            1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1303:19:
+
+ 1302 |       DO 50 I = 2, T2
+      |                                                                        2
+ 1303 |       IF (X(I) - Y(I)) 60, 50, 70
+      |                   1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:2315:18:
+
+ 2315 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:2322:18:
+
+ 2322 |       CALL MPMUL (Y, Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4495:18:
+
+ 4495 |       CALL MPEXP (X, X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:365:19:
+
+  365 |       CALL MPDIVI (Y, 2*R(I3), Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:380:18:
+
+  380 |       CALL MPMUL (X, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4973:19:
+
+ 4973 |    40 CALL MPROOT (X, -2, R(I2))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4975:18:
+
+ 4975 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:412:22:
+
+  412 |       CALL MPSQRT (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1586:18:
+
+ 1586 |       CALL MPREC (Y, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1592:18:
+
+ 1592 |       CALL MPMUL (X, R(I2), Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:437:18:
+
+  437 |       CALL MPCMR (Y, RY)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:381:19:
+
+  381 |       CALL MPATAN (Y, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4260:19:
+
+ 4259 |       DO 20 I = 1, J
+      |                                                                        2
+ 4260 |    20 Y(I+1) = B*X(2*I+1) + X(2*I+2)
+      |                   1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:4260:30:
+
+ 4259 |       DO 20 I = 1, J
+      |                                                                        2
+ 4260 |    20 Y(I+1) = B*X(2*I+1) + X(2*I+2)
+      |                              1
+Warning: Array reference at (1) out of bounds (4 > 2) in loop beginning at (2)
+524f1.f:608:34:
+
+  608 |       IF (NU.EQ.0) CALL MPCIM (1, Y)
+      |                                  1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1322:21:
+
+ 1322 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4917:34:
+
+ 4917 |       IF (IS.EQ.0) CALL MPCIM (1, Y)
+      |                                  1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4922:18:
+
+ 4922 |       CALL MPMUL (X, X, R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4951:26:
+
+ 4951 |       CALL MPADD2 (R(I2), Y, Y, Y, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4824:24:
+
+ 4824 |       CALL MPART1 (239, Y)
+      |                        1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4843:25:
+
+ 4843 |       CALL MPMUL (R(I2), Y, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4847:25:
+
+ 4847 |       CALL MPMUL (R(I2), Y, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4854:18:
+
+ 4854 |       CALL MPCMR (Y, RY)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1337:18:
+
+ 1337 |       CALL MPSIN (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2580:22:
+
+ 2580 |       CALL MPSQRT (X, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2591:21:
+
+ 2591 |    90 CALL MPCIM (1, X)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2635:18:
+
+ 2635 |       CALL MPMUL (X, R(I3), X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:648:18:
+
+  648 |       CALL MPMUL (X, X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:716:18:
+
+  716 |    20 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:734:18:
+
+  734 |       CALL MPREC (X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:756:28:
+
+  756 |       CALL MPDIV (Y, R(I6), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:5186:6:
+
+ 5186 |       FLD (0, 6, TEMP) = FLD (6*MOD(LFIELD,6), 6, SOURCE(I))
+      |      1
+Error: The function result on the lhs of the assignment at (1) must have the pointer attribute.
+524f1.f:1914:8:
+
+ 1913 |       DO 10 I = 2, T
+      |                                                                        2
+ 1914 |    10 X(I+2) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (4 > 3) in loop beginning at (2)
+524f1.f:784:57:
+
+  784 |       IF ((D(1).EQ.C(2)).AND.(D(2).EQ.C(5))) CALL MPEPS (X)
+      |                                                         1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2230:18:
+
+ 2230 |       CALL MPCMR (G, RG)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:786:58:
+
+  786 |       IF ((D(1).EQ.C(4)).AND.(D(2).EQ.C(1))) CALL MPMAXR (X)
+      |                                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3709:8:
+
+ 3708 |       DO 10 I = 2, T
+      |                                                                        2
+ 3709 |    10 X(I+2) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (4 > 3) in loop beginning at (2)
+524f1.f:787:58:
+
+  787 |       IF ((D(1).EQ.C(4)).AND.(D(2).EQ.C(3))) CALL MPMINR (X)
+      |                                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:847:26:
+
+  847 |       CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:856:19:
+
+  856 |       CALL MPDIVI (Z, TP, Z)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:970:32:
+
+  969 |       DO 10 I = 1, T
+      |                                                                        2
+  970 |       DZ = DB*DZ + DBLE(FLOAT(X(I+2)))
+      |                                1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:1056:41:
+
+ 1056 |       IF (N1.GT.0) CALL MPDIV (Y, R(I2), Y)
+      |                                         1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1057:38:
+
+ 1057 |       IF (N1.LT.0) CALL MPMUL (R(I2), Y, Y)
+      |                                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1350:21:
+
+ 1350 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1360:25:
+
+ 1360 |       CALL MPREC (R(I2), Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1365:19:
+
+ 1365 |       CALL MPDIVI (Y, 2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2120:18:
+
+ 2120 |    30 CALL MPREC (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2123:18:
+
+ 2123 |       CALL MPMUL (Y, Y, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3545:18:
+
+ 3545 |       CALL MPMUL (X, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3547:18:
+
+ 3547 |       CALL MPMUL (X, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3549:18:
+
+ 3549 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3554:19:
+
+ 3554 |    40 CALL MPEXP1 (Y, R(I4))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1843:18:
+
+ 1843 |    80 CALL MPREC (X, R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1845:18:
+
+ 1845 |       CALL MPEXP (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1847:18:
+
+ 1847 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1868:18:
+
+ 1868 |   110 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1888:18:
+
+ 1888 |       CALL MPMUL (X, R(I2), R(I4))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1896:18:
+
+ 1896 |       CALL MPEXP (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1897:18:
+
+ 1897 |       CALL MPMUL (Y, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1952:22:
+
+ 1952 |       CALL MPCIM (XS, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1956:18:
+
+ 1956 |       CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2060:18:
+
+ 2060 |       CALL MPMUL (X, X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2082:18:
+
+ 2082 |       CALL MPMUL (X, X, R(I4))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2087:22:
+
+ 2087 |       CALL MPSQRT (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:2089:18:
+
+ 2089 |       CALL MPMUL (Y, R(I4), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1973:18:
+
+ 1973 |    30 CALL MPMUL (X, X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1975:17:
+
+ 1975 |       CALL MPEXP(Y, Y)
+      |                 1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1976:18:
+
+ 1976 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1978:19:
+
+ 1978 |       CALL MPROOT (Y, -2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1979:18:
+
+ 1979 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2012:18:
+
+ 2012 |       CALL MPMUL (X, X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2014:18:
+
+ 2014 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2015:18:
+
+ 2015 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2017:19:
+
+ 2017 |       CALL MPROOT (Y, -2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2018:18:
+
+ 2018 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2025:18:
+
+ 2025 |    20 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3288:21:
+
+ 3288 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3289:18:
+
+ 3289 |    30 CALL MPMUL (Y, R(I4), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2494:18:
+
+ 2494 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2503:19:
+
+ 2503 |       CALL MPDIVI (Y, 2, R(I3))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2520:25:
+
+ 2520 |       CALL MPMUL (R(I3), Y, R(I3))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2527:18:
+
+ 2527 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2528:18:
+
+ 2528 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2536:21:
+
+ 2536 |   110 CALL MPREC (X, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2762:21:
+
+ 2762 |   130 CALL MPCIM (J, Z)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2779:22:
+
+ 2779 |       CALL MPCIM (IS, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2786:19:
+
+ 2786 |       CALL MPDIVI (X, IZ, X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2787:19:
+
+ 2787 |       CALL MPDIVI (Y, IZ, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2791:18:
+
+ 2791 |       CALL MPMUL (X, R(I2), X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2792:18:
+
+ 2792 |       CALL MPMUL (Y, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2796:22:
+
+ 2796 |       CALL MPCMIM (X, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2799:22:
+
+ 2799 |       CALL MPCMIM (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3042:40:
+
+ 3042 |       IF (J.LT.0) CALL MPDIV (X, R(I2), X)
+      |                                        1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3043:30:
+
+ 3043 |       IF (J.GE.0) CALL MPMUL (X, R(I2), X)
+      |                              1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3051:31:
+
+ 3051 |       IF (J.LT.0) CALL MPDIVI (X, JP, X)
+      |                               1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3073:42:
+
+ 3073 |       CALL MPIO (R(I2), N, (-IABS(UNIT)), IFORM, ERR)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘iform’ (1/20) at (1) [-Wargument-mismatch]
+524f1.f:3191:20:
+
+ 3191 |       CALL MPEI (Y, Y)
+      |                    1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4079:32:
+
+ 4079 |       CALL MPIO (R(I2), P, LUN, IFORM, ERR)
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘iform’ (1/20) at (1) [-Wargument-mismatch]
+524f1.f:4311:21:
+
+ 4311 |       CALL MPCIM (1, PI(1))
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4318:19:
+
+ 4318 |       CALL MPDIVI (PI(1), 2, PI(1))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4331:18:
+
+ 4331 |       CALL MPMUL (PI(1), R(I4), PI(1))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4332:32:
+
+ 4332 |       CALL MPDIV (PI(1), R(I3), PI(1))
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4355:25:
+
+ 4355 |    30 CALL MPMUL (R(I2), X, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4429:18:
+
+ 4429 |       CALL MPMUL (Y, R(I2), Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4431:18:
+
+ 4431 |       CALL MPEXP (Z, Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4883:25:
+
+ 4883 |       CALL MPREC (R(I3), Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4895:28:
+
+ 4895 |       CALL MPDIV (Y, R(I3), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4897:19:
+
+ 4897 |    30 CALL MPDIVI (Y, 2*XS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5089:22:
+
+ 5089 |       CALL MPCIM (XS, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5098:28:
+
+ 5098 |       CALL MPDIV (Y, R(I2), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:5103:28:
+
+ 5103 |       CALL MPDIV (R(I2), Y, Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ f77 524f1.f -std=legacy -c
+524f1.f:4233:19:
+
+ 4233 |       CALL MPMAXR (X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4997:8:
+
+ 4996 |       DO 20 I = 2, T2
+      |                                                                        2
+ 4997 |    20 Y(I) = X(I)
+      |        1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:4997:15:
+
+ 4996 |       DO 20 I = 2, T2
+      |                                                                        2
+ 4997 |    20 Y(I) = X(I)
+      |               1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:4007:8:
+
+ 4006 |       DO 180 I = 1, T
+      |                                                                        2
+ 4007 |   180 Z(I+2) = R(I)
+      |        1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:936:8:
+
+  935 |       DO 50 I = 2, T
+      |                                                                        2
+  936 |    50 Z(I+1) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:1383:22:
+
+ 1383 |    40 CALL MPCIM (I1, Q)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1660:8:
+
+ 1657 |       DO 90 K = 2, KH
+      |                                                                        2
+......
+ 1660 |       R(K) = C/J
+      |        1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1661:21:
+
+ 1657 |       DO 90 K = 2, KH
+      |                                                                        2
+......
+ 1661 |    90 C = B*(C - J*R(K))
+      |                     1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1384:32:
+
+ 1384 |       IF (J1.NE.1) CALL MPDIVI (Q, J1, Q)
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3826:19:
+
+ 3826 |       CALL MPDIVI (X, JS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3827:19:
+
+ 3827 |       CALL MPMUL2 (Y, IS, Y, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3830:19:
+
+ 3830 |    50 CALL MPDIVI (X, IS*JS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:202:26:
+
+  202 |   110 CALL MPNZR (RS, RE, Z, TRUNC)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:191:12:
+
+  190 |       DO 80 J = 1, T
+      |                                                                        2
+  191 |       IF (X(J+2) - Y(J+2)) 100, 80, 130
+      |            1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:191:21:
+
+  190 |       DO 80 J = 1, T
+      |                                                                        2
+  191 |       IF (X(J+2) - Y(J+2)) 100, 80, 130
+      |                     1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:3805:19:
+
+ 3805 |       CALL MPMUL2 (X, IY, Z, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4279:24:
+
+ 4279 |       CALL MPART1 (239, X)
+      |                        1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5005:19:
+
+ 5005 |       CALL MPADD2 (X, Y, Z, Y1, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1238:27:
+
+ 1237 |       DO 10 I = 1, T
+      |                                                                        2
+ 1238 |       RZ = RB*RZ + FLOAT(X(I+2))
+      |                           1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:4283:18:
+
+ 4283 |       CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1114:26:
+
+ 1114 |       CALL MPNZR (XS, X2, Y, 1)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4451:21:
+
+ 4451 |    10 CALL MPCIM (1, X)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1428:26:
+
+ 1428 |       CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1437:19:
+
+ 1437 |       CALL MPDIVI (Z, TP, Z)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4372:21:
+
+ 4372 |    10 CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3787:26:
+
+ 3787 |    60 CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4548:18:
+
+ 4548 |    30 CALL MPMUL (X, R(I2), R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:123:19:
+
+  123 |       CALL MPADD2 (X, Y, Z, Y, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4392:30:
+
+ 4392 |       IF (N.LT.0) CALL MPREC (Y, Y)
+      |                              1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4395:21:
+
+ 4395 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4399:36:
+
+ 4399 |       IF ((2*N2).NE.NS) CALL MPMUL (Y, R(I2), Y)
+      |                                    1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4653:18:
+
+ 4653 |       CALL MPMUL (X, R(I3), R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4687:18:
+
+ 4687 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4485:19:
+
+ 4485 |       CALL MPROOT (X, LS, X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3431:28:
+
+ 3431 |       CALL MPL235 (1, 0, 0, X)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3456:42:
+
+ 3456 |       IF (IK.EQ.3) CALL MPL235 (IA, 1, 0, X)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3457:44:
+
+ 3457 |       IF (IK.EQ.4) CALL MPL235 (IA+2, 0, 0, X)
+      |                                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3458:42:
+
+ 3458 |       IF (IK.EQ.5) CALL MPL235 (IA, 0, 1, X)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3459:44:
+
+ 3459 |       IF (IK.EQ.6) CALL MPL235 (IA+1, 1, 0, X)
+      |                                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3502:26:
+
+ 3502 |       CALL MPADD2 (R(I3), X, X, X, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3506:18:
+
+ 3506 |   170 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2433:25:
+
+ 2433 |    90 CALL MPMUL (R(I2), Y, Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1303:12:
+
+ 1302 |       DO 50 I = 2, T2
+      |                                                                        2
+ 1303 |       IF (X(I) - Y(I)) 60, 50, 70
+      |            1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1303:19:
+
+ 1302 |       DO 50 I = 2, T2
+      |                                                                        2
+ 1303 |       IF (X(I) - Y(I)) 60, 50, 70
+      |                   1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:2315:18:
+
+ 2315 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:2322:18:
+
+ 2322 |       CALL MPMUL (Y, Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4495:18:
+
+ 4495 |       CALL MPEXP (X, X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:365:19:
+
+  365 |       CALL MPDIVI (Y, 2*R(I3), Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:380:18:
+
+  380 |       CALL MPMUL (X, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4973:19:
+
+ 4973 |    40 CALL MPROOT (X, -2, R(I2))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4975:18:
+
+ 4975 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:412:22:
+
+  412 |       CALL MPSQRT (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1586:18:
+
+ 1586 |       CALL MPREC (Y, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1592:18:
+
+ 1592 |       CALL MPMUL (X, R(I2), Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:437:18:
+
+  437 |       CALL MPCMR (Y, RY)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:381:19:
+
+  381 |       CALL MPATAN (Y, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4260:19:
+
+ 4259 |       DO 20 I = 1, J
+      |                                                                        2
+ 4260 |    20 Y(I+1) = B*X(2*I+1) + X(2*I+2)
+      |                   1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:4260:30:
+
+ 4259 |       DO 20 I = 1, J
+      |                                                                        2
+ 4260 |    20 Y(I+1) = B*X(2*I+1) + X(2*I+2)
+      |                              1
+Warning: Array reference at (1) out of bounds (4 > 2) in loop beginning at (2)
+524f1.f:608:34:
+
+  608 |       IF (NU.EQ.0) CALL MPCIM (1, Y)
+      |                                  1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1322:21:
+
+ 1322 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4917:34:
+
+ 4917 |       IF (IS.EQ.0) CALL MPCIM (1, Y)
+      |                                  1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4922:18:
+
+ 4922 |       CALL MPMUL (X, X, R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4951:26:
+
+ 4951 |       CALL MPADD2 (R(I2), Y, Y, Y, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4824:24:
+
+ 4824 |       CALL MPART1 (239, Y)
+      |                        1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4843:25:
+
+ 4843 |       CALL MPMUL (R(I2), Y, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4847:25:
+
+ 4847 |       CALL MPMUL (R(I2), Y, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4854:18:
+
+ 4854 |       CALL MPCMR (Y, RY)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1337:18:
+
+ 1337 |       CALL MPSIN (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2580:22:
+
+ 2580 |       CALL MPSQRT (X, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2591:21:
+
+ 2591 |    90 CALL MPCIM (1, X)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2635:18:
+
+ 2635 |       CALL MPMUL (X, R(I3), X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:648:18:
+
+  648 |       CALL MPMUL (X, X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:716:18:
+
+  716 |    20 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:734:18:
+
+  734 |       CALL MPREC (X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:756:28:
+
+  756 |       CALL MPDIV (Y, R(I6), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1914:8:
+
+ 1913 |       DO 10 I = 2, T
+      |                                                                        2
+ 1914 |    10 X(I+2) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (4 > 3) in loop beginning at (2)
+524f1.f:784:57:
+
+  784 |       IF ((D(1).EQ.C(2)).AND.(D(2).EQ.C(5))) CALL MPEPS (X)
+      |                                                         1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2230:18:
+
+ 2230 |       CALL MPCMR (G, RG)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:786:58:
+
+  786 |       IF ((D(1).EQ.C(4)).AND.(D(2).EQ.C(1))) CALL MPMAXR (X)
+      |                                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3709:8:
+
+ 3708 |       DO 10 I = 2, T
+      |                                                                        2
+ 3709 |    10 X(I+2) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (4 > 3) in loop beginning at (2)
+524f1.f:787:58:
+
+  787 |       IF ((D(1).EQ.C(4)).AND.(D(2).EQ.C(3))) CALL MPMINR (X)
+      |                                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:847:26:
+
+  847 |       CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:856:19:
+
+  856 |       CALL MPDIVI (Z, TP, Z)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:970:32:
+
+  969 |       DO 10 I = 1, T
+      |                                                                        2
+  970 |       DZ = DB*DZ + DBLE(FLOAT(X(I+2)))
+      |                                1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:1056:41:
+
+ 1056 |       IF (N1.GT.0) CALL MPDIV (Y, R(I2), Y)
+      |                                         1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1057:38:
+
+ 1057 |       IF (N1.LT.0) CALL MPMUL (R(I2), Y, Y)
+      |                                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1350:21:
+
+ 1350 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1360:25:
+
+ 1360 |       CALL MPREC (R(I2), Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1365:19:
+
+ 1365 |       CALL MPDIVI (Y, 2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2120:18:
+
+ 2120 |    30 CALL MPREC (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2123:18:
+
+ 2123 |       CALL MPMUL (Y, Y, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3545:18:
+
+ 3545 |       CALL MPMUL (X, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3547:18:
+
+ 3547 |       CALL MPMUL (X, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3549:18:
+
+ 3549 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3554:19:
+
+ 3554 |    40 CALL MPEXP1 (Y, R(I4))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1843:18:
+
+ 1843 |    80 CALL MPREC (X, R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1845:18:
+
+ 1845 |       CALL MPEXP (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1847:18:
+
+ 1847 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1868:18:
+
+ 1868 |   110 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1888:18:
+
+ 1888 |       CALL MPMUL (X, R(I2), R(I4))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1896:18:
+
+ 1896 |       CALL MPEXP (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1897:18:
+
+ 1897 |       CALL MPMUL (Y, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1952:22:
+
+ 1952 |       CALL MPCIM (XS, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1956:18:
+
+ 1956 |       CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2060:18:
+
+ 2060 |       CALL MPMUL (X, X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2082:18:
+
+ 2082 |       CALL MPMUL (X, X, R(I4))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2087:22:
+
+ 2087 |       CALL MPSQRT (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:2089:18:
+
+ 2089 |       CALL MPMUL (Y, R(I4), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1973:18:
+
+ 1973 |    30 CALL MPMUL (X, X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1975:17:
+
+ 1975 |       CALL MPEXP(Y, Y)
+      |                 1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1976:18:
+
+ 1976 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1978:19:
+
+ 1978 |       CALL MPROOT (Y, -2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1979:18:
+
+ 1979 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2012:18:
+
+ 2012 |       CALL MPMUL (X, X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2014:18:
+
+ 2014 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2015:18:
+
+ 2015 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2017:19:
+
+ 2017 |       CALL MPROOT (Y, -2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2018:18:
+
+ 2018 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2025:18:
+
+ 2025 |    20 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3288:21:
+
+ 3288 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3289:18:
+
+ 3289 |    30 CALL MPMUL (Y, R(I4), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2494:18:
+
+ 2494 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2503:19:
+
+ 2503 |       CALL MPDIVI (Y, 2, R(I3))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2520:25:
+
+ 2520 |       CALL MPMUL (R(I3), Y, R(I3))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2527:18:
+
+ 2527 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2528:18:
+
+ 2528 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2536:21:
+
+ 2536 |   110 CALL MPREC (X, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2762:21:
+
+ 2762 |   130 CALL MPCIM (J, Z)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2779:22:
+
+ 2779 |       CALL MPCIM (IS, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2786:19:
+
+ 2786 |       CALL MPDIVI (X, IZ, X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2787:19:
+
+ 2787 |       CALL MPDIVI (Y, IZ, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2791:18:
+
+ 2791 |       CALL MPMUL (X, R(I2), X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2792:18:
+
+ 2792 |       CALL MPMUL (Y, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2796:22:
+
+ 2796 |       CALL MPCMIM (X, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2799:22:
+
+ 2799 |       CALL MPCMIM (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3042:40:
+
+ 3042 |       IF (J.LT.0) CALL MPDIV (X, R(I2), X)
+      |                                        1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3043:30:
+
+ 3043 |       IF (J.GE.0) CALL MPMUL (X, R(I2), X)
+      |                              1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3051:31:
+
+ 3051 |       IF (J.LT.0) CALL MPDIVI (X, JP, X)
+      |                               1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3073:42:
+
+ 3073 |       CALL MPIO (R(I2), N, (-IABS(UNIT)), IFORM, ERR)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘iform’ (1/20) at (1) [-Wargument-mismatch]
+524f1.f:3191:20:
+
+ 3191 |       CALL MPEI (Y, Y)
+      |                    1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4079:32:
+
+ 4079 |       CALL MPIO (R(I2), P, LUN, IFORM, ERR)
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘iform’ (1/20) at (1) [-Wargument-mismatch]
+524f1.f:4311:21:
+
+ 4311 |       CALL MPCIM (1, PI(1))
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4318:19:
+
+ 4318 |       CALL MPDIVI (PI(1), 2, PI(1))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4331:18:
+
+ 4331 |       CALL MPMUL (PI(1), R(I4), PI(1))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4332:32:
+
+ 4332 |       CALL MPDIV (PI(1), R(I3), PI(1))
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4355:25:
+
+ 4355 |    30 CALL MPMUL (R(I2), X, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4429:18:
+
+ 4429 |       CALL MPMUL (Y, R(I2), Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4431:18:
+
+ 4431 |       CALL MPEXP (Z, Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4883:25:
+
+ 4883 |       CALL MPREC (R(I3), Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4895:28:
+
+ 4895 |       CALL MPDIV (Y, R(I3), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4897:19:
+
+ 4897 |    30 CALL MPDIVI (Y, 2*XS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5089:22:
+
+ 5089 |       CALL MPCIM (XS, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5098:28:
+
+ 5098 |       CALL MPDIV (Y, R(I2), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:5103:28:
+
+ 5103 |       CALL MPDIV (R(I2), Y, Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ ls
+524  524.f  524f1.f  524f1.o  xx00  xx01
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ gfortran 524f1.f -std=legacy -o 524r
+524f1.f:4233:19:
+
+ 4233 |       CALL MPMAXR (X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4997:8:
+
+ 4996 |       DO 20 I = 2, T2
+      |                                                                        2
+ 4997 |    20 Y(I) = X(I)
+      |        1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:4997:15:
+
+ 4996 |       DO 20 I = 2, T2
+      |                                                                        2
+ 4997 |    20 Y(I) = X(I)
+      |               1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:4007:8:
+
+ 4006 |       DO 180 I = 1, T
+      |                                                                        2
+ 4007 |   180 Z(I+2) = R(I)
+      |        1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:936:8:
+
+  935 |       DO 50 I = 2, T
+      |                                                                        2
+  936 |    50 Z(I+1) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:1383:22:
+
+ 1383 |    40 CALL MPCIM (I1, Q)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1660:8:
+
+ 1657 |       DO 90 K = 2, KH
+      |                                                                        2
+......
+ 1660 |       R(K) = C/J
+      |        1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1661:21:
+
+ 1657 |       DO 90 K = 2, KH
+      |                                                                        2
+......
+ 1661 |    90 C = B*(C - J*R(K))
+      |                     1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1384:32:
+
+ 1384 |       IF (J1.NE.1) CALL MPDIVI (Q, J1, Q)
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3826:19:
+
+ 3826 |       CALL MPDIVI (X, JS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3827:19:
+
+ 3827 |       CALL MPMUL2 (Y, IS, Y, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3830:19:
+
+ 3830 |    50 CALL MPDIVI (X, IS*JS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:202:26:
+
+  202 |   110 CALL MPNZR (RS, RE, Z, TRUNC)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:191:12:
+
+  190 |       DO 80 J = 1, T
+      |                                                                        2
+  191 |       IF (X(J+2) - Y(J+2)) 100, 80, 130
+      |            1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:191:21:
+
+  190 |       DO 80 J = 1, T
+      |                                                                        2
+  191 |       IF (X(J+2) - Y(J+2)) 100, 80, 130
+      |                     1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:3805:19:
+
+ 3805 |       CALL MPMUL2 (X, IY, Z, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4279:24:
+
+ 4279 |       CALL MPART1 (239, X)
+      |                        1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5005:19:
+
+ 5005 |       CALL MPADD2 (X, Y, Z, Y1, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1238:27:
+
+ 1237 |       DO 10 I = 1, T
+      |                                                                        2
+ 1238 |       RZ = RB*RZ + FLOAT(X(I+2))
+      |                           1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:4283:18:
+
+ 4283 |       CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1114:26:
+
+ 1114 |       CALL MPNZR (XS, X2, Y, 1)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4451:21:
+
+ 4451 |    10 CALL MPCIM (1, X)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1428:26:
+
+ 1428 |       CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1437:19:
+
+ 1437 |       CALL MPDIVI (Z, TP, Z)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4372:21:
+
+ 4372 |    10 CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3787:26:
+
+ 3787 |    60 CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4548:18:
+
+ 4548 |    30 CALL MPMUL (X, R(I2), R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:123:19:
+
+  123 |       CALL MPADD2 (X, Y, Z, Y, 0)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4392:30:
+
+ 4392 |       IF (N.LT.0) CALL MPREC (Y, Y)
+      |                              1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4395:21:
+
+ 4395 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4399:36:
+
+ 4399 |       IF ((2*N2).NE.NS) CALL MPMUL (Y, R(I2), Y)
+      |                                    1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4653:18:
+
+ 4653 |       CALL MPMUL (X, R(I3), R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4687:18:
+
+ 4687 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4485:19:
+
+ 4485 |       CALL MPROOT (X, LS, X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3431:28:
+
+ 3431 |       CALL MPL235 (1, 0, 0, X)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3456:42:
+
+ 3456 |       IF (IK.EQ.3) CALL MPL235 (IA, 1, 0, X)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3457:44:
+
+ 3457 |       IF (IK.EQ.4) CALL MPL235 (IA+2, 0, 0, X)
+      |                                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3458:42:
+
+ 3458 |       IF (IK.EQ.5) CALL MPL235 (IA, 0, 1, X)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3459:44:
+
+ 3459 |       IF (IK.EQ.6) CALL MPL235 (IA+1, 1, 0, X)
+      |                                            1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3502:26:
+
+ 3502 |       CALL MPADD2 (R(I3), X, X, X, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3506:18:
+
+ 3506 |   170 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2433:25:
+
+ 2433 |    90 CALL MPMUL (R(I2), Y, Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1303:12:
+
+ 1302 |       DO 50 I = 2, T2
+      |                                                                        2
+ 1303 |       IF (X(I) - Y(I)) 60, 50, 70
+      |            1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:1303:19:
+
+ 1302 |       DO 50 I = 2, T2
+      |                                                                        2
+ 1303 |       IF (X(I) - Y(I)) 60, 50, 70
+      |                   1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+524f1.f:2315:18:
+
+ 2315 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:2322:18:
+
+ 2322 |       CALL MPMUL (Y, Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4495:18:
+
+ 4495 |       CALL MPEXP (X, X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:365:19:
+
+  365 |       CALL MPDIVI (Y, 2*R(I3), Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:380:18:
+
+  380 |       CALL MPMUL (X, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:4973:19:
+
+ 4973 |    40 CALL MPROOT (X, -2, R(I2))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4975:18:
+
+ 4975 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:412:22:
+
+  412 |       CALL MPSQRT (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1586:18:
+
+ 1586 |       CALL MPREC (Y, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1592:18:
+
+ 1592 |       CALL MPMUL (X, R(I2), Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:437:18:
+
+  437 |       CALL MPCMR (Y, RY)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:381:19:
+
+  381 |       CALL MPATAN (Y, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4260:19:
+
+ 4259 |       DO 20 I = 1, J
+      |                                                                        2
+ 4260 |    20 Y(I+1) = B*X(2*I+1) + X(2*I+2)
+      |                   1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:4260:30:
+
+ 4259 |       DO 20 I = 1, J
+      |                                                                        2
+ 4260 |    20 Y(I+1) = B*X(2*I+1) + X(2*I+2)
+      |                              1
+Warning: Array reference at (1) out of bounds (4 > 2) in loop beginning at (2)
+524f1.f:608:34:
+
+  608 |       IF (NU.EQ.0) CALL MPCIM (1, Y)
+      |                                  1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1322:21:
+
+ 1322 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4917:34:
+
+ 4917 |       IF (IS.EQ.0) CALL MPCIM (1, Y)
+      |                                  1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4922:18:
+
+ 4922 |       CALL MPMUL (X, X, R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4951:26:
+
+ 4951 |       CALL MPADD2 (R(I2), Y, Y, Y, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4824:24:
+
+ 4824 |       CALL MPART1 (239, Y)
+      |                        1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4843:25:
+
+ 4843 |       CALL MPMUL (R(I2), Y, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4847:25:
+
+ 4847 |       CALL MPMUL (R(I2), Y, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4854:18:
+
+ 4854 |       CALL MPCMR (Y, RY)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1337:18:
+
+ 1337 |       CALL MPSIN (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2580:22:
+
+ 2580 |       CALL MPSQRT (X, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2591:21:
+
+ 2591 |    90 CALL MPCIM (1, X)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2635:18:
+
+ 2635 |       CALL MPMUL (X, R(I3), X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:648:18:
+
+  648 |       CALL MPMUL (X, X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:716:18:
+
+  716 |    20 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:734:18:
+
+  734 |       CALL MPREC (X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:756:28:
+
+  756 |       CALL MPDIV (Y, R(I6), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1914:8:
+
+ 1913 |       DO 10 I = 2, T
+      |                                                                        2
+ 1914 |    10 X(I+2) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (4 > 3) in loop beginning at (2)
+524f1.f:784:57:
+
+  784 |       IF ((D(1).EQ.C(2)).AND.(D(2).EQ.C(5))) CALL MPEPS (X)
+      |                                                         1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2230:18:
+
+ 2230 |       CALL MPCMR (G, RG)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:786:58:
+
+  786 |       IF ((D(1).EQ.C(4)).AND.(D(2).EQ.C(1))) CALL MPMAXR (X)
+      |                                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3709:8:
+
+ 3708 |       DO 10 I = 2, T
+      |                                                                        2
+ 3709 |    10 X(I+2) = 0
+      |        1
+Warning: Array reference at (1) out of bounds (4 > 3) in loop beginning at (2)
+524f1.f:787:58:
+
+  787 |       IF ((D(1).EQ.C(4)).AND.(D(2).EQ.C(3))) CALL MPMINR (X)
+      |                                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:847:26:
+
+  847 |       CALL MPNZR (RS, RE, Z, 0)
+      |                          1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:856:19:
+
+  856 |       CALL MPDIVI (Z, TP, Z)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:970:32:
+
+  969 |       DO 10 I = 1, T
+      |                                                                        2
+  970 |       DZ = DB*DZ + DBLE(FLOAT(X(I+2)))
+      |                                1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+524f1.f:1056:41:
+
+ 1056 |       IF (N1.GT.0) CALL MPDIV (Y, R(I2), Y)
+      |                                         1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1057:38:
+
+ 1057 |       IF (N1.LT.0) CALL MPMUL (R(I2), Y, Y)
+      |                                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1350:21:
+
+ 1350 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1360:25:
+
+ 1360 |       CALL MPREC (R(I2), Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1365:19:
+
+ 1365 |       CALL MPDIVI (Y, 2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2120:18:
+
+ 2120 |    30 CALL MPREC (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2123:18:
+
+ 2123 |       CALL MPMUL (Y, Y, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3545:18:
+
+ 3545 |       CALL MPMUL (X, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3547:18:
+
+ 3547 |       CALL MPMUL (X, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3549:18:
+
+ 3549 |       CALL MPMUL (X, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:3554:19:
+
+ 3554 |    40 CALL MPEXP1 (Y, R(I4))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1843:18:
+
+ 1843 |    80 CALL MPREC (X, R(I3))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1845:18:
+
+ 1845 |       CALL MPEXP (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1847:18:
+
+ 1847 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1868:18:
+
+ 1868 |   110 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1888:18:
+
+ 1888 |       CALL MPMUL (X, R(I2), R(I4))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1896:18:
+
+ 1896 |       CALL MPEXP (X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1897:18:
+
+ 1897 |       CALL MPMUL (Y, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1952:22:
+
+ 1952 |       CALL MPCIM (XS, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1956:18:
+
+ 1956 |       CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2060:18:
+
+ 2060 |       CALL MPMUL (X, X, R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2082:18:
+
+ 2082 |       CALL MPMUL (X, X, R(I4))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2087:22:
+
+ 2087 |       CALL MPSQRT (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:2089:18:
+
+ 2089 |       CALL MPMUL (Y, R(I4), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (2/3) at (1) [-Wargument-mismatch]
+524f1.f:1973:18:
+
+ 1973 |    30 CALL MPMUL (X, X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1975:17:
+
+ 1975 |       CALL MPEXP(Y, Y)
+      |                 1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1976:18:
+
+ 1976 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:1978:19:
+
+ 1978 |       CALL MPROOT (Y, -2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:1979:18:
+
+ 1979 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2012:18:
+
+ 2012 |       CALL MPMUL (X, X, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2014:18:
+
+ 2014 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2015:18:
+
+ 2015 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2017:19:
+
+ 2017 |       CALL MPROOT (Y, -2, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2018:18:
+
+ 2018 |       CALL MPMUL (Y, R(I2), R(I2))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2025:18:
+
+ 2025 |    20 CALL MPCMR (X, RX)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3288:21:
+
+ 3288 |       CALL MPCIM (1, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3289:18:
+
+ 3289 |    30 CALL MPMUL (Y, R(I4), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2494:18:
+
+ 2494 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2503:19:
+
+ 2503 |       CALL MPDIVI (Y, 2, R(I3))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2520:25:
+
+ 2520 |       CALL MPMUL (R(I3), Y, R(I3))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2527:18:
+
+ 2527 |       CALL MPEXP (Y, Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2528:18:
+
+ 2528 |       CALL MPMUL (Y, R(I3), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2536:21:
+
+ 2536 |   110 CALL MPREC (X, Y)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2762:21:
+
+ 2762 |   130 CALL MPCIM (J, Z)
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2779:22:
+
+ 2779 |       CALL MPCIM (IS, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2786:19:
+
+ 2786 |       CALL MPDIVI (X, IZ, X)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2787:19:
+
+ 2787 |       CALL MPDIVI (Y, IZ, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2791:18:
+
+ 2791 |       CALL MPMUL (X, R(I2), X)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2792:18:
+
+ 2792 |       CALL MPMUL (Y, R(I2), Y)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:2796:22:
+
+ 2796 |       CALL MPCMIM (X, X)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:2799:22:
+
+ 2799 |       CALL MPCMIM (Y, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3042:40:
+
+ 3042 |       IF (J.LT.0) CALL MPDIV (X, R(I2), X)
+      |                                        1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3043:30:
+
+ 3043 |       IF (J.GE.0) CALL MPMUL (X, R(I2), X)
+      |                              1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:3051:31:
+
+ 3051 |       IF (J.LT.0) CALL MPDIVI (X, JP, X)
+      |                               1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:3073:42:
+
+ 3073 |       CALL MPIO (R(I2), N, (-IABS(UNIT)), IFORM, ERR)
+      |                                          1
+Warning: Actual argument contains too few elements for dummy argument ‘iform’ (1/20) at (1) [-Wargument-mismatch]
+524f1.f:3191:20:
+
+ 3191 |       CALL MPEI (Y, Y)
+      |                    1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4079:32:
+
+ 4079 |       CALL MPIO (R(I2), P, LUN, IFORM, ERR)
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘iform’ (1/20) at (1) [-Wargument-mismatch]
+524f1.f:4311:21:
+
+ 4311 |       CALL MPCIM (1, PI(1))
+      |                     1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4318:19:
+
+ 4318 |       CALL MPDIVI (PI(1), 2, PI(1))
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4331:18:
+
+ 4331 |       CALL MPMUL (PI(1), R(I4), PI(1))
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4332:32:
+
+ 4332 |       CALL MPDIV (PI(1), R(I3), PI(1))
+      |                                1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4355:25:
+
+ 4355 |    30 CALL MPMUL (R(I2), X, R(I2))
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4429:18:
+
+ 4429 |       CALL MPMUL (Y, R(I2), Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4431:18:
+
+ 4431 |       CALL MPEXP (Z, Z)
+      |                  1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4883:25:
+
+ 4883 |       CALL MPREC (R(I3), Y)
+      |                         1
+Warning: Actual argument contains too few elements for dummy argument ‘y’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:4895:28:
+
+ 4895 |       CALL MPDIV (Y, R(I3), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:4897:19:
+
+ 4897 |    30 CALL MPDIVI (Y, 2*XS, Y)
+      |                   1
+Warning: Actual argument contains too few elements for dummy argument ‘x’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5089:22:
+
+ 5089 |       CALL MPCIM (XS, Y)
+      |                      1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/2) at (1) [-Wargument-mismatch]
+524f1.f:5098:28:
+
+ 5098 |       CALL MPDIV (Y, R(I2), Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+524f1.f:5103:28:
+
+ 5103 |       CALL MPDIV (R(I2), Y, Y)
+      |                            1
+Warning: Actual argument contains too few elements for dummy argument ‘z’ (1/3) at (1) [-Wargument-mismatch]
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ ./524r
+1EXAMPLE OF MP PACKAGE,   BASE =    16384,   DIGITS =  28
+
+
+ PI TO 100D
+
+                   3.14159265358979323846264338327950288419716939937510
+                     58209749445923078164062862089986280348253421170680
+
+ EXP(PI*SQRT(163/9)) TO 100D
+
+              640320.00000000060486373504901603947174181881853947577148
+                     57603665918194652218258286942536340815822646477590
+
+ EXP(PI*SQRT(163)) TO 90D
+
+  262537412640768743.99999999999925007259719818568887935385633733699086
+                     2707537410378210647910118607312951181346
+ian@ian-HP-Stream-Notebook-PC-11:~/524b$ 
+
