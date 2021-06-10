@@ -1,0 +1,28 @@
+ian@ian-HP-Stream-Notebook-PC-11:~$ flex test1.lex
+ian@ian-HP-Stream-Notebook-PC-11:~$ cc lex.yy.c -lfl
+ian@ian-HP-Stream-Notebook-PC-11:~$ ./a.out
+The boy stood on the burning deck 
+shelling peanuts by the peck
+       2      12      64
+ian@ian-HP-Stream-Notebook-PC-11:~$ cat test1.lex
+/* just like Unix wc */
+%{
+int chars = 0;
+int words = 0;
+int lines = 0;
+%}
+%%
+
+[a-zA-Z]+ { words++; chars += strlen(yytext); }
+\n        { chars++; lines++; }
+.         { chars++; }
+
+%%
+
+int main(int argc, char **argv)
+{
+ yylex();
+ printf("%8d%8d%8d\n",lines, words, chars);
+} 
+ian@ian-HP-Stream-Notebook-PC-11:~$ 
+
