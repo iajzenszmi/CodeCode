@@ -1,5 +1,5 @@
 #include<iostream>
-
+/* https://www.codesansar.com/numerical-methods/eulers-method-using-cpp-output.htm */
 /* defining ordinary differential equation to be solved */
 /* In this example we are solving dy/dx = x + y */
 #define f(x,y) x+y
