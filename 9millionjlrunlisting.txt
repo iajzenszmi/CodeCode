@@ -1,0 +1,220 @@
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ ls
+9million2.jl  9million.jl  julia-1.6.2  julia-1.6.2-linux-x86_64.tar.gz
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ julia 9million.jl
+ERROR: LoadError: ArgumentError: Package StatsBase not found in current path:
+- Run `import Pkg; Pkg.add("StatsBase")` to install the StatsBase package.
+
+Stacktrace:
+ [1] require(::Module, ::Symbol) at ./loading.jl:823
+ [2] include at ./boot.jl:317 [inlined]
+ [3] include_relative(::Module, ::String) at ./loading.jl:1044
+ [4] include(::Module, ::String) at ./sysimg.jl:29
+ [5] exec_options(::Base.JLOptions) at ./client.jl:266
+ [6] _start() at ./client.jl:425
+in expression starting at /home/ian/9million/9million.jl:1
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ ^C
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.0.4 (2019-05-16)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia> import Pkg; Pkg.add("StatsBase")
+  Updating registry at `~/.julia/registries/General`
+  Updating git-repo `https://github.com/JuliaRegistries/General.git`
+ Resolving package versions...
+ Installed DataAPI ──────────── v1.7.0
+ Installed StatsAPI ─────────── v1.0.0
+ Installed Missings ─────────── v1.0.0
+ Installed SortingAlgorithms ── v1.0.1
+ Installed Compat ───────────── v3.31.0
+ Installed OrderedCollections ─ v1.4.1
+ Installed DataStructures ───── v0.18.9
+ Installed StatsBase ────────── v0.33.8
+  Updating `~/.julia/environments/v1.0/Project.toml`
+  [2913bbd2] + StatsBase v0.33.8
+  Updating `~/.julia/environments/v1.0/Manifest.toml`
+  [34da2185] + Compat v3.31.0
+  [9a962f9c] + DataAPI v1.7.0
+  [864edb3b] + DataStructures v0.18.9
+  [e1d29d7a] + Missings v1.0.0
+  [bac558e1] + OrderedCollections v1.4.1
+  [a2af1166] + SortingAlgorithms v1.0.1
+  [82ae8749] + StatsAPI v1.0.0
+  [2913bbd2] + StatsBase v0.33.8
+  [2a0f44e3] + Base64 
+  [ade2ca70] + Dates 
+  [8bb1440f] + DelimitedFiles 
+  [8ba89e20] + Distributed 
+  [b77e0a4c] + InteractiveUtils 
+  [76f85450] + LibGit2 
+  [8f399da3] + Libdl 
+  [37e2e46d] + LinearAlgebra 
+  [56ddb016] + Logging 
+  [d6f4376e] + Markdown 
+  [a63ad114] + Mmap 
+  [44cfe95a] + Pkg 
+  [de0858da] + Printf 
+  [3fa0cd96] + REPL 
+  [9a3f8284] + Random 
+  [ea8e919c] + SHA 
+  [9e88b42a] + Serialization 
+  [1a1011a3] + SharedArrays 
+  [6462fe0b] + Sockets 
+  [2f01184e] + SparseArrays 
+  [10745b16] + Statistics 
+  [8dfed614] + Test 
+  [cf7118a7] + UUIDs 
+  [4ec0a83e] + Unicode 
+
+julia> 
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ julia 99million.jl
+ERROR: could not open file /home/ian/9million/99million.jl
+Stacktrace:
+ [1] include at ./boot.jl:317 [inlined]
+ [2] include_relative(::Module, ::String) at ./loading.jl:1044
+ [3] include(::Module, ::String) at ./sysimg.jl:29
+ [4] exec_options(::Base.JLOptions) at ./client.jl:266
+ [5] _start() at ./client.jl:425
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ ls
+9million2.jl  9million.jl  julia-1.6.2  julia-1.6.2-linux-x86_64.tar.gz
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ julia 9million.jl
+                                                 [1]
+                                                [1, 1]
+                                              [1, 1, 1]
+                                             [1, 2, 1, 1]
+                                           [1, 2, 2, 1, 1]
+                                          [1, 3, 3, 2, 1, 1]
+                                        [1, 3, 4, 3, 2, 1, 1]
+                                       [1, 4, 5, 5, 3, 2, 1, 1]
+                                     [1, 4, 7, 6, 5, 3, 2, 1, 1]
+                                    [1, 5, 8, 9, 7, 5, 3, 2, 1, 1]
+                                 [1, 5, 10, 11, 10, 7, 5, 3, 2, 1, 1]
+                               [1, 6, 12, 15, 13, 11, 7, 5, 3, 2, 1, 1]
+                             [1, 6, 14, 18, 18, 14, 11, 7, 5, 3, 2, 1, 1]
+                           [1, 7, 16, 23, 23, 20, 15, 11, 7, 5, 3, 2, 1, 1]
+                         [1, 7, 19, 27, 30, 26, 21, 15, 11, 7, 5, 3, 2, 1, 1]
+                       [1, 8, 21, 34, 37, 35, 28, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+                     [1, 8, 24, 39, 47, 44, 38, 29, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+                   [1, 9, 27, 47, 57, 58, 49, 40, 30, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+                 [1, 9, 30, 54, 70, 71, 65, 52, 41, 30, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+              [1, 10, 33, 64, 84, 90, 82, 70, 54, 42, 30, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+           [1, 10, 37, 72, 101, 110, 105, 89, 73, 55, 42, 30, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+        [1, 11, 40, 84, 119, 136, 131, 116, 94, 75, 56, 42, 30, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+      [1, 11, 44, 94, 141, 163, 164, 146, 123, 97, 76, 56, 42, 30, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+   [1, 12, 48, 108, 164, 199, 201, 186, 157, 128, 99, 77, 56, 42, 30, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+[1, 12, 52, 120, 192, 235, 248, 230, 201, 164, 131, 100, 77, 56, 42, 30, 22, 15, 11, 7, 5, 3, 2, 1, 1]
+
+G(23) is 1255
+  0.234633 seconds (79.10 k allocations: 2.532 MiB, 4.19% gc time)
+
+G(123) is 2552338241
+  0.071965 seconds (322.05 k allocations: 2.516 MiB)
+
+G(1234) is 156978797223733228787865722354959930
+  5.525689 seconds (32.64 M allocations: 262.063 MiB, 29.19% gc time)
+
+G(12345) is 69420357953926116819562977205209384460667673094671463620270321700806074195845953959951425306140971942519870679768681736
+575.582881 seconds (3.25 G allocations: 27.451 GiB, 28.00% gc time)
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ cat 9million.jl
+using Combinatorics, StatsBase
+
+namesofline(n) = counts([x[1] for x in integer_partitions(n)])
+
+function centerjustpyramid(n)
+    maxwidth = length(string(namesofline(n)))
+    for i in 1:n
+        s = string(namesofline(i))
+        println(" " ^ div(maxwidth - length(s), 2), s)
+    end
+end
+
+centerjustpyramid(25)
+
+const cachecountpartitions = Dict{BigInt,BigInt}()
+function countpartitions(n::BigInt)
+    if n < 0
+        0
+    elseif n < 2
+        1
+    elseif (np = get(cachecountpartitions, n, 0)) > 0
+        np
+    else
+        np = 0
+        sgn = 1
+        for k = 1:n
+            np += sgn * (countpartitions(n - (k*(3k-1)) >> 1) + countpartitions(n - (k*(3k+1)) >> 1))
+            sgn = -sgn
+        end
+        cachecountpartitions[n] = np
+    end
+end
+
+G(n) = countpartitions(BigInt(n))
+
+for g in [23, 123, 1234, 12345]
+    @time println("\nG($g) is $(G(g))")
+end
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ sudo apt install sloccount
+[sudo] password for ian: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  doc-base
+The following NEW packages will be installed:
+  sloccount
+0 to upgrade, 1 to newly install, 0 to remove and 0 not to upgrade.
+Need to get 84.8 kB of archives.
+After this operation, 442 kB of additional disk space will be used.
+Get:1 http://au.archive.ubuntu.com/ubuntu bionic/universe amd64 sloccount amd64 2.26-5.2 [84.8 kB]
+Fetched 84.8 kB in 1s (99.9 kB/s)  
+Selecting previously unselected package sloccount.
+(Reading database ... 164893 files and directories currently installed.)
+Preparing to unpack .../sloccount_2.26-5.2_amd64.deb ...
+Unpacking sloccount (2.26-5.2) ...
+Setting up sloccount (2.26-5.2) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ ls
+9million2.jl  9million.jl  julia-1.6.2  julia-1.6.2-linux-x86_64.tar.gz
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ ls 9million2.jl
+9million2.jl
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ sloccount 9million.jl
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/9million/9million.jl to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+32      top_dir         lisp=32
+
+
+Totals grouped by language (dominant language first):
+lisp:            32 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 32
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.06)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.07 (0.88)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.07
+Total Estimated Cost to Develop                           = $ 728
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Notebook-PC-11:~/9million$ 
+
