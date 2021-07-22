@@ -1,0 +1,289 @@
+ian@ian-HP-Stream-Notebook-PC-11:~$ python -m numpy.f2py -c fib1.f -m fib1
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "fib1" sources
+f2py options: []
+f2py:> /tmp/tmpYTl7fk/src.linux-x86_64-2.7/fib1module.c
+creating /tmp/tmpYTl7fk/src.linux-x86_64-2.7
+Reading fortran codes...
+	Reading file 'fib1.f' (format:fix,strict)
+Post-processing...
+	Block: fib1
+			Block: fib
+Post-processing (stage 2)...
+Building modules...
+	Building module "fib1"...
+		Constructing wrapper function "fib"...
+		  fib(a,[n])
+	Wrote C/API module "fib1" to file "/tmp/tmpYTl7fk/src.linux-x86_64-2.7/fib1module.c"
+  adding '/tmp/tmpYTl7fk/src.linux-x86_64-2.7/fortranobject.c' to sources.
+  adding '/tmp/tmpYTl7fk/src.linux-x86_64-2.7' to include_dirs.
+copying /usr/lib/python2.7/dist-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmpYTl7fk/src.linux-x86_64-2.7
+copying /usr/lib/python2.7/dist-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmpYTl7fk/src.linux-x86_64-2.7
+build_src: building npy-pkg config files
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Could not locate executable gfortran
+Could not locate executable f95
+customize IntelFCompiler
+Could not locate executable ifort
+Could not locate executable ifc
+customize LaheyFCompiler
+Could not locate executable lf95
+customize PGroupFCompiler
+Could not locate executable pgfortran
+customize AbsoftFCompiler
+Could not locate executable f90
+Could not locate executable f77
+customize NAGFCompiler
+customize VastFCompiler
+customize CompaqFCompiler
+Could not locate executable fort
+customize IntelItaniumFCompiler
+Could not locate executable efort
+Could not locate executable efc
+customize IntelEM64TFCompiler
+customize GnuFCompiler
+Could not locate executable g77
+customize G95FCompiler
+Could not locate executable g95
+customize PathScaleFCompiler
+Could not locate executable pathf95
+don't know how to compile Fortran code on platform 'posix'
+warning: build_ext: f77_compiler=None is not available.
+
+building 'fib1' extension
+error: extension 'fib1' has Fortran sources but no Fortran compiler found
+ian@ian-HP-Stream-Notebook-PC-11:~$ sudo apt install gfortran
+[sudo] password for ian: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libxcb-xinerama0 libxcb-xtest0
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  gfortran-7 libgfortran-7-dev
+Suggested packages:
+  gfortran-multilib gfortran-doc gfortran-7-multilib gfortran-7-doc
+  libgfortran4-dbg libcoarrays-dev
+The following NEW packages will be installed:
+  gfortran gfortran-7 libgfortran-7-dev
+0 to upgrade, 3 to newly install, 0 to remove and 3 not to upgrade.
+Need to get 9,546 kB of archives.
+After this operation, 29.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://au.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgfortran-7-dev amd64 7.5.0-3ubuntu1~18.04 [530 kB]
+Get:2 http://au.archive.ubuntu.com/ubuntu bionic-updates/main amd64 gfortran-7 amd64 7.5.0-3ubuntu1~18.04 [9,014 kB]
+Get:3 http://au.archive.ubuntu.com/ubuntu bionic-updates/main amd64 gfortran amd64 4:7.4.0-1ubuntu2.3 [1,356 B]
+Fetched 9,546 kB in 2s (5,586 kB/s)  
+Selecting previously unselected package libgfortran-7-dev:amd64.
+(Reading database ... 180794 files and directories currently installed.)
+Preparing to unpack .../libgfortran-7-dev_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking libgfortran-7-dev:amd64 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package gfortran-7.
+Preparing to unpack .../gfortran-7_7.5.0-3ubuntu1~18.04_amd64.deb ...
+Unpacking gfortran-7 (7.5.0-3ubuntu1~18.04) ...
+Selecting previously unselected package gfortran.
+Preparing to unpack .../gfortran_4%3a7.4.0-1ubuntu2.3_amd64.deb ...
+Unpacking gfortran (4:7.4.0-1ubuntu2.3) ...
+Setting up libgfortran-7-dev:amd64 (7.5.0-3ubuntu1~18.04) ...
+Setting up gfortran-7 (7.5.0-3ubuntu1~18.04) ...
+Setting up gfortran (4:7.4.0-1ubuntu2.3) ...
+update-alternatives: using /usr/bin/gfortran to provide /usr/bin/f95 (f95) in auto mode
+update-alternatives: using /usr/bin/gfortran to provide /usr/bin/f77 (f77) in auto mode
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+ian@ian-HP-Stream-Notebook-PC-11:~$ python -m numpy.f2py -c fib1.f -m fib1
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "fib1" sources
+f2py options: []
+f2py:> /tmp/tmpCWwWsm/src.linux-x86_64-2.7/fib1module.c
+creating /tmp/tmpCWwWsm/src.linux-x86_64-2.7
+Reading fortran codes...
+	Reading file 'fib1.f' (format:fix,strict)
+Post-processing...
+	Block: fib1
+			Block: fib
+Post-processing (stage 2)...
+Building modules...
+	Building module "fib1"...
+		Constructing wrapper function "fib"...
+		  fib(a,[n])
+	Wrote C/API module "fib1" to file "/tmp/tmpCWwWsm/src.linux-x86_64-2.7/fib1module.c"
+  adding '/tmp/tmpCWwWsm/src.linux-x86_64-2.7/fortranobject.c' to sources.
+  adding '/tmp/tmpCWwWsm/src.linux-x86_64-2.7' to include_dirs.
+copying /usr/lib/python2.7/dist-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmpCWwWsm/src.linux-x86_64-2.7
+copying /usr/lib/python2.7/dist-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmpCWwWsm/src.linux-x86_64-2.7
+build_src: building npy-pkg config files
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler
+customize Gnu95FCompiler using build_ext
+building 'fib1' extension
+compiling C sources
+C compiler: x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC
+
+creating /tmp/tmpCWwWsm/tmp
+creating /tmp/tmpCWwWsm/tmp/tmpCWwWsm
+creating /tmp/tmpCWwWsm/tmp/tmpCWwWsm/src.linux-x86_64-2.7
+compile options: '-I/tmp/tmpCWwWsm/src.linux-x86_64-2.7 -I/usr/lib/python2.7/dist-packages/numpy/core/include -I/usr/include/python2.7 -c'
+x86_64-linux-gnu-gcc: /tmp/tmpCWwWsm/src.linux-x86_64-2.7/fib1module.c
+In file included from /usr/lib/python2.7/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1809:0,
+                 from /usr/lib/python2.7/dist-packages/numpy/core/include/numpy/ndarrayobject.h:18,
+                 from /usr/lib/python2.7/dist-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpCWwWsm/src.linux-x86_64-2.7/fortranobject.h:13,
+                 from /tmp/tmpCWwWsm/src.linux-x86_64-2.7/fib1module.c:19:
+/usr/lib/python2.7/dist-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: #warning "Using deprecated NumPy API, disable it by " "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it by " \
+  ^~~~~~~
+x86_64-linux-gnu-gcc: /tmp/tmpCWwWsm/src.linux-x86_64-2.7/fortranobject.c
+In file included from /usr/lib/python2.7/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1809:0,
+                 from /usr/lib/python2.7/dist-packages/numpy/core/include/numpy/ndarrayobject.h:18,
+                 from /usr/lib/python2.7/dist-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /tmp/tmpCWwWsm/src.linux-x86_64-2.7/fortranobject.h:13,
+                 from /tmp/tmpCWwWsm/src.linux-x86_64-2.7/fortranobject.c:2:
+/usr/lib/python2.7/dist-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: #warning "Using deprecated NumPy API, disable it by " "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it by " \
+  ^~~~~~~
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -Wall -g -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -Wall -g -fno-second-underscore -fPIC -O3 -funroll-loops
+compile options: '-I/tmp/tmpCWwWsm/src.linux-x86_64-2.7 -I/usr/lib/python2.7/dist-packages/numpy/core/include -I/usr/include/python2.7 -c'
+gfortran:f77: fib1.f
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmpCWwWsm/tmp/tmpCWwWsm/src.linux-x86_64-2.7/fib1module.o /tmp/tmpCWwWsm/tmp/tmpCWwWsm/src.linux-x86_64-2.7/fortranobject.o /tmp/tmpCWwWsm/fib1.o -lgfortran -o ./fib1.so
+Removing build directory /tmp/tmpCWwWsm
+ian@ian-HP-Stream-Notebook-PC-11:~$ ls
+9million  Documents         fib1.f   julia     Public     Videos
+CodeCode  Downloads         fib1.so  Music     snap
+Desktop   examples.desktop  firefox  Pictures  Templates
+ian@ian-HP-Stream-Notebook-PC-11:~$ python3
+Python 3.6.9 (default, Jan 26 2021, 15:33:00) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> fib1.fib(a, 10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'fib1' is not defined
+>>> import numpy
+>>> import fib1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: /home/ian/fib1.so: undefined symbol: PyCObject_Type
+>>> 
+ian@ian-HP-Stream-Notebook-PC-11:~$ python
+Python 2.7.17 (default, Feb 27 2021, 15:10:58) 
+[GCC 7.5.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy
+>>> import fib1
+>>> print(fib1.fib._doc_)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: _doc_
+>>> print(fib1.fib.__doc__)
+fib(a,[n])
+
+Wrapper for ``fib``.
+
+Parameters
+----------
+a : input rank-1 array('d') with bounds (n)
+
+Other Parameters
+----------------
+n : input int, optional
+    Default: len(a)
+
+>>> fib(a,[6])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'fib' is not defined
+>>> fib(a,6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'fib' is not defined
+>>> import fib1
+>>> fib1.fib1( a,10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'fib1'
+>>> a1 = numpy.zeros(8, 'd')
+>>> fib1.fib(a1, 6)
+>>> print a1(fib1,6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'numpy.ndarray' object is not callable
+>>> print(a1)
+[ 0.  1.  1.  2.  3.  5.  0.  0.]
+>>> 
+ian@ian-HP-Stream-Notebook-PC-11:~$ cat fib1.f
+C FILE: FIB1.F
+      SUBROUTINE FIB(A,N)
+C
+C     CALCULATE FIRST N FIBONACCI NUMBERS
+C
+      INTEGER N
+      REAL*8 A(N)
+      DO I=1,N
+         IF (I.EQ.1) THEN
+            A(I) = 0.0D0
+         ELSEIF (I.EQ.2) THEN
+            A(I) = 1.0D0
+         ELSE 
+            A(I) = A(I-1) + A(I-2)
+         ENDIF
+      ENDDO
+      END
+
+ian@ian-HP-Stream-Notebook-PC-11:~$ sloccount fib1.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/fib1.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+13      top_dir         fortran=13
+
+
+Totals grouped by language (dominant language first):
+fortran:         13 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 13
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.03)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.05 (0.62)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.04
+Total Estimated Cost to Develop                           = $ 283
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Notebook-PC-11:~$ 
+
