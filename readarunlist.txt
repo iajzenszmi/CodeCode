@@ -1,0 +1,183 @@
+ian@ian-HP-Stream-Notebook-PC-11:~/Downloads/reada$ cd ~/Downloads
+ian@ian-HP-Stream-Notebook-PC-11:~/Downloads$ cat reada.f
+       character(len=80) inrec
+       integer io 
+       logical eof
+       integer reccount
+       eof = .false.
+       io = 0
+       reccount = 0
+!       do while(.not.eof)
+       open(5,file="IDCJAC0009_086304_1800_Data.csv")
+       read(5,9000,iostat=io) inrec
+       reccount = reccount + 1
+ 9000  format(80a)
+ 9002  format(" ",80a)      
+       if(io  .lt. 0) eof =.true.
+       write(6,9002) inrec
+       do while (.not. eof .and. reccount .le. 100)
+      ! call zerof(inrec)
+       read(5,9000,iostat=io) inrec
+       reccount = reccount + 1
+       if(io .lt.0)eof =.true.
+       write(6,9002) inrec
+       end do
+       end program
+ian@ian-HP-Stream-Notebook-PC-11:~/Downloads$ gfortran reada.f -o reada1
+ian@ian-HP-Stream-Notebook-PC-11:~/Downloads$ ./reada1 < IDCJAC0009_086304_1800_Data.csv
+ Product code,Bureau of Meteorology station number,Year,Month,Day,Rainfall amount
+ IDCJAC0009,086304,1972,01,01,,,                                                 
+ IDCJAC0009,086304,1972,01,02,,,                                                 
+ IDCJAC0009,086304,1972,01,03,,,                                                 
+ IDCJAC0009,086304,1972,01,04,,,                                                 
+ IDCJAC0009,086304,1972,01,05,,,                                                 
+ IDCJAC0009,086304,1972,01,06,,,                                                 
+ IDCJAC0009,086304,1972,01,07,,,                                                 
+ IDCJAC0009,086304,1972,01,08,,,                                                 
+ IDCJAC0009,086304,1972,01,09,,,                                                 
+ IDCJAC0009,086304,1972,01,10,,,                                                 
+ IDCJAC0009,086304,1972,01,11,,,                                                 
+ IDCJAC0009,086304,1972,01,12,,,                                                 
+ IDCJAC0009,086304,1972,01,13,,,                                                 
+ IDCJAC0009,086304,1972,01,14,,,                                                 
+ IDCJAC0009,086304,1972,01,15,,,                                                 
+ IDCJAC0009,086304,1972,01,16,,,                                                 
+ IDCJAC0009,086304,1972,01,17,,,                                                 
+ IDCJAC0009,086304,1972,01,18,,,                                                 
+ IDCJAC0009,086304,1972,01,19,,,                                                 
+ IDCJAC0009,086304,1972,01,20,,,                                                 
+ IDCJAC0009,086304,1972,01,21,,,                                                 
+ IDCJAC0009,086304,1972,01,22,,,                                                 
+ IDCJAC0009,086304,1972,01,23,,,                                                 
+ IDCJAC0009,086304,1972,01,24,,,                                                 
+ IDCJAC0009,086304,1972,01,25,,,                                                 
+ IDCJAC0009,086304,1972,01,26,,,                                                 
+ IDCJAC0009,086304,1972,01,27,,,                                                 
+ IDCJAC0009,086304,1972,01,28,,,                                                 
+ IDCJAC0009,086304,1972,01,29,,,                                                 
+ IDCJAC0009,086304,1972,01,30,,,                                                 
+ IDCJAC0009,086304,1972,01,31,,,                                                 
+ IDCJAC0009,086304,1972,02,01,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,02,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,03,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,04,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,05,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,06,,,                                                 
+ IDCJAC0009,086304,1972,02,07,2.0,2,Y                                            
+ IDCJAC0009,086304,1972,02,08,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,09,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,10,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,11,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,12,26.7,1,Y                                           
+ IDCJAC0009,086304,1972,02,13,7.9,1,Y                                            
+ IDCJAC0009,086304,1972,02,14,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,15,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,16,37.3,1,Y                                           
+ IDCJAC0009,086304,1972,02,17,36.1,1,Y                                           
+ IDCJAC0009,086304,1972,02,18,13.0,1,Y                                           
+ IDCJAC0009,086304,1972,02,19,1.5,1,Y                                            
+ IDCJAC0009,086304,1972,02,20,,,                                                 
+ IDCJAC0009,086304,1972,02,21,16.8,2,Y                                           
+ IDCJAC0009,086304,1972,02,22,22.9,1,Y                                           
+ IDCJAC0009,086304,1972,02,23,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,24,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,25,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,26,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,27,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,28,0.0,,Y                                             
+ IDCJAC0009,086304,1972,02,29,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,01,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,02,3.0,1,Y                                            
+ IDCJAC0009,086304,1972,03,03,10.4,1,Y                                           
+ IDCJAC0009,086304,1972,03,04,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,05,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,06,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,07,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,08,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,09,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,10,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,11,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,12,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,13,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,14,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,15,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,16,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,17,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,18,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,19,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,20,0.5,1,Y                                            
+ IDCJAC0009,086304,1972,03,21,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,22,0.3,1,Y                                            
+ IDCJAC0009,086304,1972,03,23,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,24,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,25,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,26,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,27,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,28,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,29,0.8,1,Y                                            
+ IDCJAC0009,086304,1972,03,30,0.0,,Y                                             
+ IDCJAC0009,086304,1972,03,31,0.0,,Y                                             
+ IDCJAC0009,086304,1972,04,01,0.0,,Y                                             
+ IDCJAC0009,086304,1972,04,02,0.0,,Y                                             
+ IDCJAC0009,086304,1972,04,03,0.0,,Y                                             
+ IDCJAC0009,086304,1972,04,04,1.3,1,Y                                            
+ IDCJAC0009,086304,1972,04,05,4.6,1,Y                                            
+ IDCJAC0009,086304,1972,04,06,0.0,,Y                                             
+ IDCJAC0009,086304,1972,04,07,0.0,,Y                                             
+ IDCJAC0009,086304,1972,04,08,0.0,,Y                                             
+ IDCJAC0009,086304,1972,04,09,,,                                                 
+ian@ian-HP-Stream-Notebook-PC-11:~/Downloads$ sudo apt install sloccount
+[sudo] password for ian: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  doc-base
+The following NEW packages will be installed:
+  sloccount
+0 to upgrade, 1 to newly install, 0 to remove and 0 not to upgrade.
+Need to get 84.8 kB of archives.
+After this operation, 442 kB of additional disk space will be used.
+Get:1 http://au.archive.ubuntu.com/ubuntu bionic/universe amd64 sloccount amd64 2.26-5.2 [84.8 kB]
+Fetched 84.8 kB in 1s (130 kB/s)     
+Selecting previously unselected package sloccount.
+(Reading database ... 171745 files and directories currently installed.)
+Preparing to unpack .../sloccount_2.26-5.2_amd64.deb ...
+Unpacking sloccount (2.26-5.2) ...
+Setting up sloccount (2.26-5.2) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+ian@ian-HP-Stream-Notebook-PC-11:~/Downloads$ sloccount reada.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/Downloads/reada.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+21      top_dir         fortran=21
+
+
+Totals grouped by language (dominant language first):
+fortran:         21 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 21
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.04)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.06 (0.75)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.06
+Total Estimated Cost to Develop                           = $ 468
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Notebook-PC-11:~/Downloads$ 
+
