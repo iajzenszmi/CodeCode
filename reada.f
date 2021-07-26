@@ -1,19 +1,36 @@
        character(len=80) inrec
+       character(len=4) year, yearx
        integer io 
        logical eof
+!       integer n /0/
+       integer k
        eof = .false.
        io = 0
 !       do while(.not.eof)
        open(5,file="IDCJAC0009_086304_1800_Data.csv")
        read(5,9000,iostat=io) inrec
- 9000  format(80a)
- 9002  format(" ",80a)      
+       read(5,9000,iostat=io) inrec
+ 9000  format(a80)
+ 9002  format(a4)      
+ 9003  format(" ",a80)    
        if(io  .lt. 0) eof =.true.
-       write(6,9002) inrec
-       do while (.not. eof)
+!       yearx = year
+       write(year,9002) inrec(19:22)
+       write(6,9002) inrec(19:22)
+       write(6,9003) inrec
+        yearx = year
+
+        do while (.not. eof .and. (year .eq. yearx))
+!       n = n+ 1
       ! call zerof(inrec)
        read(5,9000,iostat=io) inrec
        if(io .lt.0)eof =.true.
-       write(6,9002) inrec
+      
+       yearx = year
+       write(year,9002) inrec(19:22)
+       if (year .eq.yearx) then
+       write(6,9002) inrec(19:22)
+       write(6,9003) inrec
+       endif
        end do
        end program
