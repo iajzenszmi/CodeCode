@@ -20,17 +20,14 @@
        write(6,9003) inrec
         yearx = year
 
-        do while (.not. eof .and. (year .eq. yearx))
-!       n = n+ 1
-      ! call zerof(inrec)
-       read(5,9000,iostat=io) inrec
-       if(io .lt.0)eof =.true.
+        do while (.not. eof .and. (inrec(19:22 ).eq.yearx))
+        write(6,9002) inrec(19:22)
+        write(6,9003)  inrec
+        yearx = inrec(19:22)
+
+
+        read(5,9000,iostat=io) inrec
+        if(io .lt.0)eof =.true.
       
-       yearx = year
-       write(year,9002) inrec(19:22)
-       if (year .eq.yearx) then
-       write(6,9002) inrec(19:22)
-       write(6,9003) inrec
-       endif
        end do
        end program
