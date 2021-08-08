@@ -1,0 +1,527 @@
+ian@ian-Aspire-One-753:~$ ls
+ 599dir       Documents                         quantecon.jl
+ 657          Downloads                         royalwedding2011.pdf
+ aimacsharp  "Kinder 7's Mabul-142505656.mp4"   royalwedding2011.txt
+ aimajs       Music                             snap
+ aimajulia    Pictures                          Templates
+ Desktop      Public                            Videos
+ian@ian-Aspire-One-753:~$ cd Downloads
+ian@ian-Aspire-One-753:~/Downloads$ ls
+ Chapter_HPC_8_Julia.pdf
+'Comprehension and interpretation (humanities) 1971.pdf'
+'Comprehension and interpretation (humanities) 1971.txt'
+'Comprehension and interpretation (science) 1971(1).pdf'
+'Comprehension and interpretation (science) 1971.pdf'
+'FSANZ Safe Food Australia_WEB.pdf'
+'IAN AJZENSZMIDT COVID-19 Digital Certificate 20210806.pdf'
+'Important information J290614557.pdf'
+ julia-1.6.2-full
+ julia-1.6.2-full.tar.gz
+ julia-1.6.2-linux-x86_64.tar.gz
+ julia-1.6.2.pdf
+ Julia-intro.pdf
+ kaldispeechtotext
+ prince-william-wedding-2011.pdf
+ prince-william-wedding-2011.txt
+ quantecon-notebooks-julia
+ quantitative_economics_with_julia.pdf
+ TableDrivenAgentProgram.cs
+'The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'
+ true_metrix_go.pdf
+ Unpaid-work.pdf
+ zoom_amd64.deb
+ian@ian-Aspire-One-753:~/Downloads$ youtube-dl The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'
+>  
+> ffplay
+> bash: unexpected EOF while looking for matching `''
+bash: syntax error: unexpected end of file
+ian@ian-Aspire-One-753:~/Downloads$ ffplay The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'
+>  ^C
+ian@ian-Aspire-One-753:~/Downloads$ ffplay "The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'"
+ffplay version 4.2.4-1ubuntu0.1 Copyright (c) 2003-2020 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.3.0-10ubuntu2)
+  configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared --enable-version3 --disable-doc --disable-programs --enable-libaribb24 --enable-liblensfun --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv': No such file or directory
+
+ian@ian-Aspire-One-753:~/Downloads$  ffplay "The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'"
+ffplay version 4.2.4-1ubuntu0.1 Copyright (c) 2003-2020 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.3.0-10ubuntu2)
+  configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared --enable-version3 --disable-doc --disable-programs --enable-libaribb24 --enable-liblensfun --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv': No such file or directory
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+ian@ian-Aspire-One-753:~/Downloads$  ffplay The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'
+>  The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'
+ffplay version 4.2.4-1ubuntu0.1 Copyright (c) 2003-2020 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.3.0-10ubuntu2)
+  configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared --enable-version3 --disable-doc --disable-programs --enable-libaribb24 --enable-liblensfun --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+Argument 'Royal' provided as input filename, but 'The' was already specified.
+ian@ian-Aspire-One-753:~/Downloads$  
+ian@ian-Aspire-One-753:~/Downloads$ ffplay  "The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'"
+ffplay version 4.2.4-1ubuntu0.1 Copyright (c) 2003-2020 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.3.0-10ubuntu2)
+  configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared --enable-version3 --disable-doc --disable-programs --enable-libaribb24 --enable-liblensfun --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv': No such file or directory
+    nan    :  0.000 fd=   0 aq=    0KB vq=    0KB sq=    0B f=0/0   
+ian@ian-Aspire-One-753:~/Downloads$  ls
+ Chapter_HPC_8_Julia.pdf                                      Julia-intro.pdf
+'Comprehension and interpretation (humanities) 1971.pdf'      kaldispeechtotext
+'Comprehension and interpretation (humanities) 1971.txt'      prince-william-wedding-2011.pdf
+'Comprehension and interpretation (science) 1971(1).pdf'      prince-william-wedding-2011.txt
+'Comprehension and interpretation (science) 1971.pdf'         quantecon-notebooks-julia
+'FSANZ Safe Food Australia_WEB.pdf'                           quantitative_economics_with_julia.pdf
+'IAN AJZENSZMIDT COVID-19 Digital Certificate 20210806.pdf'   TableDrivenAgentProgram.cs
+'Important information J290614557.pdf'                       'The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'
+ julia-1.6.2-full                                             true_metrix_go.pdf
+ julia-1.6.2-full.tar.gz                                      Unpaid-work.pdf
+ julia-1.6.2-linux-x86_64.tar.gz                              zoom_amd64.deb
+ julia-1.6.2.pdf
+ian@ian-Aspire-One-753:~/Downloads$ ffplay 'The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv'
+ffplay version 4.2.4-1ubuntu0.1 Copyright (c) 2003-2020 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.3.0-10ubuntu2)
+  configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared --enable-version3 --disable-doc --disable-programs --enable-libaribb24 --enable-liblensfun --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+Input #0, matroska,webm, from 'The Royal Wedding Ceremony at Westminster Abbey-53UaRWI1Vh4.mkv':
+  Metadata:
+    ENCODER         : Lavf57.83.100
+  Duration: 01:10:50.53, start: 0.000000, bitrate: 1469 kb/s
+    Stream #0:0(eng): Video: vp9 (Profile 0), yuv420p(tv, bt709), 1280x720, SAR 1:1 DAR 16:9, 29.97 fps, 29.97 tbr, 1k tbn, 1k tbc (default)
+    Metadata:
+      DURATION        : 01:10:50.480000000
+    Stream #0:1: Audio: aac (LC), 44100 Hz, stereo, fltp (default)
+    Metadata:
+      HANDLER_NAME    : ISO Media file produced by Google Inc.
+      DURATION        : 01:10:50.529000000
+2022.07 A-V: -0.003 fd=   5 aq=   20KB vq=  108KB sq=    0B f=0/0   
+ian@ian-Aspire-One-753:~/Downloads$ julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.4.1
+ _/ |\__'_|_|_|\__'_|  |  Ubuntu ⛬  julia/1.4.1+dfsg-1
+|__/                   |
+
+julia> using Plots
+ERROR: ArgumentError: Package Plots not found in current path:
+- Run `import Pkg; Pkg.add("Plots")` to install the Plots package.
+
+Stacktrace:
+ [1] require(::Module, ::Symbol) at ./loading.jl:892
+
+julia> gr(fmt=:png);
+ERROR: UndefVarError: gr not defined
+Stacktrace:
+ [1] top-level scope at REPL[2]:1
+
+julia> plot(sin, -2π, 2π, label="sin(x)")
+ERROR: UndefVarError: plot not defined
+Stacktrace:
+ [1] top-level scope at REPL[3]:1
+
+julia> import Pkg; Pkg.add("Plots")
+   Updating registry at `~/.julia/registries/General`
+   Updating git-repo `https://github.com/JuliaRegistries/General.git`
+  Resolving package versions...
+  Installed DataValueInterfaces ───────── v1.0.0
+  Installed Ogg_jll ───────────────────── v1.3.4+2
+  Installed LibVPX_jll ────────────────── v1.9.0+1
+  Installed IteratorInterfaceExtensions ─ v1.0.0
+  Installed RecipesPipeline ───────────── v0.1.13
+  Installed Colors ────────────────────── v0.12.8
+  Installed Plots ─────────────────────── v1.6.12
+  Installed FreeType2_jll ─────────────── v2.10.1+5
+  Installed Opus_jll ──────────────────── v1.3.1+3
+  Installed x264_jll ──────────────────── v2020.7.14+2
+  Installed FriBidi_jll ───────────────── v1.0.5+6
+  Installed PlotUtils ─────────────────── v1.0.11
+  Installed Showoff ───────────────────── v0.3.2
+  Installed GeometryTypes ─────────────── v0.8.4
+  Installed LAME_jll ──────────────────── v3.100.0+3
+  Installed PlotThemes ────────────────── v2.0.1
+  Installed FixedPointNumbers ─────────── v0.8.4
+  Installed StructArrays ──────────────── v0.6.0
+  Installed libvorbis_jll ─────────────── v1.3.6+6
+  Installed Tables ────────────────────── v1.5.0
+  Installed ColorSchemes ──────────────── v3.13.0
+  Installed ColorTypes ────────────────── v0.10.12
+  Installed EarCut_jll ────────────────── v2.1.5+1
+  Installed OffsetArrays ──────────────── v1.10.5
+  Installed Bzip2_jll ─────────────────── v1.0.6+5
+  Installed Formatting ────────────────── v0.4.2
+  Installed x265_jll ──────────────────── v3.0.0+3
+  Installed Measures ──────────────────── v0.3.1
+  Installed Grisu ─────────────────────── v1.0.2
+  Installed Contour ───────────────────── v0.5.7
+  Installed ArrayInterface ────────────── v3.1.23
+  Installed libass_jll ────────────────── v0.14.0+4
+  Installed libfdk_aac_jll ────────────── v0.1.6+4
+  Installed LaTeXStrings ──────────────── v1.2.1
+  Installed Latexify ──────────────────── v0.14.12
+  Installed FFMPEG_jll ────────────────── v4.3.1+4
+  Installed TableTraits ───────────────── v1.0.1
+  Installed GR ────────────────────────── v0.52.0
+  Installed FFMPEG ────────────────────── v0.4.1
+  Installed Reexport ──────────────────── v0.2.0
+  Installed GeometryBasics ────────────── v0.3.13
+  Installed StaticArrays ──────────────── v1.2.12
+  Installed OpenSSL_jll ───────────────── v1.1.1+6
+Downloading artifact: Ogg
+--2021-08-08 16:01:45--  https://github.com/JuliaBinaryWrappers/Ogg_jll.jl/releases/download/Ogg-v1.3.4+0/Ogg.v1.3.4.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/216901990/ae492100-8d36-11ea-9e6f-9af145bc860a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060252Z&X-Amz-Expires=300&X-Amz-Signature=0d927d78448f1190df28640c86c267a1e0829cd55ea5e991f7946f6dae363541&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216901990&response-content-disposition=attachment%3B%20filename%3DOgg.v1.3.4.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:46--  https://github-releases.githubusercontent.com/216901990/ae492100-8d36-11ea-9e6f-9af145bc860a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060252Z&X-Amz-Expires=300&X-Amz-Signature=0d927d78448f1190df28640c86c267a1e0829cd55ea5e991f7946f6dae363541&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216901990&response-content-disposition=attachment%3B%20filename%3DOgg.v1.3.4.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.108.154, 185.199.109.154, 185.199.110.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.108.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 262984 (257K) [application/octet-stream]
+Saving to: '/tmp/jl_UKfzLR-download.gz’
+
+/tmp/jl_UKfzLR-download.gz          100%[=================================================================>] 256.82K  --.-KB/s    in 0.06s   
+
+2021-08-08 16:01:46 (4.09 MB/s) - '/tmp/jl_UKfzLR-download.gz’ saved [262984/262984]
+Downloading artifact: LibVPX
+--2021-08-08 16:01:46--  https://github.com/JuliaBinaryWrappers/LibVPX_jll.jl/releases/download/LibVPX-v1.9.0+0/LibVPX.v1.9.0.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/211970824/68963180-d58d-11ea-94da-6b289ac3288d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060253Z&X-Amz-Expires=300&X-Amz-Signature=705d1007846b24d3b5cd531ca3e00ed5906af5ee93fdbf22fa2e3a9da016d9fe&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=211970824&response-content-disposition=attachment%3B%20filename%3DLibVPX.v1.9.0.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:46--  https://github-releases.githubusercontent.com/211970824/68963180-d58d-11ea-94da-6b289ac3288d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060253Z&X-Amz-Expires=300&X-Amz-Signature=705d1007846b24d3b5cd531ca3e00ed5906af5ee93fdbf22fa2e3a9da016d9fe&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=211970824&response-content-disposition=attachment%3B%20filename%3DLibVPX.v1.9.0.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1487085 (1.4M) [application/octet-stream]
+Saving to: '/tmp/jl_4nb5JQ-download.gz’
+
+/tmp/jl_4nb5JQ-download.gz          100%[=================================================================>]   1.42M  --.-KB/s    in 0.1s    
+
+2021-08-08 16:01:47 (13.0 MB/s) - '/tmp/jl_4nb5JQ-download.gz’ saved [1487085/1487085]
+Downloading artifact: Opus
+--2021-08-08 16:01:47--  https://github.com/JuliaBinaryWrappers/Opus_jll.jl/releases/download/Opus-v1.3.1+1/Opus.v1.3.1.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/221093156/b14a0e80-8d42-11ea-9c09-ed18894c93df?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060254Z&X-Amz-Expires=300&X-Amz-Signature=a56f78f90cb42e87409c7646c247b9b8001a8216e391144cfe68693b872c33d2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=221093156&response-content-disposition=attachment%3B%20filename%3DOpus.v1.3.1.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:47--  https://github-releases.githubusercontent.com/221093156/b14a0e80-8d42-11ea-9c09-ed18894c93df?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060254Z&X-Amz-Expires=300&X-Amz-Signature=a56f78f90cb42e87409c7646c247b9b8001a8216e391144cfe68693b872c33d2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=221093156&response-content-disposition=attachment%3B%20filename%3DOpus.v1.3.1.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 947136 (925K) [application/octet-stream]
+Saving to: '/tmp/jl_tC5MhO-download.gz’
+
+/tmp/jl_tC5MhO-download.gz          100%[=================================================================>] 924.94K  --.-KB/s    in 0.1s    
+
+2021-08-08 16:01:48 (8.26 MB/s) - '/tmp/jl_tC5MhO-download.gz’ saved [947136/947136]
+Downloading artifact: FreeType2
+--2021-08-08 16:01:48--  https://github.com/JuliaBinaryWrappers/FreeType2_jll.jl/releases/download/FreeType2-v2.10.1+4/FreeType2.v2.10.1.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/205475014/39d83900-e790-11ea-8370-66329736adc9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060255Z&X-Amz-Expires=300&X-Amz-Signature=523045ffb8985b77d912aa21987c54d230ed65b3680178280082b6ecac1ed8b2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=205475014&response-content-disposition=attachment%3B%20filename%3DFreeType2.v2.10.1.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:48--  https://github-releases.githubusercontent.com/205475014/39d83900-e790-11ea-8370-66329736adc9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060255Z&X-Amz-Expires=300&X-Amz-Signature=523045ffb8985b77d912aa21987c54d230ed65b3680178280082b6ecac1ed8b2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=205475014&response-content-disposition=attachment%3B%20filename%3DFreeType2.v2.10.1.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1448123 (1.4M) [application/octet-stream]
+Saving to: '/tmp/jl_6C4i0P-download.gz’
+
+/tmp/jl_6C4i0P-download.gz          100%[=================================================================>]   1.38M  --.-KB/s    in 0.1s    
+
+2021-08-08 16:01:49 (11.7 MB/s) - '/tmp/jl_6C4i0P-download.gz’ saved [1448123/1448123]
+Downloading artifact: x264
+--2021-08-08 16:01:49--  https://github.com/JuliaBinaryWrappers/x264_jll.jl/releases/download/x264-v2020.7.14+0/x264.v2020.7.14.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/216931635/673b1980-d539-11ea-8743-8a7fea5dbd70?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060256Z&X-Amz-Expires=300&X-Amz-Signature=ac12054aac1437ba07da160dfe648a8931c7c45bd0849b767a295a80cdcfdeef&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216931635&response-content-disposition=attachment%3B%20filename%3Dx264.v2020.7.14.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:49--  https://github-releases.githubusercontent.com/216931635/673b1980-d539-11ea-8743-8a7fea5dbd70?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060256Z&X-Amz-Expires=300&X-Amz-Signature=ac12054aac1437ba07da160dfe648a8931c7c45bd0849b767a295a80cdcfdeef&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216931635&response-content-disposition=attachment%3B%20filename%3Dx264.v2020.7.14.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2048143 (2.0M) [application/octet-stream]
+Saving to: '/tmp/jl_VQRd1R-download.gz’
+
+/tmp/jl_VQRd1R-download.gz          100%[=================================================================>]   1.95M  12.7MB/s    in 0.2s    
+
+2021-08-08 16:01:50 (12.7 MB/s) - '/tmp/jl_VQRd1R-download.gz’ saved [2048143/2048143]
+Downloading artifact: FriBidi
+--2021-08-08 16:01:50--  https://github.com/JuliaBinaryWrappers/FriBidi_jll.jl/releases/download/FriBidi-v1.0.5+5/FriBidi.v1.0.5.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/205937924/dd731a80-e78b-11ea-9e39-28d35cea96d5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060257Z&X-Amz-Expires=300&X-Amz-Signature=8a935c63922cee469f0b612939c0cae697997c4677f4506da8c72d0a83f54a03&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=205937924&response-content-disposition=attachment%3B%20filename%3DFriBidi.v1.0.5.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:51--  https://github-releases.githubusercontent.com/205937924/dd731a80-e78b-11ea-9e39-28d35cea96d5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060257Z&X-Amz-Expires=300&X-Amz-Signature=8a935c63922cee469f0b612939c0cae697997c4677f4506da8c72d0a83f54a03&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=205937924&response-content-disposition=attachment%3B%20filename%3DFriBidi.v1.0.5.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 83386 (81K) [application/octet-stream]
+Saving to: '/tmp/jl_yBZr7R-download.gz’
+
+/tmp/jl_yBZr7R-download.gz          100%[=================================================================>]  81.43K  --.-KB/s    in 0.02s   
+
+2021-08-08 16:01:51 (3.23 MB/s) - '/tmp/jl_yBZr7R-download.gz’ saved [83386/83386]
+Downloading artifact: libvorbis
+--2021-08-08 16:01:51--  https://github.com/JuliaBinaryWrappers/libvorbis_jll.jl/releases/download/libvorbis-v1.3.6+4/libvorbis.v1.3.6.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/216931629/1ca42100-9060-11ea-9f53-68cb83df3082?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060258Z&X-Amz-Expires=300&X-Amz-Signature=3fa70148761e902cfd1175903c892e08add4ce105de4103517229fa85e7f373f&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216931629&response-content-disposition=attachment%3B%20filename%3Dlibvorbis.v1.3.6.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:51--  https://github-releases.githubusercontent.com/216931629/1ca42100-9060-11ea-9f53-68cb83df3082?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060258Z&X-Amz-Expires=300&X-Amz-Signature=3fa70148761e902cfd1175903c892e08add4ce105de4103517229fa85e7f373f&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216931629&response-content-disposition=attachment%3B%20filename%3Dlibvorbis.v1.3.6.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 287325 (281K) [application/octet-stream]
+Saving to: '/tmp/jl_nKtPqQ-download.gz’
+
+/tmp/jl_nKtPqQ-download.gz          100%[=================================================================>] 280.59K  --.-KB/s    in 0.05s   
+
+2021-08-08 16:01:52 (5.23 MB/s) - '/tmp/jl_nKtPqQ-download.gz’ saved [287325/287325]
+Downloading artifact: LAME
+--2021-08-08 16:01:52--  https://github.com/JuliaBinaryWrappers/LAME_jll.jl/releases/download/LAME-v3.100.0+1/LAME.v3.100.0.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/216902735/8f60cc80-905f-11ea-9e66-7b3858a44f41?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060259Z&X-Amz-Expires=300&X-Amz-Signature=1c2795e2d28ad385ab649a9563e7592187811fb27d336337966fe4467ac05c15&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216902735&response-content-disposition=attachment%3B%20filename%3DLAME.v3.100.0.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:52--  https://github-releases.githubusercontent.com/216902735/8f60cc80-905f-11ea-9e66-7b3858a44f41?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060259Z&X-Amz-Expires=300&X-Amz-Signature=1c2795e2d28ad385ab649a9563e7592187811fb27d336337966fe4467ac05c15&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216902735&response-content-disposition=attachment%3B%20filename%3DLAME.v3.100.0.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 308004 (301K) [application/octet-stream]
+Saving to: '/tmp/jl_XcVZBO-download.gz’
+
+/tmp/jl_XcVZBO-download.gz          100%[=================================================================>] 300.79K  --.-KB/s    in 0.05s   
+
+2021-08-08 16:01:53 (5.37 MB/s) - '/tmp/jl_XcVZBO-download.gz’ saved [308004/308004]
+Downloading artifact: EarCut
+--2021-08-08 16:01:53--  https://github.com/JuliaBinaryWrappers/EarCut_jll.jl/releases/download/EarCut-v2.1.5+0/EarCut.v2.1.5.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/252313232/3ab3ab80-743a-11ea-9862-b413499a0e1f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060259Z&X-Amz-Expires=300&X-Amz-Signature=d281e0782713cd342006012cabae54c86a767752c5a4807c605eb03a0790b4d9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=252313232&response-content-disposition=attachment%3B%20filename%3DEarCut.v2.1.5.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:53--  https://github-releases.githubusercontent.com/252313232/3ab3ab80-743a-11ea-9862-b413499a0e1f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060259Z&X-Amz-Expires=300&X-Amz-Signature=d281e0782713cd342006012cabae54c86a767752c5a4807c605eb03a0790b4d9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=252313232&response-content-disposition=attachment%3B%20filename%3DEarCut.v2.1.5.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 80889 (79K) [application/octet-stream]
+Saving to: '/tmp/jl_lPOr4N-download.gz’
+
+/tmp/jl_lPOr4N-download.gz          100%[=================================================================>]  78.99K  --.-KB/s    in 0.03s   
+
+2021-08-08 16:01:54 (2.89 MB/s) - '/tmp/jl_lPOr4N-download.gz’ saved [80889/80889]
+Downloading artifact: Bzip2
+--2021-08-08 16:01:54--  https://github.com/JuliaBinaryWrappers/Bzip2_jll.jl/releases/download/Bzip2-v1.0.6+4/Bzip2.v1.0.6.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/205474225/131a0280-e790-11ea-9fd5-401bc28b0e01?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060300Z&X-Amz-Expires=300&X-Amz-Signature=52c3add6e34d661c24fd98c7e81883dff125547c19d3eef0f75d02c9e9378ab9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=205474225&response-content-disposition=attachment%3B%20filename%3DBzip2.v1.0.6.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:54--  https://github-releases.githubusercontent.com/205474225/131a0280-e790-11ea-9fd5-401bc28b0e01?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060300Z&X-Amz-Expires=300&X-Amz-Signature=52c3add6e34d661c24fd98c7e81883dff125547c19d3eef0f75d02c9e9378ab9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=205474225&response-content-disposition=attachment%3B%20filename%3DBzip2.v1.0.6.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 518007 (506K) [application/octet-stream]
+Saving to: '/tmp/jl_mjZIDR-download.gz’
+
+/tmp/jl_mjZIDR-download.gz          100%[=================================================================>] 505.87K  --.-KB/s    in 0.07s   
+
+2021-08-08 16:01:54 (6.91 MB/s) - '/tmp/jl_mjZIDR-download.gz’ saved [518007/518007]
+Downloading artifact: x265
+--2021-08-08 16:01:55--  https://github.com/JuliaBinaryWrappers/x265_jll.jl/releases/download/x265-v3.0.0+1/x265.v3.0.0.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/211971057/7b699a80-9060-11ea-9fb7-ab920a213fd2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060301Z&X-Amz-Expires=300&X-Amz-Signature=3b0cf41c08bf7c9fda05c6931e0bad6483f378c8b05b3808cf1b28c0e3350317&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=211971057&response-content-disposition=attachment%3B%20filename%3Dx265.v3.0.0.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:55--  https://github-releases.githubusercontent.com/211971057/7b699a80-9060-11ea-9fb7-ab920a213fd2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060301Z&X-Amz-Expires=300&X-Amz-Signature=3b0cf41c08bf7c9fda05c6931e0bad6483f378c8b05b3808cf1b28c0e3350317&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=211971057&response-content-disposition=attachment%3B%20filename%3Dx265.v3.0.0.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1078333 (1.0M) [application/octet-stream]
+Saving to: '/tmp/jl_Z25lpQ-download.gz’
+
+/tmp/jl_Z25lpQ-download.gz          100%[=================================================================>]   1.03M  --.-KB/s    in 0.1s    
+
+2021-08-08 16:01:55 (10.6 MB/s) - '/tmp/jl_Z25lpQ-download.gz’ saved [1078333/1078333]
+Downloading artifact: libass
+--2021-08-08 16:01:56--  https://github.com/JuliaBinaryWrappers/libass_jll.jl/releases/download/libass-v0.14.0+2/libass.v0.14.0.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/216909096/be773e00-905f-11ea-84cc-a6906759d3e4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060302Z&X-Amz-Expires=300&X-Amz-Signature=e84f9dfc212e66d9a7e82b59f23a1b2adf26709bc7505fc203832489f0b31794&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216909096&response-content-disposition=attachment%3B%20filename%3Dlibass.v0.14.0.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:56--  https://github-releases.githubusercontent.com/216909096/be773e00-905f-11ea-84cc-a6906759d3e4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060302Z&X-Amz-Expires=300&X-Amz-Signature=e84f9dfc212e66d9a7e82b59f23a1b2adf26709bc7505fc203832489f0b31794&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=216909096&response-content-disposition=attachment%3B%20filename%3Dlibass.v0.14.0.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 341291 (333K) [application/octet-stream]
+Saving to: '/tmp/jl_d64aAO-download.gz’
+
+/tmp/jl_d64aAO-download.gz          100%[=================================================================>] 333.29K  --.-KB/s    in 0.06s   
+
+2021-08-08 16:01:56 (5.73 MB/s) - '/tmp/jl_d64aAO-download.gz’ saved [341291/341291]
+Downloading artifact: libfdk_aac
+--2021-08-08 16:01:56--  https://github.com/JuliaBinaryWrappers/libfdk_aac_jll.jl/releases/download/libfdk_aac-v0.1.6+2/libfdk_aac.v0.1.6.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/217762297/ed8daf80-905f-11ea-9d1e-01a959034dce?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060303Z&X-Amz-Expires=300&X-Amz-Signature=754a544c0c6e2ffa1a0d2e013c060e020b5ffcaa4407a5e7e7d535efadad326f&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=217762297&response-content-disposition=attachment%3B%20filename%3Dlibfdk_aac.v0.1.6.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:57--  https://github-releases.githubusercontent.com/217762297/ed8daf80-905f-11ea-9d1e-01a959034dce?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060303Z&X-Amz-Expires=300&X-Amz-Signature=754a544c0c6e2ffa1a0d2e013c060e020b5ffcaa4407a5e7e7d535efadad326f&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=217762297&response-content-disposition=attachment%3B%20filename%3Dlibfdk_aac.v0.1.6.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1622771 (1.5M) [application/octet-stream]
+Saving to: '/tmp/jl_X87GAR-download.gz’
+
+/tmp/jl_X87GAR-download.gz          100%[=================================================================>]   1.55M  --.-KB/s    in 0.1s    
+
+2021-08-08 16:01:57 (13.1 MB/s) - '/tmp/jl_X87GAR-download.gz’ saved [1622771/1622771]
+Downloading artifact: FFMPEG
+--2021-08-08 16:01:58--  https://github.com/JuliaBinaryWrappers/FFMPEG_jll.jl/releases/download/FFMPEG-v4.3.1+2/FFMPEG.v4.3.1.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/223027061/5f930e80-e6ba-11ea-9a31-5ec01bf867e3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060304Z&X-Amz-Expires=300&X-Amz-Signature=b44bda694992c314306ada3343b52f9a7f4b1bbd0f8415bdccd5742f65dd8ae2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=223027061&response-content-disposition=attachment%3B%20filename%3DFFMPEG.v4.3.1.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:01:58--  https://github-releases.githubusercontent.com/223027061/5f930e80-e6ba-11ea-9a31-5ec01bf867e3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060304Z&X-Amz-Expires=300&X-Amz-Signature=b44bda694992c314306ada3343b52f9a7f4b1bbd0f8415bdccd5742f65dd8ae2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=223027061&response-content-disposition=attachment%3B%20filename%3DFFMPEG.v4.3.1.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10985318 (10M) [application/octet-stream]
+Saving to: '/tmp/jl_rxyYHR-download.gz’
+
+/tmp/jl_rxyYHR-download.gz          100%[=================================================================>]  10.48M  15.1MB/s    in 0.7s    
+
+2021-08-08 16:01:59 (15.1 MB/s) - '/tmp/jl_rxyYHR-download.gz’ saved [10985318/10985318]
+Downloading artifact: OpenSSL
+--2021-08-08 16:02:01--  https://github.com/JuliaBinaryWrappers/OpenSSL_jll.jl/releases/download/OpenSSL-v1.1.1+2/OpenSSL.v1.1.1.x86_64-linux-gnu.tar.gz
+Resolving github.com (github.com)... 52.64.108.95
+Connecting to github.com (github.com)|52.64.108.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/210954086/714cb480-71f5-11ea-8d7a-a27882d306ee?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060307Z&X-Amz-Expires=300&X-Amz-Signature=9b56577c3abf1ea643281402241a594f549df3710af109f3e9c7b1b5ae70fb8d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=210954086&response-content-disposition=attachment%3B%20filename%3DOpenSSL.v1.1.1.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-08-08 16:02:01--  https://github-releases.githubusercontent.com/210954086/714cb480-71f5-11ea-8d7a-a27882d306ee?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210808%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210808T060307Z&X-Amz-Expires=300&X-Amz-Signature=9b56577c3abf1ea643281402241a594f549df3710af109f3e9c7b1b5ae70fb8d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=210954086&response-content-disposition=attachment%3B%20filename%3DOpenSSL.v1.1.1.x86_64-linux-gnu.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.111.154, 185.199.110.154, 185.199.109.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.111.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4248106 (4.1M) [application/octet-stream]
+Saving to: '/tmp/jl_oP36bS-download.gz’
+
+/tmp/jl_oP36bS-download.gz          100%[=================================================================>]   4.05M  3.70MB/s    in 1.1s    
+
+2021-08-08 16:02:02 (3.70 MB/s) - '/tmp/jl_oP36bS-download.gz’ saved [4248106/4248106]
+   Updating `~/.julia/environments/v1.4/Project.toml`
+  [91a5bcdd] + Plots v1.6.12
+   Updating `~/.julia/environments/v1.4/Manifest.toml`
+  [4fba245c] ↑ ArrayInterface v3.1.22 ⇒ v3.1.23
+  [6e34b625] ↓ Bzip2_jll v1.0.7+0 ⇒ v1.0.6+5
+  [35d6a980] + ColorSchemes v3.13.0
+  [3da002f7] + ColorTypes v0.10.12
+  [5ae59095] + Colors v0.12.8
+  [d38c429a] + Contour v0.5.7
+  [e2d170a0] + DataValueInterfaces v1.0.0
+  [5ae413db] + EarCut_jll v2.1.5+1
+  [c87230d0] + FFMPEG v0.4.1
+  [b22a6f82] + FFMPEG_jll v4.3.1+4
+  [53c48c17] + FixedPointNumbers v0.8.4
+  [59287772] + Formatting v0.4.2
+  [d7e528f0] + FreeType2_jll v2.10.1+5
+  [559328eb] + FriBidi_jll v1.0.5+6
+  [28b8d3ca] + GR v0.52.0
+  [5c1252a2] + GeometryBasics v0.3.13
+  [4d00f742] + GeometryTypes v0.8.4
+  [42e2da0e] + Grisu v1.0.2
+  [82899510] + IteratorInterfaceExtensions v1.0.0
+  [c1c5ebd0] + LAME_jll v3.100.0+3
+  [b964fa9f] + LaTeXStrings v1.2.1
+  [23fbe1c1] + Latexify v0.14.12
+  [dd192d2f] + LibVPX_jll v1.9.0+1
+  [442fdcdd] + Measures v0.3.1
+  [6fe1bfb0] ↑ OffsetArrays v1.10.4 ⇒ v1.10.5
+  [e7412a2a] + Ogg_jll v1.3.4+2
+  [458c3c95] + OpenSSL_jll v1.1.1+6
+  [91d4177d] + Opus_jll v1.3.1+3
+  [ccf2f8ad] + PlotThemes v2.0.1
+  [995b91a9] + PlotUtils v1.0.11
+  [91a5bcdd] + Plots v1.6.12
+  [01d81517] + RecipesPipeline v0.1.13
+  [189a3867] ↓ Reexport v1.1.0 ⇒ v0.2.0
+  [992d4aef] + Showoff v0.3.2
+  [90137ffa] ↑ StaticArrays v1.2.11 ⇒ v1.2.12
+  [09ab397b] + StructArrays v0.6.0
+  [3783bdb8] + TableTraits v1.0.1
+  [bd369af6] + Tables v1.5.0
+  [0ac62f75] + libass_jll v0.14.0+4
+  [f638f0a6] + libfdk_aac_jll v0.1.6+4
+  [f27f6e37] + libvorbis_jll v1.3.6+6
+  [1270edf5] + x264_jll v2020.7.14+2
+  [dfaa095f] + x265_jll v3.0.0+3
+   Building GR → `~/.julia/packages/GR/BwGt2/deps/build.log`
+
+julia> using Plots
+[ Info: Precompiling Plots [91a5bcdd-55d7-5caf-9e0b-520d859cae80]
+
+
+julia> gr(fmt=:png);
+
+julia> plot(sin, -2π, 2π, label="sin(x)")
+
+ls  
+
+julia> 
+
+julia> ls
+ERROR: UndefVarError: ls not defined
+
+julia> 
+
