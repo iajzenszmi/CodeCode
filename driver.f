@@ -1,132 +1,91 @@
-      program main
-
-c***********************************************************************
+        PROGRAM SPANTR
 c
-cc TOMS441_PRB tests DIPOLE.
+c  A driver program to demonstrate Algorithm 422.
+c  This example shows how to find the minimum spanning
+c  tree which connects 6 large cities in Michigan.
+c  A graph which stores the distances in miles between
+c  each city is read in as file spantr.in and is then
+c  used to load array bgraph(6,6).  The output file
+c  lists the edges which make up the minimal spanning
+c  tree, these edges are stored in array mstree(2,6).
+c  This driver program was compiled and tested using
+c  Fortran 77.
 c
-      implicit none
-
-      integer sample_num
-      integer test_num
-
-      parameter ( sample_num = 1000 )
-      parameter ( test_num = 3 )
-
-      real a
-      real alpha_test(test_num)
-      real alpha
-      real b
-      real dipole
-      integer i
-      real mean
-      real r
-      real r_test(test_num)
-      integer seed
-      integer test
-      real variance
-      real x(sample_num)
-      real xmax
-      real xmin
-
-      save alpha_test
-      save r_test
-
-      data alpha_test / 0.0, 0.785398163397448, 1.57079632679490 /
-      data r_test / 1.0, 0.5, 0.0 /
-
-      seed = 123456789
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) 'TOMS441_PRB'
-      write ( *, '(a)' ) '  Test TOMS algorithm 441, generating'
-      write ( *, '(a)' ) '  random deviates from the dipole '
-      write ( *, '(a)' ) '  distribution.'
-
-      do test = 1, test_num
-
-        alpha = alpha_test(test)
-        r = r_test(test)
-
-        a = r * cos ( alpha )
-        b = r * sin ( alpha )
-
-        write ( *, '(a)' ) ' '
-        write ( *, '(a,g14.6)' ) ' A = ', a
-        write ( *, '(a,g14.6)' ) ' B = ', b
-
-        xmax = -1.0E+30
-        xmin = +1.0D+30
-        mean = 0.0D+00
-
-        do i = 1, sample_num
-          x(i) = dipole ( a, b, seed )
-          xmax = max ( xmax, x(i) )
-          xmin = min ( xmin, x(i) )
-          mean = mean + x(i)
-        end do
-
-        mean = mean / real ( sample_num )
-
-        variance = 0.0
-        do i = 1, sample_num
-          variance = variance + ( x(i) - mean )**2
-        end do
-        variance = variance / real ( sample_num - 1 )
-
-        write ( *, '(a)' ) ' '
-        write ( *, '(a,i6)'    ) '  Sample size =     ', sample_num
-        write ( *, '(a,g14.6)' ) '  Sample mean =     ', mean
-        write ( *, '(a,g14.6)' ) '  Sample variance = ', variance
-        write ( *, '(a,g14.6)' ) '  Sample maximum =  ', xmax
-        write ( *, '(a,g14.6)' ) '  Sample minimum =  ', xmin
-
-      end do
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) 'TOMS441_PRB'
-      write ( *, '(a)' ) '  Normal end of execution.'
-
-      stop
-      end
-      function r11 ( seed )
-
-c*******************************************************************************
+c  Note: The input file spantr.in should contain only
+c  eight lines; two header lines and then six lines
+c  containing the six city names and the 6-by-6 matrix
+c  of distances between these cities (in miles).
 c
-cc R11 returns a pseudorandom number between -1 and +1.
+c     buf1           is an 80-char scratch buffer
+c     sname(6)       holds the 14-char city names
+c     bgraph(50,50)  holds the graph and the edges between the 6 nodes
+c     mstree(2,50)   holds the nodes for the minimal spanning tree
+c     numbls         is the number of edges in the minimal spanning tree
+c     sumlen         is the sum of the edge lengths in the minimal
+c                    spanning tree
 c
-c  Modified:
 c
-c    06 December 2005
-c
-c  Author:
-c
-c    John Burkardt
-c
-c  Parameters:
-c
-c    Input/output, integer SEED, the "seed" value, which should NOT be 0.
-c    On output, SEED has been updated.
-c
-c    Output, real RD11, a new pseudorandom variate, strictly between -1 and 1.
-c
-      implicit none
+C     .. Local Scalars ..
+      PARAMETER (NMAX=50)
 
-      integer k
-      real r11
-      integer seed
-
-      k = seed / 127773
-
-      seed = 16807 * ( seed - k * 127773 ) - k * 2836
-
-      if ( seed < 0 ) then
-        seed = seed + 2147483647
-      end if
+      DOUBLE PRECISION SUMLEN
+      INTEGER I,J,NIN,NOUT,NUMBLS
+      CHARACTER*80 BUF1
+C     ..
+C     .. Local Arrays ..
+      DOUBLE PRECISION BGRAPH(NMAX,NMAX)
+      INTEGER MSTREE(2,NMAX)
+      CHARACTER*14 SNAME(NMAX)
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL DMTOMS
+C     ..
+       OPEN (10,FILE='data',STATUS='old',ERR=30)
+       OPEN (20,FILE='res',STATUS='unknown',ERR=40)
 c
-c  Although SEED can be represented exactly as a 32 bit integer,
-c  it generally cannot be represented exactly as a 32 bit real number!
+C Use port library routine to set default input and
+C output channels
+C
+C     .. Parameters ..
+C      INTEGER NMAX
+C      PARAMETER (NMAX=50)
+C     ..
+C     .. External Functions ..
+C     INTEGER I1MACH
+C     EXTERNAL I1MACH
+C      real r1mach 
+C     ..
+       NIN = 5
+C      NOUT = 6
+      READ (5,FMT='(a)') BUF1
+      WRITE (6,FMT='(//,1x,a)') BUF1
+      READ (5,FMT='(a)') BUF1
+      WRITE (6,FMT='(1x,a)') BUF1
+      DO 10 I = 1,6
+          READ (NIN,FMT=9000) SNAME(I), (BGRAPH(I,J),J=1,6)
+          WRITE (NOUT,FMT=9010) SNAME(I), (BGRAPH(I,J),J=1,6)
+   10 CONTINUE
+C       CLOSE (6)
+C
+      CALL DMTOMS(BGRAPH,6,MSTREE,NUMBLS,SUMLEN)
 c
-      r11 = 2.0 * real ( dble ( seed ) * 4.656612875D-10 ) - 1.0
+      WRITE (NOUT,FMT=
+     +  '(//,'' number of edges in minimal spanning tree = '',    i8)')
+     +  NUMBLS
+      WRITE (NOUT,FMT='(/,'' sum of the edges (miles) = '',f8.4,//)')
+     +  SUMLEN
+      DO 20 I = 1,NUMBLS
+          WRITE (NOUT,FMT='('' from,to: '',2i4,2x,2a18)') MSTREE(1,I),
+     +      MSTREE(2,I),SNAME(MSTREE(1,I)),SNAME(MSTREE(2,I))
+   20 CONTINUE
+C     CLOSE (20)
+      STOP
+   30 WRITE(NOUT,FMT='(//,'' Error opening spantr.in !! '',/)')
+      STOP
 
-      return
-      end
+   40 WRITE(NOUT,FMT='(//,'' Error opening spantr.out !! '',/)')
+       STOP
+
+ 9000 FORMAT (A14,6F7.1)
+ 9010 FORMAT (1X,A14,6F7.1)
+      END
