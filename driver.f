@@ -1,91 +1,140 @@
-        PROGRAM SPANTR
-c
-c  A driver program to demonstrate Algorithm 422.
-c  This example shows how to find the minimum spanning
-c  tree which connects 6 large cities in Michigan.
-c  A graph which stores the distances in miles between
-c  each city is read in as file spantr.in and is then
-c  used to load array bgraph(6,6).  The output file
-c  lists the edges which make up the minimal spanning
-c  tree, these edges are stored in array mstree(2,6).
-c  This driver program was compiled and tested using
-c  Fortran 77.
-c
-c  Note: The input file spantr.in should contain only
-c  eight lines; two header lines and then six lines
-c  containing the six city names and the 6-by-6 matrix
-c  of distances between these cities (in miles).
-c
-c     buf1           is an 80-char scratch buffer
-c     sname(6)       holds the 14-char city names
-c     bgraph(50,50)  holds the graph and the edges between the 6 nodes
-c     mstree(2,50)   holds the nodes for the minimal spanning tree
-c     numbls         is the number of edges in the minimal spanning tree
-c     sumlen         is the sum of the edge lengths in the minimal
-c                    spanning tree
-c
-c
-C     .. Local Scalars ..
-      PARAMETER (NMAX=50)
+      program main
 
-      DOUBLE PRECISION SUMLEN
-      INTEGER I,J,NIN,NOUT,NUMBLS
-      CHARACTER*80 BUF1
-C     ..
-C     .. Local Arrays ..
-      DOUBLE PRECISION BGRAPH(NMAX,NMAX)
-      INTEGER MSTREE(2,NMAX)
-      CHARACTER*14 SNAME(NMAX)
-C     ..
-C     .. External Subroutines ..
-      EXTERNAL DMTOMS
-C     ..
-       OPEN (10,FILE='data',STATUS='old',ERR=30)
-       OPEN (20,FILE='res',STATUS='unknown',ERR=40)
+c***********************************************************************
 c
-C Use port library routine to set default input and
-C output channels
-C
-C     .. Parameters ..
-C      INTEGER NMAX
-C      PARAMETER (NMAX=50)
-C     ..
-C     .. External Functions ..
-C     INTEGER I1MACH
-C     EXTERNAL I1MACH
-C      real r1mach 
-C     ..
-       NIN = 5
-C      NOUT = 6
-      READ (5,FMT='(a)') BUF1
-      WRITE (6,FMT='(//,1x,a)') BUF1
-      READ (5,FMT='(a)') BUF1
-      WRITE (6,FMT='(1x,a)') BUF1
-      DO 10 I = 1,6
-          READ (NIN,FMT=9000) SNAME(I), (BGRAPH(I,J),J=1,6)
-          WRITE (NOUT,FMT=9010) SNAME(I), (BGRAPH(I,J),J=1,6)
-   10 CONTINUE
-C       CLOSE (6)
-C
-      CALL DMTOMS(BGRAPH,6,MSTREE,NUMBLS,SUMLEN)
+cc TOMS467_PRB tests XPOSE.
 c
-      WRITE (NOUT,FMT=
-     +  '(//,'' number of edges in minimal spanning tree = '',    i8)')
-     +  NUMBLS
-      WRITE (NOUT,FMT='(/,'' sum of the edges (miles) = '',f8.4,//)')
-     +  SUMLEN
-      DO 20 I = 1,NUMBLS
-          WRITE (NOUT,FMT='('' from,to: '',2i4,2x,2a18)') MSTREE(1,I),
-     +      MSTREE(2,I),SNAME(MSTREE(1,I)),SNAME(MSTREE(2,I))
-   20 CONTINUE
-C     CLOSE (20)
-      STOP
-   30 WRITE(NOUT,FMT='(//,'' Error opening spantr.in !! '',/)')
-      STOP
+      implicit none
 
-   40 WRITE(NOUT,FMT='(//,'' Error opening spantr.out !! '',/)')
-       STOP
+      integer a_max
+      integer moved_max
 
- 9000 FORMAT (A14,6F7.1)
- 9010 FORMAT (1X,A14,6F7.1)
-      END
+      parameter ( a_max = 3000 )
+      parameter ( moved_max = 100 )
+
+      real a(a_max)
+      logical moved(moved_max)
+      integer n1
+      integer n12
+      integer n2
+      integer nwork
+
+      write ( *, '(a)' ) ' '
+      write ( *, '(a)' ) 'TOMS467_PRB'
+      write ( *, '(a)' ) '  Test TOMS algorithm 467, in place'
+      write ( *, '(a)' ) '  matrix transposition.'
+
+      n1 = 10
+      n2 = 10
+      n12 = n1 * n2
+      nwork = ( n1 + n2 ) / 2
+
+      write ( *, '(a)' ) ' '
+      write ( *, '(a,i6)' ) '  Row dimension N1 =    ', n1
+      write ( *, '(a,i6)' ) '  Column dimension N2 = ', n2
+      write ( *, '(a,i6)' ) '  Total size N12 =      ', n12 
+      write ( *, '(a,i6)' ) '  Workspace NWORK =     ', nwork
+
+      call set_a ( n1, n2, a )
+
+      call print_a ( n1, n2, a, 1, 5, 1, 5 )
+
+      call xpose ( a, n1, n2, n12, moved, nwork )
+
+      call print_a ( n2, n1, a, 1, 5, 1, 5 )
+
+      n1 = 7
+      n2 = 30
+      n12 = n1 * n2
+      nwork = ( n1 + n2 ) / 2
+
+      write ( *, '(a)' ) ' '
+      write ( *, '(a,i6)' ) '  Row dimension N1 =    ', n1
+      write ( *, '(a,i6)' ) '  Column dimension N2 = ', n2
+      write ( *, '(a,i6)' ) '  Total size N12 =      ', n12 
+      write ( *, '(a,i6)' ) '  Workspace NWORK =     ', nwork
+
+      call set_a ( n1, n2, a )
+
+      call print_a ( n1, n2, a, 1, 5, 1, 5 )
+
+      call xpose ( a, n1, n2, n12, moved, nwork )
+
+      call print_a ( n2, n1, a, 1, 5, 1, 5 )
+
+      n1 = 24
+      n2 = 8
+      n12 = n1 * n2
+      nwork = ( n1 + n2 ) / 2
+
+      write ( *, '(a)' ) ' '
+      write ( *, '(a,i6)' ) '  Row dimension N1 =    ', n1
+      write ( *, '(a,i6)' ) '  Column dimension N2 = ', n2
+      write ( *, '(a,i6)' ) '  Total size N12 =      ', n12 
+      write ( *, '(a,i6)' ) '  Workspace NWORK =     ', nwork
+
+      call set_a ( n1, n2, a )
+
+      call print_a ( n1, n2, a, 1, 5, 1, 5 )
+
+      call xpose ( a, n1, n2, n12, moved, nwork )
+
+      call print_a ( n2, n1, a, 1, 5, 1, 5 )
+
+      write ( *, '(a)' ) ' '
+      write ( *, '(a)' ) 'TOMS467_PRB'
+      write ( *, '(a)' ) '  Normal end of execution.'
+
+      stop
+      end
+      subroutine set_a ( n1, n2, a )
+
+c***********************************************************************
+c
+cc SET_A sets the matrix A.
+c
+      implicit none
+
+      integer n1
+      integer n2
+
+      real a(n1,n2)
+      integer i
+      integer j
+
+      do i = 1, n1
+        do j = 1, n2
+          a(i,j) = 1000 * i + j
+        end do
+      end do
+
+      return
+      end
+      subroutine print_a ( m, n, a, i_lo, i_hi, j_lo, j_hi )
+
+c***********************************************************************
+c
+cc PRINT_A prints the matrix A.
+c
+      implicit none
+
+      integer m
+      integer n
+
+      real a(m,n)
+      integer i
+      integer i_hi
+      integer i_lo
+      integer j
+      integer j_hi
+      integer j_lo
+
+      write ( *, '(a)' ) ' '
+
+      do i = i_lo, i_hi
+        write ( *, '(2x,5f8.0)' ) ( a(i,j), j = j_lo, j_hi )
+      end do
+
+      return
+      end
+
