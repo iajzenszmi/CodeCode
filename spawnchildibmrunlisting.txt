@@ -1,3 +1,4 @@
+https://www.ibm.com/docs/en/zos/2.3.0?topic=functions-spawn-spawnp-spawn-new-process
 ian@ian-HP-Stream-Laptop-11-y0XX:~$ gcc spawnchildibm.c -o spawnchildibm
 spawnchildibm.c: In function ‘main’:
 spawnchildibm.c:36:6: warning: implicit declaration of function ‘gets’; did you mean ‘fgets’? [-Wimplicit-function-declaration]
@@ -191,3 +192,4 @@ redistribute it under certain conditions as specified by the GNU GPL license;
 see the documentation for details.
 Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
 ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+https://www.ibm.com/docs/en/zos/2.3.0?topic=functions-spawn-spawnp-spawn-new-process
