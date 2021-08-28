@@ -1,0 +1,193 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gcc spawnchildibm.c -o spawnchildibm
+spawnchildibm.c: In function ‘main’:
+spawnchildibm.c:36:6: warning: implicit declaration of function ‘gets’; did you mean ‘fgets’? [-Wimplicit-function-declaration]
+   36 |  if(!gets(buf)) {
+      |      ^~~~
+      |      fgets
+spawnchildibm.c:40:35: warning: format ‘%i’ expects argument of type ‘int’, but argument 3 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+   40 |  fprintf(fp, "child from parent: %i bytes,[%s]\n", strlen(buf), buf);
+      |                                  ~^                ~~~~~~~~~~~
+      |                                   |                |
+      |                                   int              size_t {aka long unsigned int}
+      |                                  %li
+/usr/bin/ld: /tmp/ccsSazno.o: in function `main':
+spawnchildibm.c:(.text+0x32d): warning: the `gets' function is dangerous and should not be used.
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./spawnchildibm
+77
+nothingian@ian-HP-Stream-Laptop-11-y0XX:~$ cat spawnchild.out
+cat: spawnchild.out: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat spawnchild.output
+cat: spawnchild.output: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls spa*
+spawnchildibm    spawnparentibm.c  spawntestibm.c
+spawnchildibm.c  spawntest.c.save  spawntest.out
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat spawntest.out
+Environment:
+SHELL=/bin/bash
+SESSION_MANAGER=local/ian-HP-Stream-Laptop-11-y0XX:@/tmp/.ICE-unix/1439,unix/ian-HP-Stream-Laptop-11-y0XX:/tmp/.ICE-unix/1439
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LANGUAGE=en_AU:en
+GNOME_SHELL_SESSION_MODE=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+SSH_AGENT_PID=1396
+GTK_MODULES=gail:atk-bridge
+PWD=/home/ian
+LOGNAME=ian
+XDG_SESSION_DESKTOP=ubuntu
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+WINDOWPATH=2
+HOME=/home/ian
+USERNAME=ian
+IM_CONFIG_PHASE=1
+LANG=en_AU.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6003
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/e24f484d_82f8_4197_ac4c_0d4eace4087b
+INVOCATION_ID=177a4ebf650e473482b7eb1f754ae0e4
+MANAGERPID=1217
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=ian
+GNOME_TERMINAL_SERVICE=:1.98
+DISPLAY=:0
+SHLVL=1
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/1000
+JOURNAL_STREAM=8:39936
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+PATH=/home/ian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+_=./spawnchildibm
+
+
+TEST_ENV envvar = (null)Args:
+./spawnchildibm
+
+
+Child/parent
+child from parent: 2 bytes,[77]
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat spawnchildibm.c
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+/* This is a sample child program used by spawn.  This program will
+ * work stand-alone as well as from spawn or fork/exec. */
+
+extern char ** environ; /* External used to access the environment
+			   directly instead of using getenv */
+
+void main(int argc, char *argv[]) {
+
+	char *e, **env=environ;  /* Used to step through the environment
+				  * to write out to file. */
+	char buf[256]={0};
+	FILE *fp=fopen("spawntest.out","w");
+ 	int i;
+
+	/* Print out the environment variables */
+	i=0;
+	fprintf(fp, "Environment:\n");
+	while(e=env[i++])  fprintf(fp, "%s\n", e);
+	fprintf(fp, "\n\n");
+
+	/* Just to prove getenv works */
+	fprintf(fp, "TEST_ENV envvar = %s", getenv("TEST_ENV"));
+
+	/* Print out the command line arguments */
+	i=0;
+	fprintf(fp,"Args:\n");
+	while(e=argv[i++]) fprintf(fp,"%s\n", e);
+	fprintf(fp, "\n\n");
+	
+	/* Print out what was sent on stdin */
+	fprintf(fp, "Child/parent\n");
+	if(!gets(buf)) {
+		ferror(stdin);
+		exit(-1);
+		}
+	fprintf(fp, "child from parent: %i bytes,[%s]\n", strlen(buf), buf);
+
+	/* Send something to stdout */	
+	printf("nothing");
+
+	fclose(fp);
+	exit(0);
+}
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount spawnchildibm.c
+
+Command 'sloccount' not found, but can be installed with:
+
+sudo apt install sloccount
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sudo apt install sloccount
+[sudo] password for ian: 
+Sorry, try again.
+[sudo] password for ian: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libestr0 libfastjson4 libllvm11 shim
+Use 'sudo apt autoremove' to remove them.
+Suggested packages:
+  doc-base
+The following NEW packages will be installed:
+  sloccount
+0 to upgrade, 1 to newly install, 0 to remove and 5 not to upgrade.
+Need to get 84.8 kB of archives.
+After this operation, 442 kB of additional disk space will be used.
+Get:1 http://au.archive.ubuntu.com/ubuntu focal/universe amd64 sloccount amd64 2.26-5.2 [84.8 kB]
+Fetched 84.8 kB in 2s (50.6 kB/s)
+Selecting previously unselected package sloccount.
+(Reading database ... 209968 files and directories currently installed.)
+Preparing to unpack .../sloccount_2.26-5.2_amd64.deb ...
+Unpacking sloccount (2.26-5.2) ...
+Setting up sloccount (2.26-5.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount spawnchildibm.c
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/spawnchildibm.c to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+28      top_dir         ansic=28
+
+
+Totals grouped by language (dominant language first):
+ansic:           28 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 28
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.06)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.07 (0.84)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.07
+Total Estimated Cost to Develop                           = $ 633
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
