@@ -1,0 +1,7 @@
+#include <spawn.h>
+pid_t spawn( const char * path,
+             int fd_count,
+             const int fd_count[],
+             const struct inheritance * inherit,
+             char * const argv[],
+             char * const envp[] );
