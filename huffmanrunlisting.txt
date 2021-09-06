@@ -1,0 +1,712 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xchebev XCHEBEV.o CHEBEV.o
+/usr/bin/ld: XCHEBEV.o: in function `MAIN__':
+XCHEBEV.FOR:(.text+0xa5): undefined reference to `chebft_'
+collect2: error: ld returned 1 exit status
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xchebev XCHEBEV.o CHEBEV.o CHEBFT.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ./a.out
+bash: ./a.out: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xchebev XCHEBEV.o CHEBEV.o CHEBFT.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xchebev XCHEBEV.o CHEBEV.o CHEBFT.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ./xchebev
+ How many terms in Chebyshev evaluation?
+ Enter n between 6 and 40. Enter n=0 to END.
+40
+         X        Actual   Chebyshev fit
+    -1.256637    0.632073    0.632073
+    -1.099557    0.852077    0.852077
+    -0.942478    0.798917    0.798917
+    -0.785398    0.603301    0.603301
+    -0.628318    0.372488    0.372488
+    -0.471239    0.179244    0.179244
+    -0.314159    0.057987    0.057987
+    -0.157080    0.007624    0.007624
+     0.000000   -0.000000   -0.000000
+     0.157080   -0.007624   -0.007624
+     0.314159   -0.057987   -0.057987
+     0.471239   -0.179244   -0.179244
+     0.628318   -0.372488   -0.372487
+     0.785398   -0.603301   -0.603301
+     0.942478   -0.798917   -0.798917
+     1.099557   -0.852077   -0.852077
+     1.256637   -0.632073   -0.632073
+ How many terms in Chebyshev evaluation?
+ Enter n between 6 and 40. Enter n=0 to END.
+
+^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ls
+ ADDINT.FOR            IINDEXX.FOR           SORT2.FOR     XHPSORT.FOR
+ ADDINT.o              IINDEXX.o             SORT2.o       XHPSORT.o
+ AIRY.FOR              index.html            SORT3.FOR     XHQR.FOR
+ AIRY.o               'index.html?C=D;O=A'   SORT3.o       XHQR.o
+ AMEBSA.FOR           'index.html?C=D;O=D'   SORT.FOR      XHUFFMAN.FOR
+ AMEBSA.o             'index.html?C=M;O=A'   SORT.o        XHUFFMAN.o
+ AMOEBA.FOR           'index.html?C=M;O=D'   SPCTRL.DAT    XHUNT.FOR
+ AMOEBA.o             'index.html?C=N;O=A'   SPCTRM.FOR    XHUNT.o
+ AMOTRY.FOR           'index.html?C=N;O=D'   SPCTRM.o      XHYPGEO.FOR
+ AMOTRY.o             'index.html?C=S;O=A'   SPEAR.FOR     XHYPGEO.o
+ AMOTSA.FOR           'index.html?C=S;O=D'   SPEAR.o       XICRC.FOR
+ AMOTSA.o              INDEXX.FOR            SPHBES.FOR    XICRC.o
+ ANNEAL.FOR            INDEXX.o              SPHBES.o      XIGRAY.FOR
+ ANNEAL.o              INTERP.FOR            SPHFPT.FOR    XIGRAY.o
+ ANORM2.FOR            INTERP.o              SPHFPT.o      XINDEXX.FOR
+ ANORM2.o              IRBIT1.FOR            SPHOOT.FOR    XINDEXX.o
+ ARCMAK.FOR            IRBIT1.o              SPHOOT.o      XIRBIT1.FOR
+ ARCMAK.o              IRBIT2.FOR            SPLIE2.FOR    XIRBIT1.o
+ ARCODE.FOR            IRBIT2.o              SPLIE2.o      XIRBIT2.FOR
+ ARCODE.o              JACOBI.FOR            SPLIN2.FOR    XIRBIT2.o
+ ARCSUM.FOR            JACOBI.o              SPLIN2.o      XJACOBI.FOR
+ ARCSUM.o              JACOBN.FOR            SPLINE.FOR    XJACOBI.o
+ ASOLVE.FOR            JACOBN.o              SPLINE.o      XJULDAY.FOR
+ ASOLVE.o              JULDAY.FOR            SPLINT.FOR    XJULDAY.o
+ ATIMES.FOR            JULDAY.o              SPLINT.o      XKENDL1.FOR
+ ATIMES.o              KENDL1.FOR            SPREAD.FOR    XKENDL1.o
+ AVEVAR.FOR            KENDL1.o              SPREAD.o      XKENDL2.FOR
+ AVEVAR.o              KENDL2.FOR            SPRSAX.FOR    XKENDL2.o
+ BADLUK.FOR            KENDL2.o              SPRSAX.o      XKS2D1S.FOR
+ BADLUK.o              KERMOM.FOR            SPRSIN.FOR    XKS2D1S.o
+ BALANC.FOR            KERMOM.o              SPRSIN.o      XKS2D2S.FOR
+ BALANC.o              KS2D1S.FOR            SPRSPM.FOR    XKS2D2S.o
+ BANBKS.FOR            KS2D1S.o              SPRSPM.o      XKSONE.FOR
+ BANBKS.o              KS2D2S.FOR            SPRSTM.FOR    XKSONE.o
+ BANDEC.FOR            KS2D2S.o              SPRSTM.o      XKSTWO.FOR
+ BANDEC.o              KSONE.FOR             SPRSTP.FOR    XKSTWO.o
+ BANMUL.FOR            KSONE.o               SPRSTP.o      XLAGUER.FOR
+ BANMUL.o              KSTWO.FOR             SPRSTX.FOR    XLAGUER.o
+ BCUCOF.FOR            KSTWO.o               SPRSTX.o      XLFIT.FOR
+ BCUCOF.o              LAGUER.FOR            STIFBS.FOR    XLFIT.o
+ BCUINT.FOR            LAGUER.o              STIFBS.o      XLINBCG.FOR
+ BCUINT.o              LFIT.FOR              STIFF.FOR     XLINBCG.o
+ BESCHB.FOR            LFIT.o                STIFF.o       XLINMIN.FOR
+ BESCHB.o              LINBCG.FOR            STOERM.FOR    XLINMIN.o
+ bessi                 LINBCG.o              STOERM.o      XLOCATE.FOR
+ BESSI0.FOR            LINMIN.FOR            SVBKSB.FOR    XLOCATE.o
+ BESSI0.o              LINMIN.o              SVBKSB.o      XLUBKSB.FOR
+ BESSI1.FOR            LNSRCH.FOR            SVDCMP.FOR    XLUBKSB.o
+ BESSI1.o              LNSRCH.o              SVDCMP.o      XLUDCMP.FOR
+ BESSI.FOR             LOCATE.FOR            SVDFIT.FOR    XLUDCMP.o
+ BESSIK.FOR            LOCATE.o              SVDFIT.o      XMACHAR.FOR
+ BESSIK.o              LOP.FOR               SVDVAR.FOR    XMACHAR.o
+ BESSI.o               LOP.o                 SVDVAR.o      XMEDFIT.FOR
+ bessirunlisting.txt   LUBKSB.FOR            TABLE2.DAT    XMEDFIT.o
+ BESSJ0.FOR            LUBKSB.o              TABLE.DAT     XMEMCOF.FOR
+ BESSJ0.o              LUDCMP.FOR            TARRAY.DAT    XMEMCOF.o
+ BESSJ1.FOR            LUDCMP.o              TEXT.DAT      XMGFAS.FOR
+ BESSJ1.o              MACHAR.FOR            TOEPLZ.FOR    XMGFAS.o
+ BESSJ.FOR             MACHAR.o              TOEPLZ.o      XMGLIN.FOR
+ BESSJ.o               MALOC.FOR             TPTEST.FOR    XMGLIN.o
+ BESSJY.FOR            MALOC.o               TPTEST.o      XMIDPNT.FOR
+ BESSJY.o              MATADD.FOR            TQLI.FOR      XMIDPNT.o
+ BESSK0.FOR            MATADD.o              TQLI.o        XMISER.FOR
+ BESSK0.o              MATRX1.DAT            TRAPZD.FOR    XMISER.o
+ BESSK1.FOR            MATRX2.DAT            TRAPZD.o      XMMID.FOR
+ BESSK1.o              MATRX3.DAT            TRED2.FOR     XMMID.o
+ BESSK.FOR             MATSUB.FOR            TRED2.o       XMNBRAK.FOR
+ BESSK.o               MATSUB.o              TRIDAG.FOR    XMNBRAK.o
+ BESSY0.FOR            MEDFIT.FOR            TRIDAG.o      XMNEWT.FOR
+ BESSY0.o              MEDFIT.o              TRNCST.FOR    XMNEWT.o
+ BESSY1.FOR            MEMCOF.FOR            TRNCST.o      XMOMENT.FOR
+ BESSY1.o              MEMCOF.o              TRNSPT.FOR    XMOMENT.o
+ BESSY.FOR             METROP.FOR            TRNSPT.o      XMPPI.FOR
+ BESSY.o               METROP.o              TTEST.FOR     XMPPI.o
+ BETACF.FOR            MGFAS.FOR             TTEST.o       XMPROVE.FOR
+ BETACF.o              MGFAS.o               TUTEST.FOR    XMPROVE.o
+ BETA.FOR              MGLIN.FOR             TUTEST.o      XMRQCOF.FOR
+ BETAI.FOR             MGLIN.o               TWOFFT.FOR    XMRQCOF.o
+ BETAI.o               MIDEXP.FOR            TWOFFT.o      XMRQMIN.FOR
+ BETA.o                MIDEXP.o              VANDER.FOR    XMRQMIN.o
+ BICO.FOR              MIDINF.FOR            VANDER.o      XNEWT.FOR
+ BICO.o                MIDINF.o              VEGAS.FOR     XNEWT.o
+ BKSUB.FOR             MIDPNT.FOR            VEGAS.o       XODEINT.FOR
+ BKSUB.o               MIDPNT.o              VOLTRA.FOR    XODEINT.o
+ BNLDEV.FOR            MIDSQL.FOR            VOLTRA.o      XORTHOG.FOR
+ BNLDEV.o              MIDSQL.o              WT1.FOR       XORTHOG.o
+ BRENT.FOR             MIDSQU.FOR            WT1.o         XPADE.FOR
+ BRENT.o               MIDSQU.o              WTN.FOR       XPADE.o
+ BROYDN.FOR            MISER.FOR             WTN.o         XPCCHEB.FOR
+ BROYDN.o              MISER.o               WWGHTS.FOR    XPCCHEB.o
+ BSSTEP.FOR            MMID.FOR              WWGHTS.o      XPCSHFT.FOR
+ BSSTEP.o              MMID.o                XAIRY.FOR     XPCSHFT.o
+ CALDAT.FOR            MNBRAK.FOR            XAIRY.o       XPEARSN.FOR
+ CALDAT.o              MNBRAK.o              XAMEBSA.FOR   XPEARSN.o
+ CHDER.FOR             MNEWT.FOR             XAMEBSA.o     XPERIOD.FOR
+ CHDER.o               MNEWT.o               XAMOEBA.FOR   XPERIOD.o
+ CHEBEV.FOR            MOMENT.FOR            XAMOEBA.o     XPIKSR2.FOR
+ CHEBEV.o              MOMENT.o              XANNEAL.FOR   XPIKSR2.o
+ chebft                MP2DFR.FOR            XANNEAL.o     XPIKSRT.FOR
+ CHEBFT.FOR            MP2DFR.o              XARCODE.FOR   XPIKSRT.o
+ CHEBFT.o              MPDIV.FOR             XARCODE.o     XPLGNDR.FOR
+ CHEBPC.FOR            MPDIV.o               XAVEVAR.FOR   XPLGNDR.o
+ CHEBPC.o              MPINV.FOR             XAVEVAR.o     XPOIDEV.FOR
+ CHINT.FOR             MPINV.o               XBALANC.FOR   XPOIDEV.o
+ CHINT.o               MPMUL.FOR             XBALANC.o     XPOLCOE.FOR
+ CHIXY.FOR             MPMUL.o               XBANDEC.FOR   XPOLCOE.o
+ CHIXY.o               MPOPS.FOR             XBANDEC.o     XPOLCOF.FOR
+ CHOLDC.FOR            MPOPS.o               XBANMUL.FOR   XPOLCOF.o
+ CHOLDC.o              MPPI.FOR              XBANMUL.o     XPOLDIV.FOR
+ CHOLSL.FOR            MPPI.o                XBCUCOF.FOR   XPOLDIV.o
+ CHOLSL.o              MPROVE.FOR            XBCUCOF.o     XPOLIN2.FOR
+ CHSONE.FOR            MPROVE.o              XBCUINT.FOR   XPOLIN2.o
+ CHSONE.o              MPSQRT.FOR            XBCUINT.o     XPOLINT.FOR
+ CHSTWO.FOR            MPSQRT.o              XBESCHB.FOR   XPOLINT.o
+ CHSTWO.o              MRQCOF.FOR            XBESCHB.o     XPOWELL.FOR
+ CISI.FOR              MRQCOF.o              xbessi        XPOWELL.o
+ CISI.o                MRQMIN.FOR            XBESSI0.FOR   XPREDIC.FOR
+ CNTAB1.FOR            MRQMIN.o              XBESSI0.o     XPREDIC.o
+ CNTAB1.o              NEWT.FOR              XBESSI1.FOR   XPROBKS.FOR
+ CNTAB2.FOR            NEWT.o                XBESSI1.o     XPROBKS.o
+ CNTAB2.o              ODEINT.FOR            XBESSI.FOR    XPSDES.FOR
+ CONVLV.FOR            ODEINT.o              XBESSIK.FOR   XPSDES.o
+ CONVLV.o              ORTHOG.FOR            XBESSIK.o     XPZEXTR.FOR
+ COPY.FOR              ORTHOG.o              XBESSI.o      XPZEXTR.o
+ COPY.o                PADE.FOR              XBESSJ0.FOR   XQGAUS.FOR
+ correl                PADE.o                XBESSJ0.o     XQGAUS.o
+ CORREL.FOR            PCCHEB.FOR            XBESSJ1.FOR   XQRDCMP.FOR
+ CORREL.o              PCCHEB.o              XBESSJ1.o     XQRDCMP.o
+ COSFT1.FOR            PCSHFT.FOR            XBESSJ.FOR    XQROMB.FOR
+ COSFT1.o              PCSHFT.o              XBESSJ.o      XQROMB.o
+ COSFT2.FOR            PEARSN.FOR            XBESSJY.FOR   XQROMO.FOR
+ COSFT2.o              PEARSN.o              XBESSJY.o     XQROMO.o
+ COVSRT.FOR            PERIOD.FOR            XBESSK0.FOR   XQROOT.FOR
+ COVSRT.o              PERIOD.o              XBESSK0.o     XQROOT.o
+ CRANK.FOR             PIKSR2.FOR            XBESSK1.FOR   XQRSOLV.FOR
+ CRANK.o               PIKSR2.o              XBESSK1.o     XQRSOLV.o
+ CYCLIC.FOR            PIKSRT.FOR            XBESSK.FOR    XQRUPDT.FOR
+ CYCLIC.o              PIKSRT.o              XBESSK.o      XQRUPDT.o
+ DATES.DAT             PINVS.FOR             XBESSY0.FOR   XQSIMP.FOR
+ DAUB4.FOR             PINVS.o               XBESSY0.o     XQSIMP.o
+ DAUB4.o               PLGNDR.FOR            XBESSY1.FOR   XQTRAP.FOR
+ DAWSON.FOR            PLGNDR.o              XBESSY1.o     XQTRAP.o
+ DAWSON.o              POIDEV.FOR            XBESSY.FOR    XQUAD3D.FOR
+ DBRENT.FOR            POIDEV.o              XBESSY.o      XQUAD3D.o
+ DBRENT.o              POLCOE.FOR            XBETA.FOR     XRAN4.FOR
+ DDPOLY.FOR            POLCOE.o              XBETAI.FOR    XRAN4.o
+ DDPOLY.o              POLCOF.FOR            XBETAI.o      XRAN.FOR
+ DECCHK.FOR            POLCOF.o              XBETA.o       XRANK.FOR
+ DECCHK.o              POLDIV.FOR            XBICO.FOR     XRANK.o
+ DF1DIM.FOR            POLDIV.o              XBICO.o       XRAN.o
+ DF1DIM.o              POLIN2.FOR            XBNLDEV.FOR   XRATINT.FOR
+ DFOUR1.FOR            POLIN2.o              XBNLDEV.o     XRATINT.o
+ DFOUR1.o              POLINT.FOR            XBRENT.FOR    XRATLSQ.FOR
+ DFPMIN.FOR            POLINT.o              XBRENT.o      XRATLSQ.o
+ DFPMIN.o              POWELL.FOR            XBROYDN.FOR   XRC.FOR
+ DFRIDR.FOR            POWELL.o              XBROYDN.o     XRC.o
+ DFRIDR.o              PREDIC.FOR            XBSSTEP.FOR   XRD.FOR
+ DFTCOR.FOR            PREDIC.o              XBSSTEP.o     XRD.o
+ DFTCOR.o              PROBKS.FOR            XCALDAT.FOR   XREALFT.FOR
+ DFTINT.FOR            PROBKS.o              XCALDAT.o     XREALFT.o
+ DFTINT.o              PSDES.FOR             XCHDER.FOR    XRF.FOR
+ DIFEQ.FOR             PWT.FOR               XCHDER.o      XRF.o
+ DIFEQ.o               PWT.o                 xchebev       XRJ.FOR
+ DPYTHAG.FOR           PWTSET.FOR            XCHEBEV.FOR   XRJ.o
+ DPYTHAG.o             PWTSET.o              XCHEBEV.o     XRK4.FOR
+ DREALFT.FOR           PYTHAG.FOR            XCHEBFT.FOR   XRK4.o
+ DREALFT.o             PYTHAG.o              XCHEBFT.o     XRKDUMB.FOR
+ DSPRSAX.FOR           PZEXTR.FOR            XCHEBPC.FOR   XRKDUMB.o
+ DSPRSAX.o             PZEXTR.o              XCHEBPC.o     XRKQS.FOR
+ DSPRSTX.FOR           QGAUS.FOR             XCHINT.FOR    XRKQS.o
+ DSPRSTX.o             QGAUS.o               XCHINT.o      XRLFT3.FOR
+ DSVBKSB.FOR           QRDCMP.FOR            XCHOLSL.FOR   XRLFT3.o
+ DSVBKSB.o             QRDCMP.o              XCHOLSL.o     XROFUNC.FOR
+ DSVDCMP.FOR           QROMB.FOR             XCHSONE.FOR   XROFUNC.o
+ DSVDCMP.o             QROMB.o               XCHSONE.o     XRTBIS.FOR
+ ECLASS.FOR            QROMO.FOR             XCHSTWO.FOR   XRTBIS.o
+ ECLASS.o              QROMO.o               XCHSTWO.o     XRTFLSP.FOR
+ ECLAZZ.FOR            QROOT.FOR             XCISI.FOR     XRTFLSP.o
+ ECLAZZ.o              QROOT.o               XCISI.o       XRTNEWT.FOR
+ EI.FOR                QRSOLV.FOR            XCNTAB1.FOR   XRTNEWT.o
+ EIGSRT.FOR            QRSOLV.o              XCNTAB1.o     XRTSAFE.FOR
+ EIGSRT.o              QRUPDT.FOR            XCNTAB2.FOR   XRTSAFE.o
+ EI.o                  QRUPDT.o              XCNTAB2.o     XRTSEC.FOR
+ ELLE.FOR              QSIMP.FOR             XCONVLV.FOR   XRTSEC.o
+ ELLE.o                QSIMP.o               XCONVLV.o     XRZEXTR.FOR
+ ELLF.FOR              QTRAP.FOR             XCORREL.FOR   XRZEXTR.o
+ ELLF.o                QTRAP.o               XCORREL.o     XSAVGOL.FOR
+ ELLPI.FOR             QUAD3D.FOR            XCOSFT1.FOR   XSAVGOL.o
+ ELLPI.o               QUAD3D.o              XCOSFT1.o     XSCRSHO.FOR
+ ELMHES.FOR            QUADCT.FOR            XCOSFT2.FOR   XSCRSHO.o
+ ELMHES.o              QUADCT.o              XCOSFT2.o     XSELECT.FOR
+ ERFCC.FOR             QUADMX.FOR            XCOVSRT.FOR   XSELECT.o
+ ERFCC.o               QUADMX.o              XCOVSRT.o     XSELIP.FOR
+ ERFC.FOR              QUADVL.FOR            XCRANK.FOR    XSELIP.o
+ ERFC.o                QUADVL.o              XCRANK.o      XSHELL.FOR
+ ERF.FOR               RAN0.FOR              XCYCLIC.FOR   XSHELL.o
+ ERF.o                 RAN0.o                XCYCLIC.o     xsimplx
+ EULSUM.FOR            RAN1.FOR              XDAWSON.FOR   XSIMPLX.FOR
+ EULSUM.o              RAN1.o                XDAWSON.o     XSIMPLX.o
+ EVLMEM.FOR            RAN2.FOR              XDBRENT.FOR   XSIMPR.FOR
+ EVLMEM.o              RAN2.o                XDBRENT.o     XSIMPR.o
+ EXPDEV.FOR            RAN3.FOR              XDDPOLY.FOR   XSINFT.FOR
+ EXPDEV.o              RAN3.o                XDDPOLY.o     XSINFT.o
+ EXPINT.FOR            RAN4.FOR              XDECCHK.FOR   XSNCNDN.FOR
+ EXPINT.o              RANK.FOR              XDECCHK.o     XSNCNDN.o
+ F1DIM.FOR             RANK.o                XDF1DIM.FOR   XSOBSEQ.FOR
+ F1DIM.o               RANPT.FOR             XDF1DIM.o     XSOBSEQ.o
+ FACTLN.FOR            RANPT.o               XDFPMIN.FOR   XSOR.FOR
+ FACTLN.o              RATINT.FOR            XDFPMIN.o     XSOR.o
+ FACTRL.FOR            RATINT.o              XDFRIDR.FOR   XSORT2.FOR
+ FACTRL.o              RATLSQ.FOR            XDFRIDR.o     XSORT2.o
+ FASPER.FOR            RATLSQ.o              XDFTINT.FOR   XSORT3.FOR
+ FASPER.o              RATVAL.FOR            XDFTINT.o     XSORT3.o
+ FDJAC.FOR             RATVAL.o              XECLASS.FOR   XSORT.FOR
+ FDJAC.o               RC.FOR                XECLASS.o     XSORT.o
+ FGAUSS.FOR            RC.o                  XECLAZZ.FOR   XSPCTRM.FOR
+ FGAUSS.o              RD.FOR                XECLAZZ.o     XSPCTRM.o
+ FILL0.FOR             RD.o                  XEI.FOR       XSPEAR.FOR
+ FILL0.o               REALFT.FOR            XEIGSRT.FOR   XSPEAR.o
+ FITEXY.FOR            REALFT.o              XEIGSRT.o     XSPHBES.FOR
+ FITEXY.o              REBIN.FOR             XEI.o         XSPHBES.o
+ FIT.FOR               REBIN.o               XELLE.FOR     XSPHFPT.FOR
+ FIT.o                 RED.FOR               XELLE.o       XSPHFPT.o
+ FIXRTS.FOR            RED.o                 XELLF.FOR     XSPLIE2.FOR
+ FIXRTS.o              RELAX2.FOR            XELLF.o       XSPLIE2.o
+ FLEG.FOR              RELAX2.o              XELLPI.FOR    XSPLIN2.FOR
+ FLEG.o                RELAX.FOR             XELLPI.o      XSPLIN2.o
+ FLMOON.FOR            RELAX.o               XELMHES.FOR   XSPLINE.FOR
+ FLMOON.o              RESID.FOR             XELMHES.o     XSPLINE.o
+ FMIN.FOR              RESID.o               XERFCC.FOR    XSPLINT.FOR
+ FMIN.o                REVCST.FOR            XERFCC.o      XSPLINT.o
+ fncval.dat            REVCST.o              XERFC.FOR     XSPRSAX.FOR
+ FNCVAL.DAT            REVERS.FOR            XERFC.o       XSPRSAX.o
+ FOUR1.FOR             REVERS.o              XERF.FOR      XSPRSIN.FOR
+ FOUR1.o               RF.FOR                XERF.o        XSPRSIN.o
+ FOUREW.FOR            RF.o                  XEULSUM.FOR   XSPRSPM.FOR
+ FOUREW.o              RJ.FOR                XEULSUM.o     XSPRSPM.o
+ FOURFS.FOR            RJ.o                  XEVLMEM.FOR   XSPRSTM.FOR
+ FOURFS.o              RK4.FOR               XEVLMEM.o     XSPRSTM.o
+ FOURN.FOR             RK4.o                 XEXPDEV.FOR   XSPRSTP.FOR
+ FOURN.o               RKCK.FOR              XEXPDEV.o     XSPRSTP.o
+ FPOLY.FOR             RKCK.o                XEXPINT.FOR   XSPRSTX.FOR
+ FPOLY.o               RKDUMB.FOR            XEXPINT.o     XSPRSTX.o
+ FRED2.FOR             RKDUMB.o              XF1DIM.FOR    XSTIFBS.FOR
+ FRED2.o               RKQS.FOR              XF1DIM.o      XSTIFBS.o
+ FREDEX.FOR            RKQS.o                XFACTLN.FOR   XSTIFF.FOR
+ FREDEX.o              RLFT3.FOR             XFACTLN.o     XSTIFF.o
+ FREDIN.FOR            RLFT3.o               XFACTRL.FOR   XSTOERM.FOR
+ FREDIN.o              RLFTFRAG.FOR          XFACTRL.o     XSTOERM.o
+ FRENEL.FOR            ROFUNC.FOR            XFASPER.FOR   XSVBKSB.FOR
+ FRENEL.o              ROFUNC.o              XFASPER.o     XSVBKSB.o
+ FRPRMN.FOR            ROTATE.FOR            XFGAUSS.FOR   XSVDCMP.FOR
+ FRPRMN.o              ROTATE.o              XFGAUSS.o     XSVDCMP.o
+ FTEST.FOR             RSOLV.FOR             XFITEXY.FOR   XSVDFIT.FOR
+ FTEST.o               RSOLV.o               XFITEXY.o     XSVDFIT.o
+ GAMDEV.FOR            RSTRCT.FOR            XFIT.FOR      XSVDVAR.FOR
+ GAMDEV.o              RSTRCT.o              XFIT.o        XSVDVAR.o
+ GAMMLN.FOR            RTBIS.FOR             XFIXRTS.FOR   XTOEPLZ.FOR
+ GAMMLN.o              RTBIS.o               XFIXRTS.o     XTOEPLZ.o
+ GAMMP.FOR             RTFLSP.FOR            XFLEG.FOR     XTPTEST.FOR
+ GAMMP.o               RTFLSP.o              XFLEG.o       XTPTEST.o
+ GAMMQ.FOR             RTNEWT.FOR            XFLMOON.FOR   XTQLI.FOR
+ GAMMQ.o               RTNEWT.o              XFLMOON.o     XTQLI.o
+ GASDEV.FOR            RTSAFE.FOR            XFOUR1.FOR    XTRAPZD.FOR
+ GASDEV.o              RTSAFE.o              XFOUR1.o      XTRAPZD.o
+ GAUCOF.FOR            RTSEC.FOR             XFOURFS.FOR   XTRED2.FOR
+ GAUCOF.o              RTSEC.o               XFOURFS.o     XTRED2.o
+ GAUHER.FOR            RZEXTR.FOR            XFOURN.FOR    XTRIDAG.FOR
+ GAUHER.o              RZEXTR.o              XFOURN.o      XTRIDAG.o
+ GAUJAC.FOR            SAVGOL.FOR            XFPOLY.FOR    XTTEST.FOR
+ GAUJAC.o              SAVGOL.o              XFPOLY.o      XTTEST.o
+ GAULAG.FOR            SCRSHO.FOR            XFRED2.FOR    XTUTEST.FOR
+ GAULAG.o              SCRSHO.o              XFRED2.o      XTUTEST.o
+ GAULEG.FOR            SELECT.FOR            XFREDIN.FOR   XTWOFFT.FOR
+ GAULEG.o              SELECT.o              XFREDIN.o     XTWOFFT.o
+ GAUSSJ.FOR            SELIP.FOR             XFRENEL.FOR   XVANDER.FOR
+ GAUSSJ.o              SELIP.o               XFRENEL.o     XVANDER.o
+ GCF.FOR               SFROID.FOR            XFRPRMN.FOR   XVEGAS.FOR
+ GCF.o                 SFROID.o              XFRPRMN.o     XVEGAS.o
+ GOLDEN.FOR            SHELL.FOR             XFTEST.FOR    XVOLTRA.FOR
+ GOLDEN.o              SHELL.o               XFTEST.o      XVOLTRA.o
+ GSER.FOR              SHOOTF.FOR            XGAMDEV.FOR   XWT1.FOR
+ GSER.o                SHOOTF.o              XGAMDEV.o     XWT1.o
+ HPSEL.FOR             SHOOT.FOR             XGAMMLN.FOR   XWTN.FOR
+ HPSEL.o               SHOOT.o               XGAMMLN.o     XWTN.o
+ HPSORT.FOR            SIMP1.FOR             XGAMMP.FOR    XZBRAC.FOR
+ HPSORT.o              SIMP1.o               XGAMMP.o      XZBRAC.o
+ HQR.FOR               SIMP2.FOR             XGAMMQ.FOR    XZBRAK.FOR
+ HQR.o                 SIMP2.o               XGAMMQ.o      XZBRAK.o
+ HUFAPP.FOR            SIMP3.FOR             XGASDEV.FOR   XZBRENT.FOR
+ HUFAPP.o              SIMP3.o               XGASDEV.o     XZBRENT.o
+ HUFDEC.FOR            SIMPLX.FOR            XGAUCOF.FOR   XZRHQR.FOR
+ HUFDEC.o              SIMPLX.o              XGAUCOF.o     XZRHQR.o
+ HUFENC.FOR            SIMPR.FOR             XGAUHER.FOR   XZRIDDR.FOR
+ HUFENC.o              SIMPR.o               XGAUHER.o     XZRIDDR.o
+ HUFMAK.FOR            SINFT.FOR             XGAUJAC.FOR   XZROOTS.FOR
+ HUFMAK.o              SINFT.o               XGAUJAC.o     XZROOTS.o
+ HUNT.FOR              SLVSM2.FOR            XGAULAG.FOR   ZBRAC.FOR
+ HUNT.o                SLVSM2.o              XGAULAG.o     ZBRAC.o
+ HYPDRV.FOR            SLVSML.FOR            XGAULEG.FOR   ZBRAK.FOR
+ HYPDRV.o              SLVSML.o              XGAULEG.o     ZBRAK.o
+ HYPGEO.FOR            SNCNDN.FOR            XGAUSSJ.FOR   ZBRENT.FOR
+ HYPGEO.o              SNCNDN.o              XGAUSSJ.o     ZBRENT.o
+ HYPSER.FOR            SNRM.FOR              XGCF.FOR      ZRHQR.FOR
+ HYPSER.o              SNRM.o                XGCF.o        ZRHQR.o
+ ICRC1.FOR             SOBSEQ.FOR            XGOLDEN.FOR   ZRIDDR.FOR
+ ICRC1.o               SOBSEQ.o              XGOLDEN.o     ZRIDDR.o
+ ICRC.FOR              SOLVDE.FOR            XGSER.FOR     ZROOTS.FOR
+ ICRC.o                SOLVDE.o              XGSER.o       ZROOTS.o
+ IGRAY.FOR             SOR.FOR               XHPSEL.FOR
+ IGRAY.o               SOR.o                 XHPSEL.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xhypdrv XHYPDRV.o HYPDRV.o
+gfortran: error: XHYPDRV.o: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ls XHY*
+XHYPGEO.FOR  XHYPGEO.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ls HYP*
+HYPDRV.FOR  HYPDRV.o  HYPGEO.FOR  HYPGEO.o  HYPSER.FOR  HYPSER.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ls XH*
+XHPSEL.FOR  XHPSORT.FOR  XHQR.FOR  XHUFFMAN.FOR  XHUNT.FOR  XHYPGEO.FOR
+XHPSEL.o    XHPSORT.o    XHQR.o    XHUFFMAN.o    XHUNT.o    XHYPGEO.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xhuffman XHUFFMAN.o HUFFMAN.o
+gfortran: error: HUFFMAN.o: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ls *HUFF*
+XHUFFMAN.FOR  XHUFFMAN.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xhuffman XHUFFMAN.o
+/usr/bin/ld: XHUFFMAN.o: in function `MAIN__':
+XHUFFMAN.FOR:(.text+0x202): undefined reference to `hufmak_'
+/usr/bin/ld: XHUFFMAN.FOR:(.text+0x834): undefined reference to `hufenc_'
+/usr/bin/ld: XHUFFMAN.FOR:(.text+0x88d): undefined reference to `hufenc_'
+/usr/bin/ld: XHUFFMAN.FOR:(.text+0x8de): undefined reference to `hufdec_'
+collect2: error: ld returned 1 exit status
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xhuffman XHUFFMAN.o  HUFMAK.o HUFENC.o HUFDEC.o
+/usr/bin/ld: HUFMAK.o: in function `hufmak_':
+HUFMAK.FOR:(.text+0x1a8): undefined reference to `hufapp_'
+/usr/bin/ld: HUFMAK.FOR:(.text+0x227): undefined reference to `hufapp_'
+/usr/bin/ld: HUFMAK.FOR:(.text+0x33a): undefined reference to `hufapp_'
+collect2: error: ld returned 1 exit status
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran -o xhuffman XHUFFMAN.o HUFMAK.o HUFENC.o HUFDEC.o HUFAPP.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ./xhuffman
+ index, character, nfreq, bits in code, code int
+           1            4242           3           7
+           2  !            4          13        6821
+           3  "           42          10         863
+           4  #            1          15       27244
+           5  $            1          15       27280
+           6  %            1          15       27481
+           7  &            1          15       27293
+           8  '           65           9         427
+           9  (            2          14       13623
+          10  )            2          14       13731
+          11  *            1          15       27458
+          12  +           32          10         853
+          13  ,          304           6           2
+          14  -           90           8          90
+          15  .          186           7          44
+          16  /            1          15       27242
+          17  0            1          15       27241
+          18  1            1          15       27456
+          19  2            1          15       27457
+          20  3            1          15       27281
+          21  4            1          15       27476
+          22  5            1          15       27459
+          23  6            1          16       54974
+          24  7            1          15       27482
+          25  8            1          15       27483
+          26  9            1          15       27295
+          27  :            8          12        3433
+          28  ;           26          10         849
+          29  <            1          15       27475
+          30  =            1          15       27485
+          31  >            1          15       27478
+          32  ?            7          12        3400
+          33  @            1          15       27240
+          34  A           26          10         367
+          35  B           13          11        1696
+          36  C            9          12        3444
+          37  D            7          12        3401
+          38  E            7          12        3402
+          39  F           15          11        1703
+          40  G           18          11        1721
+          41  H           22          10         364
+          42  I           35          10         859
+          43  J            1          15       27477
+          44  K            2          14       13641
+          45  L            5          13        6890
+          46  M            6          13        6891
+          47  N           12          11         730
+          48  O           42          10         862
+          49  P            7          12        3403
+          50  Q            1          15       27294
+          51  R            6          12        1462
+          52  S           21          11        1723
+          53  T           65           9         428
+          54  U            1          15       27292
+          55  V            4          13        6822
+          56  W            6          12        1463
+          57  X            1          15       27474
+          58  Y            7          12        3404
+          59  Z            1          15       27484
+          60  [            1          15       27472
+          61  \            1          15       27473
+          62  ]            1          15       27479
+          63  ^            1          15       27486
+          64  _            1          15       27243
+          65  `            1          15       27460
+          66  a         1694           4           9
+          67  b          330           6          20
+          68  c          538           5           0
+          69  d          900           5          21
+          70  e         2645           3           1
+          71  f          471           6          50
+          72  g          454           6          48
+          73  h         1364           4           4
+          74  i         1421           4           6
+          75  j           13          11        1697
+          76  k          169           7          43
+          77  l          851           5          20
+          78  m          455           6          49
+          79  n         1518           4           8
+          80  o         1502           4           7
+          81  p          380           6          23
+          82  q           17          11        1720
+          83  r         1134           5          27
+          84  s         1319           4           1
+          85  t         1825           4          11
+          86  u          525           6          52
+          87  v          168           7          42
+          88  w          478           6          51
+          89  x           25          10         366
+          90  y          313           6           3
+          91  z           15          11        1704
+          92  {            1          16       54975
+          93  |            1          15       27461
+          94  }            1          15       27480
+          95  ~            1          15       27245
+ ENTER A LINE:
+good
+ LENGTH OF LINE INPUT,CODED=           4           3
+ DECODED OUTPUT:
+ good
+ ENTER A LINE:
+good morning
+ LENGTH OF LINE INPUT,CODED=          12           7
+ DECODED OUTPUT:
+ good morning
+ ENTER A LINE:
+99
+ LENGTH OF LINE INPUT,CODED=           2           4
+ DECODED OUTPUT:
+ 99
+ ENTER A LINE:
+ NORMAL COMPLETION
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat XHUFFMAN.FOR
+      PROGRAM xhuffman
+C     driver for routines hufmak, hufenc, hufdec
+      INTEGER MC,MQ,MAXBUF,MAXLINE
+      PARAMETER (MC=512,MQ=2*MC-1,MAXBUF=200,MAXLINE=80)
+      INTEGER icod,ncod,nprob,left,iright,nch,nodemax
+      COMMON /hufcom/ icod(MQ),ncod(MQ),nprob(MQ),left(MQ),
+     *     iright(MQ),nch,nodemax
+      SAVE /hufcom/
+      INTEGER i,ilong,j,k,n,nb,nh,nlong,nt,nfreq(256)
+      CHARACTER*200 mess,code,ness
+      CHARACTER*80 lin
+C     construct a letter frequency table from the file TEXT.DAT
+      open(unit=7,file='TEXT.DAT',status='old')
+      do 11 j=1,256
+        nfreq(j)=0
+11    continue
+1     continue
+      do 12 j=1,MAXLINE
+        lin(j:j)=char(32)
+12    continue
+      read(7,'(a)',END=3) lin
+      do 13 n=MAXLINE,1,-1
+        if (lin(n:n).ne.char(32)) goto 2
+13    continue
+2     do 14 k=1,min(MAXLINE,n)
+        j=ichar(lin(k:k))-31
+        if (j.ge.1) nfreq(j)=nfreq(j)+1
+14    continue
+      goto 1
+3     close(unit=7)
+      nch=96
+C     here is the initialization that constructs the code
+      call hufmak(nfreq,nch,ilong,nlong)
+      write(*,*)
+     *     'index, ','character, ','nfreq, ','bits in code, ','code int'
+      do 15 j=1,nch
+        if (nfreq(j).ne.0.)
+     *       write(*,*) j,' ',char(j+31),' ',nfreq(j),ncod(j),icod(j)
+15    continue
+C     now ready to prompt for lines to encode
+4     write(*,*) 'ENTER A LINE:'
+      do 16 j=1,MAXLINE
+        mess(j:j)=char(32)
+16    continue
+      read(*,'(a)',END=999) mess
+      do 17 n=MAXLINE,1,-1
+        if (mess(n:n).ne.char(32)) goto 5
+17    continue
+C     shift from 256 character alphabet to 96 printing characters
+5     do 18 j=1,n
+        mess(j:j)=char(ichar(mess(j:j))-32)
+18    continue
+C     here we Huffman encode mess(1:n)
+      nb=0
+      do 19 j=1,n
+        call hufenc(ichar(mess(j:j)),code,MAXLINE,nb)
+19    continue
+      nh=nb/8+1
+C     message termination (encode a single long character)
+      call hufenc(ilong,code,MAXLINE,nb)
+C     here we decode the message, hopefully to get the original back
+      nb=0
+      do 21 j=1,MAXLINE
+        call hufdec(i,code,nh,nb)
+        if (i.eq.nch) goto 6
+        ness(j:j)=char(i)
+21    continue
+      pause 'HUFFMAN - NEVER GET HERE'
+6     nt=j-1
+      write(*,*) 'LENGTH OF LINE INPUT,CODED=',n,nh
+      write(*,*) 'DECODED OUTPUT:'
+      write(*,'(1x,80a1)') (char(ichar(ness(j:j))+32),j=1,nt)
+      if (nt.ne.n) write(*,*) 'ERROR ! N DECODED .NE. N INPUT'
+      if (nt-n.eq.1) write(*,*) 'MAY BE HARMLESS SPURIOUS CHARACTER.'
+      goto 4
+999   write(*,*) 'NORMAL COMPLETION'
+      STOP
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat HUFMAK.FOR
+      SUBROUTINE hufmak(nfreq,nchin,ilong,nlong)
+      INTEGER ilong,nchin,nlong,nfreq(nchin),MC,MQ
+      PARAMETER (MC=512,MQ=2*MC-1)
+CU    USES hufapp
+      INTEGER ibit,j,k,n,nch,node,nodemx,nused,ibset,index(MQ),iup(MQ),
+     *icod(MQ),left(MQ),iright(MQ),ncod(MQ),nprob(MQ)
+      COMMON /hufcom/ icod,ncod,nprob,left,iright,nch,nodemx
+      SAVE /hufcom/
+      nch=nchin
+      nused=0
+      do 11 j=1,nch
+        nprob(j)=nfreq(j)
+        icod(j)=0
+        ncod(j)=0
+        if(nfreq(j).ne.0)then
+          nused=nused+1
+          index(nused)=j
+        endif
+11    continue
+      do 12 j=nused,1,-1
+        call hufapp(index,nprob,nused,j)
+12    continue
+      k=nch
+1     if(nused.gt.1)then
+      node=index(1)
+        index(1)=index(nused)
+        nused=nused-1
+        call hufapp(index,nprob,nused,1)
+        k=k+1
+        nprob(k)=nprob(index(1))+nprob(node)
+        left(k)=node
+        iright(k)=index(1)
+        iup(index(1)) = -k
+        iup(node)=k
+        index(1)=k
+        call hufapp(index,nprob,nused,1)
+      goto 1
+      endif
+      nodemx=k
+      iup(nodemx)=0
+      do 13 j=1,nch
+        if(nprob(j).ne.0)then
+          n=0
+          ibit=0
+          node=iup(j)
+2         if(node.ne.0)then
+            if(node.lt.0)then
+              n=ibset(n,ibit)
+              node = -node
+            endif
+            node=iup(node)
+            ibit=ibit+1
+          goto 2
+          endif
+          icod(j)=n
+          ncod(j)=ibit
+        endif
+13    continue
+      nlong=0
+      do 14 j=1,nch
+        if(ncod(j).gt.nlong)then
+          nlong=ncod(j)
+          ilong=j-1
+        endif
+14    continue
+      return
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat HUFENC.FOR
+      SUBROUTINE hufenc(ich,code,lcode,nb)
+      INTEGER ich,lcode,nb,MC,MQ
+      PARAMETER (MC=512,MQ=2*MC-1)
+      INTEGER k,l,n,nc,nch,nodemx,ntmp,ibset
+      INTEGER icod(MQ),left(MQ),iright(MQ),ncod(MQ),nprob(MQ)
+      LOGICAL btest
+      CHARACTER*1 code(*)
+      COMMON /hufcom/ icod,ncod,nprob,left,iright,nch,nodemx
+      SAVE /hufcom/
+      k=ich+1
+      if(k.gt.nch.or.k.lt.1)pause 'ich out of range in hufenc.'
+      do 11 n=ncod(k),1,-1
+        nc=nb/8+1
+        if (nc.gt.lcode) pause 'lcode too small in hufenc.'
+        l=mod(nb,8)
+        if (l.eq.0) code(nc)=char(0)
+        if(btest(icod(k),n-1))then
+          ntmp=ibset(ichar(code(nc)),l)
+          code(nc)=char(ntmp)
+        endif
+        nb=nb+1
+11    continue
+      return
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat HUFDEC.FOR
+      SUBROUTINE hufdec(ich,code,lcode,nb)
+      INTEGER ich,lcode,nb,MC,MQ
+      PARAMETER (MC=512,MQ=2*MC-1)
+      INTEGER l,nc,nch,node,nodemx
+      INTEGER icod(MQ),left(MQ),iright(MQ),ncod(MQ),nprob(MQ)
+      LOGICAL btest
+      CHARACTER*1 code(lcode)
+      COMMON /hufcom/ icod,ncod,nprob,left,iright,nch,nodemx
+      SAVE /hufcom/
+      node=nodemx
+1     continue
+        nc=nb/8+1
+        if (nc.gt.lcode)then
+          ich=nch
+          return
+        endif
+        l=mod(nb,8)
+        nb=nb+1
+        if(btest(ichar(code(nc)),l))then
+          node=iright(node)
+        else
+          node=left(node)
+        endif
+        if(node.le.nch)then
+          ich=node-1
+          return
+        endif
+      goto 1
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat HUFAPP.FOR
+      SUBROUTINE hufapp(index,nprob,m,l)
+      INTEGER m,l,MC,MQ
+      PARAMETER (MC=512,MQ=2*MC-1)
+      INTEGER index(MQ),nprob(MQ)
+      INTEGER i,j,k,n
+      n=m
+      i=l
+      k=index(i)
+2     if(i.le.n/2)then
+        j=i+i
+        if (j.lt.n.and.nprob(index(j)).gt.nprob(index(j+1))) j=j+1
+        if (nprob(k).le.nprob(index(j))) goto 3
+        index(i)=index(j)
+        i=j
+      goto 2
+      endif
+3     index(i)=k
+      return
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ 
+
