@@ -1,0 +1,545 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran SINFT.FOR -o sinft
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+/usr/bin/ld: /tmp/ccWhJH8i.o: in function `sinft_':
+SINFT.FOR:(.text+0x22d): undefined reference to `realft_'
+collect2: error: ld returned 1 exit status
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran XSINFT.FOR SINFT.FOR REALFT.FOR -o xsinft
+/usr/bin/ld: /tmp/cc5xVKzf.o: in function `realft_':
+REALFT.FOR:(.text+0xcb): undefined reference to `four1_'
+/usr/bin/ld: REALFT.FOR:(.text+0x4fe): undefined reference to `four1_'
+collect2: error: ld returned 1 exit status
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran XSINFT.FOR SINFT.FOR REALFT.FOR -o xsinft
+/usr/bin/ld: /tmp/ccz7a0H6.o: in function `realft_':
+REALFT.FOR:(.text+0xcb): undefined reference to `four1_'
+/usr/bin/ld: REALFT.FOR:(.text+0x4fe): undefined reference to `four1_'
+collect2: error: ld returned 1 exit status
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran XSINFT.FOR SINFT.FOR REALFT.FOR FOUR1.FOR -o xsinft
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ./xsinft
+ Period of sinusoid in channels (2-16)
+16
+    1 *
+    2 *
+    3 *******************************
+    4 *
+    5 *
+    6 *
+    7 *
+    8 *
+    9 *
+   10 *
+   11 *
+   12 *
+   13 *
+   14 *
+   15 *
+   16 *
+ press continue ...
+
+    1 ****************
+    2 *********************
+    3 **************************
+    4 *****************************
+    5 *******************************
+    6 *****************************
+    7 **************************
+    8 *********************
+    9 ****************
+   10 **********
+   11 *****
+   12 **
+   13 *
+   14 **
+   15 *****
+   16 **********
+ Period of sinusoid in channels (2-16)
+2
+    1 **********
+    2 ***********
+    3 **********
+    4 ***********
+    5 **********
+    6 ***********
+    7 *********
+    8 ************
+    9 ********
+   10 *************
+   11 *******
+   12 **************
+   13 ******
+   14 *****************
+   15 *
+   16 *******************************
+ press continue ...
+
+    1 ***************
+    2 ****************
+    3 *************
+    4 ******************
+    5 ***********
+    6 ********************
+    7 *********
+    8 **********************
+    9 *******
+   10 ************************
+   11 *****
+   12 **************************
+   13 ***
+   14 ****************************
+   15 *
+   16 *******************************
+ Period of sinusoid in channels (2-16)
+16
+    1 *
+    2 *
+    3 *******************************
+    4 *
+    5 *
+    6 *
+    7 *
+    8 *
+    9 *
+   10 *
+   11 *
+   12 *
+   13 *
+   14 *
+   15 *
+   16 *
+ press continue ...
+
+    1 ****************
+    2 *********************
+    3 **************************
+    4 *****************************
+    5 *******************************
+    6 *****************************
+    7 **************************
+    8 *********************
+    9 ****************
+   10 **********
+   11 *****
+   12 **
+   13 *
+   14 **
+   15 *****
+   16 **********
+ Period of sinusoid in channels (2-16)
+At line 9 of file XSINFT.FOR (unit = 5, file = 'stdin')
+Fortran runtime error: End of file
+
+Error termination. Backtrace:
+#0  0x7f2703225d5a
+#1  0x7f2703226869
+#2  0x7f270322754f
+#3  0x7f270346ac5b
+#4  0x7f2703463e26
+#5  0x7f2703464dc9
+#6  0x5603979e62fe
+#7  0x5603979e683f
+#8  0x7f2702eeb0b2
+#9  0x5603979e612d
+#10  0xffffffffffffffff
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat XSINFT.FOR && cat SINFT.FOR && cat REALFT.FOR && cat FOUR1.FOR
+      PROGRAM xsinft
+C     driver for routine sinft
+      INTEGER NP
+      REAL EPS,PI,WIDTH
+      PARAMETER(EPS=1.0e-3,NP=16,WIDTH=30.0,PI=3.14159)
+      INTEGER i,j,nlim
+      REAL big,per,scal,small,data(NP)
+1     write(*,'(1x,a,i2,a)') 'Period of sinusoid in channels (2-',NP,')'
+      read(*,*) per
+      if (per.le.0.) stop
+      do 11 i=1,NP
+        data(i)=sin(2.0*PI*(i-1)/per)
+11    continue
+      call sinft(data,NP)
+      big=-1.0e10
+      small=1.0e10
+      do 12 i=1,NP
+        if (data(i).lt.small) small=data(i)
+        if (data(i).gt.big) big=data(i)
+12    continue
+      scal=WIDTH/(big-small)
+      do 13 i=1,NP
+        nlim=scal*(data(i)-small)+EPS
+        write(*,'(1x,i4,1x,60a1)') i,('*',j=1,nlim+1)
+13    continue
+      write(*,*) 'press continue ...'
+      read(*,*)
+      call sinft(data,NP)
+      big=-1.0e10
+      small=1.0e10
+      do 14 i=1,NP
+        if (data(i).lt.small) small=data(i)
+        if (data(i).gt.big) big=data(i)
+14    continue
+      scal=WIDTH/(big-small)
+      do 15 i=1,NP
+        nlim=scal*(data(i)-small)+EPS
+        write(*,'(1x,i4,1x,60a1)') i,('*',j=1,nlim+1)
+15    continue
+      goto 1
+      END
+      SUBROUTINE sinft(y,n)
+      INTEGER n
+      REAL y(n)
+CU    USES realft
+      INTEGER j
+      REAL sum,y1,y2
+      DOUBLE PRECISION theta,wi,wpi,wpr,wr,wtemp
+      theta=3.141592653589793d0/dble(n)
+      wr=1.0d0
+      wi=0.0d0
+      wpr=-2.0d0*sin(0.5d0*theta)**2
+      wpi=sin(theta)
+      y(1)=0.0
+      do 11 j=1,n/2
+        wtemp=wr
+        wr=wr*wpr-wi*wpi+wr
+        wi=wi*wpr+wtemp*wpi+wi
+        y1=wi*(y(j+1)+y(n-j+1))
+        y2=0.5*(y(j+1)-y(n-j+1))
+        y(j+1)=y1+y2
+        y(n-j+1)=y1-y2
+11    continue
+      call realft(y,n,+1)
+      sum=0.0
+      y(1)=0.5*y(1)
+      y(2)=0.0
+      do 12 j=1,n-1,2
+        sum=sum+y(j)
+        y(j)=y(j+1)
+        y(j+1)=sum
+12    continue
+      return
+      END
+      SUBROUTINE realft(data,n,isign)
+      INTEGER isign,n
+      REAL data(n)
+CU    USES four1
+      INTEGER i,i1,i2,i3,i4,n2p3
+      REAL c1,c2,h1i,h1r,h2i,h2r,wis,wrs
+      DOUBLE PRECISION theta,wi,wpi,wpr,wr,wtemp
+      theta=3.141592653589793d0/dble(n/2)
+      c1=0.5
+      if (isign.eq.1) then
+        c2=-0.5
+        call four1(data,n/2,+1)
+      else
+        c2=0.5
+        theta=-theta
+      endif
+      wpr=-2.0d0*sin(0.5d0*theta)**2
+      wpi=sin(theta)
+      wr=1.0d0+wpr
+      wi=wpi
+      n2p3=n+3
+      do 11 i=2,n/4
+        i1=2*i-1
+        i2=i1+1
+        i3=n2p3-i2
+        i4=i3+1
+        wrs=sngl(wr)
+        wis=sngl(wi)
+        h1r=c1*(data(i1)+data(i3))
+        h1i=c1*(data(i2)-data(i4))
+        h2r=-c2*(data(i2)+data(i4))
+        h2i=c2*(data(i1)-data(i3))
+        data(i1)=h1r+wrs*h2r-wis*h2i
+        data(i2)=h1i+wrs*h2i+wis*h2r
+        data(i3)=h1r-wrs*h2r+wis*h2i
+        data(i4)=-h1i+wrs*h2i+wis*h2r
+        wtemp=wr
+        wr=wr*wpr-wi*wpi+wr
+        wi=wi*wpr+wtemp*wpi+wi
+11    continue
+      if (isign.eq.1) then
+        h1r=data(1)
+        data(1)=h1r+data(2)
+        data(2)=h1r-data(2)
+      else
+        h1r=data(1)
+        data(1)=c1*(h1r+data(2))
+        data(2)=c1*(h1r-data(2))
+        call four1(data,n/2,-1)
+      endif
+      return
+      END
+      SUBROUTINE four1(data,nn,isign)
+      INTEGER isign,nn
+      REAL data(2*nn)
+      INTEGER i,istep,j,m,mmax,n
+      REAL tempi,tempr
+      DOUBLE PRECISION theta,wi,wpi,wpr,wr,wtemp
+      n=2*nn
+      j=1
+      do 11 i=1,n,2
+        if(j.gt.i)then
+          tempr=data(j)
+          tempi=data(j+1)
+          data(j)=data(i)
+          data(j+1)=data(i+1)
+          data(i)=tempr
+          data(i+1)=tempi
+        endif
+        m=n/2
+1       if ((m.ge.2).and.(j.gt.m)) then
+          j=j-m
+          m=m/2
+        goto 1
+        endif
+        j=j+m
+11    continue
+      mmax=2
+2     if (n.gt.mmax) then
+        istep=2*mmax
+        theta=6.28318530717959d0/(isign*mmax)
+        wpr=-2.d0*sin(0.5d0*theta)**2
+        wpi=sin(theta)
+        wr=1.d0
+        wi=0.d0
+        do 13 m=1,mmax,2
+          do 12 i=m,n,istep
+            j=i+mmax
+            tempr=sngl(wr)*data(j)-sngl(wi)*data(j+1)
+            tempi=sngl(wr)*data(j+1)+sngl(wi)*data(j)
+            data(j)=data(i)-tempr
+            data(j+1)=data(i+1)-tempi
+            data(i)=data(i)+tempr
+            data(i+1)=data(i+1)+tempi
+12        continue
+          wtemp=wr
+          wr=wr*wpr-wi*wpi+wr
+          wi=wi*wpr+wtemp*wpi+wi
+13      continue
+        mmax=istep
+      goto 2
+      endif
+      return
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ sloccount XSINFT.FOR  
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES/XSINFT.FOR to top_dir
+Categorizing files.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+0       top_dir         (none)
+SLOC total is zero, no further analysis performed.
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cp XSINFT.FOR xsinft.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ sloccount xsinft.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES/xsinft.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+40      top_dir         fortran=40
+
+
+Totals grouped by language (dominant language first):
+fortran:         40 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 40
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.08)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.08 (0.97)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.08
+Total Estimated Cost to Develop                           = $ 920
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMian@iian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPian@ianian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLian@ian-HPian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cp SINFT.FOR sinft.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ sloccount sinft.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES/sinft.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+32      top_dir         fortran=32
+
+
+Totals grouped by language (dominant language first):
+fortran:         32 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 32
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.06)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.07 (0.88)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.07
+Total Estimated Cost to Develop                           = $ 728
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cp REALFT.FOR realft.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ sloccount realft.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES/realft.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+51      top_dir         fortran=51
+
+
+Totals grouped by language (dominant language first):
+fortran:         51 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 51
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.11)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.09 (1.06)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.10
+Total Estimated Cost to Develop                           = $ 1,187
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cp FOUR1.FOR four1.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ sloccount four1.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES/four1.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+52      top_dir         fortran=52
+
+
+Totals grouped by language (dominant language first):
+fortran:         52 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 52
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.11)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.09 (1.07)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.10
+Total Estimated Cost to Develop                           = $ 1,212
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat XSINFT.FOR
+      PROGRAM xsinft
+C     driver for routine sinft
+      INTEGER NP
+      REAL EPS,PI,WIDTH
+      PARAMETER(EPS=1.0e-3,NP=16,WIDTH=30.0,PI=3.14159)
+      INTEGER i,j,nlim
+      REAL big,per,scal,small,data(NP)
+1     write(*,'(1x,a,i2,a)') 'Period of sinusoid in channels (2-',NP,')'
+      read(*,*) per
+      if (per.le.0.) stop
+      do 11 i=1,NP
+        data(i)=sin(2.0*PI*(i-1)/per)
+11    continue
+      call sinft(data,NP)
+      big=-1.0e10
+      small=1.0e10
+      do 12 i=1,NP
+        if (data(i).lt.small) small=data(i)
+        if (data(i).gt.big) big=data(i)
+12    continue
+      scal=WIDTH/(big-small)
+      do 13 i=1,NP
+        nlim=scal*(data(i)-small)+EPS
+        write(*,'(1x,i4,1x,60a1)') i,('*',j=1,nlim+1)
+13    continue
+      write(*,*) 'press continue ...'
+      read(*,*)
+      call sinft(data,NP)
+      big=-1.0e10
+      small=1.0e10
+      do 14 i=1,NP
+        if (data(i).lt.small) small=data(i)
+        if (data(i).gt.big) big=data(i)
+14    continue
+      scal=WIDTH/(big-small)
+      do 15 i=1,NP
+        nlim=scal*(data(i)-small)+EPS
+        write(*,'(1x,i4,1x,60a1)') i,('*',j=1,nlim+1)
+15    continue
+      goto 1
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat SINFT.FOR
+      SUBROUTINE sinft(y,n)
+      INTEGER n
+      REAL y(n)
+CU    USES realft
+      INTEGER j
+      REAL sum,y1,y2
+      DOUBLE PRECISION theta,wi,wpi,wpr,wr,wtemp
+      theta=3.141592653589793d0/dble(n)
+      wr=1.0d0
+      wi=0.0d0
+      wpr=-2.0d0*sin(0.5d0*theta)**2
+      wpi=sin(theta)
+      y(1)=0.0
+      do 11 j=1,n/2
+        wtemp=wr
+        wr=wr*wpr-wi*wpi+wr
+        wi=wi*wpr+wtemp*wpi+wi
+        y1=wi*(y(j+1)+y(n-j+1))
+        y2=0.5*(y(j+1)-y(n-j+1))
+        y(j+1)=y1+y2
+        y(n-j+1)=y1-y2
+11    continue
+      call realft(y,n,+1)
+      sum=0.0
+      y(1)=0.5*y(1)
+      y(2)=0.0
+      do 12 j=1,n-1,2
+        sum=sum+y(j)
+        y(j)=y(j+1)
+        y(j+1)=sum
+12    continue
+      return
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ 
+
