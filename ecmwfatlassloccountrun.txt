@@ -1,0 +1,92 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ mkdir ecmwfatlas
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cd ecmwfatlas
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas$ git clone https://github.com/ecmwf/atlas.git
+Cloning into 'atlas'...
+remote: Enumerating objects: 56833, done.
+remote: Counting objects: 100% (3501/3501), done.
+remote: Compressing objects: 100% (937/937), done.
+remote: Total 56833 (delta 2642), reused 3348 (delta 2551), pack-reused 53332
+Receiving objects: 100% (56833/56833), 15.13 MiB | 6.49 MiB/s, done.
+Resolving deltas: 100% (46926/46926), done.
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas$ cd atlas
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas/atlas$ ls
+AUTHORS  CHANGELOG.md  CMakeLists.txt  etc      README.md  tools
+bamboo   cmake         doc             LICENSE  src        VERSION
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas/atlas$ cd doc
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas/atlas/doc$ ls
+CMakeLists.txt    Doxyfile.in     example-grids     README.md
+Doxyfile-custom   Doxyfile-mcss   example-projects  user-guide
+Doxyfile-default  Doxyfile-stock  pages
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas/atlas/doc$ cd example-projects
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas/atlas/doc/example-projects$ ls
+build_hello_world_fortran.sh  project_hello_world          README
+build_hello_world.sh          project_hello_world_fortran  source-me.sh
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas/atlas/doc/example-projects$ cd ~/ecmwfatlas
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas$ sloccount atlas
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/ecmwfatlas/atlas/AUTHORS to top_dir
+Adding /home/ian/ecmwfatlas/atlas/CHANGELOG.md to top_dir
+Adding /home/ian/ecmwfatlas/atlas/CMakeLists.txt to top_dir
+Adding /home/ian/ecmwfatlas/atlas/LICENSE to top_dir
+Adding /home/ian/ecmwfatlas/atlas/README.md to top_dir
+Adding /home/ian/ecmwfatlas/atlas/VERSION to top_dir
+Creating filelist for bamboo
+Creating filelist for cmake
+Creating filelist for doc
+Creating filelist for etc
+Creating filelist for tools
+Have a non-directory at the top, so creating directory src_top_dir
+Adding /home/ian/ecmwfatlas/atlas/src/CMakeLists.txt to src_top_dir
+Creating filelist for src_apps
+Creating filelist for src_atlas
+Creating filelist for src_atlas_acc_support
+Creating filelist for src_atlas_f
+Creating filelist for src_sandbox
+Creating filelist for src_tests
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+73818   src_atlas       cpp=73818
+25374   src_tests       cpp=20694,f90=4680
+7568    src_atlas_f     f90=7389,cpp=179
+2138    src_sandbox     cpp=1708,f90=430
+1114    tools           sh=783,python=331
+1063    src_apps        cpp=1063
+903     doc             cpp=497,f90=328,python=45,sh=33
+44      bamboo          sh=44
+32      cmake           cpp=32
+16      src_atlas_acc_support ansic=16
+0       etc             (none)
+0       src_top_dir     (none)
+0       top_dir         (none)
+
+
+Totals grouped by language (dominant language first):
+cpp:          97991 (87.44%)
+f90:          12827 (11.45%)
+sh:             860 (0.77%)
+python:         376 (0.34%)
+ansic:           16 (0.01%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 112,070
+Development Effort Estimate, Person-Years (Person-Months) = 28.38 (340.55)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 1.91 (22.92)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 14.86
+Total Estimated Cost to Develop                           = $ 3,833,588
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/ecmwfatlas$ 
