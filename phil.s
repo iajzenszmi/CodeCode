@@ -1,4 +1,4 @@
-	.file	"philosopher.c"
+	.file	"phil.c"
 	.text
 	.comm	chopstick,40,32
 	.globl	main

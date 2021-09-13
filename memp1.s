@@ -1,8 +1,8 @@
-	.file	"suma1.c"
+	.file	"memp1.c"
 	.text
 	.section	.rodata
 .LC0:
-	.string	"\n%d"
+	.string	"Memory usage: %ld kilobytes\n"
 	.text
 	.globl	main
 	.type	main, @function
@@ -15,17 +15,25 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	subq	$16, %rsp
-	movl	$1, -8(%rbp)
-	movl	-8(%rbp), %eax
-	addl	$1, %eax
-	movl	%eax, -4(%rbp)
-	movl	-4(%rbp), %eax
-	movl	%eax, %esi
+	subq	$160, %rsp
+	movq	%fs:40, %rax
+	movq	%rax, -8(%rbp)
+	xorl	%eax, %eax
+	leaq	-160(%rbp), %rax
+	movq	%rax, %rsi
+	movl	$0, %edi
+	call	getrusage@PLT
+	movq	-128(%rbp), %rax
+	movq	%rax, %rsi
 	leaq	.LC0(%rip), %rdi
 	movl	$0, %eax
 	call	printf@PLT
 	movl	$0, %eax
+	movq	-8(%rbp), %rdx
+	xorq	%fs:40, %rdx
+	je	.L3
+	call	__stack_chk_fail@PLT
+.L3:
 	leave
 	.cfi_def_cfa 7, 8
 	ret

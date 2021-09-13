@@ -1,8 +1,8 @@
-	.file	"suma1.c"
+	.file	"shining.c"
 	.text
 	.section	.rodata
 .LC0:
-	.string	"\n%d"
+	.string	"From sea to shining C."
 	.text
 	.globl	main
 	.type	main, @function
@@ -15,18 +15,10 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	subq	$16, %rsp
-	movl	$1, -8(%rbp)
-	movl	-8(%rbp), %eax
-	addl	$1, %eax
-	movl	%eax, -4(%rbp)
-	movl	-4(%rbp), %eax
-	movl	%eax, %esi
 	leaq	.LC0(%rip), %rdi
+	call	puts@PLT
 	movl	$0, %eax
-	call	printf@PLT
-	movl	$0, %eax
-	leave
+	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
