@@ -1,4 +1,4 @@
-# plot.plt
+# plot2.plt
 set term x11 0
 set title "Fortran Example Parabola"
 set nokey

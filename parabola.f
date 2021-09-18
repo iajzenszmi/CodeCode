@@ -4,7 +4,7 @@
         open(unit=48,file="para.txt")
         do i = 1, 10, 1
            x(i) = i
-           y(i) = (x(i) ** 2) + 10
+           y(i) = (x(i) ** 2) 
         enddo
         print *,x,y
         do i=1,10
