@@ -1,0 +1,171 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ gfortran XSPLINE.FOR SPLINE.FOR -o xspline
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat XSPLINE.FOR
+      PROGRAM xspline
+C     driver for routine spline
+      INTEGER N
+      REAL PI
+      PARAMETER(N=20,PI=3.141593)
+      INTEGER i
+      REAL yp1,ypn,x(N),y(N),y2(N)
+      open(unit=48,file='para.txt')
+
+      write(*,*) 'Second-derivatives for sin(x) from 0 to PI'
+C     generate array for interpolation
+      do 11 i=1,20
+        x(i)=i*PI/N
+        y(i)=sin(x(i))
+11    continue
+C     calculate 2nd derivative with SPLINE
+      yp1=cos(x(1))
+      ypn=cos(x(N))
+      call spline(x,y,N,yp1,ypn,y2)
+C     test result
+      write(*,'(t19,a,t35,a)') 'spline','actual'
+      write(*,'(t6,a,t17,a,t33,a)') 'angle','2nd deriv','2nd deriv'
+      do 12 i=1,N
+        write(*,'(1x,f8.2,2f16.6)') x(i),y2(i),-sin(x(i))
+        write(48,*) x(i),y2(i),-sin(x(i))
+
+12    continue
+      close(48)
+       call system('gnuplot -p ~/plot2.plt')
+       END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cat SPLINE.FOR
+      SUBROUTINE spline(x,y,n,yp1,ypn,y2)
+      INTEGER n,NMAX
+      REAL yp1,ypn,x(n),y(n),y2(n)
+      PARAMETER (NMAX=500)
+      INTEGER i,k
+      REAL p,qn,sig,un,u(NMAX)
+      if (yp1.gt..99e30) then
+        y2(1)=0.
+        u(1)=0.
+      else
+        y2(1)=-0.5
+        u(1)=(3./(x(2)-x(1)))*((y(2)-y(1))/(x(2)-x(1))-yp1)
+      endif
+      do 11 i=2,n-1
+        sig=(x(i)-x(i-1))/(x(i+1)-x(i-1))
+        p=sig*y2(i-1)+2.
+        y2(i)=(sig-1.)/p
+        u(i)=(6.*((y(i+1)-y(i))/(x(i+
+     *1)-x(i))-(y(i)-y(i-1))/(x(i)-x(i-1)))/(x(i+1)-x(i-1))-sig*
+     *u(i-1))/p
+11    continue
+      if (ypn.gt..99e30) then
+        qn=0.
+        un=0.
+      else
+        qn=0.5
+        un=(3./(x(n)-x(n-1)))*(ypn-(y(n)-y(n-1))/(x(n)-x(n-1)))
+      endif
+      y2(n)=(un-qn*u(n-1))/(qn*y2(n-1)+1.)
+      do 12 k=n-1,1,-1
+        y2(k)=y2(k)*y2(k+1)+u(k)
+12    continue
+      return
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ ./xspline
+ Second-derivatives for sin(x) from 0 to PI
+                  spline          actual
+     angle      2nd deriv       2nd deriv
+     0.16       -0.156832       -0.156434
+     0.31       -0.309631       -0.309017
+     0.47       -0.454933       -0.453991
+     0.63       -0.588991       -0.587785
+     0.79       -0.708561       -0.707107
+     0.94       -0.810683       -0.809017
+     1.10       -0.892844       -0.891007
+     1.26       -0.953009       -0.951057
+     1.41       -0.989721       -0.987688
+     1.57       -1.002061       -1.000000
+     1.73       -0.989715       -0.987688
+     1.88       -0.953020       -0.951056
+     2.04       -0.892835       -0.891006
+     2.20       -0.810685       -0.809017
+     2.36       -0.708558       -0.707107
+     2.51       -0.588999       -0.587785
+     2.67       -0.454920       -0.453990
+     2.83       -0.309660       -0.309017
+     2.98       -0.156736       -0.156434
+     3.14       -0.000075        0.000000
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ sloccount XSPLINE.FOR 
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES/XSPLINE.FOR to top_dir
+Categorizing files.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+0       top_dir         (none)
+SLOC total is zero, no further analysis performed.
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cp XSPLINE.FOR XSPLINE.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ cp SPLINE.FOR SPLINE.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ sloccount XSPLINE.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES/XSPLINE.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+24      top_dir         fortran=24
+
+
+Totals grouped by language (dominant language first):
+fortran:         24 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 24
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.05)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.07 (0.79)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.06
+Total Estimated Cost to Develop                           = $ 538
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ sloccount SPLINE.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES/SPLINE.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+34      top_dir         fortran=34
+
+
+Totals grouped by language (dominant language first):
+fortran:         34 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 34
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.07)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.08 (0.90)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.08
+Total Estimated Cost to Develop                           = $ 776
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/www.patarnott.com/MAC/FORTRAN.208/F77/EXAMPLES$ 
+
