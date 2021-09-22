@@ -1,0 +1,755 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ wget https://scikit-learn.org/stable/_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip
+--2021-09-23 06:14:59--  https://scikit-learn.org/stable/_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip
+Resolving scikit-learn.org (scikit-learn.org)... 185.199.108.153, 185.199.111.153, 185.199.109.153, ...
+Connecting to scikit-learn.org (scikit-learn.org)|185.199.108.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1209580 (1.2M) [application/zip]
+Saving to: 'auto_examples_python.zip’
+
+auto_examples_pytho 100%[===================>]   1.15M  --.-KB/s    in 0.09s   
+
+2021-09-23 06:15:00 (12.3 MB/s) - 'auto_examples_python.zip’ saved [1209580/1209580]
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cd sklearnexamples
+bash: cd: sklearnexamples: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ mkdir sklearnexamples
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cd sklearnexamples
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ wget https://scikit-learn.org/stable/_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip
+--2021-09-23 06:16:11--  https://scikit-learn.org/stable/_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip
+Resolving scikit-learn.org (scikit-learn.org)... 185.199.108.153, 185.199.111.153, 185.199.109.153, ...
+Connecting to scikit-learn.org (scikit-learn.org)|185.199.108.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1209580 (1.2M) [application/zip]
+Saving to: 'auto_examples_python.zip’
+
+auto_examples_pytho 100%[===================>]   1.15M  --.-KB/s    in 0.1s    
+
+2021-09-23 06:16:12 (11.9 MB/s) - 'auto_examples_python.zip’ saved [1209580/1209580]
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ unzip https://scikit-learn.org/stable/_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip
+unzip:  cannot find or open https://scikit-learn.org/stable/_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip, https://scikit-learn.org/stable/_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip.zip or https://scikit-learn.org/stable/_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip.ZIP.
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ unzip auto_examples_python.zip
+Archive:  auto_examples_python.zip
+ extracting: applications/plot_outlier_detection_wine.py  
+ extracting: applications/plot_tomography_l1_reconstruction.py  
+ extracting: applications/plot_topics_extraction_with_nmf_lda.py  
+ extracting: applications/plot_out_of_core_classification.py  
+ extracting: applications/plot_face_recognition.py  
+ extracting: applications/plot_model_complexity_influence.py  
+ extracting: applications/plot_stock_market.py  
+ extracting: applications/wikipedia_principal_eigenvector.py  
+ extracting: applications/plot_species_distribution_modeling.py  
+ extracting: applications/svm_gui.py  
+ extracting: applications/plot_prediction_latency.py  
+ extracting: bicluster/plot_spectral_coclustering.py  
+ extracting: bicluster/plot_spectral_biclustering.py  
+ extracting: bicluster/plot_bicluster_newsgroups.py  
+ extracting: calibration/plot_compare_calibration.py  
+ extracting: calibration/plot_calibration_curve.py  
+ extracting: calibration/plot_calibration.py  
+ extracting: calibration/plot_calibration_multiclass.py  
+ extracting: classification/plot_digits_classification.py  
+ extracting: classification/plot_lda.py  
+ extracting: classification/plot_classification_probability.py  
+ extracting: classification/plot_classifier_comparison.py  
+ extracting: classification/plot_lda_qda.py  
+ extracting: cluster/plot_kmeans_plusplus.py  
+ extracting: cluster/plot_optics.py  
+ extracting: cluster/plot_dbscan.py  
+ extracting: cluster/plot_agglomerative_dendrogram.py  
+ extracting: cluster/plot_digits_agglomeration.py  
+ extracting: cluster/plot_mean_shift.py  
+ extracting: cluster/plot_kmeans_assumptions.py  
+ extracting: cluster/plot_dict_face_patches.py  
+ extracting: cluster/plot_face_compress.py  
+ extracting: cluster/plot_affinity_propagation.py  
+ extracting: cluster/plot_color_quantization.py  
+ extracting: cluster/plot_agglomerative_clustering.py  
+ extracting: cluster/plot_coin_segmentation.py  
+ extracting: cluster/plot_digits_linkage.py  
+ extracting: cluster/plot_coin_ward_segmentation.py  
+ extracting: cluster/plot_cluster_iris.py  
+ extracting: cluster/plot_segmentation_toy.py  
+ extracting: cluster/plot_inductive_clustering.py  
+ extracting: cluster/plot_ward_structured_vs_unstructured.py  
+ extracting: cluster/plot_agglomerative_clustering_metrics.py  
+ extracting: cluster/plot_birch_vs_minibatchkmeans.py  
+ extracting: cluster/plot_kmeans_stability_low_dim_dense.py  
+ extracting: cluster/plot_adjusted_for_chance_measures.py  
+ extracting: cluster/plot_mini_batch_kmeans.py  
+ extracting: cluster/plot_feature_agglomeration_vs_univariate_selection.py  
+ extracting: cluster/plot_kmeans_silhouette_analysis.py  
+ extracting: cluster/plot_linkage_comparison.py  
+ extracting: cluster/plot_kmeans_digits.py  
+ extracting: cluster/plot_cluster_comparison.py  
+ extracting: compose/plot_feature_union.py  
+ extracting: compose/plot_digits_pipe.py  
+ extracting: compose/plot_compare_reduction.py  
+ extracting: compose/plot_column_transformer_mixed_types.py  
+ extracting: compose/plot_column_transformer.py  
+ extracting: compose/plot_transformed_target.py  
+ extracting: covariance/plot_lw_vs_oas.py  
+ extracting: covariance/plot_sparse_cov.py  
+ extracting: covariance/plot_covariance_estimation.py  
+ extracting: covariance/plot_mahalanobis_distances.py  
+ extracting: covariance/plot_robust_vs_empirical_covariance.py  
+ extracting: cross_decomposition/plot_pcr_vs_pls.py  
+ extracting: cross_decomposition/plot_compare_cross_decomposition.py  
+ extracting: datasets/plot_digits_last_image.py  
+ extracting: datasets/plot_iris_dataset.py  
+ extracting: datasets/plot_random_dataset.py  
+ extracting: datasets/plot_random_multilabel_dataset.py  
+ extracting: decomposition/plot_beta_divergence.py  
+ extracting: decomposition/plot_pca_iris.py  
+ extracting: decomposition/plot_incremental_pca.py  
+ extracting: decomposition/plot_pca_vs_lda.py  
+ extracting: decomposition/plot_varimax_fa.py  
+ extracting: decomposition/plot_ica_blind_source_separation.py  
+ extracting: decomposition/plot_pca_3d.py  
+ extracting: decomposition/plot_ica_vs_pca.py  
+ extracting: decomposition/plot_kernel_pca.py  
+ extracting: decomposition/plot_pca_vs_fa_model_selection.py  
+ extracting: decomposition/plot_image_denoising.py  
+ extracting: decomposition/plot_sparse_coding.py  
+ extracting: decomposition/plot_faces_decomposition.py  
+ extracting: ensemble/plot_forest_importances_faces.py  
+ extracting: ensemble/plot_adaboost_regression.py  
+ extracting: ensemble/plot_voting_regressor.py  
+ extracting: ensemble/plot_ensemble_oob.py  
+ extracting: ensemble/plot_isolation_forest.py  
+ extracting: ensemble/plot_random_forest_embedding.py  
+ extracting: ensemble/plot_adaboost_multiclass.py  
+ extracting: ensemble/plot_adaboost_twoclass.py  
+ extracting: ensemble/plot_monotonic_constraints.py  
+ extracting: ensemble/plot_voting_decision_regions.py  
+ extracting: ensemble/plot_forest_importances.py  
+ extracting: ensemble/plot_adaboost_hastie_10_2.py  
+ extracting: ensemble/plot_random_forest_regression_multioutput.py  
+ extracting: ensemble/plot_gradient_boosting_quantile.py  
+ extracting: ensemble/plot_gradient_boosting_regularization.py  
+ extracting: ensemble/plot_voting_probas.py  
+ extracting: ensemble/plot_bias_variance.py  
+ extracting: ensemble/plot_gradient_boosting_regression.py  
+ extracting: ensemble/plot_forest_iris.py  
+ extracting: ensemble/plot_feature_transformation.py  
+ extracting: ensemble/plot_gradient_boosting_early_stopping.py  
+ extracting: ensemble/plot_gradient_boosting_oob.py  
+ extracting: ensemble/plot_gradient_boosting_categorical.py  
+ extracting: ensemble/plot_stack_predictors.py  
+ extracting: exercises/plot_digits_classification_exercise.py  
+ extracting: exercises/plot_cv_digits.py  
+ extracting: exercises/plot_iris_exercise.py  
+ extracting: exercises/plot_cv_diabetes.py  
+ extracting: feature_selection/plot_rfe_digits.py  
+ extracting: feature_selection/plot_f_test_vs_mi.py  
+ extracting: feature_selection/plot_feature_selection_pipeline.py  
+ extracting: feature_selection/plot_rfe_with_cross_validation.py  
+ extracting: feature_selection/plot_select_from_model_diabetes.py  
+ extracting: feature_selection/plot_permutation_test_for_classification.py  
+ extracting: feature_selection/plot_feature_selection.py  
+ extracting: gaussian_process/plot_gpc_xor.py  
+ extracting: gaussian_process/plot_gpc_iris.py  
+ extracting: gaussian_process/plot_compare_gpr_krr.py  
+ extracting: gaussian_process/plot_gpr_prior_posterior.py  
+ extracting: gaussian_process/plot_gpc_isoprobability.py  
+ extracting: gaussian_process/plot_gpc.py  
+ extracting: gaussian_process/plot_gpr_noisy.py  
+ extracting: gaussian_process/plot_gpr_noisy_targets.py  
+ extracting: gaussian_process/plot_gpr_co2.py  
+ extracting: gaussian_process/plot_gpr_on_structured_data.py  
+ extracting: impute/plot_iterative_imputer_variants_comparison.py  
+ extracting: impute/plot_missing_values.py  
+ extracting: inspection/plot_permutation_importance_multicollinear.py  
+ extracting: inspection/plot_permutation_importance.py  
+ extracting: inspection/plot_partial_dependence.py  
+ extracting: inspection/plot_linear_model_coefficient_interpretation.py  
+ extracting: kernel_approximation/plot_scalable_poly_kernels.py  
+ extracting: linear_model/plot_lasso_lars.py  
+ extracting: linear_model/plot_ridge_path.py  
+ extracting: linear_model/plot_huber_vs_ridge.py  
+ extracting: linear_model/plot_omp.py  
+ extracting: linear_model/plot_sgd_separating_hyperplane.py  
+ extracting: linear_model/plot_iris_logistic.py  
+ extracting: linear_model/plot_sgd_loss_functions.py  
+ extracting: linear_model/plot_ols_ridge_variance.py  
+ extracting: linear_model/plot_ransac.py  
+ extracting: linear_model/plot_ols_3d.py  
+ extracting: linear_model/plot_ridge_coeffs.py  
+ extracting: linear_model/plot_sgd_penalties.py  
+ extracting: linear_model/plot_sgd_comparison.py  
+ extracting: linear_model/plot_logistic.py  
+ extracting: linear_model/plot_polynomial_interpolation.py  
+ extracting: linear_model/plot_sgd_weighted_samples.py  
+ extracting: linear_model/plot_ols.py  
+ extracting: linear_model/plot_sgd_iris.py  
+ extracting: linear_model/plot_logistic_path.py  
+ extracting: linear_model/plot_nnls.py  
+ extracting: linear_model/plot_ard.py  
+ extracting: linear_model/plot_lasso_dense_vs_sparse_data.py  
+ extracting: linear_model/plot_multi_task_lasso_support.py  
+ extracting: linear_model/plot_bayesian_ridge.py  
+ extracting: linear_model/plot_lasso_model_selection.py  
+ extracting: linear_model/plot_sparse_logistic_regression_mnist.py  
+ extracting: linear_model/plot_lasso_and_elasticnet.py  
+ extracting: linear_model/plot_bayesian_ridge_curvefit.py  
+ extracting: linear_model/plot_theilsen.py  
+ extracting: linear_model/plot_sgd_early_stopping.py  
+ extracting: linear_model/plot_logistic_multinomial.py  
+ extracting: linear_model/plot_robust_fit.py  
+ extracting: linear_model/plot_logistic_l1_l2_sparsity.py  
+ extracting: linear_model/plot_lasso_coordinate_descent_path.py  
+ extracting: linear_model/plot_sparse_logistic_regression_20newsgroups.py  
+ extracting: linear_model/plot_poisson_regression_non_normal_loss.py  
+ extracting: linear_model/plot_tweedie_regression_insurance_claims.py  
+ extracting: manifold/plot_swissroll.py  
+ extracting: manifold/plot_compare_methods.py  
+ extracting: manifold/plot_mds.py    
+ extracting: manifold/plot_t_sne_perplexity.py  
+ extracting: manifold/plot_manifold_sphere.py  
+ extracting: manifold/plot_lle_digits.py  
+ extracting: miscellaneous/plot_changed_only_pprint_parameter.py  
+ extracting: miscellaneous/plot_kernel_ridge_regression.py  
+ extracting: miscellaneous/plot_roc_curve_visualization_api.py  
+ extracting: miscellaneous/plot_display_object_visualization.py  
+ extracting: miscellaneous/plot_isotonic_regression.py  
+ extracting: miscellaneous/plot_partial_dependence_visualization_api.py  
+ extracting: miscellaneous/plot_kernel_approximation.py  
+ extracting: miscellaneous/plot_multioutput_face_completion.py  
+ extracting: miscellaneous/plot_multilabel.py  
+ extracting: miscellaneous/plot_anomaly_comparison.py  
+ extracting: miscellaneous/plot_johnson_lindenstrauss_bound.py  
+ extracting: mixture/plot_gmm_pdf.py  
+ extracting: mixture/plot_gmm.py     
+ extracting: mixture/plot_gmm_selection.py  
+ extracting: mixture/plot_gmm_covariances.py  
+ extracting: mixture/plot_gmm_sin.py  
+ extracting: mixture/plot_concentration_prior.py  
+ extracting: model_selection/plot_cv_predict.py  
+ extracting: model_selection/plot_confusion_matrix.py  
+ extracting: model_selection/plot_cv_indices.py  
+ extracting: model_selection/plot_validation_curve.py  
+ extracting: model_selection/plot_det.py  
+ extracting: model_selection/plot_successive_halving_iterations.py  
+ extracting: model_selection/plot_grid_search_refit_callable.py  
+ extracting: model_selection/plot_underfitting_overfitting.py  
+ extracting: model_selection/plot_grid_search_digits.py  
+ extracting: model_selection/plot_randomized_search.py  
+ extracting: model_selection/plot_roc.py  
+ extracting: model_selection/plot_precision_recall.py  
+ extracting: model_selection/plot_train_error_vs_test_error.py  
+ extracting: model_selection/plot_successive_halving_heatmap.py  
+ extracting: model_selection/plot_roc_crossval.py  
+ extracting: model_selection/plot_nested_cross_validation_iris.py  
+ extracting: model_selection/plot_multi_metric_evaluation.py  
+ extracting: model_selection/grid_search_text_feature_extraction.py  
+ extracting: model_selection/plot_learning_curve.py  
+ extracting: model_selection/plot_grid_search_stats.py  
+ extracting: multioutput/plot_classifier_chain_yeast.py  
+ extracting: neighbors/plot_regression.py  
+ extracting: neighbors/plot_lof_outlier_detection.py  
+ extracting: neighbors/plot_species_kde.py  
+ extracting: neighbors/plot_nearest_centroid.py  
+ extracting: neighbors/plot_digits_kde_sampling.py  
+ extracting: neighbors/plot_classification.py  
+ extracting: neighbors/plot_caching_nearest_neighbors.py  
+ extracting: neighbors/plot_nca_illustration.py  
+ extracting: neighbors/plot_lof_novelty_detection.py  
+ extracting: neighbors/plot_nca_classification.py  
+ extracting: neighbors/plot_nca_dim_reduction.py  
+ extracting: neighbors/plot_kde_1d.py  
+ extracting: neighbors/approximate_nearest_neighbors.py  
+ extracting: neural_networks/plot_mnist_filters.py  
+ extracting: neural_networks/plot_rbm_logistic_classification.py  
+ extracting: neural_networks/plot_mlp_training_curves.py  
+ extracting: neural_networks/plot_mlp_alpha.py  
+ extracting: preprocessing/plot_discretization.py  
+ extracting: preprocessing/plot_discretization_strategies.py  
+ extracting: preprocessing/plot_scaling_importance.py  
+ extracting: preprocessing/plot_map_data_to_normal.py  
+ extracting: preprocessing/plot_discretization_classification.py  
+ extracting: preprocessing/plot_all_scaling.py  
+ extracting: release_highlights/plot_release_highlights_0_23_0.py  
+ extracting: release_highlights/plot_release_highlights_0_24_0.py  
+ extracting: release_highlights/plot_release_highlights_0_22_0.py  
+ extracting: semi_supervised/plot_label_propagation_structure.py  
+ extracting: semi_supervised/plot_label_propagation_digits.py  
+ extracting: semi_supervised/plot_semi_supervised_versus_svm_iris.py  
+ extracting: semi_supervised/plot_self_training_varying_threshold.py  
+ extracting: semi_supervised/plot_semi_supervised_newsgroups.py  
+ extracting: semi_supervised/plot_label_propagation_digits_active_learning.py  
+ extracting: svm/plot_svm_nonlinear.py  
+ extracting: svm/plot_separating_hyperplane.py  
+ extracting: svm/plot_custom_kernel.py  
+ extracting: svm/plot_svm_tie_breaking.py  
+ extracting: svm/plot_weighted_samples.py  
+ extracting: svm/plot_rbf_parameters.py  
+ extracting: svm/plot_linearsvc_support_vectors.py  
+ extracting: svm/plot_svm_scale_c.py  
+ extracting: svm/plot_separating_hyperplane_unbalanced.py  
+ extracting: svm/plot_svm_margin.py  
+ extracting: svm/plot_svm_kernels.py  
+ extracting: svm/plot_svm_anova.py   
+ extracting: svm/plot_svm_regression.py  
+ extracting: svm/plot_oneclass.py    
+ extracting: svm/plot_iris_svc.py    
+ extracting: text/plot_hashing_vs_dict_vectorizer.py  
+ extracting: text/plot_document_clustering.py  
+ extracting: text/plot_document_classification_20newsgroups.py  
+ extracting: tree/plot_tree_regression.py  
+ extracting: tree/plot_tree_regression_multioutput.py  
+ extracting: tree/plot_iris_dtc.py   
+ extracting: tree/plot_cost_complexity_pruning.py  
+ extracting: tree/plot_unveil_tree_structure.py  
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ wget https://scikit-learn.org/stable/_downloads/6f1e7a639e0699d6164445b55e6c116d/auto_examples_jupyter.zip
+--2021-09-23 06:18:19--  https://scikit-learn.org/stable/_downloads/6f1e7a639e0699d6164445b55e6c116d/auto_examples_jupyter.zip
+Resolving scikit-learn.org (scikit-learn.org)... 185.199.108.153, 185.199.111.153, 185.199.109.153, ...
+Connecting to scikit-learn.org (scikit-learn.org)|185.199.108.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1559037 (1.5M) [application/zip]
+Saving to: 'auto_examples_jupyter.zip’
+
+auto_examples_jupyt 100%[===================>]   1.49M  8.84MB/s    in 0.2s    
+
+2021-09-23 06:18:20 (8.84 MB/s) - 'auto_examples_jupyter.zip’ saved [1559037/1559037]
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ unzip auto_examples_jupyter.zip
+Archive:  auto_examples_jupyter.zip
+ extracting: applications/plot_outlier_detection_wine.ipynb  
+ extracting: applications/plot_tomography_l1_reconstruction.ipynb  
+ extracting: applications/plot_topics_extraction_with_nmf_lda.ipynb  
+ extracting: applications/plot_out_of_core_classification.ipynb  
+ extracting: applications/plot_face_recognition.ipynb  
+ extracting: applications/plot_model_complexity_influence.ipynb  
+ extracting: applications/plot_stock_market.ipynb  
+ extracting: applications/wikipedia_principal_eigenvector.ipynb  
+ extracting: applications/plot_species_distribution_modeling.ipynb  
+ extracting: applications/svm_gui.ipynb  
+ extracting: applications/plot_prediction_latency.ipynb  
+ extracting: bicluster/plot_spectral_coclustering.ipynb  
+ extracting: bicluster/plot_spectral_biclustering.ipynb  
+ extracting: bicluster/plot_bicluster_newsgroups.ipynb  
+ extracting: calibration/plot_compare_calibration.ipynb  
+ extracting: calibration/plot_calibration_curve.ipynb  
+ extracting: calibration/plot_calibration.ipynb  
+ extracting: calibration/plot_calibration_multiclass.ipynb  
+ extracting: classification/plot_digits_classification.ipynb  
+ extracting: classification/plot_lda.ipynb  
+ extracting: classification/plot_classification_probability.ipynb  
+ extracting: classification/plot_classifier_comparison.ipynb  
+ extracting: classification/plot_lda_qda.ipynb  
+ extracting: cluster/plot_kmeans_plusplus.ipynb  
+ extracting: cluster/plot_optics.ipynb  
+ extracting: cluster/plot_dbscan.ipynb  
+ extracting: cluster/plot_agglomerative_dendrogram.ipynb  
+ extracting: cluster/plot_digits_agglomeration.ipynb  
+ extracting: cluster/plot_mean_shift.ipynb  
+ extracting: cluster/plot_kmeans_assumptions.ipynb  
+ extracting: cluster/plot_dict_face_patches.ipynb  
+ extracting: cluster/plot_face_compress.ipynb  
+ extracting: cluster/plot_affinity_propagation.ipynb  
+ extracting: cluster/plot_color_quantization.ipynb  
+ extracting: cluster/plot_agglomerative_clustering.ipynb  
+ extracting: cluster/plot_coin_segmentation.ipynb  
+ extracting: cluster/plot_digits_linkage.ipynb  
+ extracting: cluster/plot_coin_ward_segmentation.ipynb  
+ extracting: cluster/plot_cluster_iris.ipynb  
+ extracting: cluster/plot_segmentation_toy.ipynb  
+ extracting: cluster/plot_inductive_clustering.ipynb  
+ extracting: cluster/plot_ward_structured_vs_unstructured.ipynb  
+ extracting: cluster/plot_agglomerative_clustering_metrics.ipynb  
+ extracting: cluster/plot_birch_vs_minibatchkmeans.ipynb  
+ extracting: cluster/plot_kmeans_stability_low_dim_dense.ipynb  
+ extracting: cluster/plot_adjusted_for_chance_measures.ipynb  
+ extracting: cluster/plot_mini_batch_kmeans.ipynb  
+ extracting: cluster/plot_feature_agglomeration_vs_univariate_selection.ipynb  
+ extracting: cluster/plot_kmeans_silhouette_analysis.ipynb  
+ extracting: cluster/plot_linkage_comparison.ipynb  
+ extracting: cluster/plot_kmeans_digits.ipynb  
+ extracting: cluster/plot_cluster_comparison.ipynb  
+ extracting: compose/plot_feature_union.ipynb  
+ extracting: compose/plot_digits_pipe.ipynb  
+ extracting: compose/plot_compare_reduction.ipynb  
+ extracting: compose/plot_column_transformer_mixed_types.ipynb  
+ extracting: compose/plot_column_transformer.ipynb  
+ extracting: compose/plot_transformed_target.ipynb  
+ extracting: covariance/plot_lw_vs_oas.ipynb  
+ extracting: covariance/plot_sparse_cov.ipynb  
+ extracting: covariance/plot_covariance_estimation.ipynb  
+ extracting: covariance/plot_mahalanobis_distances.ipynb  
+ extracting: covariance/plot_robust_vs_empirical_covariance.ipynb  
+ extracting: cross_decomposition/plot_pcr_vs_pls.ipynb  
+ extracting: cross_decomposition/plot_compare_cross_decomposition.ipynb  
+ extracting: datasets/plot_digits_last_image.ipynb  
+ extracting: datasets/plot_iris_dataset.ipynb  
+ extracting: datasets/plot_random_dataset.ipynb  
+ extracting: datasets/plot_random_multilabel_dataset.ipynb  
+ extracting: decomposition/plot_beta_divergence.ipynb  
+ extracting: decomposition/plot_pca_iris.ipynb  
+ extracting: decomposition/plot_incremental_pca.ipynb  
+ extracting: decomposition/plot_pca_vs_lda.ipynb  
+ extracting: decomposition/plot_varimax_fa.ipynb  
+ extracting: decomposition/plot_ica_blind_source_separation.ipynb  
+ extracting: decomposition/plot_pca_3d.ipynb  
+ extracting: decomposition/plot_ica_vs_pca.ipynb  
+ extracting: decomposition/plot_kernel_pca.ipynb  
+ extracting: decomposition/plot_pca_vs_fa_model_selection.ipynb  
+ extracting: decomposition/plot_image_denoising.ipynb  
+ extracting: decomposition/plot_sparse_coding.ipynb  
+ extracting: decomposition/plot_faces_decomposition.ipynb  
+ extracting: ensemble/plot_forest_importances_faces.ipynb  
+ extracting: ensemble/plot_adaboost_regression.ipynb  
+ extracting: ensemble/plot_voting_regressor.ipynb  
+ extracting: ensemble/plot_ensemble_oob.ipynb  
+ extracting: ensemble/plot_isolation_forest.ipynb  
+ extracting: ensemble/plot_random_forest_embedding.ipynb  
+ extracting: ensemble/plot_adaboost_multiclass.ipynb  
+ extracting: ensemble/plot_adaboost_twoclass.ipynb  
+ extracting: ensemble/plot_monotonic_constraints.ipynb  
+ extracting: ensemble/plot_voting_decision_regions.ipynb  
+ extracting: ensemble/plot_forest_importances.ipynb  
+ extracting: ensemble/plot_adaboost_hastie_10_2.ipynb  
+ extracting: ensemble/plot_random_forest_regression_multioutput.ipynb  
+ extracting: ensemble/plot_gradient_boosting_quantile.ipynb  
+ extracting: ensemble/plot_gradient_boosting_regularization.ipynb  
+ extracting: ensemble/plot_voting_probas.ipynb  
+ extracting: ensemble/plot_bias_variance.ipynb  
+ extracting: ensemble/plot_gradient_boosting_regression.ipynb  
+ extracting: ensemble/plot_forest_iris.ipynb  
+ extracting: ensemble/plot_feature_transformation.ipynb  
+ extracting: ensemble/plot_gradient_boosting_early_stopping.ipynb  
+ extracting: ensemble/plot_gradient_boosting_oob.ipynb  
+ extracting: ensemble/plot_gradient_boosting_categorical.ipynb  
+ extracting: ensemble/plot_stack_predictors.ipynb  
+ extracting: exercises/plot_digits_classification_exercise.ipynb  
+ extracting: exercises/plot_cv_digits.ipynb  
+ extracting: exercises/plot_iris_exercise.ipynb  
+ extracting: exercises/plot_cv_diabetes.ipynb  
+ extracting: feature_selection/plot_rfe_digits.ipynb  
+ extracting: feature_selection/plot_f_test_vs_mi.ipynb  
+ extracting: feature_selection/plot_feature_selection_pipeline.ipynb  
+ extracting: feature_selection/plot_rfe_with_cross_validation.ipynb  
+ extracting: feature_selection/plot_select_from_model_diabetes.ipynb  
+ extracting: feature_selection/plot_permutation_test_for_classification.ipynb  
+ extracting: feature_selection/plot_feature_selection.ipynb  
+ extracting: gaussian_process/plot_gpc_xor.ipynb  
+ extracting: gaussian_process/plot_gpc_iris.ipynb  
+ extracting: gaussian_process/plot_compare_gpr_krr.ipynb  
+ extracting: gaussian_process/plot_gpr_prior_posterior.ipynb  
+ extracting: gaussian_process/plot_gpc_isoprobability.ipynb  
+ extracting: gaussian_process/plot_gpc.ipynb  
+ extracting: gaussian_process/plot_gpr_noisy.ipynb  
+ extracting: gaussian_process/plot_gpr_noisy_targets.ipynb  
+ extracting: gaussian_process/plot_gpr_co2.ipynb  
+ extracting: gaussian_process/plot_gpr_on_structured_data.ipynb  
+ extracting: impute/plot_iterative_imputer_variants_comparison.ipynb  
+ extracting: impute/plot_missing_values.ipynb  
+ extracting: inspection/plot_permutation_importance_multicollinear.ipynb  
+ extracting: inspection/plot_permutation_importance.ipynb  
+ extracting: inspection/plot_partial_dependence.ipynb  
+ extracting: inspection/plot_linear_model_coefficient_interpretation.ipynb  
+ extracting: kernel_approximation/plot_scalable_poly_kernels.ipynb  
+ extracting: linear_model/plot_lasso_lars.ipynb  
+ extracting: linear_model/plot_ridge_path.ipynb  
+ extracting: linear_model/plot_huber_vs_ridge.ipynb  
+ extracting: linear_model/plot_omp.ipynb  
+ extracting: linear_model/plot_sgd_separating_hyperplane.ipynb  
+ extracting: linear_model/plot_iris_logistic.ipynb  
+ extracting: linear_model/plot_sgd_loss_functions.ipynb  
+ extracting: linear_model/plot_ols_ridge_variance.ipynb  
+ extracting: linear_model/plot_ransac.ipynb  
+ extracting: linear_model/plot_ols_3d.ipynb  
+ extracting: linear_model/plot_ridge_coeffs.ipynb  
+ extracting: linear_model/plot_sgd_penalties.ipynb  
+ extracting: linear_model/plot_sgd_comparison.ipynb  
+ extracting: linear_model/plot_logistic.ipynb  
+ extracting: linear_model/plot_polynomial_interpolation.ipynb  
+ extracting: linear_model/plot_sgd_weighted_samples.ipynb  
+ extracting: linear_model/plot_ols.ipynb  
+ extracting: linear_model/plot_sgd_iris.ipynb  
+ extracting: linear_model/plot_logistic_path.ipynb  
+ extracting: linear_model/plot_nnls.ipynb  
+ extracting: linear_model/plot_ard.ipynb  
+ extracting: linear_model/plot_lasso_dense_vs_sparse_data.ipynb  
+ extracting: linear_model/plot_multi_task_lasso_support.ipynb  
+ extracting: linear_model/plot_bayesian_ridge.ipynb  
+ extracting: linear_model/plot_lasso_model_selection.ipynb  
+ extracting: linear_model/plot_sparse_logistic_regression_mnist.ipynb  
+ extracting: linear_model/plot_lasso_and_elasticnet.ipynb  
+ extracting: linear_model/plot_bayesian_ridge_curvefit.ipynb  
+ extracting: linear_model/plot_theilsen.ipynb  
+ extracting: linear_model/plot_sgd_early_stopping.ipynb  
+ extracting: linear_model/plot_logistic_multinomial.ipynb  
+ extracting: linear_model/plot_robust_fit.ipynb  
+ extracting: linear_model/plot_logistic_l1_l2_sparsity.ipynb  
+ extracting: linear_model/plot_lasso_coordinate_descent_path.ipynb  
+ extracting: linear_model/plot_sparse_logistic_regression_20newsgroups.ipynb  
+ extracting: linear_model/plot_poisson_regression_non_normal_loss.ipynb  
+ extracting: linear_model/plot_tweedie_regression_insurance_claims.ipynb  
+ extracting: manifold/plot_swissroll.ipynb  
+ extracting: manifold/plot_compare_methods.ipynb  
+ extracting: manifold/plot_mds.ipynb  
+ extracting: manifold/plot_t_sne_perplexity.ipynb  
+ extracting: manifold/plot_manifold_sphere.ipynb  
+ extracting: manifold/plot_lle_digits.ipynb  
+ extracting: miscellaneous/plot_changed_only_pprint_parameter.ipynb  
+ extracting: miscellaneous/plot_kernel_ridge_regression.ipynb  
+ extracting: miscellaneous/plot_roc_curve_visualization_api.ipynb  
+ extracting: miscellaneous/plot_display_object_visualization.ipynb  
+ extracting: miscellaneous/plot_isotonic_regression.ipynb  
+ extracting: miscellaneous/plot_partial_dependence_visualization_api.ipynb  
+ extracting: miscellaneous/plot_kernel_approximation.ipynb  
+ extracting: miscellaneous/plot_multioutput_face_completion.ipynb  
+ extracting: miscellaneous/plot_multilabel.ipynb  
+ extracting: miscellaneous/plot_anomaly_comparison.ipynb  
+ extracting: miscellaneous/plot_johnson_lindenstrauss_bound.ipynb  
+ extracting: mixture/plot_gmm_pdf.ipynb  
+ extracting: mixture/plot_gmm.ipynb  
+ extracting: mixture/plot_gmm_selection.ipynb  
+ extracting: mixture/plot_gmm_covariances.ipynb  
+ extracting: mixture/plot_gmm_sin.ipynb  
+ extracting: mixture/plot_concentration_prior.ipynb  
+ extracting: model_selection/plot_cv_predict.ipynb  
+ extracting: model_selection/plot_confusion_matrix.ipynb  
+ extracting: model_selection/plot_cv_indices.ipynb  
+ extracting: model_selection/plot_validation_curve.ipynb  
+ extracting: model_selection/plot_det.ipynb  
+ extracting: model_selection/plot_successive_halving_iterations.ipynb  
+ extracting: model_selection/plot_grid_search_refit_callable.ipynb  
+ extracting: model_selection/plot_underfitting_overfitting.ipynb  
+ extracting: model_selection/plot_grid_search_digits.ipynb  
+ extracting: model_selection/plot_randomized_search.ipynb  
+ extracting: model_selection/plot_roc.ipynb  
+ extracting: model_selection/plot_precision_recall.ipynb  
+ extracting: model_selection/plot_train_error_vs_test_error.ipynb  
+ extracting: model_selection/plot_successive_halving_heatmap.ipynb  
+ extracting: model_selection/plot_roc_crossval.ipynb  
+ extracting: model_selection/plot_nested_cross_validation_iris.ipynb  
+ extracting: model_selection/plot_multi_metric_evaluation.ipynb  
+ extracting: model_selection/grid_search_text_feature_extraction.ipynb  
+ extracting: model_selection/plot_learning_curve.ipynb  
+ extracting: model_selection/plot_grid_search_stats.ipynb  
+ extracting: multioutput/plot_classifier_chain_yeast.ipynb  
+ extracting: neighbors/plot_regression.ipynb  
+ extracting: neighbors/plot_lof_outlier_detection.ipynb  
+ extracting: neighbors/plot_species_kde.ipynb  
+ extracting: neighbors/plot_nearest_centroid.ipynb  
+ extracting: neighbors/plot_digits_kde_sampling.ipynb  
+ extracting: neighbors/plot_classification.ipynb  
+ extracting: neighbors/plot_caching_nearest_neighbors.ipynb  
+ extracting: neighbors/plot_nca_illustration.ipynb  
+ extracting: neighbors/plot_lof_novelty_detection.ipynb  
+ extracting: neighbors/plot_nca_classification.ipynb  
+ extracting: neighbors/plot_nca_dim_reduction.ipynb  
+ extracting: neighbors/plot_kde_1d.ipynb  
+ extracting: neighbors/approximate_nearest_neighbors.ipynb  
+ extracting: neural_networks/plot_mnist_filters.ipynb  
+ extracting: neural_networks/plot_rbm_logistic_classification.ipynb  
+ extracting: neural_networks/plot_mlp_training_curves.ipynb  
+ extracting: neural_networks/plot_mlp_alpha.ipynb  
+ extracting: preprocessing/plot_discretization.ipynb  
+ extracting: preprocessing/plot_discretization_strategies.ipynb  
+ extracting: preprocessing/plot_scaling_importance.ipynb  
+ extracting: preprocessing/plot_map_data_to_normal.ipynb  
+ extracting: preprocessing/plot_discretization_classification.ipynb  
+ extracting: preprocessing/plot_all_scaling.ipynb  
+ extracting: release_highlights/plot_release_highlights_0_23_0.ipynb  
+ extracting: release_highlights/plot_release_highlights_0_24_0.ipynb  
+ extracting: release_highlights/plot_release_highlights_0_22_0.ipynb  
+ extracting: semi_supervised/plot_label_propagation_structure.ipynb  
+ extracting: semi_supervised/plot_label_propagation_digits.ipynb  
+ extracting: semi_supervised/plot_semi_supervised_versus_svm_iris.ipynb  
+ extracting: semi_supervised/plot_self_training_varying_threshold.ipynb  
+ extracting: semi_supervised/plot_semi_supervised_newsgroups.ipynb  
+ extracting: semi_supervised/plot_label_propagation_digits_active_learning.ipynb  
+ extracting: svm/plot_svm_nonlinear.ipynb  
+ extracting: svm/plot_separating_hyperplane.ipynb  
+ extracting: svm/plot_custom_kernel.ipynb  
+ extracting: svm/plot_svm_tie_breaking.ipynb  
+ extracting: svm/plot_weighted_samples.ipynb  
+ extracting: svm/plot_rbf_parameters.ipynb  
+ extracting: svm/plot_linearsvc_support_vectors.ipynb  
+ extracting: svm/plot_svm_scale_c.ipynb  
+ extracting: svm/plot_separating_hyperplane_unbalanced.ipynb  
+ extracting: svm/plot_svm_margin.ipynb  
+ extracting: svm/plot_svm_kernels.ipynb  
+ extracting: svm/plot_svm_anova.ipynb  
+ extracting: svm/plot_svm_regression.ipynb  
+ extracting: svm/plot_oneclass.ipynb  
+ extracting: svm/plot_iris_svc.ipynb  
+ extracting: text/plot_hashing_vs_dict_vectorizer.ipynb  
+ extracting: text/plot_document_clustering.ipynb  
+ extracting: text/plot_document_classification_20newsgroups.ipynb  
+ extracting: tree/plot_tree_regression.ipynb  
+ extracting: tree/plot_tree_regression_multioutput.ipynb  
+ extracting: tree/plot_iris_dtc.ipynb  
+ extracting: tree/plot_cost_complexity_pruning.ipynb  
+ extracting: tree/plot_unveil_tree_structure.ipynb  
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ ls
+applications               decomposition         mixture
+auto_examples_jupyter.zip  ensemble              model_selection
+auto_examples_python.zip   exercises             multioutput
+bicluster                  feature_selection     neighbors
+calibration                gaussian_process      neural_networks
+classification             impute                preprocessing
+cluster                    inspection            release_highlights
+compose                    kernel_approximation  semi_supervised
+covariance                 linear_model          svm
+cross_decomposition        manifold              text
+datasets                   miscellaneous         tree
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ cd applications
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples/applications$ ls
+plot_face_recognition.ipynb
+plot_face_recognition.py
+plot_model_complexity_influence.ipynb
+plot_model_complexity_influence.py
+plot_outlier_detection_wine.ipynb
+plot_outlier_detection_wine.py
+plot_out_of_core_classification.ipynb
+plot_out_of_core_classification.py
+plot_prediction_latency.ipynb
+plot_prediction_latency.py
+plot_species_distribution_modeling.ipynb
+plot_species_distribution_modeling.py
+plot_stock_market.ipynb
+plot_stock_market.py
+plot_tomography_l1_reconstruction.ipynb
+plot_tomography_l1_reconstruction.py
+plot_topics_extraction_with_nmf_lda.ipynb
+plot_topics_extraction_with_nmf_lda.py
+svm_gui.ipynb
+svm_gui.py
+wikipedia_principal_eigenvector.ipynb
+wikipedia_principal_eigenvector.py
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples/applications$ ipython3 plot_stock_market.py
+
+=======================================
+Visualizing the stock market structure
+=======================================
+
+This example employs several unsupervised learning techniques to extract
+the stock market structure from variations in historical quotes.
+
+The quantity that we use is the daily variation in quote price: quotes
+that are linked tend to cofluctuate during a day.
+
+.. _stock_market:
+
+Learning a graph structure
+--------------------------
+
+We use sparse inverse covariance estimation to find which quotes are
+correlated conditionally on the others. Specifically, sparse inverse
+covariance gives us a graph, that is a list of connection. For each
+symbol, the symbols that it is connected too are those useful to explain
+its fluctuations.
+
+Clustering
+----------
+
+We use clustering to group together quotes that behave similarly. Here,
+amongst the :ref:`various clustering techniques <clustering>` available
+in the scikit-learn, we use :ref:`affinity_propagation` as it does
+not enforce equal-size clusters, and it can choose automatically the
+number of clusters from the data.
+
+Note that this gives us a different indication than the graph, as the
+graph reflects conditional relations between variables, while the
+clustering reflects marginal properties: variables clustered together can
+be considered as having a similar impact at the level of the full stock
+market.
+
+Embedding in 2D space
+---------------------
+
+For visualization purposes, we need to lay out the different symbols on a
+2D canvas. For this we use :ref:`manifold` techniques to retrieve 2D
+embedding.
+
+
+Visualization
+-------------
+
+The output of the 3 models are combined in a 2D graph where nodes
+represents the stocks and edges the:
+
+- cluster labels are used to define the color of the nodes
+- the sparse covariance model is used to display the strength of the edges
+- the 2D embedding is used to position the nodes in the plan
+
+This example has a fair amount of visualization-related code, as
+visualization is crucial here to display the graph. One of the challenge
+is to position the labels minimizing overlap. For this we use an
+heuristic based on the direction of the nearest neighbor along each
+axis.
+
+Fetching quote history for 'AAPL'
+Fetching quote history for 'AIG'
+Fetching quote history for 'AMZN'
+Fetching quote history for 'AXP'
+Fetching quote history for 'BA'
+Fetching quote history for 'BAC'
+Fetching quote history for 'CAJ'
+Fetching quote history for 'CAT'
+Fetching quote history for 'CL'
+Fetching quote history for 'CMCSA'
+Fetching quote history for 'COP'
+Fetching quote history for 'CSCO'
+Fetching quote history for 'CVC'
+Fetching quote history for 'CVS'
+Fetching quote history for 'CVX'
+Fetching quote history for 'DD'
+Fetching quote history for 'DELL'
+Fetching quote history for 'F'
+Fetching quote history for 'GD'
+Fetching quote history for 'GE'
+Fetching quote history for 'GS'
+Fetching quote history for 'GSK'
+Fetching quote history for 'HD'
+Fetching quote history for 'HMC'
+Fetching quote history for 'HPQ'
+Fetching quote history for 'IBM'
+Fetching quote history for 'JPM'
+Fetching quote history for 'K'
+Fetching quote history for 'KMB'
+Fetching quote history for 'KO'
+Fetching quote history for 'MAR'
+Fetching quote history for 'MCD'
+Fetching quote history for 'MMM'
+Fetching quote history for 'MSFT'
+Fetching quote history for 'NAV'
+Fetching quote history for 'NOC'
+Fetching quote history for 'NVS'
+Fetching quote history for 'PEP'
+Fetching quote history for 'PFE'
+Fetching quote history for 'PG'
+Fetching quote history for 'R'
+Fetching quote history for 'RTN'
+Fetching quote history for 'SAP'
+Fetching quote history for 'SNE'
+Fetching quote history for 'SNY'
+Fetching quote history for 'TM'
+Fetching quote history for 'TOT'
+Fetching quote history for 'TWX'
+Fetching quote history for 'TXN'
+Fetching quote history for 'UN'
+Fetching quote history for 'VLO'
+Fetching quote history for 'WFC'
+Fetching quote history for 'WMT'
+Fetching quote history for 'XOM'
+Fetching quote history for 'XRX'
+Fetching quote history for 'YHOO'
+/home/ian/.local/lib/python3.8/site-packages/numpy/core/_methods.py:202: RuntimeWarning: invalid value encountered in subtract
+  x = asanyarray(arr - arrmean)
+Cluster 1: Apple, Amazon, Yahoo
+Cluster 2: Comcast, Cablevision, Time Warner
+Cluster 3: ConocoPhillips, Chevron, Total, Valero Energy, Exxon
+Cluster 4: Cisco, Dell, HP, IBM, Microsoft, SAP, Texas Instruments
+Cluster 5: Boeing, General Dynamics, Northrop Grumman, Raytheon
+Cluster 6: AIG, American express, Bank of America, Caterpillar, CVS, DuPont de Nemours, Ford, General Electrics, Goldman Sachs, Home Depot, JPMorgan Chase, Marriott, 3M, Ryder, Wells Fargo, Wal-Mart
+Cluster 7: McDonald's
+Cluster 8: GlaxoSmithKline, Novartis, Pfizer, Sanofi-Aventis, Unilever
+Cluster 9: Kellogg, Coca Cola, Pepsi
+Cluster 10: Colgate-Palmolive, Kimberly-Clark, Procter Gamble
+Cluster 11: Canon, Honda, Navistar, Sony, Toyota, Xerox
+
+https://scikit-learn.org/stable/auto_examples/applications/plot_stock_market.html#sphx-glr-auto-examples-applications-plot-stock-market-pyhttps://scikit-learn.org/stable/auto_examples/applications/plot_stock_market.html#sphx-glr-auto-examples-applications-plot-stock-market-py
