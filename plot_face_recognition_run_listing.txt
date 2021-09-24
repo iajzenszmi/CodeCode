@@ -1,0 +1,622 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ raincloud.plots
+raincloud.plots: command not found
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls
+ aima-python
+ a.out
+ arct.txt
+ atanf
+ atanf.f
+ atlasf
+ auto_examples_python.zip
+ banmul.f
+ bergenoceanforecast
+ cabinetsort.py
+ chebc
+ chebc.c
+ chebcpp.cpp
+ chebcsourcecodeandrunlisting.txt
+ chebfun.jl
+ chebjul.jul
+ CodeCode
+ csvread.py
+ Data.csv
+ data.txt
+ Desktop
+ Documents
+ Downloads
+ euclid.py
+ F77
+ F77.1
+ F77.2
+ fckit
+'Game Graphics Programming By Allen Sherrod.pdf.1'
+ GB8ZMQZ3
+ gitkey.txt
+ gitkey.txt.pub
+ gradient
+ gradient2
+ gradient2.f
+ gradient2runlisting.txt
+ gradient.f
+ graphtest
+ graphtest.f08
+ handbookartificialintelligence
+ hellow
+ hellow.f
+ index.html
+ index.html.1
+'index.html?extid=SEO----'
+ iris
+ Music
+ nano.save
+ nohup.out
+ pandascsv.py
+ parab
+ parabola
+ parabola.f
+ para.txt
+ Pictures
+ pli-0.9.10d
+ pli-0.9.10d.tgz
+ plot2.plt
+ plot3.plt
+ plot.plt
+ Public
+ pythonrobotics
+'Rabbi YY Jacobson - The Satmar Rebbe on Struggling Children-JXhlkrDm2U0.f248.webm.part'
+ rainpy.py
+ randa.py
+ scikit_learn_data
+ sgsol.f
+ sin
+ sine
+ sine.f
+ sin.f
+ sin.plt
+ sin.txt
+ sklearnexamples
+ snap
+ spawnchildibm
+ spawnchildibm.c
+ spawnchildibmrunlisting.txt
+ spawnparentibm.c
+ spawntest.c.save
+ spawntestibm.c
+ spawntest.out
+ synchp
+ synchprims.cpp
+ SzeliskiBookDraft_20210702.pdf.1
+ temperature.py
+ templat2.py
+ template.py
+ Templates
+ testclisting.txt
+ testf
+ testf.f
+ testf.o
+ testfun.c
+ test.m
+ tinvb.f
+ tmp
+ Videos
+ waterbalance
+ wget-log
+ www.patarnott.com
+ xbanmul
+ xbanmul.f
+ xsplinerunwithgnuplot.txt
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sudo apt update
+[sudo] password for ian: 
+Hit:1 http://au.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://au.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://au.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  libestr0 libfastjson4 libllvm11 shim
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  linux-headers-5.11.0-36-generic linux-hwe-5.11-headers-5.11.0-36
+  linux-image-5.11.0-36-generic linux-modules-5.11.0-36-generic
+  linux-modules-extra-5.11.0-36-generic
+The following packages will be upgraded:
+  ca-certificates gir1.2-javascriptcoregtk-4.0 gir1.2-webkit2-4.0
+  google-chrome-stable libjavascriptcoregtk-4.0-18 libtiff5
+  libwebkit2gtk-4.0-37 linux-generic-hwe-20.04 linux-headers-generic-hwe-20.04
+  linux-image-generic-hwe-20.04 linux-libc-dev
+11 to upgrade, 5 to newly install, 0 to remove and 0 not to upgrade.
+10 standard security updates
+Need to get 90.7 MB/193 MB of archives.
+After this operation, 426 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://dl.google.com/linux/chrome/deb stable/main amd64 google-chrome-stable amd64 94.0.4606.54-1 [90.5 MB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security/main amd64 ca-certificates all 20210119~20.04.2 [145 kB]
+Fetched 90.7 MB in 3s (27.8 MB/s)                                              
+Preconfiguring packages ...
+dpkg: warning: files list file for package 'libeckit-dev:amd64' missing; assumin
+g package has no files currently installed
+dpkg: warning: files list file for package 'libteckit0:amd64' missing; assuming 
+package has no files currently installed
+dpkg: warning: files list file for package 'libeckit-utils' missing; assuming pa
+ckage has no files currently installed
+dpkg: warning: files list file for package 'libeckit0d:amd64' missing; assuming 
+package has no files currently installed
+(Reading database ... 299705 files and directories currently installed.)
+Preparing to unpack .../00-ca-certificates_20210119~20.04.2_all.deb ...
+Unpacking ca-certificates (20210119~20.04.2) over (20210119~20.04.1) ...
+Preparing to unpack .../01-google-chrome-stable_94.0.4606.54-1_amd64.deb ...
+Unpacking google-chrome-stable (94.0.4606.54-1) over (93.0.4577.82-1) ...
+Preparing to unpack .../02-libwebkit2gtk-4.0-37_2.32.4-0ubuntu0.20.04.1_amd64.de
+b ...
+Unpacking libwebkit2gtk-4.0-37:amd64 (2.32.4-0ubuntu0.20.04.1) over (2.32.3-0ubu
+ntu0.20.04.1) ...
+Preparing to unpack .../03-libjavascriptcoregtk-4.0-18_2.32.4-0ubuntu0.20.04.1_a
+md64.deb ...
+Unpacking libjavascriptcoregtk-4.0-18:amd64 (2.32.4-0ubuntu0.20.04.1) over (2.32
+.3-0ubuntu0.20.04.1) ...
+Preparing to unpack .../04-gir1.2-webkit2-4.0_2.32.4-0ubuntu0.20.04.1_amd64.deb 
+...
+Unpacking gir1.2-webkit2-4.0:amd64 (2.32.4-0ubuntu0.20.04.1) over (2.32.3-0ubunt
+u0.20.04.1) ...
+Preparing to unpack .../05-gir1.2-javascriptcoregtk-4.0_2.32.4-0ubuntu0.20.04.1_
+amd64.deb ...
+Unpacking gir1.2-javascriptcoregtk-4.0:amd64 (2.32.4-0ubuntu0.20.04.1) over (2.3
+2.3-0ubuntu0.20.04.1) ...
+Preparing to unpack .../06-libtiff5_4.1.0+git191117-2ubuntu0.20.04.2_amd64.deb .
+..
+Unpacking libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.2) over (4.1.0+git19111
+7-2ubuntu0.20.04.1) ...
+Selecting previously unselected package linux-modules-5.11.0-36-generic.
+Preparing to unpack .../07-linux-modules-5.11.0-36-generic_5.11.0-36.40~20.04.1_
+amd64.deb ...
+Unpacking linux-modules-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+Selecting previously unselected package linux-image-5.11.0-36-generic.
+Preparing to unpack .../08-linux-image-5.11.0-36-generic_5.11.0-36.40~20.04.1_am
+d64.deb ...
+Unpacking linux-image-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+Selecting previously unselected package linux-modules-extra-5.11.0-36-generic.
+Preparing to unpack .../09-linux-modules-extra-5.11.0-36-generic_5.11.0-36.40~20
+.04.1_amd64.deb ...
+Unpacking linux-modules-extra-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+Preparing to unpack .../10-linux-generic-hwe-20.04_5.11.0.36.40~20.04.15_amd64.d
+eb ...
+Unpacking linux-generic-hwe-20.04 (5.11.0.36.40~20.04.15) over (5.11.0.34.36~20.
+04.13) ...
+Preparing to unpack .../11-linux-image-generic-hwe-20.04_5.11.0.36.40~20.04.15_a
+md64.deb ...
+Unpacking linux-image-generic-hwe-20.04 (5.11.0.36.40~20.04.15) over (5.11.0.34.
+36~20.04.13) ...
+Selecting previously unselected package linux-hwe-5.11-headers-5.11.0-36.
+Preparing to unpack .../12-linux-hwe-5.11-headers-5.11.0-36_5.11.0-36.40~20.04.1
+_all.deb ...
+Unpacking linux-hwe-5.11-headers-5.11.0-36 (5.11.0-36.40~20.04.1) ...
+Selecting previously unselected package linux-headers-5.11.0-36-generic.
+Preparing to unpack .../13-linux-headers-5.11.0-36-generic_5.11.0-36.40~20.04.1_
+amd64.deb ...
+Unpacking linux-headers-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+Preparing to unpack .../14-linux-headers-generic-hwe-20.04_5.11.0.36.40~20.04.15
+_amd64.deb ...
+Unpacking linux-headers-generic-hwe-20.04 (5.11.0.36.40~20.04.15) over (5.11.0.3
+4.36~20.04.13) ...
+Preparing to unpack .../15-linux-libc-dev_5.4.0-86.97_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.4.0-86.97) over (5.4.0-84.94) ...
+Setting up libjavascriptcoregtk-4.0-18:amd64 (2.32.4-0ubuntu0.20.04.1) ...
+Setting up linux-libc-dev:amd64 (5.4.0-86.97) ...
+Setting up gir1.2-javascriptcoregtk-4.0:amd64 (2.32.4-0ubuntu0.20.04.1) ...
+Setting up ca-certificates (20210119~20.04.2) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 1 removed; done.
+Setting up linux-hwe-5.11-headers-5.11.0-36 (5.11.0-36.40~20.04.1) ...
+Setting up libwebkit2gtk-4.0-37:amd64 (2.32.4-0ubuntu0.20.04.1) ...
+Setting up libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.2) ...
+Setting up linux-headers-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+Setting up gir1.2-webkit2-4.0:amd64 (2.32.4-0ubuntu0.20.04.1) ...
+Setting up google-chrome-stable (94.0.4606.54-1) ...
+Setting up linux-headers-generic-hwe-20.04 (5.11.0.36.40~20.04.15) ...
+Setting up linux-image-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+I: /boot/vmlinuz.old is now a symlink to vmlinuz-5.11.0-34-generic
+I: /boot/initrd.img.old is now a symlink to initrd.img-5.11.0-34-generic
+I: /boot/vmlinuz is now a symlink to vmlinuz-5.11.0-36-generic
+I: /boot/initrd.img is now a symlink to initrd.img-5.11.0-36-generic
+Setting up linux-modules-extra-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+Setting up linux-image-generic-hwe-20.04 (5.11.0.36.40~20.04.15) ...
+Setting up linux-modules-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+Setting up linux-generic-hwe-20.04 (5.11.0.36.40~20.04.15) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ca-certificates (20210119~20.04.2) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+Processing triggers for linux-image-5.11.0-36-generic (5.11.0-36.40~20.04.1) ...
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-5.11.0-36-generic
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.11.0-36-generic
+Found initrd image: /boot/initrd.img-5.11.0-36-generic
+Found linux image: /boot/vmlinuz-5.11.0-34-generic
+Found initrd image: /boot/initrd.img-5.11.0-34-generic
+Found linux image: /boot/vmlinuz-5.11.0-27-generic
+Found initrd image: /boot/initrd.img-5.11.0-27-generic
+Adding boot menu entry for UEFI Firmware Settings
+done
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls
+ aima-python
+ a.out
+ arct.txt
+ atanf
+ atanf.f
+ atlasf
+ auto_examples_python.zip
+ banmul.f
+ bergenoceanforecast
+ cabinetsort.py
+ chebc
+ chebc.c
+ chebcpp.cpp
+ chebcsourcecodeandrunlisting.txt
+ chebfun.jl
+ chebjul.jul
+ CodeCode
+ csvread.py
+ Data.csv
+ data.txt
+ Desktop
+ Documents
+ Downloads
+ euclid.py
+ F77
+ F77.1
+ F77.2
+ fckit
+'Game Graphics Programming By Allen Sherrod.pdf.1'
+ GB8ZMQZ3
+ gitkey.txt
+ gitkey.txt.pub
+ gradient
+ gradient2
+ gradient2.f
+ gradient2runlisting.txt
+ gradient.f
+ graphtest
+ graphtest.f08
+ handbookartificialintelligence
+ hellow
+ hellow.f
+ index.html
+ index.html.1
+'index.html?extid=SEO----'
+ iris
+ Music
+ nano.save
+ nohup.out
+ pandascsv.py
+ parab
+ parabola
+ parabola.f
+ para.txt
+ Pictures
+ pli-0.9.10d
+ pli-0.9.10d.tgz
+ plot2.plt
+ plot3.plt
+ plot.plt
+ Public
+ pythonrobotics
+'Rabbi YY Jacobson - The Satmar Rebbe on Struggling Children-JXhlkrDm2U0.f248.webm.part'
+ rainpy.py
+ randa.py
+ scikit_learn_data
+ sgsol.f
+ sin
+ sine
+ sine.f
+ sin.f
+ sin.plt
+ sin.txt
+ sklearnexamples
+ snap
+ spawnchildibm
+ spawnchildibm.c
+ spawnchildibmrunlisting.txt
+ spawnparentibm.c
+ spawntest.c.save
+ spawntestibm.c
+ spawntest.out
+ synchp
+ synchprims.cpp
+ SzeliskiBookDraft_20210702.pdf.1
+ temperature.py
+ templat2.py
+ template.py
+ Templates
+ testclisting.txt
+ testf
+ testf.f
+ testf.o
+ testfun.c
+ test.m
+ tinvb.f
+ tmp
+ Videos
+ waterbalance
+ wget-log
+ www.patarnott.com
+ xbanmul
+ xbanmul.f
+ xsplinerunwithgnuplot.txt
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran graphtest.f08
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./a.out
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cd Downloads
+ian@ian-HP-Stream-Laptop-11-y0XX:~/Downloads$ ls
+ AAASpline.m
+ chebpydemo.m
+ chebpydemo.py
+ CMakeLists.txt
+'document(1).pdf'
+ document.pdf
+ dopplerultrasoundvenousscanianmartinajzenszmidt_.zip
+ dopplerveinscan1..jpg
+ dopplerveinscan2.jpg
+ downloadeJnn4165006.zip
+ downloadvEB6V165145.zip
+ google-chrome-stable_current_amd64.deb
+ heapsort
+ heapsort.cbl
+ heapsort-cbl-runlisting.txt
+ heapsortcblrunlisting.txt
+ heapsort.so
+ IDCJAC0009_086304_1800_Data.csv
+ IDCJAC0009_086304_1800_Note.txt
+ IDCJAC0009_086304_1800.zip
+ IDCJAC0009_086304_1980.pdf
+ LS9_Managing-bilingual-staff.pdf
+'miss_student_code_of_conduct(1).pdf'
+ miss_student_code_of_conduct.pdf
+ perlin.f90
+ perlin.mod
+ perlin.o
+ pl1gcc-0.0.14.zip
+ pl1gcc-0.0.15
+ pl1gcc-0.0.15.zip
+ plot_chebyfit.ipynb
+ plot_chebyfit.py
+ Tax-return-for-individuals-2021.pdf
+ian@ian-HP-Stream-Laptop-11-y0XX:~/Downloads$ ls *.py
+chebpydemo.py  plot_chebyfit.py
+ian@ian-HP-Stream-Laptop-11-y0XX:~/Downloads$ vim rainpy.py
+ian@ian-HP-Stream-Laptop-11-y0XX:~/Downloads$ ls rainpy*
+ls: cannot access 'rainpy*': No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~/Downloads$ 
+ian@ian-HP-Stream-Laptop-11-y0XX:~/Downloads$ ls rainpy.py
+ls: cannot access 'rainpy.py': No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~/Downloads$ ls *.py
+chebpydemo.py  plot_chebyfit.py
+ian@ian-HP-Stream-Laptop-11-y0XX:~/Downloads$ cd
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls rainpy.py
+rainpy.py
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ipython3  rainpy.py
+  File "/home/ian/rainpy.py", line 4
+    return monthList.index(min(monthList))+1
+    ^
+IndentationError: expected an indented block
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ipython3  rainpy.py
+  File "/home/ian/rainpy.py", line 4
+    return monthList.index(min(monthList))+1
+    ^
+IndentationError: expected an indented block
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ipython3 pythoncsv.py
+[TerminalIPythonApp] WARNING | File 'pythoncsv.py' doesn't exist
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ *.py
+cabinetsort.py: command not found
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls *.py
+cabinetsort.py  euclid.py     rainpy.py  temperature.py  template.py
+csvread.py      pandascsv.py  randa.py   templat2.py
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ipython3 csvread.py
+  File "/home/ian/.local/lib/python3.8/site-packages/pd/pdd.py", line 18
+    return value
+                ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls
+ aima-python
+ a.out
+ arct.txt
+ atanf
+ atanf.f
+ atlasf
+ auto_examples_python.zip
+ banmul.f
+ bergenoceanforecast
+ cabinetsort.py
+ chebc
+ chebc.c
+ chebcpp.cpp
+ chebcsourcecodeandrunlisting.txt
+ chebfun.jl
+ chebjul.jul
+ CodeCode
+ csvread.py
+ Data.csv
+ data.txt
+ Desktop
+ Documents
+ Downloads
+ euclid.py
+ F77
+ F77.1
+ F77.2
+ fckit
+'Game Graphics Programming By Allen Sherrod.pdf.1'
+ GB8ZMQZ3
+ gitkey.txt
+ gitkey.txt.pub
+ gradient
+ gradient2
+ gradient2.f
+ gradient2runlisting.txt
+ gradient.f
+ graphtest
+ graphtest.f08
+ handbookartificialintelligence
+ hellow
+ hellow.f
+ index.html
+ index.html.1
+'index.html?extid=SEO----'
+ iris
+ Music
+ nano.save
+ nohup.out
+ pandascsv.py
+ parab
+ parabola
+ parabola.f
+ para.txt
+ Pictures
+ pli-0.9.10d
+ pli-0.9.10d.tgz
+ plot2.plt
+ plot3.plt
+ plot.plt
+ Public
+ pythonrobotics
+'Rabbi YY Jacobson - The Satmar Rebbe on Struggling Children-JXhlkrDm2U0.f248.webm.part'
+ rainpy.py
+ randa.py
+ scikit_learn_data
+ sgsol.f
+ sin
+ sine
+ sine.f
+ sin.f
+ sin.plt
+ sin.txt
+ sklearnexamples
+ snap
+ spawnchildibm
+ spawnchildibm.c
+ spawnchildibmrunlisting.txt
+ spawnparentibm.c
+ spawntest.c.save
+ spawntestibm.c
+ spawntest.out
+ synchp
+ synchprims.cpp
+ SzeliskiBookDraft_20210702.pdf.1
+ temperature.py
+ templat2.py
+ template.py
+ Templates
+ testclisting.txt
+ testf
+ testf.f
+ testf.o
+ testfun.c
+ test.m
+ tinvb.f
+ tmp
+ Videos
+ waterbalance
+ wget-log
+ www.patarnott.com
+ xbanmul
+ xbanmul.f
+ xsplinerunwithgnuplot.txt
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cd sklearnexamples
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ ls
+applications               decomposition         mixture
+auto_examples_jupyter.zip  ensemble              model_selection
+auto_examples_python.zip   exercises             multioutput
+bicluster                  feature_selection     neighbors
+calibration                gaussian_process      neural_networks
+classification             impute                preprocessing
+cluster                    inspection            release_highlights
+compose                    kernel_approximation  semi_supervised
+covariance                 linear_model          svm
+cross_decomposition        manifold              text
+datasets                   miscellaneous         tree
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ cd applicationd
+bash: cd: applicationd: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples$ cd applications
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples/applications$ ls
+covariancerun.txt
+plot_face_recognition.ipynb
+plot_face_recognition.py
+plot_model_complexity_influence.ipynb
+plot_model_complexity_influence.py
+plot_outlier_detection_wine.ipynb
+plot_outlier_detection_wine.py
+plot_out_of_core_classification.ipynb
+plot_out_of_core_classification.py
+plot_prediction_latency.ipynb
+plot_prediction_latency.py
+plot_species_distribution_modeling.ipynb
+plot_species_distribution_modeling.py
+plot_stock_market.ipynb
+plot_stock_market.py
+plot_tomography_l1_reconstruction.ipynb
+plot_tomography_l1_reconstruction.py
+plot_topics_extraction_with_nmf_lda.ipynb
+plot_topics_extraction_with_nmf_lda.py
+sklearnstockmarket.txt
+svm_gui.ipynb
+svm_gui.py
+wikipedia_principal_eigenvector.ipynb
+wikipedia_principal_eigenvector.py
+ian@ian-HP-Stream-Laptop-11-y0XX:~/sklearnexamples/applications$ ipython3 plot_face_recognition.py
+
+===================================================
+Faces recognition example using eigenfaces and SVMs
+===================================================
+
+The dataset used in this example is a preprocessed excerpt of the
+"Labeled Faces in the Wild", aka LFW_:
+
+  http://vis-www.cs.umass.edu/lfw/lfw-funneled.tgz (233MB)
+
+.. _LFW: http://vis-www.cs.umass.edu/lfw/
+
+Expected results for the top 5 most represented people in the dataset:
+
+================== ============ ======= ========== =======
+                   precision    recall  f1-score   support
+================== ============ ======= ========== =======
+     Ariel Sharon       0.67      0.92      0.77        13
+     Colin Powell       0.75      0.78      0.76        60
+  Donald Rumsfeld       0.78      0.67      0.72        27
+    George W Bush       0.86      0.86      0.86       146
+Gerhard Schroeder       0.76      0.76      0.76        25
+      Hugo Chavez       0.67      0.67      0.67        15
+       Tony Blair       0.81      0.69      0.75        36
+
+      avg / total       0.80      0.80      0.80       322
+================== ============ ======= ========== =======
+
+
+2021-09-24 10:40:57,366 Downloading LFW metadata: https://ndownloader.figshare.com/files/5976012
+2021-09-24 10:41:01,136 Downloading LFW metadata: https://ndownloader.figshare.com/files/5976009
+2021-09-24 10:41:04,409 Downloading LFW metadata: https://ndownloader.figshare.com/files/5976006
+2021-09-24 10:41:08,204 Downloading LFW data (~200MB): https://ndownloader.figshare.com/files/5976015
+
+
