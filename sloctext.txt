@@ -1,0 +1,1054 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ sloccount *
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/CodeCode/00P0o00001vPy9NEAS-Recognition Certificate-20-Years-29-03-2019.pdf to top_dir
+Adding /home/ian/CodeCode/00P90000014zflhEAA-2039645 - Membership Certificate.PDF to top_dir
+Adding /home/ian/CodeCode/00P90000014zfliEAA-2039645 - Recognition Certificate.PDF to top_dir
+Adding /home/ian/CodeCode/04_in_out.c to top_dir
+Adding /home/ian/CodeCode/04_in_out.s to top_dir
+Adding /home/ian/CodeCode/100dooors.f90 to top_dir
+Adding /home/ian/CodeCode/100dooorsf90txtrun.txt to top_dir
+Adding /home/ian/CodeCode/100dooors.s to top_dir
+Adding /home/ian/CodeCode/100doors.cob to top_dir
+Adding /home/ian/CodeCode/100doorscobrun.txt to top_dir
+Adding /home/ian/CodeCode/100doorsf90run2.txt to top_dir
+Adding /home/ian/CodeCode/100l.f to top_dir
+Adding /home/ian/CodeCode/100lines to top_dir
+Adding /home/ian/CodeCode/100l.s to top_dir
+Adding /home/ian/CodeCode/133test1.f08 to top_dir
+Adding /home/ian/CodeCode/133test1.s to top_dir
+Adding /home/ian/CodeCode/1995_Algorithm_748_Enclosing_Zeros_of_Continuous_Functions.pdf to top_dir
+Adding /home/ian/CodeCode/20c.c to top_dir
+Adding /home/ian/CodeCode/20c.s to top_dir
+Adding /home/ian/CodeCode/3802 to top_dir
+Adding /home/ian/CodeCode/38021 to top_dir
+Adding /home/ian/CodeCode/3802.f to top_dir
+Adding /home/ian/CodeCode/3802.s to top_dir
+Adding /home/ian/CodeCode/385.f to top_dir
+Adding /home/ian/CodeCode/385.s to top_dir
+Adding /home/ian/CodeCode/422listingrun.txt to top_dir
+Adding /home/ian/CodeCode/422listing.txt to top_dir
+Adding /home/ian/CodeCode/438 to top_dir
+Adding /home/ian/CodeCode/438-1.f to top_dir
+Adding /home/ian/CodeCode/438-1.s to top_dir
+Adding /home/ian/CodeCode/438.f to top_dir
+Adding /home/ian/CodeCode/438run.txt to top_dir
+Adding /home/ian/CodeCode/438.s to top_dir
+Adding /home/ian/CodeCode/438.sh to top_dir
+Adding /home/ian/CodeCode/441run.txt to top_dir
+Adding /home/ian/CodeCode/454run.txt to top_dir
+Adding /home/ian/CodeCode/456.f to top_dir
+Adding /home/ian/CodeCode/456frun.txt to top_dir
+Adding /home/ian/CodeCode/456run.txt to top_dir
+Adding /home/ian/CodeCode/456.s to top_dir
+Adding /home/ian/CodeCode/461runlisting.txt to top_dir
+Adding /home/ian/CodeCode/461.sh to top_dir
+Adding /home/ian/CodeCode/467runlisting.txt to top_dir
+Adding /home/ian/CodeCode/467.sh to top_dir
+Adding /home/ian/CodeCode/468x to top_dir
+Adding /home/ian/CodeCode/468xwork.txt to top_dir
+Adding /home/ian/CodeCode/470driver.f to top_dir
+Adding /home/ian/CodeCode/470driver.s to top_dir
+Adding /home/ian/CodeCode/470Makefile to top_dir
+Adding /home/ian/CodeCode/470runlisting.txt to top_dir
+Adding /home/ian/CodeCode/470.sh to top_dir
+Adding /home/ian/CodeCode/470src.f to top_dir
+Adding /home/ian/CodeCode/470src.s to top_dir
+Adding /home/ian/CodeCode/473.f to top_dir
+Adding /home/ian/CodeCode/473.s to top_dir
+Adding /home/ian/CodeCode/498b.f to top_dir
+Adding /home/ian/CodeCode/498b.s to top_dir
+Adding /home/ian/CodeCode/498.f to top_dir
+Adding /home/ian/CodeCode/498run.txt to top_dir
+Adding /home/ian/CodeCode/498runws.txt to top_dir
+Adding /home/ian/CodeCode/498.s to top_dir
+Adding /home/ian/CodeCode/498testlast.txt to top_dir
+Adding /home/ian/CodeCode/517.f to top_dir
+Adding /home/ian/CodeCode/517.s to top_dir
+Adding /home/ian/CodeCode/524f1.f to top_dir
+Adding /home/ian/CodeCode/524f1.s to top_dir
+Adding /home/ian/CodeCode/524run to top_dir
+Adding /home/ian/CodeCode/525.f to top_dir
+Adding /home/ian/CodeCode/525.s to top_dir
+Adding /home/ian/CodeCode/5631.f to top_dir
+Adding /home/ian/CodeCode/5631runlisting.txt to top_dir
+Adding /home/ian/CodeCode/5631.s to top_dir
+Adding /home/ian/CodeCode/563.txt to top_dir
+Adding /home/ian/CodeCode/585.f to top_dir
+Adding /home/ian/CodeCode/585run2.txt to top_dir
+Adding /home/ian/CodeCode/585run.txt to top_dir
+Adding /home/ian/CodeCode/585.s to top_dir
+Adding /home/ian/CodeCode/599 to top_dir
+Adding /home/ian/CodeCode/599.f to top_dir
+Adding /home/ian/CodeCode/599run.txt to top_dir
+Adding /home/ian/CodeCode/599.s to top_dir
+Adding /home/ian/CodeCode/5ast.c to top_dir
+Adding /home/ian/CodeCode/5ast.s to top_dir
+Adding /home/ian/CodeCode/6001.f to top_dir
+Adding /home/ian/CodeCode/6001.s to top_dir
+Adding /home/ian/CodeCode/665a.f to top_dir
+Adding /home/ian/CodeCode/665a.s to top_dir
+Adding /home/ian/CodeCode/665.f to top_dir
+Adding /home/ian/CodeCode/665.s to top_dir
+Adding /home/ian/CodeCode/665t.txt to top_dir
+Adding /home/ian/CodeCode/693 to top_dir
+Adding /home/ian/CodeCode/6934.f to top_dir
+Adding /home/ian/CodeCode/6934.s to top_dir
+Adding /home/ian/CodeCode/699.f to top_dir
+Adding /home/ian/CodeCode/699run.txt to top_dir
+Adding /home/ian/CodeCode/699.s to top_dir
+Adding /home/ian/CodeCode/718-2 to top_dir
+Adding /home/ian/CodeCode/718-2.f to top_dir
+Adding /home/ian/CodeCode/718-2.s to top_dir
+Adding /home/ian/CodeCode/718-calgo-run.txt to top_dir
+Adding /home/ian/CodeCode/718driver.f08 to top_dir
+Adding /home/ian/CodeCode/718driver.s to top_dir
+Adding /home/ian/CodeCode/718.f08 to top_dir
+Adding /home/ian/CodeCode/718intro.f08 to top_dir
+Adding /home/ian/CodeCode/718intro.s to top_dir
+Adding /home/ian/CodeCode/718-programsample11.f to top_dir
+Adding /home/ian/CodeCode/718-programsample11.s to top_dir
+Adding /home/ian/CodeCode/718-programsample1.f to top_dir
+Adding /home/ian/CodeCode/718-programsample1.s to top_dir
+Adding /home/ian/CodeCode/718-programsample21.f to top_dir
+Adding /home/ian/CodeCode/718-programsample21.s to top_dir
+Adding /home/ian/CodeCode/718-programsample2.f to top_dir
+Adding /home/ian/CodeCode/718-programsample2.s to top_dir
+Adding /home/ian/CodeCode/718-programsample3.f to top_dir
+Adding /home/ian/CodeCode/718-programsample3.s to top_dir
+Adding /home/ian/CodeCode/718README.md to top_dir
+Adding /home/ian/CodeCode/718.s to top_dir
+Adding /home/ian/CodeCode/718-sampleprogram5.f to top_dir
+Adding /home/ian/CodeCode/718-sampleprogram5.s to top_dir
+Adding /home/ian/CodeCode/718-sampleprogram.f to top_dir
+Adding /home/ian/CodeCode/718-sampleprogram.s to top_dir
+Adding /home/ian/CodeCode/718-ssevas.f to top_dir
+Adding /home/ian/CodeCode/718-ssevas.s to top_dir
+Adding /home/ian/CodeCode/718v1.f to top_dir
+Adding /home/ian/CodeCode/718v1.s to top_dir
+Adding /home/ian/CodeCode/718-v4.f to top_dir
+Adding /home/ian/CodeCode/718-v4.s to top_dir
+Adding /home/ian/CodeCode/748_1.f to top_dir
+Adding /home/ian/CodeCode/748_1.s to top_dir
+Adding /home/ian/CodeCode/748.f to top_dir
+Adding /home/ian/CodeCode/748fslocrunlisting.txt to top_dir
+Adding /home/ian/CodeCode/748run.txt to top_dir
+Adding /home/ian/CodeCode/748.s to top_dir
+Adding /home/ian/CodeCode/748test.txt to top_dir
+Adding /home/ian/CodeCode/766driver2runlisting.txt to top_dir
+Adding /home/ian/CodeCode/766driveronerun.txt to top_dir
+Adding /home/ian/CodeCode/766.sh to top_dir
+Adding /home/ian/CodeCode/99bottles.jl to top_dir
+Adding /home/ian/CodeCode/99bottlesjl.txt to top_dir
+Adding /home/ian/CodeCode/9million.jl to top_dir
+Adding /home/ian/CodeCode/9millionjlrunlisting.txt to top_dir
+Adding /home/ian/CodeCode/abstest.f90 to top_dir
+Adding /home/ian/CodeCode/abstestf90run.txt to top_dir
+Adding /home/ian/CodeCode/abstest.s to top_dir
+Adding /home/ian/CodeCode/ack.f90 to top_dir
+Adding /home/ian/CodeCode/ack.s to top_dir
+Adding /home/ian/CodeCode/acm463xWorksheet.txt to top_dir
+Adding /home/ian/CodeCode/AcmToms967Sloccount.txt to top_dir
+Adding /home/ian/CodeCode/addagoodone.f to top_dir
+Adding /home/ian/CodeCode/addagoodonerun.txt to top_dir
+Adding /home/ian/CodeCode/addagoodone.s to top_dir
+Adding /home/ian/CodeCode/additiveprimes.fs to top_dir
+Adding /home/ian/CodeCode/additiveprimesrun.txt to top_dir
+Adding /home/ian/CodeCode/Ad.R to top_dir
+Adding /home/ian/CodeCode/a.f to top_dir
+Adding /home/ian/CodeCode/aimaprobabilityjupyternotebookrun.txt to top_dir
+Adding /home/ian/CodeCode/aima-viterbi_algorithm-run.txt to top_dir
+Adding /home/ian/CodeCode/al1.asc to top_dir
+Adding /home/ian/CodeCode/alg133.mod to top_dir
+Adding /home/ian/CodeCode/allo1.c to top_dir
+Adding /home/ian/CodeCode/allo1.s to top_dir
+Adding /home/ian/CodeCode/allocatable.c to top_dir
+Adding /home/ian/CodeCode/allocatable.s to top_dir
+Adding /home/ian/CodeCode/allocate2.c to top_dir
+Adding /home/ian/CodeCode/allocate2.s to top_dir
+Adding /home/ian/CodeCode/allocate.c to top_dir
+Adding /home/ian/CodeCode/allocate.s to top_dir
+Adding /home/ian/CodeCode/amazonbraketrun.txt to top_dir
+Adding /home/ian/CodeCode/ansi90colorrun.txt to top_dir
+Adding /home/ian/CodeCode/ANSI-color-codes.h to top_dir
+Adding /home/ian/CodeCode/ansi_colors.f90 to top_dir
+Adding /home/ian/CodeCode/ansi_colors.mod to top_dir
+Adding /home/ian/CodeCode/ansi_colors.s to top_dir
+Adding /home/ian/CodeCode/ansif90.f90 to top_dir
+Adding /home/ian/CodeCode/ansif90.s to top_dir
+Adding /home/ian/CodeCode/ansifortran90colorrun.txt to top_dir
+Adding /home/ian/CodeCode/a.out to top_dir
+Adding /home/ian/CodeCode/aplot.R to top_dir
+Adding /home/ian/CodeCode/ard11.f90 to top_dir
+Adding /home/ian/CodeCode/ard11.s to top_dir
+Adding /home/ian/CodeCode/area.c to top_dir
+Adding /home/ian/CodeCode/area.s to top_dir
+Adding /home/ian/CodeCode/array.asm to top_dir
+Adding /home/ian/CodeCode/arrayfunctions.cpp to top_dir
+Adding /home/ian/CodeCode/arrsz.c to top_dir
+Adding /home/ian/CodeCode/arrsz.s to top_dir
+Adding /home/ian/CodeCode/a.s to top_dir
+Adding /home/ian/CodeCode/asig.c to top_dir
+Adding /home/ian/CodeCode/asig.s to top_dir
+Adding /home/ian/CodeCode/async1.py to top_dir
+Adding /home/ian/CodeCode/async4.py to top_dir
+Adding /home/ian/CodeCode/asyncb.py to top_dir
+Adding /home/ian/CodeCode/asyncd.py to top_dir
+Adding /home/ian/CodeCode/asynce.py to top_dir
+Adding /home/ian/CodeCode/asyncpython391.txt to top_dir
+Adding /home/ian/CodeCode/atantest.f to top_dir
+Adding /home/ian/CodeCode/atantestrun.txt to top_dir
+Adding /home/ian/CodeCode/atantest.s to top_dir
+Adding /home/ian/CodeCode/atest to top_dir
+Adding /home/ian/CodeCode/atest1.c to top_dir
+Adding /home/ian/CodeCode/atest1.s to top_dir
+Adding /home/ian/CodeCode/atest4 to top_dir
+Adding /home/ian/CodeCode/atest4.c to top_dir
+Adding /home/ian/CodeCode/atest4.s to top_dir
+Adding /home/ian/CodeCode/atest.c to top_dir
+Adding /home/ian/CodeCode/atest.s to top_dir
+Adding /home/ian/CodeCode/aupper1 to top_dir
+Adding /home/ian/CodeCode/aupper1.c to top_dir
+Adding /home/ian/CodeCode/aupper1.s to top_dir
+Adding /home/ian/CodeCode/aupper2 to top_dir
+Adding /home/ian/CodeCode/aupper2.c to top_dir
+Adding /home/ian/CodeCode/aupper2.s to top_dir
+Adding /home/ian/CodeCode/aupper3 to top_dir
+Adding /home/ian/CodeCode/aupper3.c to top_dir
+Adding /home/ian/CodeCode/aupper3.s to top_dir
+Adding /home/ian/CodeCode/aupper.c to top_dir
+Adding /home/ian/CodeCode/aupper.s to top_dir
+Adding /home/ian/CodeCode/awk1.txt to top_dir
+Adding /home/ian/CodeCode/ay.cbl to top_dir
+Adding /home/ian/CodeCode/ayrun.txt to top_dir
+Adding /home/ian/CodeCode/bessel.c to top_dir
+Adding /home/ian/CodeCode/besselcrun.txt to top_dir
+Adding /home/ian/CodeCode/bessel.s to top_dir
+Adding /home/ian/CodeCode/bignumsymoctave.txt to top_dir
+Adding /home/ian/CodeCode/bisection.f to top_dir
+Adding /home/ian/CodeCode/bisection.s to top_dir
+Adding /home/ian/CodeCode/blas1.f to top_dir
+Adding /home/ian/CodeCode/blas1.s to top_dir
+Adding /home/ian/CodeCode/blinc2.c to top_dir
+Adding /home/ian/CodeCode/blinc2.s to top_dir
+Adding /home/ian/CodeCode/boostroots.cpp to top_dir
+Adding /home/ian/CodeCode/boostrootsrun.txt to top_dir
+Adding /home/ian/CodeCode/brent.cpp to top_dir
+Adding /home/ian/CodeCode/brentcpprunlisting.txt to top_dir
+Adding /home/ian/CodeCode/brentcppsloccountrunlisting2.txt to top_dir
+Adding /home/ian/CodeCode/brent.f90 to top_dir
+Adding /home/ian/CodeCode/brentquad.cpp to top_dir
+Adding /home/ian/CodeCode/brentquadrunlisting.txt to top_dir
+Adding /home/ian/CodeCode/brentrun to top_dir
+Adding /home/ian/CodeCode/brentrun.txt to top_dir
+Adding /home/ian/CodeCode/brent.s to top_dir
+Adding /home/ian/CodeCode/brentsloccount.txt to top_dir
+Adding /home/ian/CodeCode/brent_test.f90 to top_dir
+Adding /home/ian/CodeCode/brent_test.s to top_dir
+Adding /home/ian/CodeCode/btreeset.py to top_dir
+Adding /home/ian/CodeCode/btreeset.pyc to top_dir
+Adding /home/ian/CodeCode/btreeset-test.py to top_dir
+Adding /home/ian/CodeCode/buffon.f90 to top_dir
+Adding /home/ian/CodeCode/buffon.s to top_dir
+Adding /home/ian/CodeCode/bufo.bas to top_dir
+Adding /home/ian/CodeCode/c1.cbl to top_dir
+Adding /home/ian/CodeCode/calc.c to top_dir
+Adding /home/ian/CodeCode/calc.s to top_dir
+Adding /home/ian/CodeCode/calgo133run.txt to top_dir
+Adding /home/ian/CodeCode/calgo517runlisting.txt to top_dir
+Adding /home/ian/CodeCode/calgo693runlist.txt to top_dir
+Adding /home/ian/CodeCode/calltgammatest.f08 to top_dir
+Adding /home/ian/CodeCode/calltgammatest.s to top_dir
+Adding /home/ian/CodeCode/candgfortranrun.txt to top_dir
+Adding /home/ian/CodeCode/cblass.c to top_dir
+Adding /home/ian/CodeCode/cblass.s to top_dir
+Adding /home/ian/CodeCode/CentigradeConversion to top_dir
+Adding /home/ian/CodeCode/CentigradeConversion.f08 to top_dir
+Adding /home/ian/CodeCode/CentigradeConversion.s to top_dir
+Adding /home/ian/CodeCode/cfun.c to top_dir
+Adding /home/ian/CodeCode/cfun.s to top_dir
+Adding /home/ian/CodeCode/chara.c to top_dir
+Adding /home/ian/CodeCode/chara.s to top_dir
+Adding /home/ian/CodeCode/chek.f08 to top_dir
+Adding /home/ian/CodeCode/chek.s to top_dir
+Adding /home/ian/CodeCode/choleski.f08 to top_dir
+Adding /home/ian/CodeCode/choleski.s to top_dir
+Adding /home/ian/CodeCode/circle.h to top_dir
+Adding /home/ian/CodeCode/clock1.f to top_dir
+Adding /home/ian/CodeCode/clock1.s to top_dir
+Adding /home/ian/CodeCode/cmatrx.c to top_dir
+Adding /home/ian/CodeCode/cmatrx.s to top_dir
+Adding /home/ian/CodeCode/cocolme to top_dir
+Adding /home/ian/CodeCode/cocolme2 to top_dir
+Adding /home/ian/CodeCode/cocolme2.c to top_dir
+Adding /home/ian/CodeCode/cocolme2.s to top_dir
+Adding /home/ian/CodeCode/cocolme.c to top_dir
+Adding /home/ian/CodeCode/cocolme.s to top_dir
+Adding /home/ian/CodeCode/coinf.bas to top_dir
+Adding /home/ian/CodeCode/cointoss.c to top_dir
+Adding /home/ian/CodeCode/cointoss.s to top_dir
+Adding /home/ian/CodeCode/col to top_dir
+Adding /home/ian/CodeCode/col.c to top_dir
+Adding /home/ian/CodeCode/colme to top_dir
+Adding /home/ian/CodeCode/colme.c to top_dir
+Adding /home/ian/CodeCode/colme.s to top_dir
+Adding /home/ian/CodeCode/col.s to top_dir
+Adding /home/ian/CodeCode/compa to top_dir
+Adding /home/ian/CodeCode/compa.asm to top_dir
+Adding /home/ian/CodeCode/compilerDesignInC.pdf to top_dir
+Adding /home/ian/CodeCode/complx to top_dir
+Adding /home/ian/CodeCode/complx.f08 to top_dir
+Adding /home/ian/CodeCode/complx.s to top_dir
+Adding /home/ian/CodeCode/conditions.cbl to top_dir
+Adding /home/ian/CodeCode/conver.f to top_dir
+Adding /home/ian/CodeCode/converf.txt to top_dir
+Adding /home/ian/CodeCode/conver.s to top_dir
+Adding /home/ian/CodeCode/cosprint.f to top_dir
+Adding /home/ian/CodeCode/cosprintrun.txt to top_dir
+Adding /home/ian/CodeCode/cosprint.s to top_dir
+Adding /home/ian/CodeCode/coun1 to top_dir
+Adding /home/ian/CodeCode/coun1.asm to top_dir
+Adding /home/ian/CodeCode/coun2.asm to top_dir
+Adding /home/ian/CodeCode/coun3 to top_dir
+Adding /home/ian/CodeCode/coun3.asm to top_dir
+Adding /home/ian/CodeCode/count1 to top_dir
+Adding /home/ian/CodeCode/count1a1 to top_dir
+Adding /home/ian/CodeCode/count1a1.f08 to top_dir
+Adding /home/ian/CodeCode/count1a1.s to top_dir
+Adding /home/ian/CodeCode/count1.f08 to top_dir
+Adding /home/ian/CodeCode/count1.s to top_dir
+Adding /home/ian/CodeCode/count1srun.txt to top_dir
+Adding /home/ian/CodeCode/count9 to top_dir
+Adding /home/ian/CodeCode/countto10.f to top_dir
+Adding /home/ian/CodeCode/countto10.s to top_dir
+Adding /home/ian/CodeCode/counttotorun.txt to top_dir
+Adding /home/ian/CodeCode/cpgtest2.c to top_dir
+Adding /home/ian/CodeCode/cpgtest2.s to top_dir
+Adding /home/ian/CodeCode/cppcon1to3.cpp to top_dir
+Adding /home/ian/CodeCode/crypt.c to top_dir
+Adding /home/ian/CodeCode/cryptcrun.txt to top_dir
+Adding /home/ian/CodeCode/crypt.f to top_dir
+Adding /home/ian/CodeCode/cryptfrun.txt to top_dir
+Adding /home/ian/CodeCode/crypt.s to top_dir
+Adding /home/ian/CodeCode/ct1.png to top_dir
+Adding /home/ian/CodeCode/ct2.png to top_dir
+Adding /home/ian/CodeCode/ctest.c to top_dir
+Adding /home/ian/CodeCode/ctest.s to top_dir
+Adding /home/ian/CodeCode/data to top_dir
+Adding /home/ian/CodeCode/data2 to top_dir
+Adding /home/ian/CodeCode/dati.f90 to top_dir
+Adding /home/ian/CodeCode/datif90run.txt to top_dir
+Adding /home/ian/CodeCode/dati.s to top_dir
+Adding /home/ian/CodeCode/daw.f to top_dir
+Adding /home/ian/CodeCode/dawrun.txt to top_dir
+Adding /home/ian/CodeCode/daw.s to top_dir
+Adding /home/ian/CodeCode/dawtst.f to top_dir
+Adding /home/ian/CodeCode/dawtst.f complete run listing including compiling.txt to top_dir
+Adding /home/ian/CodeCode/dawtst.s to top_dir
+Adding /home/ian/CodeCode/dl.f to top_dir
+Adding /home/ian/CodeCode/dlrun.txt to top_dir
+Adding /home/ian/CodeCode/dl.s to top_dir
+Adding /home/ian/CodeCode/dpar.mixal to top_dir
+Adding /home/ian/CodeCode/dparmixaltxt.txt to top_dir
+Adding /home/ian/CodeCode/driver1.f90 to top_dir
+Adding /home/ian/CodeCode/driver1.s to top_dir
+Adding /home/ian/CodeCode/driver2.f90 to top_dir
+Adding /home/ian/CodeCode/driver2.s to top_dir
+Adding /home/ian/CodeCode/driver.f to top_dir
+Adding /home/ian/CodeCode/driver.s to top_dir
+Adding /home/ian/CodeCode/duke of perth 2.f to top_dir
+Adding /home/ian/CodeCode/duke of perth 2.s to top_dir
+Adding /home/ian/CodeCode/dukeofperthc.c to top_dir
+Adding /home/ian/CodeCode/dukeofperthcrun.txt to top_dir
+Adding /home/ian/CodeCode/dukeofperthc.s to top_dir
+Adding /home/ian/CodeCode/dwave-ocean-sdk-attempt.txt to top_dir
+Adding /home/ian/CodeCode/ebig.f to top_dir
+Adding /home/ian/CodeCode/ebig.s to top_dir
+Adding /home/ian/CodeCode/eigens.c to top_dir
+Adding /home/ian/CodeCode/eigens.s to top_dir
+Adding /home/ian/CodeCode/equ1 to top_dir
+Adding /home/ian/CodeCode/equ1.asm to top_dir
+Adding /home/ian/CodeCode/equ1asm.txt to top_dir
+Adding /home/ian/CodeCode/equs to top_dir
+Adding /home/ian/CodeCode/equs.asm to top_dir
+Adding /home/ian/CodeCode/ESA_GNSS-Book_TM-23_Vol_I.pdf to top_dir
+Adding /home/ian/CodeCode/est1.f to top_dir
+Adding /home/ian/CodeCode/est1.s to top_dir
+Adding /home/ian/CodeCode/est2.f to top_dir
+Adding /home/ian/CodeCode/est2.s to top_dir
+Adding /home/ian/CodeCode/euler to top_dir
+Adding /home/ian/CodeCode/euler.cpp to top_dir
+Adding /home/ian/CodeCode/eulercpprunlisting.txt to top_dir
+Adding /home/ian/CodeCode/ex1.hs to top_dir
+Adding /home/ian/CodeCode/Ex1.py to top_dir
+Adding /home/ian/CodeCode/ex3.hs to top_dir
+Adding /home/ian/CodeCode/example to top_dir
+Adding /home/ian/CodeCode/example.c to top_dir
+Adding /home/ian/CodeCode/example.s to top_dir
+Adding /home/ian/CodeCode/f7.f to top_dir
+Adding /home/ian/CodeCode/f7.s to top_dir
+Adding /home/ian/CodeCode/facto to top_dir
+Adding /home/ian/CodeCode/facto.asm to top_dir
+Adding /home/ian/CodeCode/factorialbk.png to top_dir
+Adding /home/ian/CodeCode/factorialInteger to top_dir
+Adding /home/ian/CodeCode/factorialInteger.png to top_dir
+Adding /home/ian/CodeCode/f-call-c.f to top_dir
+Adding /home/ian/CodeCode/f-call-c.s to top_dir
+Adding /home/ian/CodeCode/fcnl.f08 to top_dir
+Adding /home/ian/CodeCode/fcnl.s to top_dir
+Adding /home/ian/CodeCode/fget1.f08 to top_dir
+Adding /home/ian/CodeCode/fget1.s to top_dir
+Adding /home/ian/CodeCode/fgetrun.txt to top_dir
+Adding /home/ian/CodeCode/fib1.f to top_dir
+Adding /home/ian/CodeCode/fib1.s to top_dir
+Adding /home/ian/CodeCode/fib2.c to top_dir
+Adding /home/ian/CodeCode/fib2.s to top_dir
+Adding /home/ian/CodeCode/fib.fs to top_dir
+Adding /home/ian/CodeCode/fibfsrun.txt to top_dir
+Adding /home/ian/CodeCode/fibo.bas to top_dir
+Adding /home/ian/CodeCode/fibonacci3.f to top_dir
+Adding /home/ian/CodeCode/fibonacci3.s to top_dir
+Adding /home/ian/CodeCode/fibonaccioutput.txt to top_dir
+Adding /home/ian/CodeCode/fibon.f to top_dir
+Adding /home/ian/CodeCode/fibon.s to top_dir
+Adding /home/ian/CodeCode/fibopohl.f08 to top_dir
+Adding /home/ian/CodeCode/fibopohl.s to top_dir
+Adding /home/ian/CodeCode/fibo.py to top_dir
+Adding /home/ian/CodeCode/fibotest2.c to top_dir
+Adding /home/ian/CodeCode/fibotest2.s to top_dir
+Adding /home/ian/CodeCode/fibotim.c to top_dir
+Adding /home/ian/CodeCode/fibotim.s to top_dir
+Adding /home/ian/CodeCode/file2.c to top_dir
+Adding /home/ian/CodeCode/file2.s to top_dir
+Adding /home/ian/CodeCode/filea.c to top_dir
+Adding /home/ian/CodeCode/filea.s to top_dir
+Adding /home/ian/CodeCode/FIXPOINT2.F90 to top_dir
+Adding /home/ian/CodeCode/Fixpoint2run.txt to top_dir
+Adding /home/ian/CodeCode/FIXPOINT3.F08 to top_dir
+Adding /home/ian/CodeCode/fixpoint3f08run.txt to top_dir
+Adding /home/ian/CodeCode/FIXPOINT.F to top_dir
+Adding /home/ian/CodeCode/fixpointfrun1.txt to top_dir
+Adding /home/ian/CodeCode/fixpointfrun2.txt to top_dir
+Adding /home/ian/CodeCode/flexibleleastsquaresrun.txt to top_dir
+Adding /home/ian/CodeCode/flextestout.txt to top_dir
+Adding /home/ian/CodeCode/fls.f to top_dir
+Adding /home/ian/CodeCode/fls.s to top_dir
+Adding /home/ian/CodeCode/fort.10 to top_dir
+Adding /home/ian/CodeCode/fortcolumn1replace.f to top_dir
+Adding /home/ian/CodeCode/fortcolumn1replace.s to top_dir
+Adding /home/ian/CodeCode/fortcount.f08 to top_dir
+Adding /home/ian/CodeCode/fortcount.s to top_dir
+Adding /home/ian/CodeCode/fortmon.f to top_dir
+Adding /home/ian/CodeCode/fortmon.s to top_dir
+Adding /home/ian/CodeCode/fourfortran2.f to top_dir
+Adding /home/ian/CodeCode/fourfortran2.s to top_dir
+Adding /home/ian/CodeCode/fourfortran.f to top_dir
+Adding /home/ian/CodeCode/fourfortranrun2.txt to top_dir
+Adding /home/ian/CodeCode/fourfortranrun.txt to top_dir
+Adding /home/ian/CodeCode/fourfortran.s to top_dir
+Adding /home/ian/CodeCode/four.jl to top_dir
+Adding /home/ian/CodeCode/fourjlrunlisting.txt to top_dir
+Adding /home/ian/CodeCode/FreshJuice.java to top_dir
+Adding /home/ian/CodeCode/FreshJuiceTest to top_dir
+Adding /home/ian/CodeCode/FreshJuiceTest.java to top_dir
+Adding /home/ian/CodeCode/fr.f08 to top_dir
+Adding /home/ian/CodeCode/fr.s to top_dir
+Adding /home/ian/CodeCode/funcsub.f to top_dir
+Adding /home/ian/CodeCode/funcsub.f90 to top_dir
+Adding /home/ian/CodeCode/funcsubrun.txt to top_dir
+Adding /home/ian/CodeCode/funcsub.s to top_dir
+Adding /home/ian/CodeCode/gammalist.txt to top_dir
+Adding /home/ian/CodeCode/gammattest.c to top_dir
+Adding /home/ian/CodeCode/gammattest.s to top_dir
+Adding /home/ian/CodeCode/gasolinequeue.png to top_dir
+Adding /home/ian/CodeCode/Gasoline Queue Simulation to top_dir
+Adding /home/ian/CodeCode/gauseidel.f to top_dir
+Adding /home/ian/CodeCode/gauseidel.s to top_dir
+Adding /home/ian/CodeCode/getchac.c to top_dir
+Adding /home/ian/CodeCode/getchac.s to top_dir
+Adding /home/ian/CodeCode/get_keycode.cpp to top_dir
+Adding /home/ian/CodeCode/gforth_ex2a.fs to top_dir
+Adding /home/ian/CodeCode/gforth_ex2a.fs_outputlisting.txt to top_dir
+Adding /home/ian/CodeCode/gfortranprimes.f08 to top_dir
+Adding /home/ian/CodeCode/gfortranprimesrun.txt to top_dir
+Adding /home/ian/CodeCode/gfortranprimes.s to top_dir
+Adding /home/ian/CodeCode/gls to top_dir
+Adding /home/ian/CodeCode/gls.f to top_dir
+Adding /home/ian/CodeCode/gls.f08 to top_dir
+Adding /home/ian/CodeCode/gls.s to top_dir
+Adding /home/ian/CodeCode/google scholar search  fortran multithreading to top_dir
+Adding /home/ian/CodeCode/graph.py to top_dir
+Adding /home/ian/CodeCode/graphpyrun.txt to top_dir
+Adding /home/ian/CodeCode/GreatestCommonDivisor.f to top_dir
+Adding /home/ian/CodeCode/GreatestCommonDivisorfrun.txt to top_dir
+Adding /home/ian/CodeCode/GreatestCommonDivisor.s to top_dir
+Adding /home/ian/CodeCode/gsl1.c to top_dir
+Adding /home/ian/CodeCode/gsl1.s to top_dir
+Adding /home/ian/CodeCode/hak to top_dir
+Adding /home/ian/CodeCode/hak2 to top_dir
+Adding /home/ian/CodeCode/hak2.c to top_dir
+Adding /home/ian/CodeCode/hak2.s to top_dir
+Adding /home/ian/CodeCode/hak3.c to top_dir
+Adding /home/ian/CodeCode/hak3.s to top_dir
+Adding /home/ian/CodeCode/hak.c to top_dir
+Adding /home/ian/CodeCode/hak.s to top_dir
+Adding /home/ian/CodeCode/hanoi.pli to top_dir
+Adding /home/ian/CodeCode/hellocob.cbl to top_dir
+Adding /home/ian/CodeCode/Hello.java to top_dir
+Adding /home/ian/CodeCode/hello.mixal to top_dir
+Adding /home/ian/CodeCode/hellomixaltext.txt to top_dir
+Adding /home/ian/CodeCode/Hello.pas to top_dir
+Adding /home/ian/CodeCode/hello.py to top_dir
+Adding /home/ian/CodeCode/hellopyrun.txt to top_dir
+Adding /home/ian/CodeCode/hello.r to top_dir
+Adding /home/ian/CodeCode/hellowlinux.c to top_dir
+Adding /home/ian/CodeCode/hellowlinux.ko to top_dir
+Adding /home/ian/CodeCode/hellowlinux.s to top_dir
+Adding /home/ian/CodeCode/HelloWorld.class to top_dir
+Adding /home/ian/CodeCode/HelloWorld.java to top_dir
+Adding /home/ian/CodeCode/host.py to top_dir
+Adding /home/ian/CodeCode/IDCJAC0009_086304_1800_Data.csv to top_dir
+Adding /home/ian/CodeCode/IDCJAC0009_086304_1800.zip to top_dir
+Adding /home/ian/CodeCode/iftest.cbl to top_dir
+Adding /home/ian/CodeCode/impli.f08 to top_dir
+Adding /home/ian/CodeCode/implirun.txt to top_dir
+Adding /home/ian/CodeCode/impli.s to top_dir
+Adding /home/ian/CodeCode/isn.cbl to top_dir
+Adding /home/ian/CodeCode/Jahid.class to top_dir
+Adding /home/ian/CodeCode/Jahid.java to top_dir
+Adding /home/ian/CodeCode/job1.f08 to top_dir
+Adding /home/ian/CodeCode/job1.s to top_dir
+Adding /home/ian/CodeCode/job2.f08 to top_dir
+Adding /home/ian/CodeCode/job2.s to top_dir
+Adding /home/ian/CodeCode/job3.f08 to top_dir
+Adding /home/ian/CodeCode/job3.s to top_dir
+Adding /home/ian/CodeCode/job4a.f08 to top_dir
+Adding /home/ian/CodeCode/job4a.s to top_dir
+Adding /home/ian/CodeCode/joke.pli to top_dir
+Adding /home/ian/CodeCode/jtest2.class to top_dir
+Adding /home/ian/CodeCode/jtest2.java to top_dir
+Adding /home/ian/CodeCode/jtest3.class to top_dir
+Adding /home/ian/CodeCode/jtest3.java to top_dir
+Adding /home/ian/CodeCode/jtest4.java to top_dir
+Adding /home/ian/CodeCode/jtest.class to top_dir
+Adding /home/ian/CodeCode/jtest.java to top_dir
+Adding /home/ian/CodeCode/keyb to top_dir
+Adding /home/ian/CodeCode/keyb.asm to top_dir
+Adding /home/ian/CodeCode/knowledge_current_best.txt to top_dir
+Adding /home/ian/CodeCode/knuth_algorithm_s.c to top_dir
+Adding /home/ian/CodeCode/knuth_algorithm_s.s to top_dir
+Adding /home/ian/CodeCode/knuthalgorithm_s.txt to top_dir
+Adding /home/ian/CodeCode/lapack_testing.py to top_dir
+Adding /home/ian/CodeCode/Leandroetal2006.pdf to top_dir
+Adding /home/ian/CodeCode/lgetest.f to top_dir
+Adding /home/ian/CodeCode/lgetestfrun.txt to top_dir
+Adding /home/ian/CodeCode/lgetest.s to top_dir
+Adding /home/ian/CodeCode/linpack.f to top_dir
+Adding /home/ian/CodeCode/linpack.s to top_dir
+Adding /home/ian/CodeCode/logicaltest.f to top_dir
+Adding /home/ian/CodeCode/logicaltest.s to top_dir
+Adding /home/ian/CodeCode/longmoltiplication.mod to top_dir
+Adding /home/ian/CodeCode/longmultiplication.f08 to top_dir
+Adding /home/ian/CodeCode/longmultiplicationf08run.txt to top_dir
+Adding /home/ian/CodeCode/longmultiplication.s to top_dir
+Adding /home/ian/CodeCode/lower_to_upper to top_dir
+Adding /home/ian/CodeCode/lower_to_upper.c to top_dir
+Adding /home/ian/CodeCode/lower_to_upper.png to top_dir
+Adding /home/ian/CodeCode/lower_to_upper.s to top_dir
+Adding /home/ian/CodeCode/lunch.f08 to top_dir
+Adding /home/ian/CodeCode/lunch.s to top_dir
+Adding /home/ian/CodeCode/Makefile to top_dir
+Adding /home/ian/CodeCode/Mandelbrot_animation.gif to top_dir
+Adding /home/ian/CodeCode/mandelbrotanimationjlrun.txt to top_dir
+Adding /home/ian/CodeCode/mandelbrotan.jl to top_dir
+Adding /home/ian/CodeCode/Mandelbrot_set_1.png to top_dir
+Adding /home/ian/CodeCode/Mandelbrot_set_3.png to top_dir
+Adding /home/ian/CodeCode/Mandelbrot_smoothing.gif to top_dir
+Adding /home/ian/CodeCode/mapy.py to top_dir
+Adding /home/ian/CodeCode/mc to top_dir
+Adding /home/ian/CodeCode/mc2.c to top_dir
+Adding /home/ian/CodeCode/mc2.s to top_dir
+Adding /home/ian/CodeCode/mc3 to top_dir
+Adding /home/ian/CodeCode/mc4 to top_dir
+Adding /home/ian/CodeCode/mem1.c to top_dir
+Adding /home/ian/CodeCode/mem1.s to top_dir
+Adding /home/ian/CodeCode/memp1.c to top_dir
+Adding /home/ian/CodeCode/memp1.s to top_dir
+Adding /home/ian/CodeCode/meshgrid surface sin xm ^ 3.png to top_dir
+Adding /home/ian/CodeCode/meshgrid surface xm.^4.png to top_dir
+Adding /home/ian/CodeCode/minaz.f08 to top_dir
+Adding /home/ian/CodeCode/minaz.s to top_dir
+Adding /home/ian/CodeCode/MonteCarlo.c to top_dir
+Adding /home/ian/CodeCode/MonteCarlo.s to top_dir
+Adding /home/ian/CodeCode/montec.c to top_dir
+Adding /home/ian/CodeCode/montec.s to top_dir
+Adding /home/ian/CodeCode/morse-code.cpp to top_dir
+Adding /home/ian/CodeCode/mpirun.txt to top_dir
+Adding /home/ian/CodeCode/mpitest2asmrun.txt to top_dir
+Adding /home/ian/CodeCode/mpitestas.txt to top_dir
+Adding /home/ian/CodeCode/mpitest.f08 to top_dir
+Adding /home/ian/CodeCode/mpitest.s to top_dir
+Adding /home/ian/CodeCode/mul2.cpp to top_dir
+Adding /home/ian/CodeCode/multi.f to top_dir
+Adding /home/ian/CodeCode/multiout.txt to top_dir
+Adding /home/ian/CodeCode/multiplicationtable12.jl to top_dir
+Adding /home/ian/CodeCode/multiplicationtable12run.txt to top_dir
+Adding /home/ian/CodeCode/multi.s to top_dir
+Adding /home/ian/CodeCode/multithreadedrunC++onlinux.txt to top_dir
+Adding /home/ian/CodeCode/multithreadrun.txt to top_dir
+Adding /home/ian/CodeCode/myDFT.m to top_dir
+Adding /home/ian/CodeCode/mystery.mixal to top_dir
+Adding /home/ian/CodeCode/mysteryrunmixasm.txt to top_dir
+Adding /home/ian/CodeCode/name to top_dir
+Adding /home/ian/CodeCode/name.asm to top_dir
+Adding /home/ian/CodeCode/nameasm.txt to top_dir
+Adding /home/ian/CodeCode/names to top_dir
+Adding /home/ian/CodeCode/names.asm to top_dir
+Adding /home/ian/CodeCode/neural_nets.txt to top_dir
+Adding /home/ian/CodeCode/New Database.odb to top_dir
+Adding /home/ian/CodeCode/New Database.odb.lck to top_dir
+Adding /home/ian/CodeCode/NewtonRaphson2run.txt to top_dir
+Adding /home/ian/CodeCode/NewtonRaphson2.scala to top_dir
+Adding /home/ian/CodeCode/newtonraphson.f to top_dir
+Adding /home/ian/CodeCode/newtonraphsonrun.txt to top_dir
+Adding /home/ian/CodeCode/newtonraphson.s to top_dir
+Adding /home/ian/CodeCode/nice-day.c to top_dir
+Adding /home/ian/CodeCode/nice-day.s to top_dir
+Adding /home/ian/CodeCode/nohup.out to top_dir
+Adding /home/ian/CodeCode/octave meshgrid sin xm^3 * xm-2.png to top_dir
+Adding /home/ian/CodeCode/octave meshgrid surface sin(xm^3) *  xm^-2 to top_dir
+Adding /home/ian/CodeCode/octave meshgrid surface sin(xm^3)*xm^-2) to top_dir
+Adding /home/ian/CodeCode/octave-meshgrid-xmdot2*xmdot-3.png to top_dir
+Adding /home/ian/CodeCode/Operation.qs to top_dir
+Adding /home/ian/CodeCode/parzen2.py to top_dir
+Adding /home/ian/CodeCode/perthdance.f to top_dir
+Adding /home/ian/CodeCode/perthdancerun.txt to top_dir
+Adding /home/ian/CodeCode/perthdance.s to top_dir
+Adding /home/ian/CodeCode/phase plot.png to top_dir
+Adding /home/ian/CodeCode/philasmctxt.txt to top_dir
+Adding /home/ian/CodeCode/phil.c to top_dir
+Adding /home/ian/CodeCode/philosopher to top_dir
+Adding /home/ian/CodeCode/philosopher.c to top_dir
+Adding /home/ian/CodeCode/philosopher.s to top_dir
+Adding /home/ian/CodeCode/philosophersloc.txt to top_dir
+Adding /home/ian/CodeCode/phil.s to top_dir
+Adding /home/ian/CodeCode/pic.c to top_dir
+Adding /home/ian/CodeCode/picout.txt to top_dir
+Adding /home/ian/CodeCode/pic.s to top_dir
+Adding /home/ian/CodeCode/plitowersofhanoirun.txt to top_dir
+Adding /home/ian/CodeCode/plotjlrunmandelbrot.txt to top_dir
+Adding /home/ian/CodeCode/Plot_Riemann_Zeta_Critical_Line_Siegel.py to top_dir
+Adding /home/ian/CodeCode/plotu.jl to top_dir
+Adding /home/ian/CodeCode/plplott1.f08 to top_dir
+Adding /home/ian/CodeCode/plplott1.s to top_dir
+Adding /home/ian/CodeCode/plplott2.c to top_dir
+Adding /home/ian/CodeCode/plplott2.f08 to top_dir
+Adding /home/ian/CodeCode/plplott2.s to top_dir
+Adding /home/ian/CodeCode/primes2.mixal to top_dir
+Adding /home/ian/CodeCode/primes.mixal to top_dir
+Adding /home/ian/CodeCode/primesmixalrun2.txt to top_dir
+Adding /home/ian/CodeCode/primesmixalrun.txt to top_dir
+Adding /home/ian/CodeCode/printal.mixal to top_dir
+Adding /home/ian/CodeCode/Program1.sas to top_dir
+Adding /home/ian/CodeCode/prplua.lua to top_dir
+Adding /home/ian/CodeCode/pxtest.c to top_dir
+Adding /home/ian/CodeCode/pxtest.s to top_dir
+Adding /home/ian/CodeCode/pythonScreenshot from 2017-10-02 05-26-18.png to top_dir
+Adding /home/ian/CodeCode/pythonScreenshot from 2017-10-02 05-27-53.png to top_dir
+Adding /home/ian/CodeCode/pythonwrapperforfortranfibbonacciflisting.txt to top_dir
+Adding /home/ian/CodeCode/qtest.c to top_dir
+Adding /home/ian/CodeCode/qtest.s to top_dir
+Adding /home/ian/CodeCode/quad1.png to top_dir
+Adding /home/ian/CodeCode/quad.f08 to top_dir
+Adding /home/ian/CodeCode/quadmathtest to top_dir
+Adding /home/ian/CodeCode/quadmathtest.c to top_dir
+Adding /home/ian/CodeCode/quadmathtestc.txt to top_dir
+Adding /home/ian/CodeCode/quadmathtest.s to top_dir
+Adding /home/ian/CodeCode/quad.png to top_dir
+Adding /home/ian/CodeCode/quad.s to top_dir
+Adding /home/ian/CodeCode/quantumrandomnumberrun.txt to top_dir
+Adding /home/ian/CodeCode/quine.f90 to top_dir
+Adding /home/ian/CodeCode/quinef90run.txt to top_dir
+Adding /home/ian/CodeCode/quine.s to top_dir
+Adding /home/ian/CodeCode/quinticsplinerunlisting.txt to top_dir
+Adding /home/ian/CodeCode/quintic-splines.pdf to top_dir
+Adding /home/ian/CodeCode/random-number-game.r to top_dir
+Adding /home/ian/CodeCode/randt.f08 to top_dir
+Adding /home/ian/CodeCode/randt.s to top_dir
+Adding /home/ian/CodeCode/rb1.cpp to top_dir
+Adding /home/ian/CodeCode/rb1cppsloccount.txt to top_dir
+Adding /home/ian/CodeCode/reada.f to top_dir
+Adding /home/ian/CodeCode/readarunfriday.txt to top_dir
+Adding /home/ian/CodeCode/readarunlist2.txt to top_dir
+Adding /home/ian/CodeCode/readarunlist4.txt to top_dir
+Adding /home/ian/CodeCode/readarunlistingfrimidnight.txt to top_dir
+Adding /home/ian/CodeCode/readarunlist.txt to top_dir
+Adding /home/ian/CodeCode/readarunpenultimate.txt to top_dir
+Adding /home/ian/CodeCode/reada.s to top_dir
+Adding /home/ian/CodeCode/README.md to top_dir
+Adding /home/ian/CodeCode/readme.txt to top_dir
+Adding /home/ian/CodeCode/Recamensrun.txt to top_dir
+Adding /home/ian/CodeCode/RecamensSequence.py to top_dir
+Adding /home/ian/CodeCode/rec.java to top_dir
+Adding /home/ian/CodeCode/res to top_dir
+Adding /home/ian/CodeCode/RES1 to top_dir
+Adding /home/ian/CodeCode/RES2 to top_dir
+Adding /home/ian/CodeCode/root.f to top_dir
+Adding /home/ian/CodeCode/root.s to top_dir
+Adding /home/ian/CodeCode/rootsboost1.cpp to top_dir
+Adding /home/ian/CodeCode/rootsboostsloccountrunlisting.txt to top_dir
+Adding /home/ian/CodeCode/ROOTS.OUT to top_dir
+Adding /home/ian/CodeCode/round.f to top_dir
+Adding /home/ian/CodeCode/roundf to top_dir
+Adding /home/ian/CodeCode/round.s to top_dir
+Adding /home/ian/CodeCode/run12032021,txt to top_dir
+Adding /home/ian/CodeCode/sa to top_dir
+Adding /home/ian/CodeCode/sa.asm to top_dir
+Adding /home/ian/CodeCode/sa.c to top_dir
+Adding /home/ian/CodeCode/sa.cpp to top_dir
+Adding /home/ian/CodeCode/sa.f to top_dir
+Adding /home/ian/CodeCode/saout.txt to top_dir
+Adding /home/ian/CodeCode/sa.s to top_dir
+Adding /home/ian/CodeCode/sched.pas to top_dir
+Adding /home/ian/CodeCode/screeninputoutput Screenshot from 2019-07-09 04-28-16.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2017-10-01 20-31-40.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2018-10-09 06-54-12.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2019-01-30 11-12-06.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2019-01-30 14-39-01.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2019-04-06 15-43-20.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2019-04-06 15-50-19.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-09-11 06-39-49.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-09-11 13-13-22.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-09-27 04-54-57.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-09-27 04-55-00.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-10-12 14-06-34.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-11-02 09-07-11.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-11-02 10-27-54.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-11-11 14-11-09 - 1.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2020-11-11 22-55-12.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-02-19 19-09-10.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-03-18 08-13-23.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-03-19 04-29-38.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-03-19 04-32-02.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-03-19 04-32-16.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-03-19 04-32-27.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-03-19 04-32-35.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-04-02 19-31-54.png to top_dir
+Adding /home/ian/CodeCode/Screenshot from 2021-08-08 16-30-14.png to top_dir
+Adding /home/ian/CodeCode/SECMET.f to top_dir
+Adding /home/ian/CodeCode/secmetfrun.txt to top_dir
+Adding /home/ian/CodeCode/SECMET.s to top_dir
+Adding /home/ian/CodeCode/secmet-sloccount.txt to top_dir
+Adding /home/ian/CodeCode/sev3 to top_dir
+Adding /home/ian/CodeCode/sevd to top_dir
+Adding /home/ian/CodeCode/sevdim to top_dir
+Adding /home/ian/CodeCode/sevdim88test to top_dir
+Adding /home/ian/CodeCode/sevdim88test.c to top_dir
+Adding /home/ian/CodeCode/sevdim88testc to top_dir
+Adding /home/ian/CodeCode/sevdim88testc2 to top_dir
+Adding /home/ian/CodeCode/sevdim88testc.png to top_dir
+Adding /home/ian/CodeCode/sevdim88test.f to top_dir
+Adding /home/ian/CodeCode/sevdim88testf to top_dir
+Adding /home/ian/CodeCode/sevdim88test.F to top_dir
+Adding /home/ian/CodeCode/sevdim88test.f08 to top_dir
+Adding /home/ian/CodeCode/sevdim88test.F08 to top_dir
+Adding /home/ian/CodeCode/sevdim88testf.png to top_dir
+Adding /home/ian/CodeCode/sevdim88test.s to top_dir
+Adding /home/ian/CodeCode/sevdimop to top_dir
+Adding /home/ian/CodeCode/sevdimsloc.txt to top_dir
+Adding /home/ian/CodeCode/sevdimtime to top_dir
+Adding /home/ian/CodeCode/shedskin examples run python to c++ big speedup.txt to top_dir
+Adding /home/ian/CodeCode/shining.c to top_dir
+Adding /home/ian/CodeCode/shiningrun.txt to top_dir
+Adding /home/ian/CodeCode/shining.s to top_dir
+Adding /home/ian/CodeCode/shortest.CBL to top_dir
+Adding /home/ian/CodeCode/Siegel_Graph_Loop.py to top_dir
+Adding /home/ian/CodeCode/sieve.fs to top_dir
+Adding /home/ian/CodeCode/sievefsrun.txt to top_dir
+Adding /home/ian/CodeCode/simcraps.c to top_dir
+Adding /home/ian/CodeCode/simcraps.png to top_dir
+Adding /home/ian/CodeCode/simcraps.s to top_dir
+Adding /home/ian/CodeCode/simple1.f to top_dir
+Adding /home/ian/CodeCode/simple1.s to top_dir
+Adding /home/ian/CodeCode/simple2.f to top_dir
+Adding /home/ian/CodeCode/simple2.s to top_dir
+Adding /home/ian/CodeCode/simple.f to top_dir
+Adding /home/ian/CodeCode/simple.s to top_dir
+Adding /home/ian/CodeCode/simplex.cpp to top_dir
+Adding /home/ian/CodeCode/SimplexSloccount.txt to top_dir
+Adding /home/ian/CodeCode/sims.pas to top_dir
+Adding /home/ian/CodeCode/sina.py to top_dir
+Adding /home/ian/CodeCode/sinb to top_dir
+Adding /home/ian/CodeCode/sinb.f90 to top_dir
+Adding /home/ian/CodeCode/sinb.s to top_dir
+Adding /home/ian/CodeCode/sinc to top_dir
+Adding /home/ian/CodeCode/sinc.c to top_dir
+Adding /home/ian/CodeCode/sinc.s to top_dir
+Adding /home/ian/CodeCode/sine.bas to top_dir
+Adding /home/ian/CodeCode/sineprint.f to top_dir
+Adding /home/ian/CodeCode/sineprint.s to top_dir
+Adding /home/ian/CodeCode/SinPlotJulia.txt to top_dir
+Adding /home/ian/CodeCode/sinsat.f to top_dir
+Adding /home/ian/CodeCode/sinsat.s to top_dir
+Adding /home/ian/CodeCode/sloccount esa-gnss-book.txt to top_dir
+Adding /home/ian/CodeCode/sloccount spctrm f .png to top_dir
+Adding /home/ian/CodeCode/sloccountstringsum.txt to top_dir
+Adding /home/ian/CodeCode/SPCTRL.DAT to top_dir
+Adding /home/ian/CodeCode/spctrm to top_dir
+Adding /home/ian/CodeCode/spctrm.f to top_dir
+Adding /home/ian/CodeCode/spctrm.s to top_dir
+Adding /home/ian/CodeCode/spctrmSloccount.txt to top_dir
+Adding /home/ian/CodeCode/SPECGEN.F to top_dir
+Adding /home/ian/CodeCode/spiral.c to top_dir
+Adding /home/ian/CodeCode/spiral.s to top_dir
+Adding /home/ian/CodeCode/splin5.f to top_dir
+Adding /home/ian/CodeCode/splin5.s to top_dir
+Adding /home/ian/CodeCode/splineallc.c to top_dir
+Adding /home/ian/CodeCode/splineallcout.txt to top_dir
+Adding /home/ian/CodeCode/splineallc.s to top_dir
+Adding /home/ian/CodeCode/splineall.f to top_dir
+Adding /home/ian/CodeCode/splineallout.txt to top_dir
+Adding /home/ian/CodeCode/splineall.s to top_dir
+Adding /home/ian/CodeCode/spline.f to top_dir
+Adding /home/ian/CodeCode/splinefrun.txt to top_dir
+Adding /home/ian/CodeCode/splinerun.txt to top_dir
+Adding /home/ian/CodeCode/spline.s to top_dir
+Adding /home/ian/CodeCode/sqrt.f to top_dir
+Adding /home/ian/CodeCode/sqrtf Screenshot from 2019-10-15 16-07-20.png to top_dir
+Adding /home/ian/CodeCode/sqrtf   Screenshot from 2019-10-15 16-12-05.png to top_dir
+Adding /home/ian/CodeCode/sqrtf             Screenshot from 2019-10-15 16-31-29.png to top_dir
+Adding /home/ian/CodeCode/sqrt.s to top_dir
+Adding /home/ian/CodeCode/src.f to top_dir
+Adding /home/ian/CodeCode/src.s to top_dir
+Adding /home/ian/CodeCode/star9 to top_dir
+Adding /home/ian/CodeCode/star9.asm to top_dir
+Adding /home/ian/CodeCode/stars to top_dir
+Adding /home/ian/CodeCode/stars.asm to top_dir
+Adding /home/ian/CodeCode/starsasm.txt to top_dir
+Adding /home/ian/CodeCode/stat11.c to top_dir
+Adding /home/ian/CodeCode/stat11.s to top_dir
+Adding /home/ian/CodeCode/stringinputoutput.png to top_dir
+Adding /home/ian/CodeCode/stringio.c to top_dir
+Adding /home/ian/CodeCode/stringio.s to top_dir
+Adding /home/ian/CodeCode/stringsum to top_dir
+Adding /home/ian/CodeCode/stringsum.f to top_dir
+Adding /home/ian/CodeCode/stringsum.s to top_dir
+Adding /home/ian/CodeCode/stritc.c to top_dir
+Adding /home/ian/CodeCode/stritc.s to top_dir
+Adding /home/ian/CodeCode/suma1.c to top_dir
+Adding /home/ian/CodeCode/suma1.s to top_dir
+Adding /home/ian/CodeCode/suma1txt.txt to top_dir
+Adding /home/ian/CodeCode/sumab.c to top_dir
+Adding /home/ian/CodeCode/sumab.s to top_dir
+Adding /home/ian/CodeCode/sundaytables.f to top_dir
+Adding /home/ian/CodeCode/sundaytables.s to top_dir
+Adding /home/ian/CodeCode/sym999999sun25102020.txt to top_dir
+Adding /home/ian/CodeCode/systest.f08 to top_dir
+Adding /home/ian/CodeCode/systest.s to top_dir
+Adding /home/ian/CodeCode/t2testgamma.f08 to top_dir
+Adding /home/ian/CodeCode/t2testgammarun.txt to top_dir
+Adding /home/ian/CodeCode/t2testgamma.s to top_dir
+Adding /home/ian/CodeCode/t3.c to top_dir
+Adding /home/ian/CodeCode/t3.s to top_dir
+Adding /home/ian/CodeCode/telbil.f to top_dir
+Adding /home/ian/CodeCode/telbilfrun.txt to top_dir
+Adding /home/ian/CodeCode/telbil.s to top_dir
+Adding /home/ian/CodeCode/tenc.sh to top_dir
+Adding /home/ian/CodeCode/test2.hs to top_dir
+Adding /home/ian/CodeCode/test31.c to top_dir
+Adding /home/ian/CodeCode/test31.s to top_dir
+Adding /home/ian/CodeCode/test34.cpp to top_dir
+Adding /home/ian/CodeCode/test3.c to top_dir
+Adding /home/ian/CodeCode/test3.s to top_dir
+Adding /home/ian/CodeCode/test4.c to top_dir
+Adding /home/ian/CodeCode/test4.s to top_dir
+Adding /home/ian/CodeCode/test66.c to top_dir
+Adding /home/ian/CodeCode/test66.s to top_dir
+Adding /home/ian/CodeCode/test67.c to top_dir
+Adding /home/ian/CodeCode/test67.s to top_dir
+Adding /home/ian/CodeCode/testac.c to top_dir
+Adding /home/ian/CodeCode/testac.s to top_dir
+Adding /home/ian/CodeCode/testb.py to top_dir
+Adding /home/ian/CodeCode/test_cmplx to top_dir
+Adding /home/ian/CodeCode/test_cmplx.f to top_dir
+Adding /home/ian/CodeCode/test_cmplx.s to top_dir
+Adding /home/ian/CodeCode/test_cmplx.txt to top_dir
+Adding /home/ian/CodeCode/testgamma.c to top_dir
+Adding /home/ian/CodeCode/testgamma.f08 to top_dir
+Adding /home/ian/CodeCode/testgamma.s to top_dir
+Adding /home/ian/CodeCode/testmain.c to top_dir
+Adding /home/ian/CodeCode/testmain.s to top_dir
+Adding /home/ian/CodeCode/test_planning.txt to top_dir
+Adding /home/ian/CodeCode/tests2.c to top_dir
+Adding /home/ian/CodeCode/tests2.s to top_dir
+Adding /home/ian/CodeCode/testsx.c to top_dir
+Adding /home/ian/CodeCode/testsx.s to top_dir
+Adding /home/ian/CodeCode/testx1.c to top_dir
+Adding /home/ian/CodeCode/testx1.s to top_dir
+Adding /home/ian/CodeCode/thirtydim.f90 to top_dir
+Adding /home/ian/CodeCode/thirtydimnull.f90 to top_dir
+Adding /home/ian/CodeCode/thirtydimnull.s to top_dir
+Adding /home/ian/CodeCode/thirtydim.s to top_dir
+Adding /home/ian/CodeCode/threeprong.f08 to top_dir
+Adding /home/ian/CodeCode/threeprong.s to top_dir
+Adding /home/ian/CodeCode/tic.mod to top_dir
+Adding /home/ian/CodeCode/tictactoe.c to top_dir
+Adding /home/ian/CodeCode/tictactoef.f08 to top_dir
+Adding /home/ian/CodeCode/tictactoefrun2.txt to top_dir
+Adding /home/ian/CodeCode/tictactoef.s to top_dir
+Adding /home/ian/CodeCode/tictactoe.s to top_dir
+Adding /home/ian/CodeCode/tictactoe.sc to top_dir
+Adding /home/ian/CodeCode/tictactoe.sh to top_dir
+Adding /home/ian/CodeCode/tictactoeshrun.txt to top_dir
+Adding /home/ian/CodeCode/timea.java to top_dir
+Adding /home/ian/CodeCode/timec.c to top_dir
+Adding /home/ian/CodeCode/timec.s to top_dir
+Adding /home/ian/CodeCode/time.h to top_dir
+Adding /home/ian/CodeCode/timestamp.c to top_dir
+Adding /home/ian/CodeCode/timestampcasmrun3.txt to top_dir
+Adding /home/ian/CodeCode/timestampcrun.txt to top_dir
+Adding /home/ian/CodeCode/timestamp.s to top_dir
+Adding /home/ian/CodeCode/timt to top_dir
+Adding /home/ian/CodeCode/timt.c to top_dir
+Adding /home/ian/CodeCode/timtc to top_dir
+Adding /home/ian/CodeCode/timt.s to top_dir
+Adding /home/ian/CodeCode/toh.c to top_dir
+Adding /home/ian/CodeCode/toh.s to top_dir
+Adding /home/ian/CodeCode/toms600runlisting.txt to top_dir
+Adding /home/ian/CodeCode/toms algorithm 380 in fortran compile build test  run.txt to top_dir
+Adding /home/ian/CodeCode/toms algorithm 385 gfortran 77 run.txt to top_dir
+Adding /home/ian/CodeCode/TowersOfHanoi to top_dir
+Adding /home/ian/CodeCode/tr4.cpp to top_dir
+Adding /home/ian/CodeCode/transactions on mathematical software algorithm 473 test run.txt to top_dir
+Adding /home/ian/CodeCode/transposer.f90 to top_dir
+Adding /home/ian/CodeCode/transposerrun.txt to top_dir
+Adding /home/ian/CodeCode/transposer.s to top_dir
+Adding /home/ian/CodeCode/transposition time comparisons.txt to top_dir
+Creating filelist for transputer-emulator
+Adding /home/ian/CodeCode/ts1 to top_dir
+Adding /home/ian/CodeCode/ts1.c to top_dir
+Adding /home/ian/CodeCode/ts1.s to top_dir
+Adding /home/ian/CodeCode/ts2 to top_dir
+Adding /home/ian/CodeCode/ts2.c to top_dir
+Adding /home/ian/CodeCode/ts2.cpp to top_dir
+Adding /home/ian/CodeCode/ts2.s to top_dir
+Adding /home/ian/CodeCode/tunb3m to top_dir
+Adding /home/ian/CodeCode/TUNB3M.f to top_dir
+Adding /home/ian/CodeCode/TUNB3M.m to top_dir
+Adding /home/ian/CodeCode/TUNB3M.s to top_dir
+Adding /home/ian/CodeCode/tunb3m.txt to top_dir
+Adding /home/ian/CodeCode/tunb3m_.txt to top_dir
+Adding /home/ian/CodeCode/twerp.c to top_dir
+Adding /home/ian/CodeCode/twerp.s to top_dir
+Adding /home/ian/CodeCode/twx.f to top_dir
+Adding /home/ian/CodeCode/twx.s to top_dir
+Adding /home/ian/CodeCode/tx3 to top_dir
+Adding /home/ian/CodeCode/tx3.asm to top_dir
+Adding /home/ian/CodeCode/tx3asm.txt to top_dir
+Adding /home/ian/CodeCode/tx4 to top_dir
+Adding /home/ian/CodeCode/tx4.asm to top_dir
+Adding /home/ian/CodeCode/tx4asm.txt to top_dir
+Adding /home/ian/CodeCode/UNB3M.f to top_dir
+Adding /home/ian/CodeCode/UNB3M.m to top_dir
+Adding /home/ian/CodeCode/UNB3MM.f to top_dir
+Adding /home/ian/CodeCode/UNB3MM.m to top_dir
+Adding /home/ian/CodeCode/UNB3MM.s to top_dir
+Adding /home/ian/CodeCode/UNB3MR.f to top_dir
+Adding /home/ian/CodeCode/UNB3MR.m to top_dir
+Adding /home/ian/CodeCode/UNB3MR.s to top_dir
+Adding /home/ian/CodeCode/UNB3M.s to top_dir
+Adding /home/ian/CodeCode/vandermonde.f to top_dir
+Adding /home/ian/CodeCode/vandermonde_prb.f to top_dir
+Adding /home/ian/CodeCode/vandermonde_prb.s to top_dir
+Adding /home/ian/CodeCode/vandermonde_prb.sh to top_dir
+Adding /home/ian/CodeCode/vandermonderun2.txt to top_dir
+Adding /home/ian/CodeCode/vandermonderunfull.txt to top_dir
+Adding /home/ian/CodeCode/vandermonde_run.txt to top_dir
+Adding /home/ian/CodeCode/vandermonde.s to top_dir
+Adding /home/ian/CodeCode/vector_pade.f90 to top_dir
+Adding /home/ian/CodeCode/vector_pade.s to top_dir
+Adding /home/ian/CodeCode/viterbi-algorithm.txt to top_dir
+Adding /home/ian/CodeCode/working_area_invert_sylv.mod to top_dir
+Adding /home/ian/CodeCode/working_area_main.mod to top_dir
+Adding /home/ian/CodeCode/working_area_solve_sylv.mod to top_dir
+Adding /home/ian/CodeCode/working_area_vector_pade.mod to top_dir
+Adding /home/ian/CodeCode/wtime.f90 to top_dir
+Adding /home/ian/CodeCode/wtimerun.txt to top_dir
+Adding /home/ian/CodeCode/wtime.s to top_dir
+Adding /home/ian/CodeCode/wtime_test.f90 to top_dir
+Adding /home/ian/CodeCode/wtime_test.s to top_dir
+Adding /home/ian/CodeCode/xflmoon to top_dir
+Adding /home/ian/CodeCode/xflmoon.f to top_dir
+Adding /home/ian/CodeCode/xflmoonOutput.png to top_dir
+Adding /home/ian/CodeCode/xflmoon.s to top_dir
+Adding /home/ian/CodeCode/xlocate to top_dir
+Adding /home/ian/CodeCode/xlocate.f to top_dir
+Adding /home/ian/CodeCode/xlocateOutput.png to top_dir
+Adding /home/ian/CodeCode/xlocate.s to top_dir
+Adding /home/ian/CodeCode/xspctrm.f to top_dir
+Adding /home/ian/CodeCode/xspctrm.s to top_dir
+Adding /home/ian/CodeCode/xspctrmtxt.txt to top_dir
+Adding /home/ian/CodeCode/xspectext.txt to top_dir
+Adding /home/ian/CodeCode/xspline to top_dir
+Adding /home/ian/CodeCode/xspline.f to top_dir
+Adding /home/ian/CodeCode/xsplinerun.f to top_dir
+Adding /home/ian/CodeCode/xsplinerun.s to top_dir
+Adding /home/ian/CodeCode/xspline.s to top_dir
+Adding /home/ian/CodeCode/xsplint.f to top_dir
+Adding /home/ian/CodeCode/xsplint.f08 to top_dir
+Adding /home/ian/CodeCode/xsplint.s to top_dir
+Adding /home/ian/CodeCode/xzbrent2.f to top_dir
+Adding /home/ian/CodeCode/xzbrent2.s to top_dir
+Adding /home/ian/CodeCode/xzbrent.f to top_dir
+Adding /home/ian/CodeCode/xzbrent.s to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+Unescaped left brace in regex is passed through in regex; marked by <-- HERE in m/^\\begin{ <-- HERE code}/ at /usr/bin/haskell_count line 73.
+Unescaped left brace in regex is passed through in regex; marked by <-- HERE in m/^\\end{ <-- HERE code}/ at /usr/bin/haskell_count line 95.
+Unescaped left brace in regex is passed through in regex; marked by <-- HERE in m/^\\begin{ <-- HERE code}/ at /usr/bin/haskell_count line 97.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+282828  top_dir         asm=218638,fortran=42326,ansic=9198,sh=5634,f90=3496,
+                        cpp=1330,python=924,lisp=539,pascal=279,java=223,cobol=193,haskell=48
+67875   transputer-emulator cpp=55819,python=8420,ansic=1485,sh=839,asm=708,
+                        xml=481,perl=74,tcl=49
+
+
+Totals grouped by language (dominant language first):
+asm:         219346 (62.54%)
+cpp:          57149 (16.30%)
+fortran:      42326 (12.07%)
+ansic:        10683 (3.05%)
+python:        9344 (2.66%)
+sh:            6473 (1.85%)
+f90:           3496 (1.00%)
+lisp:           539 (0.15%)
+xml:            481 (0.14%)
+pascal:         279 (0.08%)
+java:           223 (0.06%)
+cobol:          193 (0.06%)
+perl:            74 (0.02%)
+tcl:             49 (0.01%)
+haskell:         48 (0.01%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 350,703
+Development Effort Estimate, Person-Years (Person-Months) = 94.02 (1,128.23)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 3.01 (36.13)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 31.23
+Total Estimated Cost to Develop                           = $ 12,700,712
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ 
+
