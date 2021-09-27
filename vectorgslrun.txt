@@ -1,0 +1,33 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls *.c
+chebc.c    spawnchildibm.c   spawntestibm.c  vectors.c
+gslcheb.c  spawnparentibm.c  testfun.c
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gcc vectors.c -lgsl -lm
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./a.out
+v_0 = 1.23
+v_1 = 2.23
+v_2 = 3.23
+gsl: ../gsl/gsl_vector_double.h:180: ERROR: index out of range
+Default GSL error handler invoked.
+Aborted (core dumped)
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat vectors.c
+#include <stdio.h>
+#include <gsl/gsl_vector.h>
+int
+main (void)
+{
+int i;
+gsl_vector * v = gsl_vector_alloc (3);
+for (i = 0; i < 3; i++)
+{
+gsl_vector_set (v, i, 1.23 + i);
+}
+for (i = 0; i < 100; i++) /* OUT OF RANGE ERROR */
+{
+printf ("v_%d = %g\n", i, gsl_vector_get (v, i));
+}
+gsl_vector_free (v);
+return 0;
+}
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
