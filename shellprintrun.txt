@@ -1,0 +1,12 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ chmod u+x shellprint.sh
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./shellprint.sh
+10 9 8 7 6 5 4 3 2 1 
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat shellprint.sh
+#!/bin/bash
+for (( counter=10; counter>0; counter-- ))
+do
+echo -n "$counter "
+done
+printf "\n"
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
