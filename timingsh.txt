@@ -1,0 +1,20 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat timing.sh
+#!/bin/bash
+trap 'echo "Run for $((s/2)) seconds"; exit' 2
+s=1
+ 
+while true
+do
+  echo $s
+  sleep .5
+  let s++
+done
+ 
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./timing.sh
+1
+2
+3
+4
+^CRun for 2 seconds
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
