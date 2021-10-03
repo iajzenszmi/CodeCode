@@ -1,0 +1,140 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran ntimes.f08 -o ntimes
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./ntimes
+      1     2     3     4     5     6     7     8     9    10    11    12
+      2     4     6     8    10    12    14    16    18    20    22    24
+      3     6     9    12    15    18    21    24    27    30    33    36
+      4     8    12    16    20    24    28    32    36    40    44    48
+      5    10    15    20    25    30    35    40    45    50    55    60
+      6    12    18    24    30    36    42    48    54    60    66    72
+      7    14    21    28    35    42    49    56    63    70    77    84
+      8    16    24    32    40    48    56    64    72    80    88    96
+      9    18    27    36    45    54    63    72    81    90    99   108
+     10    20    30    40    50    60    70    80    90   100   110   120
+     11    22    33    44    55    66    77    88    99   110   121   132
+     12    24    36    48    60    72    84    96   108   120   132   144
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat ntimes.f08
+         integer count11
+         integer calc1
+         integer calc2
+         integer calc3
+         integer calc4
+         integer calc5
+         integer calc6
+         integer calc7
+         integer calc8
+         integer calc9
+         integer calc10
+         integer calc11
+         integer calc12
+         do 10 count11=1,12,1
+             calc1  = count11 * 1
+             calc2  = count11 * 2
+             calc3 =  count11 * 3
+             calc4 = count11  * 4
+             calc5 = count11 * 5
+             calc6  = count11 * 6
+             calc7 =  count11 * 7
+             calc8 = count11 * 8
+             calc9 = count11 * 9
+             calc10 = count11 * 10
+             calc11 = count11 * 11
+             calc12 = count11 * 12
+             write(6,9010) &                     
+     & calc1,calc2,calc3,calc4,calc5,calc6,calc7,calc8,calc9, &
+     & calc10, calc11, calc12                
+9010           format(" ",i6,i6, i6,i6,  &
+     &   i6,  i6, i6, i6,  &
+     &   i6,  i6, i6, i6)                
+ 10      continue           
+         end program
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount ntimes.f08
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/ntimes.f08 to top_dir
+Categorizing files.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+0       top_dir         (none)
+SLOC total is zero, no further analysis performed.
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat ntimes.f08
+         integer count11
+         integer calc1
+         integer calc2
+         integer calc3
+         integer calc4
+         integer calc5
+         integer calc6
+         integer calc7
+         integer calc8
+         integer calc9
+         integer calc10
+         integer calc11
+         integer calc12
+         do 10 count11=1,12,1
+             calc1  = count11 * 1
+             calc2  = count11 * 2
+             calc3 =  count11 * 3
+             calc4 = count11  * 4
+             calc5 = count11 * 5
+             calc6  = count11 * 6
+             calc7 =  count11 * 7
+             calc8 = count11 * 8
+             calc9 = count11 * 9
+             calc10 = count11 * 10
+             calc11 = count11 * 11
+             calc12 = count11 * 12
+             write(6,9010) &                     
+     & calc1,calc2,calc3,calc4,calc5,calc6,calc7,calc8,calc9, &
+     & calc10, calc11, calc12                
+9010           format(" ",i6,i6, i6,i6,  &
+     &   i6,  i6, i6, i6,  &
+     &   i6,  i6, i6, i6)                
+ 10      continue           
+         end program
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount ntimes.f08
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/ntimes.f08 to top_dir
+Categorizing files.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+0       top_dir         (none)
+SLOC total is zero, no further analysis performed.
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cp ntimes.f08 ntimes.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount ntimes.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/ntimes.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+34      top_dir         fortran=34
+
+
+Totals grouped by language (dominant language first):
+fortran:         34 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 34
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.07)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.08 (0.90)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.08
+Total Estimated Cost to Develop                           = $ 776
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
