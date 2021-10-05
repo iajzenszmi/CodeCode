@@ -1,0 +1,198 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls *f08
+divi.f08  graphtest.f08  greatestsubsequentialsum.f08  ntimes.f08
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount divi.f08
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/divi.f08 to top_dir
+Categorizing files.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+0       top_dir         (none)
+SLOC total is zero, no further analysis performed.
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cp divi.f08 divi.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount divi.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/divi.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+6       top_dir         fortran=6
+
+
+Totals grouped by language (dominant language first):
+fortran:          6 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 6
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.01)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.04 (0.45)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.02
+Total Estimated Cost to Develop                           = $ 126
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran divi.f08 -S
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ls divi*
+divi  divi.f  divi.f08  divirun.txt  divi.s
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat divi.s
+	.file	"divi.f08"
+	.text
+	.section	.rodata
+.LC0:
+	.string	"divi.f08"
+.LC1:
+	.ascii	"(\" \",a70)"
+	.align 8
+.LC2:
+	.ascii	"i must wear a mask at all times"
+	.text
+	.type	MAIN__, @function
+MAIN__:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$544, %rsp
+	movl	$1, -4(%rbp)
+.L3:
+	cmpl	$10, -4(%rbp)
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L4
+	leaq	.LC0(%rip), %rax
+	movq	%rax, -536(%rbp)
+	movl	$4, -528(%rbp)
+	leaq	.LC1(%rip), %rax
+	movq	%rax, -464(%rbp)
+	movq	$9, -456(%rbp)
+	movl	$4096, -544(%rbp)
+	movl	$6, -540(%rbp)
+	leaq	-544(%rbp), %rax
+	movq	%rax, %rdi
+	call	_gfortran_st_write@PLT
+	leaq	-544(%rbp), %rax
+	movl	$31, %edx
+	leaq	.LC2(%rip), %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-544(%rbp), %rax
+	movq	%rax, %rdi
+	call	_gfortran_st_write_done@PLT
+	addl	$1, -4(%rbp)
+	jmp	.L3
+.L4:
+	nop
+	nop
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	MAIN__, .-MAIN__
+	.globl	main
+	.type	main, @function
+main:
+.LFB1:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movl	%edi, -4(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-16(%rbp), %rdx
+	movl	-4(%rbp), %eax
+	movq	%rdx, %rsi
+	movl	%eax, %edi
+	call	_gfortran_set_args@PLT
+	leaq	options.1.3881(%rip), %rsi
+	movl	$7, %edi
+	call	_gfortran_set_options@PLT
+	call	MAIN__
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE1:
+	.size	main, .-main
+	.section	.rodata
+	.align 16
+	.type	options.1.3881, @object
+	.size	options.1.3881, 28
+options.1.3881:
+	.long	2116
+	.long	4095
+	.long	0
+	.long	1
+	.long	1
+	.long	0
+	.long	31
+	.ident	"GCC: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0"
+	.section	.note.GNU-stack,"",@progbits
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran divi.s -o divis
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./divis
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount divi.s
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/divi.s to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+101     top_dir         asm=101
+
+
+Totals grouped by language (dominant language first):
+asm:            101 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 101
+Development Effort Estimate, Person-Years (Person-Months) = 0.02 (0.22)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.12 (1.40)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.15
+Total Estimated Cost to Develop                           = $ 2,433
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+coded built and run by Ian Martin Ajzenszmidt, Melbourne, Victoria, Australia  October 2021.
