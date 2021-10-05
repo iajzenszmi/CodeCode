@@ -1,0 +1,117 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran divi.f08
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./a.out
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran divi.f08 -o divi
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./divi
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat divi.f08
+
+               integer icount
+               do icount=1,10,1
+               write(6,9010) "i must wear a mask at all times"
+ 9010          format(" ",a70)
+               end do
+               end program               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran divi.f08
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./a.out
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran divi.f08 -o divi
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./divi
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+                                        i must wear a mask at all times
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat divi.f08
+
+               integer icount
+               do icount=1,10,1
+               write(6,9010) "i must wear a mask at all times"
+ 9010          format(" ",a70)
+               end do
+               end program               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
