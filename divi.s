@@ -1,101 +1,77 @@
-	.file	"divi.f08"
+	.file	"divi.c"
 	.text
 	.section	.rodata
+	.align 8
 .LC0:
-	.string	"divi.f08"
+	.string	"  I must wear a surgical mask at all times"
 .LC1:
-	.ascii	"(\" \",a70)"
+	.string	"\n%d%s"
 	.align 8
 .LC2:
-	.ascii	"i must wear a mask at all times"
+	.string	" I must wear a surgical mask at all times"
+.LC3:
+	.string	"\n%d%s\n"
 	.text
-	.type	MAIN__, @function
-MAIN__:
-.LFB0:
-	.cfi_startproc
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	subq	$544, %rsp
-	movl	$1, -4(%rbp)
-.L3:
-	cmpl	$10, -4(%rbp)
-	setg	%al
-	movzbl	%al, %eax
-	testl	%eax, %eax
-	jne	.L4
-	leaq	.LC0(%rip), %rax
-	movq	%rax, -536(%rbp)
-	movl	$4, -528(%rbp)
-	leaq	.LC1(%rip), %rax
-	movq	%rax, -464(%rbp)
-	movq	$9, -456(%rbp)
-	movl	$4096, -544(%rbp)
-	movl	$6, -540(%rbp)
-	leaq	-544(%rbp), %rax
-	movq	%rax, %rdi
-	call	_gfortran_st_write@PLT
-	leaq	-544(%rbp), %rax
-	movl	$31, %edx
-	leaq	.LC2(%rip), %rsi
-	movq	%rax, %rdi
-	call	_gfortran_transfer_character_write@PLT
-	leaq	-544(%rbp), %rax
-	movq	%rax, %rdi
-	call	_gfortran_st_write_done@PLT
-	addl	$1, -4(%rbp)
-	jmp	.L3
-.L4:
-	nop
-	nop
-	leave
-	.cfi_def_cfa 7, 8
-	ret
-	.cfi_endproc
-.LFE0:
-	.size	MAIN__, .-MAIN__
 	.globl	main
 	.type	main, @function
 main:
-.LFB1:
+.LFB6:
 	.cfi_startproc
+	endbr64
 	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	subq	$16, %rsp
-	movl	%edi, -4(%rbp)
-	movq	%rsi, -16(%rbp)
-	movq	-16(%rbp), %rdx
+	movl	$1, -4(%rbp)
+	jmp	.L2
+.L5:
+	cmpl	$9, -4(%rbp)
+	jg	.L3
 	movl	-4(%rbp), %eax
-	movq	%rdx, %rsi
-	movl	%eax, %edi
-	call	_gfortran_set_args@PLT
-	leaq	options.1.3881(%rip), %rsi
-	movl	$7, %edi
-	call	_gfortran_set_options@PLT
-	call	MAIN__
+	leaq	.LC0(%rip), %rdx
+	movl	%eax, %esi
+	leaq	.LC1(%rip), %rdi
+	movl	$0, %eax
+	call	printf@PLT
+	jmp	.L4
+.L3:
+	cmpl	$9, -4(%rbp)
+	jle	.L4
+	movl	-4(%rbp), %eax
+	leaq	.LC2(%rip), %rdx
+	movl	%eax, %esi
+	leaq	.LC3(%rip), %rdi
+	movl	$0, %eax
+	call	printf@PLT
+.L4:
+	addl	$1, -4(%rbp)
+.L2:
+	cmpl	$10, -4(%rbp)
+	jle	.L5
 	movl	$0, %eax
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE1:
+.LFE6:
 	.size	main, .-main
-	.section	.rodata
-	.align 16
-	.type	options.1.3881, @object
-	.size	options.1.3881, 28
-options.1.3881:
-	.long	2116
-	.long	4095
-	.long	0
-	.long	1
-	.long	1
-	.long	0
-	.long	31
 	.ident	"GCC: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0"
 	.section	.note.GNU-stack,"",@progbits
+	.section	.note.gnu.property,"a"
+	.align 8
+	.long	 1f - 0f
+	.long	 4f - 1f
+	.long	 5
+0:
+	.string	 "GNU"
+1:
+	.align 8
+	.long	 0xc0000002
+	.long	 3f - 2f
+2:
+	.long	 0x3
+3:
+	.align 8
+4:

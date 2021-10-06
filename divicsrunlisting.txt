@@ -1,0 +1,187 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gcc divi.c -o divic
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./divic
+
+1  I must wear a surgical mask at all times
+2  I must wear a surgical mask at all times
+3  I must wear a surgical mask at all times
+4  I must wear a surgical mask at all times
+5  I must wear a surgical mask at all times
+6  I must wear a surgical mask at all times
+7  I must wear a surgical mask at all times
+8  I must wear a surgical mask at all times
+9  I must wear a surgical mask at all times
+10 I must wear a surgical mask at all times
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat divi.c
+#include <stdio.h>
+#include <stdlib.h>
+ int main(){
+	 int i;
+	 for(i=1;i<=10;i++){
+		 if (i <= 9){
+		 printf("\n%d%s",i,"  I must wear a surgical mask at all times");
+         }
+		 else if(i >= 10){
+			 printf("\n%d%s\n",i," I must wear a surgical mask at all times");
+		 }
+ }	
+ }
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount divi.c
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/divi.c to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+13      top_dir         ansic=13
+
+
+Totals grouped by language (dominant language first):
+ansic:           13 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 13
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.03)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.05 (0.62)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.04
+Total Estimated Cost to Develop                           = $ 283
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gcc divi.c -S
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat divi.s
+	.file	"divi.c"
+	.text
+	.section	.rodata
+	.align 8
+.LC0:
+	.string	"  I must wear a surgical mask at all times"
+.LC1:
+	.string	"\n%d%s"
+	.align 8
+.LC2:
+	.string	" I must wear a surgical mask at all times"
+.LC3:
+	.string	"\n%d%s\n"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB6:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movl	$1, -4(%rbp)
+	jmp	.L2
+.L5:
+	cmpl	$9, -4(%rbp)
+	jg	.L3
+	movl	-4(%rbp), %eax
+	leaq	.LC0(%rip), %rdx
+	movl	%eax, %esi
+	leaq	.LC1(%rip), %rdi
+	movl	$0, %eax
+	call	printf@PLT
+	jmp	.L4
+.L3:
+	cmpl	$9, -4(%rbp)
+	jle	.L4
+	movl	-4(%rbp), %eax
+	leaq	.LC2(%rip), %rdx
+	movl	%eax, %esi
+	leaq	.LC3(%rip), %rdi
+	movl	$0, %eax
+	call	printf@PLT
+.L4:
+	addl	$1, -4(%rbp)
+.L2:
+	cmpl	$10, -4(%rbp)
+	jle	.L5
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE6:
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0"
+	.section	.note.GNU-stack,"",@progbits
+	.section	.note.gnu.property,"a"
+	.align 8
+	.long	 1f - 0f
+	.long	 4f - 1f
+	.long	 5
+0:
+	.string	 "GNU"
+1:
+	.align 8
+	.long	 0xc0000002
+	.long	 3f - 2f
+2:
+	.long	 0x3
+3:
+	.align 8
+4:
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gcc divi.s -o divics2
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./divics2
+
+1  I must wear a surgical mask at all times
+2  I must wear a surgical mask at all times
+3  I must wear a surgical mask at all times
+4  I must wear a surgical mask at all times
+5  I must wear a surgical mask at all times
+6  I must wear a surgical mask at all times
+7  I must wear a surgical mask at all times
+8  I must wear a surgical mask at all times
+9  I must wear a surgical mask at all times
+10 I must wear a surgical mask at all times
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount divi.s
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/divi.s to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+77      top_dir         asm=77
+
+
+Totals grouped by language (dominant language first):
+asm:             77 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 77
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.16)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.10 (1.25)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.13
+Total Estimated Cost to Develop                           = $ 1,830
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
