@@ -1,0 +1,11 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran memory.f08 -o memory
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./memory
+ In memory of colleague David Boyd, whose funeral was held at Lyndhurst Victoria last week. The officiating Minister OF Religion said that the late David Boyd had done technical work for the Australian Government.
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat memory.f08
+            print *,"In memory of colleague David Boyd, whose funeral &
+     &was held at Lyndhurst Victoria last week. The officiating &
+     &Minister OF Religion said that the late David Boyd had done&
+     & technical work for the Australian Government."            
+            end program           
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
