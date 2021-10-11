@@ -1,0 +1,79 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran binsearch.f08 -o binsearch
+binsearch.f08:23:56:
+
+   23 |         IF (X - A(P)) 3,4,2 !Compare to the probe point.
+      |                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./binsearch
+           5
+           2           1           3           6           4           5           8           0           9           7
+           4
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat binsearch.f08
+      integer A(10) /2,1,3,6,4,5,8,0,9,7/
+      integer j
+      integer X,N,FINDI
+      N=10
+      X=4      
+      j = (FINDI(X,A,N))
+      print *,j
+      print *,A 
+      print *,X
+      end program
+
+      INTEGER FUNCTION FINDI(X,A,N)	!Binary chopper. Find i such that X = A(i)
+!Careful: it is surprisingly difficult to make this neat, due to vexations when N = 0 or 1.
+       INTEGER X,A(10)		!Where is X in array A(1:N)?
+       INTEGER N		!The count.
+       INTEGER L,R,P		!Fingers.
+        L = 0			!Establish outer bounds, to search A(L+1:R-1).
+        R = N + 1		!L = first - 1; R = last + 1.
+    1   P = (R - L)/2		!Probe point. Beware INTEGER overflow with (L + R)/2.
+        IF (P.LE.0) GO TO 5	!Aha! Nowhere!! The span is empty.
+        P = P + L
+                        !Convert an offset from L to an array index.
+        IF (X - A(P)) 3,4,2	!Compare to the probe point.
+    2   L = P			!A(P) < X. Shift the left bound up: X follows A(P).
+        GO TO 1			!Another chop.
+    3   R = P			!X < A(P). Shift the right bound down: X precedes A(P).
+        GO TO 1			!Try again.
+    4   FINDI = P		!A(P) = X. So, X is found, here!
+       RETURN			!Done.
+!Curse it!
+    5   FINDI = -L		!X is not found. Insert it at L + 1, i.e. at A(1 - FINDI).
+      END FUNCTION FINDI	!A's values need not be all different, merely in order. 
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cp binsearch.f08 binsearch.f
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ sloccount binsearch.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/binsearch.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+28      top_dir         fortran=28
+
+
+Totals grouped by language (dominant language first):
+fortran:         28 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 28
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.06)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.07 (0.84)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.07
+Total Estimated Cost to Develop                           = $ 633
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
