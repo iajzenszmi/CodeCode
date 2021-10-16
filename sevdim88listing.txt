@@ -1,3 +1,17 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ gfortran sevdim88test.f -O3  -ffast-math -ffree-form -std=legacy -funroll-loops -o sevdim
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ time ./sevdim > sevout.txt
+^C
+
+real	13m51.537s
+user	0m0.001s
+sys	0m0.009s
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ time ./sevdim > sevout.txt
+77777777
+
+real	0m34.719s
+user	0m21.169s
+sys	0m3.604s
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ cat sevdim88test.f
                  program testcall
                  integer arcnt1
 !                integer p11,p12,p21,p22,p31,p32,p41,p42,p51,p52,p61,p62,p71,p72
@@ -108,3 +122,38 @@
           return
           end subroutine 
           
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ sloccount sevdim88test.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/CodeCode/sevdim88test.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+85      top_dir         fortran=85
+
+
+Totals grouped by language (dominant language first):
+fortran:         85 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 85
+Development Effort Estimate, Person-Years (Person-Months) = 0.02 (0.18)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.11 (1.30)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.14
+Total Estimated Cost to Develop                           = $ 2,030
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ 
+
