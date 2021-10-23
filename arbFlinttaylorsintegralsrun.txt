@@ -1,0 +1,220 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/arb/arb/examples$ ls
+arbexampletaylorsintegralrun.txt  keiper_li.c  pi.c
+complex_plot.o                    keiper_li.o  pi.o
+fpwrap.c                          lcentral.c   poly_roots.c
+fpwrap.o                          lcentral.o   poly_roots.o
+hilbert_matrix.c                  logistic.c   realr
+hilbert_matrix.o                  logistic.o   real_roots.c
+integrals.c                       lvalue.c     real_roots.o
+integrals.o                       lvalue.o     taylorint
+keifer_li.txt                     pia          taylor_integrals.c
+keiper_li                         pib          taylor_integrals.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/arb/arb/examples$ gcc taylor_integrals.c -lm  -lflint -larb -o taylorint
+ian@ian-HP-Stream-Laptop-11-y0XX:~/arb/arb/examples$ ./taylorint
+integrals d
+compute integrals using d decimal digits of precision
+ian@ian-HP-Stream-Laptop-11-y0XX:~/arb/arb/examples$ ./taylorint 100
+Digits: 100
+----------------------------------------------------------------
+Integral of sin(t) from 0 to 100.
+RESULT:
+[0.137681127712316065898061486049157464489915991464489170719837887307278911949073375896904894315722715 +/- 4.98e-100] + [+/- 4.30e-100]*I
+cpu/wall(s): 0.219 0.282
+----------------------------------------------------------------
+Elliptic integral F(phi, m) = integral of 1/sqrt(1 - m*sin(t)^2)
+from 0 to phi, with phi = 6+6i, m = 1/2. Integration path
+0 -> 6 -> 6+6i.
+RESULT:
+[7.41433976790976840857250785206132475118982203235142649264476343240419785622194681884121895499236232 +/- 5.55e-99] + [1.847342980774749286771315676163486111543446141032818463594864121106831066453673386671719988277396978 +/- 3.92e-100]*I
+cpu/wall(s): 1.048 1.071
+----------------------------------------------------------------
+Bessel function J_n(z) = (1/pi) * integral of cos(t*n - z*sin(t))
+from 0 to pi. With n = 10, z = 20 + 10i.
+RESULT:
+[596.964215758266079893402499222019268452134828136089602258691567804130321851460471523996973251122649 +/- 5.97e-97] + [326.0826872778320104896000571707543269024938241093598189516330860745933923186652586820087014046850108 +/- 6.11e-98]*I
+cpu/wall(s): 1.317 1.327
+ian@ian-HP-Stream-Laptop-11-y0XX:~/arb/arb/examples$ cat taylor_integrals.c
+/* This file is public domain. Author: Fredrik Johansson. */
+
+#include "acb_calc.h"
+#include "flint/profiler.h"
+
+int
+sinx(acb_ptr out, const acb_t inp, void * params, slong order, slong prec)
+{
+    int xlen = FLINT_MIN(2, order);
+    acb_set(out, inp);
+    if (xlen > 1)
+        acb_one(out + 1);
+    _acb_poly_sin_series(out, out, xlen, order, prec);
+    return 0;
+}
+
+int
+elliptic(acb_ptr out, const acb_t inp, void * params, slong order, slong prec)
+{
+    acb_ptr t;
+    t = _acb_vec_init(order);
+    acb_set(t, inp);
+    if (order > 1)
+        acb_one(t + 1);
+    _acb_poly_sin_series(t, t, FLINT_MIN(2, order), order, prec);
+    _acb_poly_mullow(out, t, order, t, order, order, prec);
+    _acb_vec_scalar_mul_2exp_si(t, out, order, -1);
+    acb_sub_ui(t, t, 1, prec);
+    _acb_vec_neg(t, t, order);
+    _acb_poly_rsqrt_series(out, t, order, order, prec);
+    _acb_vec_clear(t, order);
+    return 0;
+}
+
+int
+bessel(acb_ptr out, const acb_t inp, void * params, slong order, slong prec)
+{
+    acb_ptr t;
+    acb_t z;
+    ulong n;
+
+    t = _acb_vec_init(order);
+    acb_init(z);
+
+    acb_set(t, inp);
+    if (order > 1)
+        acb_one(t + 1);
+
+    n = 10;
+    arb_set_si(acb_realref(z), 20);
+    arb_set_si(acb_imagref(z), 10);
+
+    /* z sin(t) */
+    _acb_poly_sin_series(out, t, FLINT_MIN(2, order), order, prec);
+    _acb_vec_scalar_mul(out, out, order, z, prec);
+
+    /* t n */
+    _acb_vec_scalar_mul_ui(t, t, FLINT_MIN(2, order), n, prec);
+
+    _acb_poly_sub(out, t, FLINT_MIN(2, order), out, order, prec);
+
+    _acb_poly_cos_series(out, out, order, order, prec);
+
+    _acb_vec_clear(t, order);
+    acb_clear(z);
+    return 0;
+}
+
+int main(int argc, char *argv[])
+{
+    acb_t r, s, a, b;
+    arf_t inr, outr;
+    slong digits, prec;
+
+    if (argc < 2)
+    {
+        flint_printf("integrals d\n");
+        flint_printf("compute integrals using d decimal digits of precision\n");
+        return 1;
+    }
+
+    acb_init(r);
+    acb_init(s);
+    acb_init(a);
+    acb_init(b);
+    arf_init(inr);
+    arf_init(outr);
+
+    arb_calc_verbose = 0;
+
+    digits = atol(argv[1]);
+    prec = digits * 3.32193;
+    flint_printf("Digits: %wd\n", digits);
+
+    flint_printf("----------------------------------------------------------------\n");
+    flint_printf("Integral of sin(t) from 0 to 100.\n");
+    arf_set_d(inr, 0.125);
+    arf_set_d(outr, 1.0);
+    TIMEIT_ONCE_START
+    acb_set_si(a, 0);
+    acb_set_si(b, 100);
+    acb_calc_integrate_taylor(r, sinx, NULL, a, b, inr, outr, prec, 1.1 * prec);
+    flint_printf("RESULT:\n");
+    acb_printn(r, digits, 0); flint_printf("\n");
+    TIMEIT_ONCE_STOP
+
+    flint_printf("----------------------------------------------------------------\n");
+    flint_printf("Elliptic integral F(phi, m) = integral of 1/sqrt(1 - m*sin(t)^2)\n");
+    flint_printf("from 0 to phi, with phi = 6+6i, m = 1/2. Integration path\n");
+    flint_printf("0 -> 6 -> 6+6i.\n");
+    arf_set_d(inr, 0.2);
+    arf_set_d(outr, 0.5);
+    TIMEIT_ONCE_START
+    acb_set_si(a, 0);
+    acb_set_si(b, 6);
+    acb_calc_integrate_taylor(r, elliptic, NULL, a, b, inr, outr, prec, 1.1 * prec);
+    acb_set_si(a, 6);
+    arb_set_si(acb_realref(b), 6);
+    arb_set_si(acb_imagref(b), 6);
+    acb_calc_integrate_taylor(s, elliptic, NULL, a, b, inr, outr, prec, 1.1 * prec);
+    acb_add(r, r, s, prec);
+    flint_printf("RESULT:\n");
+    acb_printn(r, digits, 0); flint_printf("\n");
+    TIMEIT_ONCE_STOP
+
+    flint_printf("----------------------------------------------------------------\n");
+    flint_printf("Bessel function J_n(z) = (1/pi) * integral of cos(t*n - z*sin(t))\n");
+    flint_printf("from 0 to pi. With n = 10, z = 20 + 10i.\n");
+    arf_set_d(inr, 0.1);
+    arf_set_d(outr, 0.5);
+    TIMEIT_ONCE_START
+    acb_set_si(a, 0);
+    acb_const_pi(b, 3 * prec);
+    acb_calc_integrate_taylor(r, bessel, NULL, a, b, inr, outr, prec, 3 * prec);
+    acb_div(r, r, b, prec);
+    flint_printf("RESULT:\n");
+    acb_printn(r, digits, 0); flint_printf("\n");
+    TIMEIT_ONCE_STOP
+
+    acb_clear(r);
+    acb_clear(s);
+    acb_clear(a);
+    acb_clear(b);
+    arf_clear(inr);
+    arf_clear(outr);
+
+    flint_cleanup();
+    return 0;
+}
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~/arb/arb/examples$ sloccount taylor_integrals.c
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/arb/arb/examples/taylor_integrals.c to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+124     top_dir         ansic=124
+
+
+Totals grouped by language (dominant language first):
+ansic:          124 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 124
+Development Effort Estimate, Person-Years (Person-Months) = 0.02 (0.27)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.13 (1.52)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.18
+Total Estimated Cost to Develop                           = $ 3,018
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/arb/arb/examples$ 
