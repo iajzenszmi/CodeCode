@@ -69,5 +69,5 @@
           character(len=3) inrain6
           character(len=11) comma6
           read(inrec6,9060) inrain6
- 9060     format(30x,a3)         
+ 9060     format(29x,a3)         
           end subroutine 
