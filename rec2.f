@@ -5,10 +5,12 @@
          character(len=2) inmonth
          character(len=2) inday
          character(len=3) inrain
-         integer:: iostatus
+         integer:: iostatus, reccount 
          logical eof  
+         reccount = 0
          iostatus = 0
          read(5,9000, IOSTAT=iostatus) inrec
+         reccount = reccount + 1
          do while(iostatus .eq. 0) 
 !         read (5,9000,IOSTAT=iostatus) inrec1
          call reccodeget(inrec, reccode)
@@ -21,13 +23,15 @@
          write(6,9001) inrec
  9000    format(a80)
  9001    format(" ",a80)        
-         print *,reccode
-         print *,stanno
-         print *,inyear
-         print *,inmonth
-         print *,inday
-         print *,inrain
+         print *,"record type code ",reccode
+         print *,"station number ",stanno
+         print *,"year ",inyear
+         print *,"month ",inmonth
+         print *,"day ",inday
+         print *,"rainfall ",inrain
+         print *,"record count ",reccount
          read(5,9000,IOSTAT=iostatus) inrec
+         reccount = reccount + 1
           end do
           end program
           subroutine reccodeget(inrec1,reccode1)
