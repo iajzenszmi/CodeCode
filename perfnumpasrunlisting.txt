@@ -1,0 +1,102 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ ls *.pas
+Hello.pas  perfnum.pas  sched.pas  sims.pas
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ cat perfnum.pas
+program PerfectNumbers;
+
+ function isPerfect(number: longint): boolean;
+ var
+  i, sum: longint;
+
+ begin
+  sum := 1;
+  for i := 2 to round(sqrt(real(number))) do
+    if (number mod i = 0) then
+     sum := sum + i + (number div i);
+  isPerfect := (sum = number);
+ end;
+
+var
+ candidate: longint;
+  
+begin
+ writeln('Perfect numbers from 1 to 33550337:');
+ for candidate := 2 to 33550337 do       
+   if isPerfect(candidate) then
+    writeln (candidate, ' is a perfect number.');
+end.
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ fpc perfnum.pas
+Free Pascal Compiler version 3.0.4+dfsg-23 [2019/11/25] for x86_64
+Copyright (c) 1993-2017 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling perfnum.pas
+Linking perfnum
+/usr/bin/ld.bfd: warning: link.res contains output sections; did you forget -T?
+23 lines compiled, 0.2 sec
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ ./perfnum
+Perfect numbers from 1 to 33550337:
+6 is a perfect number.
+28 is a perfect number.
+496 is a perfect number.
+8128 is a perfect number.
+^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ ./sloccount perfnum.pas
+bash: ./sloccount: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ sloccount perfnum.pas
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/CodeCode/perfnum.pas to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+19      top_dir         pascal=19
+
+
+Totals grouped by language (dominant language first):
+pascal:          19 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 19
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.04)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.06 (0.72)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.05
+Total Estimated Cost to Develop                           = $ 421
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ cat perfnum.pas
+program PerfectNumbers;
+
+ function isPerfect(number: longint): boolean;
+ var
+  i, sum: longint;
+
+ begin
+  sum := 1;
+  for i := 2 to round(sqrt(real(number))) do
+    if (number mod i = 0) then
+     sum := sum + i + (number div i);
+  isPerfect := (sum = number);
+ end;
+
+var
+ candidate: longint;
+  
+begin
+ writeln('Perfect numbers from 1 to 33550337:');
+ for candidate := 2 to 33550337 do       
+   if isPerfect(candidate) then
+    writeln (candidate, ' is a perfect number.');
+end.
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ 
+
