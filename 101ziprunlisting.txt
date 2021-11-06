@@ -1,0 +1,631 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ cd
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ mkdir 101.gz
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cd 101.gz
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz$ wget http://calgo.acm.org/101.zip
+--2021-11-07 10:25:35--  http://calgo.acm.org/101.zip
+Resolving calgo.acm.org (calgo.acm.org)... 66.198.246.118
+Connecting to calgo.acm.org (calgo.acm.org)|66.198.246.118|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18579 (18K) [application/zip]
+Saving to: '101.zip’
+
+101.zip             100%[===================>]  18.14K  59.1KB/s    in 0.3s    
+
+2021-11-07 10:25:36 (59.1 KB/s) - '101.zip’ saved [18579/18579]
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz$ unzip 101.zip
+Archive:  101.zip
+   creating: Src/
+   creating: Src/Algol60/
+  inflating: Src/Algol60/NewSrcAndTest.alg  
+  inflating: Src/Algol60/OrigSrcAndTest.alg  
+  inflating: Src/Algol60/ExpectedRes.txt  
+  inflating: Src/Algol60/Makefile    
+  inflating: Src/README              
+  inflating: Src/Copyright.txt       
+   creating: Src/Fortran90/
+  inflating: Src/Fortran90/chainLinkMod.f90  
+  inflating: Src/Fortran90/set_precision.f90  
+  inflating: Src/Fortran90/driver.f90  
+  inflating: Src/Fortran90/Makefile  
+  inflating: Src/Fortran90/coverage.chainLinkMod.f90.html  
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz$ ls
+101.zip  Src
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz$ cd Src
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src$ ls
+Algol60  Copyright.txt  Fortran90  README
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src$ cd Fortran90
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver.f90  set_precision.f90
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ make
+gfortran -Wall -fcheck=all -g -fbacktrace -ffpe-trap=invalid,zero,overflow -o set_precision.o -c set_precision.f90
+gfortran -Wall -fcheck=all -g -fbacktrace -ffpe-trap=invalid,zero,overflow -o chainLinkMod.o -c chainLinkMod.f90
+gfortran -Wall -fcheck=all -g -fbacktrace -ffpe-trap=invalid,zero,overflow -o driver.o -c driver.f90
+gfortran -Wall -fcheck=all -g -fbacktrace -ffpe-trap=invalid,zero,overflow -o driver driver.o chainLinkMod.o set_precision.o
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver      set_precision.f90
+chainlinkmod.mod                driver.f90  set_precision.mod
+chainLinkMod.o                  driver.o    set_precision.o
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ./driver
+This test has executed successfully if this the only line of text output
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ cd ~/101.gz
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz$ sloccount Src
+Creating filelist for Algol60
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/101.gz/Src/Copyright.txt to top_dir
+Creating filelist for Fortran90
+Adding /home/ian/101.gz/Src/README to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+214     Fortran90       f90=214
+0       Algol60         (none)
+0       top_dir         (none)
+
+
+Totals grouped by language (dominant language first):
+f90:            214 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 214
+Development Effort Estimate, Person-Years (Person-Months) = 0.04 (0.48)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.16 (1.88)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.25
+Total Estimated Cost to Develop                           = $ 5,353
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz$ 
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz$ ls
+101.zip  Src
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz$ cd Src
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src$ ls
+Algol60  Copyright.txt  Fortran90  README
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src$ sloccout Fortran90
+
+Command 'sloccout' not found, did you mean:
+
+  command 'sloccount' from deb sloccount (2.26-5.2)
+
+Try: sudo apt install <deb name>
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src$ cd Fortran90
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver      set_precision.f90
+chainlinkmod.mod                driver.f90  set_precision.mod
+chainLinkMod.o                  driver.o    set_precision.o
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ sloccount driver.f90
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/101.gz/Src/Fortran90/driver.f90 to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+119     top_dir         f90=119
+
+
+Totals grouped by language (dominant language first):
+f90:            119 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 119
+Development Effort Estimate, Person-Years (Person-Months) = 0.02 (0.26)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.12 (1.49)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.17
+Total Estimated Cost to Develop                           = $ 2,890
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver      set_precision.f90
+chainlinkmod.mod                driver.f90  set_precision.mod
+chainLinkMod.o                  driver.o    set_precision.o
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ sloccount set_precision.f90
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/101.gz/Src/Fortran90/set_precision.f90 to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+6       top_dir         f90=6
+
+
+Totals grouped by language (dominant language first):
+f90:              6 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 6
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.01)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.04 (0.45)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.02
+Total Estimated Cost to Develop                           = $ 126
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver      set_precision.f90
+chainlinkmod.mod                driver.f90  set_precision.mod
+chainLinkMod.o                  driver.o    set_precision.o
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ sloccount chainLinkMod.f90
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/101.gz/Src/Fortran90/chainLinkMod.f90 to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+89      top_dir         f90=89
+
+
+Totals grouped by language (dominant language first):
+f90:             89 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 89
+Development Effort Estimate, Person-Years (Person-Months) = 0.02 (0.19)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.11 (1.33)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.14
+Total Estimated Cost to Develop                           = $ 2,131
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver      set_precision.f90
+chainlinkmod.mod                driver.f90  set_precision.mod
+chainLinkMod.o                  driver.o    set_precision.o
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ sloccount coverage.chainLinkMod.f90.html
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/101.gz/Src/Fortran90/coverage.chainLinkMod.f90.html to top_dir
+Categorizing files.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+0       top_dir         (none)
+SLOC total is zero, no further analysis performed.
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ cat driver.f90
+    PROGRAM sorter
+      USE chainlinkmod, ONLY: inlist, outlist
+      USE set_precision, ONLY: wp
+
+      INTEGER, PARAMETER :: flag = -1, infosize = 3, listsize = 50
+
+! Variables for the parameters.
+      INTEGER :: first, m, n, t
+      INTEGER, ALLOCATABLE :: addr(:), info(:), list(:, :), vector(:)
+      LOGICAL :: listfull
+
+! Variables for the test rig.
+      INTEGER :: errno, i, j, k
+      INTEGER, ALLOCATABLE :: sorted_keys(:)
+
+      m = infosize
+      n = listsize
+
+      WRITE (*, '(a)') 'This test has executed successfully if &
+        &this the only line of text output'
+
+      ALLOCATE (addr(n), info(m), list(n,m+3), sorted_keys(n), vector(m+1), &
+        STAT=errno)
+      IF (errno/=0) THEN
+        WRITE (*, '(''Allocate failed trying to generate addr, &
+          &info and list arrays'')')
+        STOP
+      END IF
+
+! Set up the list of free elements.
+      addr(1:n) = [ (i,i=1,n) ]
+
+      CALL random_seed()
+
+! Completely fill the list.
+      CALL fill_list
+
+! Check that the list is correct to start with.
+      CALL check_list(n)
+
+! Gather the list of sorted keys.
+      k = first
+      DO i = 1, n
+        sorted_keys(i) = list(k, 1)
+        k = list(k, m+3)
+      END DO
+
+! Successively remove elements from the list and check
+! that the keys and values are correct after each removal.
+      DO i = 1, n
+        CALL outlist(vector, m, list, n, first, flag, addr)
+        CALL check_free(i)
+
+! Check the key.
+        t = vector(1)
+        IF (t/=sorted_keys(i)) THEN
+          WRITE (*, '(2(a,i6))') 'Key ', t, ' does not match ', sorted_keys(i)
+        END IF
+
+! Check the data returned.
+        DO j = 1, m
+          IF (vector(1+j)/=t+j) THEN
+            WRITE (*, '(2(a,i6))') 'info mismatch for key', t, 'element', j
+          END IF
+        END DO
+
+! Check the free list.
+        DO j = 1, i
+          IF (addr(j)==0) THEN
+            WRITE (*, '(2(a,i6))') 'Free list incorrect at index ', j, &
+              'after', i, 'deletions'
+          END IF
+        END DO
+! Check that the list is still sorted correctly.
+        CALL check_list(n-i)
+      END DO
+
+! Refill the list.
+      CALL fill_list
+
+! Cause a list overflow
+      CALL inlist(t, info, m, list, n, first, flag, addr, listfull)
+      IF (.NOT. listfull) THEN
+        WRITE (*, '(a)') 'Test for full list not triggered'
+      END IF
+
+
+      DEALLOCATE (addr, info, list, sorted_keys, vector)
+
+    CONTAINS
+      SUBROUTINE fill_list
+! Fill the list checking correctly order as we go
+! also check the number of free locations is correct
+        INTEGER :: i, j, t
+        INTEGER, DIMENSION (m) :: info
+        REAL (wp) :: r
+! Insert n key/value pairs into the list.
+        DO i = 1, n
+! Set up the key/value pairs.
+! Random key.
+          CALL random_number(r)
+          t = 1 + int(r*1000)/23
+! Value to be inserted.
+! Make them easy to check against t.
+          info(1:m) = [ (t+j,j=1,m) ]
+          CALL inlist(t, info, m, list, n, first, flag, addr, listfull)
+          CALL check_list(i)
+          CALL check_free(n-i)
+        END DO
+
+      END SUBROUTINE fill_list
+
+      SUBROUTINE check_free(numfree)
+        INTEGER, INTENT(IN) :: numfree
+! Check that the addr array has the correct number of free locations
+! which should be equal to numfree
+        INTEGER :: i, free
+
+        free = 0
+        DO i = 1, n
+          IF (addr(i) /= 0) THEN
+            free = free + 1
+          END IF
+        END DO
+
+        IF (free /= numfree) THEN
+          WRITE(*,ADVANCE='NO',FMT='(a,i6)')'Incorrect number of free locations: ', free
+          WRITE(*,'(a,i6)')' which should be: ', numfree
+        END IF
+      END SUBROUTINE check_free
+
+      SUBROUTINE check_list(list_length)
+! Check that list contains list_length keys in ascending order
+! starting from list(first).
+! The list has length n.
+        INTEGER, INTENT (IN) :: list_length
+
+        INTEGER :: checked, i, j, prev_t, t
+        LOGICAL :: error
+
+        error = .FALSE.
+        IF (first<0 .OR. first>n) THEN
+          WRITE (*, '(2(a,i6))') 'first is outside the value range of 1 to ', &
+            n, ' = ', first
+        ELSE
+          checked = 0
+! A dummy key for comparison at the start of the list.
+          prev_t = -1000
+          i = first
+
+          DO WHILE ((.NOT. error) .AND. checked<list_length .AND. i/=flag)
+            t = list(i, 1)
+            IF (t<prev_t) THEN
+              WRITE (*, '(2(a,i6))') t, ' at index ', i, &
+                ' is out of order with respect to ', prev_t
+              error = .TRUE.
+            ELSE
+! Check the values associated with this key.
+              DO j = 1, m
+                IF (list(i,1+j)/=t+j) THEN
+                  error = .TRUE.
+                  WRITE (*, '(a,2i6)') 'info mismatch for index ', i, j
+                END IF
+              END DO
+            END IF
+            checked = checked + 1
+! Follow the 'next' link.
+            i = list(i, m+3)
+          END DO
+          IF (checked/=list_length) THEN
+            WRITE (*, '(2(a,i6))') 'checking finished after ', checked, &
+              ' items rather than ', list_length
+          END IF
+        END IF
+      END SUBROUTINE check_list
+    END PROGRAM sorter
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver      set_precision.f90
+chainlinkmod.mod                driver.f90  set_precision.mod
+chainLinkMod.o                  driver.o    set_precision.o
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ cat set_precision.f90
+! Module set_precision provides the kind type parameter needed
+! to define the precision of a complete package along
+! with values for all commonly used precisions
+    MODULE set_precision
+!   USE, INTRINSIC :: f90_kind
+! ..
+! .. Intrinsic Functions ..
+      INTRINSIC kind
+! .. Parameters ..
+! Define the standard precisions
+! For IEEE standard arithmetic we could also use
+!     INTEGER, PARAMETER :: skind = SELECTED_REAL_KIND(p=6, r=37)
+!     INTEGER, PARAMETER :: dkind = SELECTED_REAL_KIND(p=15, r=307)
+      INTEGER, PARAMETER :: skind = kind(0.0E0)
+      INTEGER, PARAMETER :: dkind = kind(0.0D0)
+! Set the precision for the whole package
+      INTEGER, PARAMETER :: wp = dkind
+! To change the default package precision to single precision change
+! the parameter assignment to wp above to
+!     INTEGER, PARAMETER :: wp = skind
+! and recompile the complete package.
+
+!     INTEGER, PARAMETER :: qkind = quad
+! Quadruple precision is non-standard and may not be available.
+! Different compilers set this value in different ways;
+! see comments below for advice.
+!     INTEGER, PARAMETER:: qkind = ...
+!     USE, INTRINSIC :: f90_kind
+!-----------------------------------------------------------
+! For the non-standard quadruple precision:
+! IBM and Intel compilers recognize KIND(0.0Q0) 
+!     INTEGER, PARAMETER:: qkind = KIND(0.0Q0)
+!-----------------------------------------------------------
+! If you are using the NAG compiler then you can
+! make use of the NAG-supplied f90_kind module
+!     USE, INTRINSIC :: f90_kind
+!     INTEGER, PARAMETER:: skind = single ! single precision
+!     INTEGER, PARAMETER:: dkind = double ! double precision
+!     INTEGER, PARAMETER:: qkind = quad   ! quad   precision
+! but note that this module is not part of the standard
+! and is thus likely to be non-portable.
+!-----------------------------------------------------------
+
+    END MODULE set_precision
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver      set_precision.f90
+chainlinkmod.mod                driver.f90  set_precision.mod
+chainLinkMod.o                  driver.o    set_precision.o
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ cat chainLinkMod.f90
+    MODULE chainlinkmod
+! .. Use Statements ..
+      USE set_precision, ONLY: wp
+! ..
+    CONTAINS
+
+! Corrected and restructured version in Fortran 90 of
+! the original Algol 60 routines previously published as
+!
+! The argument lists of inlist and outlist could be simplified
+! further if arguments like m and n were retrieved from the
+! array sizes of the other arguments.
+!
+! ALGORITHM 100
+! ADD ITEM TO CHAIN-LINKED LIST
+! and
+! ALGORITHM 101
+! REMOVE ITEM FROM CHAIN-LINKED LIST
+! by
+! PHILIP J. KIVIAT
+! United States Steel Corp., Appl. Research Lab., Monroeville,
+! Penn. ;
+      SUBROUTINE inlist(t, info, m, list, n, first, flag, addr, listfull)
+! .. Scalar Arguments ..
+        INTEGER, INTENT (INOUT) :: first
+        INTEGER, INTENT (IN) :: flag, m, n, t
+        LOGICAL, INTENT (INOUT) :: listfull
+! ..
+! .. Array Arguments ..
+        INTEGER, INTENT (INOUT) :: addr(:), list(:, :)
+        INTEGER, INTENT (IN) :: info(:)
+! ..
+! .. Local Scalars ..
+        INTEGER :: i, j, k, link1, link2
+! ..
+! inlist adds the information pair {t,info} to the chain-
+! link structured matrix list (i,j), where t is an order key >= 0, and
+! info(k) an information vector associated with t. info(k) has
+! dimension m, list(i,j) has dimensions (n, (m+3)). flag denotes
+! the head and tail of list(i,j), and first contains the address of
+! the first (lowest order) entry in list(i,j). addr(k) is a vector
+! containing the addresses of available (empty) rows in list(i,j).
+! Initialization: list(i,m+2) = flag, for some i <= n. If list(i,j) is
+! filled the logical variable listfull returns TRUE.
+        listfull = .FALSE.
+        IF (addr(1)==0) THEN
+          listfull = .TRUE.
+        ELSE IF (addr(n)/=0) THEN
+! Insertion into an empty list.
+          i = flag
+          link1 = m + 3
+          link2 = m + 2
+          CALL addlink
+          CALL adddata
+
+        ELSE
+
+! There is at least one element to compare against.
+          i = first
+loop:     DO
+
+            IF (list(i,1)<=t) THEN
+! Insert after first item
+              link1 = m + 2
+              link2 = m + 3
+            ELSE
+! Insert before first item
+              link1 = m + 3
+              link2 = m + 2
+            END IF
+
+            IF (list(i,link2)/=flag) THEN
+! Check the next element for the insertion point.
+              k = i
+              i = list(i, link2)
+! Insertion point found.
+! Continue the search.
+              IF (list(i,1)>t) THEN
+                j = addr(1)
+                list(j, link1) = list(i, link1)
+                list(k, link2) = addr(1)
+                list(i, link1) = list(k, link2)
+                list(j, link2) = i
+                CALL adddata
+                EXIT loop
+              ELSE
+                CYCLE loop
+              END IF
+            ELSE
+! Insert 'after' i (depending on search direction).
+! Link i into the new element.
+              list(i, link2) = addr(1)
+            END IF
+            CALL addlink
+            CALL adddata
+            EXIT loop
+          END DO loop
+        END IF
+
+      CONTAINS
+! These two small routines just remove the need to duplicate
+! code or have labels and gotos as with the original Algol
+        SUBROUTINE addlink
+! Insert at one of the ends of the list,
+! linking to element i in the opposite direction.
+! As a special case, i .EQ. flag when inserting into the empty list.
+          j = addr(1)
+          list(j, link1) = i
+          list(j, link2) = flag
+          IF (link2==(m+2)) THEN
+            first = addr(1)
+          END IF
+        END SUBROUTINE addlink
+
+        SUBROUTINE adddata
+
+          list(j, 1) = t
+          list(j, 2:m+1) = info(1:m)
+          addr(1:n) = [ addr(2:n), 0 ]
+        END SUBROUTINE adddata
+
+      END SUBROUTINE inlist
+
+      SUBROUTINE outlist(vector, m, list, n, first, flag, addr)
+! outlist removes the first entry (information pair with
+! lowest order key) from list(i,j) and puts it in vector(k);
+        INTEGER, INTENT (INOUT) :: first
+        INTEGER, INTENT (IN) :: flag, m, n
+! ..
+! .. Array Arguments ..
+        INTEGER, INTENT (INOUT) :: addr(:), list(:, :), vector(:)
+! ..
+! .. Local Scalars ..
+        INTEGER :: i
+! ..
+! Copy the key and data.
+        vector(1:m+1) = list(first, 1:m+1)
+
+! Release the first entry.
+        i = n
+        DO WHILE (addr(i)==0 .AND. i>1)
+          i = i - 1
+        END DO
+        IF (addr(i)==0) THEN
+          addr(i) = first
+        ELSE
+          addr(i+1) = first
+        END IF
+        IF (list(first,m+3)==flag) THEN
+! The list is now empty.
+          list(1, m+2) = flag
+        ELSE
+          first = list(first, m+3)
+          list(first, m+2) = flag
+        END IF
+      END SUBROUTINE outlist
+    END MODULE chainlinkmod
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ ls
+chainLinkMod.f90                driver      set_precision.f90
+chainlinkmod.mod                driver.f90  set_precision.mod
+chainLinkMod.o                  driver.o    set_precision.o
+coverage.chainLinkMod.f90.html  Makefile
+ian@ian-HP-Stream-Laptop-11-y0XX:~/101.gz/Src/Fortran90$ 
