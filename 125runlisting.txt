@@ -1,0 +1,778 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/CodeCode$ cd
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cd 125.gz
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ sloccount 125.sh
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/125.gz/125.sh to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+308     top_dir         sh=308
+
+
+Totals grouped by language (dominant language first):
+sh:             308 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 308
+Development Effort Estimate, Person-Years (Person-Months) = 0.06 (0.70)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.18 (2.18)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.32
+Total Estimated Cost to Develop                           = $ 7,845
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ sloccount driver.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/125.gz/driver.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+42      top_dir         fortran=42
+
+
+Totals grouped by language (dominant language first):
+fortran:         42 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 42
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.09)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.08 (0.98)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.09
+Total Estimated Cost to Develop                           = $ 968
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ sloccount src.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/125.gz/src.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+124     top_dir         fortran=124
+
+
+Totals grouped by language (dominant language first):
+fortran:        124 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 124
+Development Effort Estimate, Person-Years (Person-Months) = 0.02 (0.27)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.13 (1.52)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.18
+Total Estimated Cost to Develop                           = $ 3,018
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ gfortran driver.f src.f -o 125run3
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ ./125run3
+1
+2
+ n=           1  eps=   2.0000000000000000     
+ m=   0.0000000000000000     
+  2.0000000000000000    0.3333333333333333
+  4 Exact=  0.4000000000000000 Quadrature=  0.0246913580246913 Error= 0.3753086E+00
+3
+4
+ n=           3  eps=   4.0000000000000000     
+ m=   1.0000000000000000     
+  1.5000000000000000    0.3333333333333333
+  0.2777777777777778   -0.1000000000000000
+  0.2222222222222222   -0.6666666666666667
+  4 Exact=  0.4000000000000000 Quadrature=  0.0624420438957476 Error= 0.3375580E+00
+5
+6
+ n=           5  eps=   6.0000000000000000     
+ m=   1.0000000000000000     
+  1.5000000000000000    0.3333333333333333
+  0.2777777777777778   -0.1000000000000000
+  0.0972222222222222   -0.2380952380952381
+  0.0450000000000000   -0.3055555555555556
+  0.0800000000000000   -0.8000000000000000
+  4 Exact=  0.4000000000000000 Quadrature=  0.0520189968594654 Error= 0.3479810E+00
+99
+99
+STOP 99
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ cat 125.sh
+#! /bin/sh
+# This is a shell archive, meaning:
+# 1. Remove everything above the #! /bin/sh line.
+# 2. Save the resulting text in a file.
+# 3. Execute the file with /bin/sh (not csh) to create the files:
+#	driver.f
+#	src.f
+# This archive created: Sun Jul 20 16:32:26 1997
+export PATH; PATH=/bin:$PATH
+if test -f 'driver.f'
+then
+	echo shar: will not over-write existing file "'driver.f'"
+else
+cat << \SHAR_EOF > 'driver.f'
+      PROGRAM MAIN
+C Driver for  CACM Alg 125 Rutishauser
+C Author M.Dow@anu.edu.au
+C        ANUSF,  Australian National University
+Canberra Australia
+C
+C Tidied up to use workspace arrays, real parameter values
+C and put through nag tools
+C
+C trh (20/07/97)
+C
+C     ..
+C     .. Parameters ..
+      INTEGER NM
+      PARAMETER (NM=100)
+      DOUBLE PRECISION ZERO,ONE,TWO,THREE
+      PARAMETER (ZERO=0.0D0,ONE=1.0D0,TWO=2.0D0,THREE=3.0D0)
+C     .. Local Scalars ..
+      DOUBLE PRECISION A,B,EPS,EXACT,S
+      INTEGER I,N,P
+C     ..
+C     .. Local Arrays ..
+      DOUBLE PRECISION E(NM),Q(NM),W(NM),WORK(9*NM+8),X(NM)
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL WEIGHTCOEFF
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC MIN
+C     ..
+   10 READ (5,FMT=*,END=20) N,EPS
+      IF (EPS.LE.ZERO) EPS = 1D-15
+      IF (N.GE.NM-1) STOP 99
+      WRITE (6,FMT=*) 'n=',N,' eps=',EPS
+C
+C  q,e for w=1/2 interval (0,2)
+C Ref: W.Jones & W.Thron Continued Fractions ...
+C      Encyclopedia of maths...vol 11 p24
+C      Continued Fraction expansion of log(1+x),
+C transformed to Rutishauser form p33
+C
+      DO I = 2,NM
+          Q(I) = TWO*I*I/ (TWO*I* (TWO*I-ONE))
+          E(I) = TWO*I*I/ (TWO*I* (TWO*I+ONE))
+      END DO
+      Q(1) = ONE
+      E(1) = ONE/THREE
+      CALL WEIGHTCOEFF(N,Q,E,EPS,W,X,WORK)
+C Adjust weights, zeros for w=1, interval (-1,1)
+      DO I = 1,N
+          W(I) = TWO*W(I)
+          X(I) = X(I) - ONE
+      END DO
+
+      DO I = 1,MIN(N,10)
+          WRITE (6,FMT=9000) W(I),X(I)
+      END DO
+C Check for x^4
+      P = 4
+      A = -ONE
+      B = ONE
+      EXACT = (B** (P+1)-A** (P+1))/ (P+1)
+      S = ZERO
+      DO I = 1,N
+          S = S + W(I)*X(I)**P
+      END DO
+      WRITE (6,FMT=9010) P,EXACT,S,EXACT - S
+      GO TO 10
+
+   20 STOP
+
+ 9000 FORMAT (F20.16,2X,F20.16)
+ 9010 FORMAT (I3,' Exact=',F20.16,' Quadrature=',F20.16,' Error=',E14.7)
+      END
+SHAR_EOF
+fi # end of overwriting check
+if test -f 'src.f'
+then
+	echo shar: will not over-write existing file "'src.f'"
+else
+cat << \SHAR_EOF > 'src.f'
+C Original Fortran translation donated by
+C
+C M.Dow@anu.edu.au
+C ANUSF,  Australian National University
+C Canberra Australia
+C 
+C Tidied up to use workspace arrays, dimension arrays to 
+C required lengths, use 0: for dimensions of A, add comments,
+C and NAG tools to layout source
+C
+C trh (20/07/97)
+
+      SUBROUTINE WEIGHTCOEFF(N,Q,E,EPS,W,X,WORK)
+C
+C This is just a wrapper routine to split up the workspace array
+C
+C     .. Scalar Arguments ..
+      DOUBLE PRECISION EPS
+      INTEGER N
+C     ..
+C     .. Array Arguments ..
+      DOUBLE PRECISION E(N-1),Q(N),W(N),WORK(9*N+8),X(N)
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL WEIGHTC
+C     ..
+      CALL WEIGHTC(N,Q,E,EPS,W,X,WORK,WORK(N+1))
+      END
+
+      SUBROUTINE WEIGHTC(N,Q,E,EPS,W,X,G,A)
+C
+C Computes the abscissae x(i) and the weight coefficients w(i) for a
+C Gaussian quadrature method
+C      \int_0^b w(x)f(x) dx \approx \sum_{i=1}^{n}w_if(x_i) where
+C \int_0^b w(x) dx = 1 and w(x)>= 0. The method requires the order n, a
+C tolerance eps and the 2n-1 first coefficients of the continued fraction
+C      \int_0^b {w(x) \over z-x} = { 1| \over |z} - {q_1 | \over |1} -
+C 				 {e_1 | \over |z} - {q_2 | \over |1} -
+C 				 {e_2 | \over |z} - \cdots
+C to be given, the latter in the two arrays q(n) and e(n-1) all
+C components of which are automatically positive by virtue of the
+C condition w(x)>= 0.  The method works as well if the upper bound b is
+C actually infinity (note that b does not appear directly as an
+C argument!) or if the density function w(x) dx is replaced by da(x) with
+C a monotonically increasing a(x) with at least n points of of variation.
+C The tolerance eps should be given in accordance to the machines
+C accuracy (preferably by using the value of d1mach(4)). The result is
+C delivered as two arrays w(n) (the weight coefficients) and x(n) (the
+C abscissae). For a description of the method see H Rutishauser, ``On a
+C modification of the QD-algorithm with Graeffe-type convergence''
+C [Proceedings of the IFIPS Congress, Munich, 1962].
+
+C     .. Scalar Arguments ..
+      DOUBLE PRECISION EPS
+      INTEGER N
+C     ..
+C     .. Array Arguments ..
+      DOUBLE PRECISION A(0:N,0:7),E(N-1),G(N),Q(N),W(N),X(N)
+C     ..
+C     .. Local Scalars ..
+      DOUBLE PRECISION M,P
+      INTEGER K
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL QDGRAEFFE
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC ABS,EXP,LOG
+C     ..
+      X(1) = Q(1) + E(1)
+      DO K = 2,N
+          G(K-1) = E(K-1)*Q(K)/X(K-1)
+          IF (K.EQ.N) THEN
+              X(K) = Q(K) - G(K-1)
+
+          ELSE
+              X(K) = Q(K) + E(K) - G(K-1)
+          END IF
+
+          G(K-1) = G(K-1)/X(K)
+          W(K-1) = X(K)/X(K-1)
+          X(K-1) = LOG(X(K-1))
+      END DO
+      X(N) = LOG(X(N))
+      P = 1
+  30  DO K = 1,N - 1
+          IF (ABS(G(K)*W(K)).GT.EPS) GO TO 40
+      END DO
+      GO TO 50
+
+   40 CALL QDGRAEFFE(N,X,G,W,A)
+      P = 2*P
+      GO TO 30
+C
+C What follows is a peculiar method to compute the w(k) from 
+C the given ratios g_k = w_{k+1}/w_k such that 
+C  \sum_{k=1}^n w_k = 1, but the straightforward formulae to do
+C this might well produce overflow of exponent
+C
+
+   50 W(1) = 1
+      M = 0
+      DO K = 1,N - 1
+          W(K+1) = W(K)*G(K)
+          IF (W(K).GT.M) M = W(K)
+      END DO
+      WRITE (6,FMT=*) 'm=',M
+C   /*do k=1,n w(k)=exp(w(k)-m) */
+      M = 0
+      DO K = 1,N
+          M = M + W(K)
+      END DO
+      DO K = 1,N
+          W(K) = W(K)/M
+          X(K) = EXP(X(K)/P)
+      END DO
+      RETURN
+
+      END
+
+      SUBROUTINE RED(A,F,N)
+C
+C  Subroutine RED reduces a heptadiagonal matrix a to tridiagonal form as
+C  described in the paper referenced above.
+C  
+C     .. Scalar Arguments ..
+      INTEGER N
+C     ..
+C     .. Array Arguments ..
+      DOUBLE PRECISION A(0:N,0:7),F(N)
+C     ..
+C     .. Local Scalars ..
+      DOUBLE PRECISION C
+      INTEGER J,K
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC ABS
+C     ..
+      DO K = 1,N - 1
+          DO J = K,N - 1
+
+              C = -F(J)*A(J,7)/A(J,2)
+              A(J,7) = 0
+              A(J+1,2) = A(J+1,2) + C*A(J,5)
+              A(J,1) = A(J,1) - C*F(J)*A(J,4)
+              A(J,6) = A(J,6) - C*A(J+1,1)
+              A(J+1,3) = A(J+1,3) - C*A(J+1,6)
+          END DO
+          DO J = K,N - 1
+              C = -F(J)*A(J,4)/A(J,1)
+              A(J,4) = 0
+              A(J+1,1) = A(J+1,1) + C*A(J,6)
+              A(J+1,6) = A(J+1,6) + C*A(J+1,3)
+              A(J,5) = A(J,5) - C*A(J+1,2)
+              A(J+1,0) = A(J+1,0) - C*A(J+1,5)
+          END DO
+          DO J = K + 1,N - 1
+              C = -A(J,3)/A(J-1,6)
+              A(J,3) = 0
+              A(J,6) = A(J,6) + C*A(J,1)
+              A(J-1,5) = A(J-1,5) - C*F(J)*F(J)*A(J,0)
+              A(J,2) = A(J,2) - C*F(J)*F(J)*A(J,5)
+              A(J,7) = A(J,7) - C*F(J)*A(J+1,2)
+          END DO
+          DO J = K + 1,N - 1
+              C = -A(J,0)/A(J-1,5)
+              A(J,0) = 0
+              A(J+1,2) = A(J+1,2) + C*F(J)*A(J,7)
+              A(J,5) = A(J,5) + C*A(J,2)
+              A(J,1) = A(J,1) - C*F(J)*F(J)*A(J,6)
+              A(J,4) = A(J,4) - C*F(J)*A(J+1,1)
+          END DO
+      END DO
+      RETURN
+
+      END
+
+      SUBROUTINE QDGRAEFFE(N,H,G,F,A)
+C
+C Subroutine QDGRAEFFE computes for a given continued fraction
+C     f(z) = { 1| \over |z} - {q_1 | \over |1} -
+C	     {e_1 | \over |z} - {q_2 | \over |1} -
+C	     {e_2 | \over |z} - \cdots - {q_n | \over |1}
+C another one, the poles of which are the squares of the poles of f(z)
+C However QDGRAEFFE uses not the coefficients q_1 ... q_n and
+C e_1 ... e_{n-1} of f(z) but the quotients f_k = q_{k+1}/q_k and
+C g_k = e_k/q_{k+1} for k=1,2,...,n-1 and the h_k = ln(abs(q_k)) for
+C k=1,2,...,n, and the results are delivered in the same form. Routine 
+C QDGRAEFFE can be used independently, but requires subroutine RED
+C
+C     .. Scalar Arguments ..
+      INTEGER N
+C     ..
+C     .. Array Arguments ..
+      DOUBLE PRECISION A(0:N,0:7),F(N),G(N),H(N)
+C     ..
+C     .. Local Scalars ..
+      INTEGER K
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL RED
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC ABS,LOG
+C     ..
+      G(N) = 0
+      F(N) = 0
+      DO K = 1,N
+          A(K-1,4) = 1
+          A(K-1,5) = 1
+          A(K,2) = 1 + G(K)*F(K)
+          A(K,1) = 1 + G(K)*F(K)
+          A(K,6) = G(K)
+          A(K,7) = G(K)
+          A(K,0) = 0
+          A(K,3) = 0
+      END DO
+      A(N,5) = 0
+C
+C The array a represents the heptadiagonal matrix Q of the paper 
+C cited above, but with the modifications needed to avoid large numbers
+C and with a peculiar arrangement.
+C
+      CALL RED(A,F,N)
+      DO K = 1,N
+          H(K) = 2*H(K) + LOG(ABS(A(K,1)*A(K,2)))
+      END DO
+      DO K = 1,N - 1
+          F(K) = F(K)*F(K)*A(K+1,2)*A(K+1,1)/ (A(K,1)*A(K,2))
+          G(K) = A(K,5)*A(K,6)/ (A(K+1,1)*A(K+1,2))
+      END DO
+      RETURN
+
+      END
+SHAR_EOF
+fi # end of overwriting check
+#	End of shell archive
+exit 0
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ cat driver.sh
+cat: driver.sh: No such file or directory
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ cat driver.f
+      PROGRAM MAIN
+C Driver for  CACM Alg 125 Rutishauser
+C Author M.Dow@anu.edu.au
+C        ANUSF,  Australian National University
+Canberra Australia
+C
+C Tidied up to use workspace arrays, real parameter values
+C and put through nag tools
+C
+C trh (20/07/97)
+C
+C     ..
+C     .. Parameters ..
+      INTEGER NM
+      PARAMETER (NM=100)
+      DOUBLE PRECISION ZERO,ONE,TWO,THREE
+      PARAMETER (ZERO=0.0D0,ONE=1.0D0,TWO=2.0D0,THREE=3.0D0)
+C     .. Local Scalars ..
+      DOUBLE PRECISION A,B,EPS,EXACT,S
+      INTEGER I,N,P
+C     ..
+C     .. Local Arrays ..
+      DOUBLE PRECISION E(NM),Q(NM),W(NM),WORK(9*NM+8),X(NM)
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL WEIGHTCOEFF
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC MIN
+C     ..
+   10 READ (5,FMT=*,END=20) N,EPS
+      IF (EPS.LE.ZERO) EPS = 1D-15
+      IF (N.GE.NM-1) STOP 99
+      WRITE (6,FMT=*) 'n=',N,' eps=',EPS
+C
+C  q,e for w=1/2 interval (0,2)
+C Ref: W.Jones & W.Thron Continued Fractions ...
+C      Encyclopedia of maths...vol 11 p24
+C      Continued Fraction expansion of log(1+x),
+C transformed to Rutishauser form p33
+C
+      DO I = 2,NM
+          Q(I) = TWO*I*I/ (TWO*I* (TWO*I-ONE))
+          E(I) = TWO*I*I/ (TWO*I* (TWO*I+ONE))
+      END DO
+      Q(1) = ONE
+      E(1) = ONE/THREE
+      CALL WEIGHTCOEFF(N,Q,E,EPS,W,X,WORK)
+C Adjust weights, zeros for w=1, interval (-1,1)
+      DO I = 1,N
+          W(I) = TWO*W(I)
+          X(I) = X(I) - ONE
+      END DO
+
+      DO I = 1,MIN(N,10)
+          WRITE (6,FMT=9000) W(I),X(I)
+      END DO
+C Check for x^4
+      P = 4
+      A = -ONE
+      B = ONE
+      EXACT = (B** (P+1)-A** (P+1))/ (P+1)
+      S = ZERO
+      DO I = 1,N
+          S = S + W(I)*X(I)**P
+      END DO
+      WRITE (6,FMT=9010) P,EXACT,S,EXACT - S
+      GO TO 10
+
+   20 STOP
+
+ 9000 FORMAT (F20.16,2X,F20.16)
+ 9010 FORMAT (I3,' Exact=',F20.16,' Quadrature=',F20.16,' Error=',E14.7)
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ cat src.f
+C Original Fortran translation donated by
+C
+C M.Dow@anu.edu.au
+C ANUSF,  Australian National University
+C Canberra Australia
+C 
+C Tidied up to use workspace arrays, dimension arrays to 
+C required lengths, use 0: for dimensions of A, add comments,
+C and NAG tools to layout source
+C
+C trh (20/07/97)
+
+      SUBROUTINE WEIGHTCOEFF(N,Q,E,EPS,W,X,WORK)
+C
+C This is just a wrapper routine to split up the workspace array
+C
+C     .. Scalar Arguments ..
+      DOUBLE PRECISION EPS
+      INTEGER N
+C     ..
+C     .. Array Arguments ..
+      DOUBLE PRECISION E(N-1),Q(N),W(N),WORK(9*N+8),X(N)
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL WEIGHTC
+C     ..
+      CALL WEIGHTC(N,Q,E,EPS,W,X,WORK,WORK(N+1))
+      END
+
+      SUBROUTINE WEIGHTC(N,Q,E,EPS,W,X,G,A)
+C
+C Computes the abscissae x(i) and the weight coefficients w(i) for a
+C Gaussian quadrature method
+C      \int_0^b w(x)f(x) dx \approx \sum_{i=1}^{n}w_if(x_i) where
+C \int_0^b w(x) dx = 1 and w(x)>= 0. The method requires the order n, a
+C tolerance eps and the 2n-1 first coefficients of the continued fraction
+C      \int_0^b {w(x) \over z-x} = { 1| \over |z} - {q_1 | \over |1} -
+C 				 {e_1 | \over |z} - {q_2 | \over |1} -
+C 				 {e_2 | \over |z} - \cdots
+C to be given, the latter in the two arrays q(n) and e(n-1) all
+C components of which are automatically positive by virtue of the
+C condition w(x)>= 0.  The method works as well if the upper bound b is
+C actually infinity (note that b does not appear directly as an
+C argument!) or if the density function w(x) dx is replaced by da(x) with
+C a monotonically increasing a(x) with at least n points of of variation.
+C The tolerance eps should be given in accordance to the machines
+C accuracy (preferably by using the value of d1mach(4)). The result is
+C delivered as two arrays w(n) (the weight coefficients) and x(n) (the
+C abscissae). For a description of the method see H Rutishauser, ``On a
+C modification of the QD-algorithm with Graeffe-type convergence''
+C [Proceedings of the IFIPS Congress, Munich, 1962].
+
+C     .. Scalar Arguments ..
+      DOUBLE PRECISION EPS
+      INTEGER N
+C     ..
+C     .. Array Arguments ..
+      DOUBLE PRECISION A(0:N,0:7),E(N-1),G(N),Q(N),W(N),X(N)
+C     ..
+C     .. Local Scalars ..
+      DOUBLE PRECISION M,P
+      INTEGER K
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL QDGRAEFFE
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC ABS,EXP,LOG
+C     ..
+      X(1) = Q(1) + E(1)
+      DO K = 2,N
+          G(K-1) = E(K-1)*Q(K)/X(K-1)
+          IF (K.EQ.N) THEN
+              X(K) = Q(K) - G(K-1)
+
+          ELSE
+              X(K) = Q(K) + E(K) - G(K-1)
+          END IF
+
+          G(K-1) = G(K-1)/X(K)
+          W(K-1) = X(K)/X(K-1)
+          X(K-1) = LOG(X(K-1))
+      END DO
+      X(N) = LOG(X(N))
+      P = 1
+  30  DO K = 1,N - 1
+          IF (ABS(G(K)*W(K)).GT.EPS) GO TO 40
+      END DO
+      GO TO 50
+
+   40 CALL QDGRAEFFE(N,X,G,W,A)
+      P = 2*P
+      GO TO 30
+C
+C What follows is a peculiar method to compute the w(k) from 
+C the given ratios g_k = w_{k+1}/w_k such that 
+C  \sum_{k=1}^n w_k = 1, but the straightforward formulae to do
+C this might well produce overflow of exponent
+C
+
+   50 W(1) = 1
+      M = 0
+      DO K = 1,N - 1
+          W(K+1) = W(K)*G(K)
+          IF (W(K).GT.M) M = W(K)
+      END DO
+      WRITE (6,FMT=*) 'm=',M
+C   /*do k=1,n w(k)=exp(w(k)-m) */
+      M = 0
+      DO K = 1,N
+          M = M + W(K)
+      END DO
+      DO K = 1,N
+          W(K) = W(K)/M
+          X(K) = EXP(X(K)/P)
+      END DO
+      RETURN
+
+      END
+
+      SUBROUTINE RED(A,F,N)
+C
+C  Subroutine RED reduces a heptadiagonal matrix a to tridiagonal form as
+C  described in the paper referenced above.
+C  
+C     .. Scalar Arguments ..
+      INTEGER N
+C     ..
+C     .. Array Arguments ..
+      DOUBLE PRECISION A(0:N,0:7),F(N)
+C     ..
+C     .. Local Scalars ..
+      DOUBLE PRECISION C
+      INTEGER J,K
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC ABS
+C     ..
+      DO K = 1,N - 1
+          DO J = K,N - 1
+
+              C = -F(J)*A(J,7)/A(J,2)
+              A(J,7) = 0
+              A(J+1,2) = A(J+1,2) + C*A(J,5)
+              A(J,1) = A(J,1) - C*F(J)*A(J,4)
+              A(J,6) = A(J,6) - C*A(J+1,1)
+              A(J+1,3) = A(J+1,3) - C*A(J+1,6)
+          END DO
+          DO J = K,N - 1
+              C = -F(J)*A(J,4)/A(J,1)
+              A(J,4) = 0
+              A(J+1,1) = A(J+1,1) + C*A(J,6)
+              A(J+1,6) = A(J+1,6) + C*A(J+1,3)
+              A(J,5) = A(J,5) - C*A(J+1,2)
+              A(J+1,0) = A(J+1,0) - C*A(J+1,5)
+          END DO
+          DO J = K + 1,N - 1
+              C = -A(J,3)/A(J-1,6)
+              A(J,3) = 0
+              A(J,6) = A(J,6) + C*A(J,1)
+              A(J-1,5) = A(J-1,5) - C*F(J)*F(J)*A(J,0)
+              A(J,2) = A(J,2) - C*F(J)*F(J)*A(J,5)
+              A(J,7) = A(J,7) - C*F(J)*A(J+1,2)
+          END DO
+          DO J = K + 1,N - 1
+              C = -A(J,0)/A(J-1,5)
+              A(J,0) = 0
+              A(J+1,2) = A(J+1,2) + C*F(J)*A(J,7)
+              A(J,5) = A(J,5) + C*A(J,2)
+              A(J,1) = A(J,1) - C*F(J)*F(J)*A(J,6)
+              A(J,4) = A(J,4) - C*F(J)*A(J+1,1)
+          END DO
+      END DO
+      RETURN
+
+      END
+
+      SUBROUTINE QDGRAEFFE(N,H,G,F,A)
+C
+C Subroutine QDGRAEFFE computes for a given continued fraction
+C     f(z) = { 1| \over |z} - {q_1 | \over |1} -
+C	     {e_1 | \over |z} - {q_2 | \over |1} -
+C	     {e_2 | \over |z} - \cdots - {q_n | \over |1}
+C another one, the poles of which are the squares of the poles of f(z)
+C However QDGRAEFFE uses not the coefficients q_1 ... q_n and
+C e_1 ... e_{n-1} of f(z) but the quotients f_k = q_{k+1}/q_k and
+C g_k = e_k/q_{k+1} for k=1,2,...,n-1 and the h_k = ln(abs(q_k)) for
+C k=1,2,...,n, and the results are delivered in the same form. Routine 
+C QDGRAEFFE can be used independently, but requires subroutine RED
+C
+C     .. Scalar Arguments ..
+      INTEGER N
+C     ..
+C     .. Array Arguments ..
+      DOUBLE PRECISION A(0:N,0:7),F(N),G(N),H(N)
+C     ..
+C     .. Local Scalars ..
+      INTEGER K
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL RED
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC ABS,LOG
+C     ..
+      G(N) = 0
+      F(N) = 0
+      DO K = 1,N
+          A(K-1,4) = 1
+          A(K-1,5) = 1
+          A(K,2) = 1 + G(K)*F(K)
+          A(K,1) = 1 + G(K)*F(K)
+          A(K,6) = G(K)
+          A(K,7) = G(K)
+          A(K,0) = 0
+          A(K,3) = 0
+      END DO
+      A(N,5) = 0
+C
+C The array a represents the heptadiagonal matrix Q of the paper 
+C cited above, but with the modifications needed to avoid large numbers
+C and with a peculiar arrangement.
+C
+      CALL RED(A,F,N)
+      DO K = 1,N
+          H(K) = 2*H(K) + LOG(ABS(A(K,1)*A(K,2)))
+      END DO
+      DO K = 1,N - 1
+          F(K) = F(K)*F(K)*A(K+1,2)*A(K+1,1)/ (A(K,1)*A(K,2))
+          G(K) = A(K,5)*A(K,6)/ (A(K+1,1)*A(K+1,2))
+      END DO
+      RETURN
+
+      END
+ian@ian-HP-Stream-Laptop-11-y0XX:~/125.gz$ 
+

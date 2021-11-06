@@ -1,140 +1,74 @@
-      program main
+      PROGRAM MAIN
+C Driver for  CACM Alg 125 Rutishauser
+C Author M.Dow@anu.edu.au
+C        ANUSF,  Australian National University
+Canberra Australia
+C
+C Tidied up to use workspace arrays, real parameter values
+C and put through nag tools
+C
+C trh (20/07/97)
+C
+C     ..
+C     .. Parameters ..
+      INTEGER NM
+      PARAMETER (NM=100)
+      DOUBLE PRECISION ZERO,ONE,TWO,THREE
+      PARAMETER (ZERO=0.0D0,ONE=1.0D0,TWO=2.0D0,THREE=3.0D0)
+C     .. Local Scalars ..
+      DOUBLE PRECISION A,B,EPS,EXACT,S
+      INTEGER I,N,P
+C     ..
+C     .. Local Arrays ..
+      DOUBLE PRECISION E(NM),Q(NM),W(NM),WORK(9*NM+8),X(NM)
+C     ..
+C     .. External Subroutines ..
+      EXTERNAL WEIGHTCOEFF
+C     ..
+C     .. Intrinsic Functions ..
+      INTRINSIC MIN
+C     ..
+   10 READ (5,FMT=*,END=20) N,EPS
+      IF (EPS.LE.ZERO) EPS = 1D-15
+      IF (N.GE.NM-1) STOP 99
+      WRITE (6,FMT=*) 'n=',N,' eps=',EPS
+C
+C  q,e for w=1/2 interval (0,2)
+C Ref: W.Jones & W.Thron Continued Fractions ...
+C      Encyclopedia of maths...vol 11 p24
+C      Continued Fraction expansion of log(1+x),
+C transformed to Rutishauser form p33
+C
+      DO I = 2,NM
+          Q(I) = TWO*I*I/ (TWO*I* (TWO*I-ONE))
+          E(I) = TWO*I*I/ (TWO*I* (TWO*I+ONE))
+      END DO
+      Q(1) = ONE
+      E(1) = ONE/THREE
+      CALL WEIGHTCOEFF(N,Q,E,EPS,W,X,WORK)
+C Adjust weights, zeros for w=1, interval (-1,1)
+      DO I = 1,N
+          W(I) = TWO*W(I)
+          X(I) = X(I) - ONE
+      END DO
 
-c***********************************************************************
-c
-cc TOMS467_PRB tests XPOSE.
-c
-      implicit none
+      DO I = 1,MIN(N,10)
+          WRITE (6,FMT=9000) W(I),X(I)
+      END DO
+C Check for x^4
+      P = 4
+      A = -ONE
+      B = ONE
+      EXACT = (B** (P+1)-A** (P+1))/ (P+1)
+      S = ZERO
+      DO I = 1,N
+          S = S + W(I)*X(I)**P
+      END DO
+      WRITE (6,FMT=9010) P,EXACT,S,EXACT - S
+      GO TO 10
 
-      integer a_max
-      integer moved_max
+   20 STOP
 
-      parameter ( a_max = 3000 )
-      parameter ( moved_max = 100 )
-
-      real a(a_max)
-      logical moved(moved_max)
-      integer n1
-      integer n12
-      integer n2
-      integer nwork
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) 'TOMS467_PRB'
-      write ( *, '(a)' ) '  Test TOMS algorithm 467, in place'
-      write ( *, '(a)' ) '  matrix transposition.'
-
-      n1 = 10
-      n2 = 10
-      n12 = n1 * n2
-      nwork = ( n1 + n2 ) / 2
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a,i6)' ) '  Row dimension N1 =    ', n1
-      write ( *, '(a,i6)' ) '  Column dimension N2 = ', n2
-      write ( *, '(a,i6)' ) '  Total size N12 =      ', n12 
-      write ( *, '(a,i6)' ) '  Workspace NWORK =     ', nwork
-
-      call set_a ( n1, n2, a )
-
-      call print_a ( n1, n2, a, 1, 5, 1, 5 )
-
-      call xpose ( a, n1, n2, n12, moved, nwork )
-
-      call print_a ( n2, n1, a, 1, 5, 1, 5 )
-
-      n1 = 7
-      n2 = 30
-      n12 = n1 * n2
-      nwork = ( n1 + n2 ) / 2
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a,i6)' ) '  Row dimension N1 =    ', n1
-      write ( *, '(a,i6)' ) '  Column dimension N2 = ', n2
-      write ( *, '(a,i6)' ) '  Total size N12 =      ', n12 
-      write ( *, '(a,i6)' ) '  Workspace NWORK =     ', nwork
-
-      call set_a ( n1, n2, a )
-
-      call print_a ( n1, n2, a, 1, 5, 1, 5 )
-
-      call xpose ( a, n1, n2, n12, moved, nwork )
-
-      call print_a ( n2, n1, a, 1, 5, 1, 5 )
-
-      n1 = 24
-      n2 = 8
-      n12 = n1 * n2
-      nwork = ( n1 + n2 ) / 2
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a,i6)' ) '  Row dimension N1 =    ', n1
-      write ( *, '(a,i6)' ) '  Column dimension N2 = ', n2
-      write ( *, '(a,i6)' ) '  Total size N12 =      ', n12 
-      write ( *, '(a,i6)' ) '  Workspace NWORK =     ', nwork
-
-      call set_a ( n1, n2, a )
-
-      call print_a ( n1, n2, a, 1, 5, 1, 5 )
-
-      call xpose ( a, n1, n2, n12, moved, nwork )
-
-      call print_a ( n2, n1, a, 1, 5, 1, 5 )
-
-      write ( *, '(a)' ) ' '
-      write ( *, '(a)' ) 'TOMS467_PRB'
-      write ( *, '(a)' ) '  Normal end of execution.'
-
-      stop
-      end
-      subroutine set_a ( n1, n2, a )
-
-c***********************************************************************
-c
-cc SET_A sets the matrix A.
-c
-      implicit none
-
-      integer n1
-      integer n2
-
-      real a(n1,n2)
-      integer i
-      integer j
-
-      do i = 1, n1
-        do j = 1, n2
-          a(i,j) = 1000 * i + j
-        end do
-      end do
-
-      return
-      end
-      subroutine print_a ( m, n, a, i_lo, i_hi, j_lo, j_hi )
-
-c***********************************************************************
-c
-cc PRINT_A prints the matrix A.
-c
-      implicit none
-
-      integer m
-      integer n
-
-      real a(m,n)
-      integer i
-      integer i_hi
-      integer i_lo
-      integer j
-      integer j_hi
-      integer j_lo
-
-      write ( *, '(a)' ) ' '
-
-      do i = i_lo, i_hi
-        write ( *, '(2x,5f8.0)' ) ( a(i,j), j = j_lo, j_hi )
-      end do
-
-      return
-      end
-
+ 9000 FORMAT (F20.16,2X,F20.16)
+ 9010 FORMAT (I3,' Exact=',F20.16,' Quadrature=',F20.16,' Error=',E14.7)
+      END
