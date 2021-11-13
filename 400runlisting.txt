@@ -1,0 +1,157 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/400.gz$ gfortran 400.f -std=legacy -o 400run
+ian@ian-HP-Stream-Laptop-11-y0XX:~/400.gz$ ./400run
+   29.0000095       0.00000000       3.11747899E-05          16
+ian@ian-HP-Stream-Laptop-11-y0XX:~/400.gz$ cat 400.f
+C     ALGORITHM 400 COLLECTED ALGORITHMS FROM ACM.
+C     ALGORITHM APPEARED IN COMM. ACM, VOL. 13, NO. 10,
+C     P. 622.
+      FUNCTION HRVINT(F, A, B, iMAX, ACC, FAC, MFIN)
+C HAVIE INTEGRATION WITH AN EXPANDED RUTISHAUSER-
+C TYPE SUMMATION PROCEDURE
+         DIMENSION T(17), U(17), TPREV(17), UPREV(17),F(17)
+C TEST FOR MAX GREATER THAN 16
+         MUX=iMAX
+         IF(iMAX-16) 10, 10, 5
+    5    MUX=16
+C INITIALIZATION
+   10    ENPT=0.5*(F(A)+F(B))
+         SUMT=0.0
+         MFIN=1
+         N=1
+         H=B-A
+         SH=H
+C BEGIN REPETITIVE LOOP FROM ORDER 1 TO ORDER MAX
+   15    T(1)=H*(ENPT+SUMT)
+         SUM=0.
+         NN=N+N
+         EN=NN
+         EM=SH/EN
+C BEGIN RUTISHAUSER EVALUATION OF RECTANGULAR SUMS
+C INITIALIZATION
+         IF(NN-16) 20, 20, 25
+   20    NZ=NN
+         GO TO 30
+   25    NZ=16
+         IF(NN-256) 30, 30, 35
+   30    NA=NN
+         GO TO 40
+   35    NA=256
+         IF(NN-4096) 40, 40, 45
+   40    NB=NN
+         GO TO 50
+   45    NB=4096
+C DEVELOPMENT OF RECTANGULAR SUMS
+   50    DO 70 KC=1,NN,4096
+             SUMB=0.
+             KK=KC+NB-1
+             DO 65 KB=KC,KK,256
+                SUMA=0.
+                KKK=KB+NA-1
+                DO 60 KA=KB,KKK,16
+                   SUMZ=0.
+                   KFR=KA+NZ-1
+                   DO 55 KZ=KA,KFR,2
+                       ZKZ=KZ
+   55              SUMZ=SUMZ+F(A+ZKZ*EM)
+   60           SUMA=SUMZ+SUMA
+   65        SUMB=SUMA+SUMB
+   70    SUM=SUMB+SUM
+C END OF RUTISHAUSER PROCEDURE
+         U(1)=H*SUM
+         K=1
+C BEGIN EXTRAPOLATION LOOP
+   75    FAC=ABS(T(K)-U(K))
+         IF(T(K)) 80, 85, 80
+C TEST FOR RELATIVE ACCURACY
+   80    IF(FAC-ABS(ACC*T(K))) 90, 90, 100
+C TEST FOR ABSOLUTE ACCURACY WHEN T(K)=0
+   85    IF(FAC-ABS(ACC)) 95, 95, 100
+   90    FAC=FAC/ABS(T(K))
+C INTEGRAL EVALUATION BEFORE EXIT
+   95    HRVINT=0.5*(T(K)+U(K))
+         RETURN
+  100    IF(K-MFIN) 105, 115, 115
+  105    AK=K+K
+         D=2.**AK
+         DMA=D-1.0
+C BEGIN EXTRAPOLATION
+         T(K+1)=(D*T(K)-TPREV(K))/DMA
+         TPREV(K)=T(K)
+         U(K+1)=(D*U(K)-UPREV(K))/DMA
+         UPREV(K)=U(K)
+C END EXTRAPOLATION
+         K=K+1
+         IF(K-MUX) 75, 110, 110
+C END EXTRAPOLATION LOOP
+  110    FAC=ABS(T(K)-U(K))
+         IF(T(K)) 90, 95, 90
+C ORDER IS INCREASED BY ONE
+  115    H=0.5*H
+         SUMT=SUMT+SUM
+         TPREV(K)=T(K)
+         UPREV(K)=U(K)
+         MFIN=MFIN+1
+         N=NN
+         GO TO 15
+C RETURN FOR NEXT ORDER EXTRAPOLATION
+         END FUNCTION
+         real f11,ACC1,FAC1,F1(17)
+         INTEGER MFIN1
+         F1(17)=7.0
+         F1(1)=1.0
+         F1(2)=6.0
+         F1(3)=7.0
+         F1(4)=8.0
+         F1(5)=2.0
+         F1(6)=3.0
+         F1(7)=9.0
+         F1(8)=5.0
+         F1(9)=2.0
+         F1(10)=4.0
+         F1(11)=2.0
+         F1(12)=4.0
+         F1(13)=5.0
+         F1(14)=2.0
+         F1(15)=2.0
+         F1(16)= 9.0
+         ACC1 = 0.0
+         FAC1 = 0.0
+         f11 = HRVINT(F1,3.0,8.0,17,ACC1,FAC1,MFIN1)
+         print *, f11,ACC1,FAC1,MFIN1
+         end program
+
+ian@ian-HP-Stream-Laptop-11-y0XX:~/400.gz$ sloccount 400.f
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/400.gz/400.f to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+96      top_dir         fortran=96
+
+
+Totals grouped by language (dominant language first):
+fortran:         96 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 96
+Development Effort Estimate, Person-Years (Person-Months) = 0.02 (0.20)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.11 (1.37)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.15
+Total Estimated Cost to Develop                           = $ 2,307
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/400.gz$ 
+
