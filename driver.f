@@ -1,74 +1,176 @@
-      PROGRAM MAIN
-C Driver for  CACM Alg 125 Rutishauser
-C Author M.Dow@anu.edu.au
-C        ANUSF,  Australian National University
-Canberra Australia
+      program main
 C
-C Tidied up to use workspace arrays, real parameter values
-C and put through nag tools
+c***********************************************************************
+cC      ALGORITHM 343, COLLECTED ALGORITHMS FROM ACM.
+C      THIS WORK PUBLISHED IN COMMUNICATIONS OF THE ACM
+C      VOL. 11, NO. 12, December, 1968, PP.820--826.
 C
-C trh (20/07/97)
-C
-C     ..
-C     .. Parameters ..
-      INTEGER NM
-      PARAMETER (NM=100)
-      DOUBLE PRECISION ZERO,ONE,TWO,THREE
-      PARAMETER (ZERO=0.0D0,ONE=1.0D0,TWO=2.0D0,THREE=3.0D0)
-C     .. Local Scalars ..
-      DOUBLE PRECISION A,B,EPS,EXACT,S
-      INTEGER I,N,P
-C     ..
-C     .. Local Arrays ..
-      DOUBLE PRECISION E(NM),Q(NM),W(NM),WORK(9*NM+8),X(NM)
-C     ..
-C     .. External Subroutines ..
-      EXTERNAL WEIGHTCOEFF
-C     ..
-C     .. Intrinsic Functions ..
-      INTRINSIC MIN
-C     ..
-   10 READ (5,FMT=*,END=20) N,EPS
-      IF (EPS.LE.ZERO) EPS = 1D-15
-      IF (N.GE.NM-1) STOP 99
-      WRITE (6,FMT=*) 'n=',N,' eps=',EPS
-C
-C  q,e for w=1/2 interval (0,2)
-C Ref: W.Jones & W.Thron Continued Fractions ...
-C      Encyclopedia of maths...vol 11 p24
-C      Continued Fraction expansion of log(1+x),
-C transformed to Rutishauser form p33
-C
-      DO I = 2,NM
-          Q(I) = TWO*I*I/ (TWO*I* (TWO*I-ONE))
-          E(I) = TWO*I*I/ (TWO*I* (TWO*I+ONE))
-      END DO
-      Q(1) = ONE
-      E(1) = ONE/THREE
-      CALL WEIGHTCOEFF(N,Q,E,EPS,W,X,WORK)
-C Adjust weights, zeros for w=1, interval (-1,1)
-      DO I = 1,N
-          W(I) = TWO*W(I)
-          X(I) = X(I) - ONE
-      END DO
+cc TOMS343_PRB tests TOMS343.
+c
+c  Modified:
+c
+c    20 January 2006
+c
+c  Author:
+c
+c    John Burkardt
+c
+      implicit none
 
-      DO I = 1,MIN(N,10)
-          WRITE (6,FMT=9000) W(I),X(I)
-      END DO
-C Check for x^4
-      P = 4
-      A = -ONE
-      B = ONE
-      EXACT = (B** (P+1)-A** (P+1))/ (P+1)
-      S = ZERO
-      DO I = 1,N
-          S = S + W(I)*X(I)**P
-      END DO
-      WRITE (6,FMT=9010) P,EXACT,S,EXACT - S
-      GO TO 10
 
-   20 STOP
+      write ( *, '(a)' ) ' '
+      write ( *, '(a)' ) 'TOMS343_PRB'
+      write ( *, '(a)' ) '  Test TOMS algorithm 343, to compute'
+      write ( *, '(a)' ) '  the eigenvalues and eigenvectors of'
+      write ( *, '(a)' ) '  a real general matrix.'
 
- 9000 FORMAT (F20.16,2X,F20.16)
- 9010 FORMAT (I3,' Exact=',F20.16,' Quadrature=',F20.16,' Error=',E14.7)
-      END
+      call test01
+
+      write ( *, '(a)' ) ' '
+      write ( *, '(a)' ) 'TOMS343_PRB'
+      write ( *, '(a)' ) '  Normal end of execution.'
+
+      write ( *, '(a)' ) ' '
+
+      stop
+      end
+      subroutine test01
+
+c***********************************************************************
+c
+cc TEST01 tests EIGENP.
+c
+c  Modified:
+c
+c    20 January 2006
+c
+c  Author:
+c
+c    John Burkardt
+c
+      implicit none
+
+      integer nm
+      integer n1
+      integer n2
+      integer n3
+
+      parameter ( nm = 5 )
+      parameter ( n1 = 5 )
+      parameter ( n2 = 4 )
+      parameter ( n3 = 3 )
+
+      real a(nm,nm)
+      real a1(5,5)
+      real a2(4,4)
+      real a3(3,3)
+      real evi(nm)
+      real evr(nm)
+      integer i
+      integer indic(nm)
+      integer j
+      integer k
+      integer n
+      real t
+      real veci(nm,nm)
+      real vecr(nm,nm)
+
+      data a1 /
+     &  -0.5, 1.0, 0.0, 0.0, 0.0,
+     &  -1.0, 0.0, 1.0, 0.0, 0.0,
+     &  -1.0, 0.0, 0.0, 1.0, 0.0,
+     &  -0.5, 0.0, 0.0, 0.0, 1.0,
+     &  -1.0, 0.0, 0.0, 0.0, 0.0 /
+
+      data a2 /
+     &  -2.0, -7.0,  0.0, -1.0,
+     &   1.0, -5.0, -1.0,  0.0,
+     &   1.0, -2.0, -3.0, -1.0,
+     &   1.0, -4.0, -2.0,  0.0 /
+
+      data a3 /
+     &   1.00, 0.10, 0.00,
+     &   0.00, 1.00, 1.00,
+     &   0.01, 0.00, 1.00 /
+
+      t = 24.0E+00
+
+      write ( *, '(a)' ) ' '
+      write ( *, '(a)' ) 'TEST01'
+      write ( *, '(a)' ) '  Test EIGENP, which computes eigenvalues and'
+      write ( *, '(a)' ) '  eigenvectors of a general real matrix.'
+      write ( *, '(a)' ) ' '
+
+      do k = 1, 3
+
+        if ( k .eq. 1 ) then
+
+          n = n1
+
+          do i = 1, n
+            do j = 1, n
+              a(i,j) = a1(i,j)
+            end do
+          end do
+      
+        else if ( k .eq. 2 ) then
+
+          n = n2
+
+          do i = 1, n
+            do j = 1, n
+              a(i,j) = a2(i,j)
+            end do
+          end do
+
+        else if ( k .eq. 3 ) then
+
+          n = n3
+
+          do i = 1, n
+            do j = 1, n
+              a(i,j) = a3(i,j)
+            end do
+          end do
+      
+        end if
+
+        write ( *, '(a)' ) ' '
+        write ( *, '(a)' ) '  Matrix A:'
+        write ( *, '(a)' ) ' '
+
+        do i = 1, n
+          write ( *, '(5f10.4)' ) ( a(i,j), j = 1, n )
+        end do
+
+        call eigenp ( n, nm, a, t, evr, evi, vecr, veci, indic )
+
+        write ( *, '(a)' ) ' '
+        write ( *, '(a)' ) '       I   INDIC   Real part  Imag part'
+        write ( *, '(a)' ) ' '
+
+        do i = 1, n
+          write ( *, '(2x,i6,2x,i6,2x,g14.6,2x,g14.6)' ) 
+     &      i, indic(i), evr(i), evi(i)
+        end do
+
+        write ( *, '(a)' ) ' '
+        write ( *, '(a)' ) '  Real parts of eigenvectors:'
+        write ( *, '(a)' ) ' '
+
+        do i = 1, n
+          write ( *, '(5f10.4)' ) ( vecr(i,j), j = 1, n )
+        end do
+
+        write ( *, '(a)' ) ' '
+        write ( *, '(a)' ) '  Imaginary parts of eigenvectors:'
+        write ( *, '(a)' ) ' '
+
+        do i = 1, n
+          write ( *, '(5f10.4)' ) ( veci(i,j), j = 1, n )
+        end do
+
+      end do
+
+      return
+      end

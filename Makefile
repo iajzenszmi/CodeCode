@@ -1,10 +1,10 @@
 all: Res
 
 src.o: src.f
-	$(F77) $(F77OPTS) -c src.f -std=legacy
+	$(F77) $(F77OPTS) -c src.f
 
 driver.o: driver.f
-	$(F77) $(F77OPTS) -c driver.f -std=legacy
+	$(F77) $(F77OPTS) -c driver.f
 
 DRIVERS= driver
 RESULTS= Res
