@@ -613,7 +613,7 @@ C ARC  (IA,IB)  CANNOT BE REMOVED FROM THE GRAPH.
    40 JJ = -1
       RETURN
       END
-    6
-    0    3    5    8   11   13   16
-    3    5    6    6    3    6    1    4    5    1
-    2    2    3    4    2    5
+C    6
+C    0    3    5    8   11   13   16
+C    3    5    6    6    3    6    1    4    5    1
+C
