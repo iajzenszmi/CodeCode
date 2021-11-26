@@ -1,0 +1,226 @@
+ian@ian-Aspire-One-753:~/sciml$ git clone https://github.com/SciML/OrdinaryDiffEq.jl.git
+Cloning into 'OrdinaryDiffEq.jl'...
+remote: Enumerating objects: 31677, done.
+remote: Counting objects: 100% (2410/2410), done.
+remote: Compressing objects: 100% (938/938), done.
+remote: Total 31677 (delta 1722), reused 2008 (delta 1464), pack-reused 29267
+Receiving objects: 100% (31677/31677), 9.93 MiB | 3.42 MiB/s, done.
+Resolving deltas: 100% (24958/24958), done.
+ian@ian-Aspire-One-753:~/sciml$ ls
+OrdinaryDiffEq.jl
+ian@ian-Aspire-One-753:~/sciml$ cd OrdinaryDiffEq.jl
+ian@ian-Aspire-One-753:~/sciml/OrdinaryDiffEq.jl$ ls
+benchmark     diagrams  LICENSE.md    README.md  test
+CITATION.bib  docs      Project.toml  src
+ian@ian-Aspire-One-753:~/sciml/OrdinaryDiffEq.jl$ cd src
+ian@ian-Aspire-One-753:~/sciml/OrdinaryDiffEq.jl/src$ ls
+adams_utils.jl         dense                   misc_utils.jl
+algorithms.jl          derivative_utils.jl     nlsolve
+alg_utils.jl           derivative_wrappers.jl  nordsieck_utils.jl
+bdf_utils.jl           generic_rosenbrock.jl   OrdinaryDiffEq.jl
+caches                 initdt.jl               perform_step
+cache_utils.jl         initialize_dae.jl       rkc_utils.jl
+composite_algs.jl      integrators             solve.jl
+composite_solution.jl  interp_func.jl          tableaus
+constants.jl           iterator_interface.jl   wrappers.jl
+ian@ian-Aspire-One-753:~/sciml/OrdinaryDiffEq.jl/src$ cd ~/julia
+ian@ian-Aspire-One-753:~/julia$ ls
+julia-1.7.0-rc2  julia-1.7.0-rc2-full.tar
+ian@ian-Aspire-One-753:~/julia$ cd julia-1.7.0-rc2
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ls
+base             deps        julia            NEWS.md    sysimage.mk    VERSION
+CITATION.bib     doc         julia-1.7.0-rc2  ode1.jl    test
+cli              etc         LICENSE.md       README.md  THIRDPARTY.md
+contrib          graph1.jl   Makefile         src        usr
+CONTRIBUTING.md  HISTORY.md  Make.inc         stdlib     usr-staging
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ./julia ~/sciml/OrdinaryDiffEq.jl/src/OrdinaryDiffEq.jl
+ERROR: LoadError: ArgumentError: Package DocStringExtensions not found in current path:
+- Run `import Pkg; Pkg.add("DocStringExtensions")` to install the DocStringExtensions package.
+
+Stacktrace:
+ [1] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:967
+in expression starting at /home/ian/sciml/OrdinaryDiffEq.jl/src/OrdinaryDiffEq.jl:1
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ./julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.7.0-rc2 (2021-10-20)
+ _/ |\__'_|_|_|\__'_|  |  
+|__/                   |
+
+julia> import Pkg; Pkg.add("OrdinaryDiffEq")
+    Updating registry at `~/.julia/registries/General`
+    Updating git-repo `https://github.com/JuliaRegistries/General.git`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+
+julia> using OrdinaryDiffEq
+
+julia> f(u,p,t) = 1.01*u
+f (generic function with 1 method)
+
+julia> u0=1/2
+0.5
+
+julia> tspan = (0.0,1.0)
+(0.0, 1.0)
+
+julia> prob = ODEProblem(f,u0,tspan)
+ODEProblem with uType Float64 and tType Float64. In-place: false
+timespan: (0.0, 1.0)
+u0: 0.5
+
+julia> sol = solve(prob,Tsit5(),reltol=1e-8,abstol=1e-8)
+retcode: Success
+Interpolation: specialized 4th order "free" interpolation
+t: 17-element Vector{Float64}:
+ 0.0
+ 0.012407826196308189
+ 0.04250125658161484
+ 0.08178046092620397
+ 0.12887379439591745
+ 0.18409790041494495
+ 0.24627449404376492
+ 0.3147928829168652
+ 0.38859624030646006
+ 0.46686165530000767
+ 0.5487159959104151
+ 0.6334345501790717
+ 0.7203628343994752
+ 0.8089578125953629
+ 0.8987653123338385
+ 0.9894159840028138
+ 1.0
+u: 17-element Vector{Float64}:
+ 0.5
+ 0.5063053789114713
+   Installed Graphite2_jll ───────── v1.3.14+0
+   Installed FFMPEG_jll ──────────── v4.4.0+0
+   Installed Libffi_jll ──────────── v3.2.2+1
+   Installed libass_jll ──────────── v0.15.1+0
+   Installed Latexify ────────────── v0.15.9
+   Installed GR ──────────────────── v0.62.1
+   Installed Plots ───────────────── v1.24.1
+  Downloaded artifact: x265
+  Downloaded artifact: libfdk_aac
+  Downloaded artifact: GR
+  Downloaded artifact: EarCut
+  Downloaded artifact: Cairo
+  Downloaded artifact: Fontconfig
+  Downloaded artifact: Bzip2
+  Downloaded artifact: HarfBuzz
+  Downloaded artifact: GLFW
+  Downloaded artifact: x264
+  Downloaded artifact: FreeType2
+  Downloaded artifact: Libffi
+  Downloaded artifact: Wayland_protocols
+  Downloaded artifact: Graphite2
+  Downloaded artifact: libass
+  Downloaded artifact: FFMPEG
+    Updating `~/.julia/environments/v1.7/Project.toml`
+  [91a5bcdd] + Plots v1.24.1
+    Updating `~/.julia/environments/v1.7/Manifest.toml`
+  [35d6a980] + ColorSchemes v3.15.0
+  [d38c429a] + Contour v0.5.7
+  [c87230d0] + FFMPEG v0.4.1
+  [28b8d3ca] + GR v0.62.1
+  [5c1252a2] + GeometryBasics v0.4.1
+  [42e2da0e] + Grisu v1.0.2
+  [cd3eb016] + HTTP v0.9.17
+  [83e8ac13] + IniFile v0.5.0
+  [c8e1da08] + IterTools v1.3.0
+  [682c06a0] + JSON v0.21.2
+  [b964fa9f] + LaTeXStrings v1.3.0
+  [23fbe1c1] + Latexify v0.15.9
+  [739be429] + MbedTLS v1.0.3
+  [442fdcdd] + Measures v0.3.1
+  [69de0a69] + Parsers v2.1.2
+  [ccf2f8ad] + PlotThemes v2.0.1
+  [995b91a9] + PlotUtils v1.0.15
+  [91a5bcdd] + Plots v1.24.1
+  [01d81517] + RecipesPipeline v0.4.1
+  [6c6a2e73] + Scratch v1.1.0
+  [992d4aef] + Showoff v1.0.3
+  [09ab397b] + StructArrays v0.6.3
+  [5c2747f8] + URIs v1.3.0
+  [1cfade01] + UnicodeFun v0.4.1
+  [6e34b625] + Bzip2_jll v1.0.8+0
+  [83423d85] + Cairo_jll v1.16.1+0
+  [5ae413db] + EarCut_jll v2.2.3+0
+  [2e619515] + Expat_jll v2.2.10+0
+  [b22a6f82] + FFMPEG_jll v4.4.0+0
+  [a3f928ae] + Fontconfig_jll v2.13.93+0
+  [d7e528f0] + FreeType2_jll v2.10.4+0
+  [559328eb] + FriBidi_jll v1.0.10+0
+  [0656b61e] + GLFW_jll v3.3.5+1
+  [d2c73de3] + GR_jll v0.62.0+0
+  [78b55507] + Gettext_jll v0.21.0+0
+  [7746bdde] + Glib_jll v2.68.3+0
+  [3b182d85] + Graphite2_jll v1.3.14+0
+  [2e76f6c2] + HarfBuzz_jll v2.8.1+0
+  [aacddb02] + JpegTurbo_jll v2.1.0+0
+  [c1c5ebd0] + LAME_jll v3.100.1+0
+  [dd4b983a] + LZO_jll v2.10.1+0
+  [e9f186c6] + Libffi_jll v3.2.2+1
+  [d4300ac3] + Libgcrypt_jll v1.8.7+0
+  [7e76a0d4] + Libglvnd_jll v1.3.0+3
+  [7add5ba3] + Libgpg_error_jll v1.42.0+0
+  [4b2f31a3] + Libmount_jll v2.35.0+0
+  [89763e89] + Libtiff_jll v4.3.0+0
+  [38a345b3] + Libuuid_jll v2.36.0+0
+  [e7412a2a] + Ogg_jll v1.3.5+0
+  [458c3c95] + OpenSSL_jll v1.1.10+0
+  [91d4177d] + Opus_jll v1.3.2+0
+  [2f80f16e] + PCRE_jll v8.44.0+0
+  [30392449] + Pixman_jll v0.40.1+0
+  [ea2cea3b] + Qt5Base_jll v5.15.3+0
+  [a2964d1f] + Wayland_jll v1.19.0+0
+  [2381bf8a] + Wayland_protocols_jll v1.23.0+0
+  [aed1982a] + XSLT_jll v1.1.34+0
+  [4f6342f7] + Xorg_libX11_jll v1.6.9+4
+  [0c0b7dd1] + Xorg_libXau_jll v1.0.9+4
+  [935fb764] + Xorg_libXcursor_jll v1.2.0+4
+  [a3789734] + Xorg_libXdmcp_jll v1.1.3+4
+  [1082639a] + Xorg_libXext_jll v1.3.4+4
+  [d091e8ba] + Xorg_libXfixes_jll v5.0.3+4
+  [d1454406] + Xorg_libXinerama_jll v1.1.4+4
+  [ec84b674] + Xorg_libXrandr_jll v1.5.2+4
+  [ea2f1a96] + Xorg_libXrender_jll v0.9.10+4
+  [14d82f49] + Xorg_libpthread_stubs_jll v0.1.0+3
+  [c7cfdc94] + Xorg_libxcb_jll v1.13.0+3
+  [cc61e674] + Xorg_libxkbfile_jll v1.1.0+4
+  [12413925] + Xorg_xcb_util_image_jll v0.4.0+1
+  [2def613f] + Xorg_xcb_util_jll v0.4.0+1
+  [975044d2] + Xorg_xcb_util_keysyms_jll v0.4.0+1
+  [0d47668e] + Xorg_xcb_util_renderutil_jll v0.3.9+1
+  [c22f9ab0] + Xorg_xcb_util_wm_jll v0.4.1+1
+  [35661453] + Xorg_xkbcomp_jll v1.4.2+4
+  [33bec58e] + Xorg_xkeyboard_config_jll v2.27.0+4
+  [c5fb5394] + Xorg_xtrans_jll v1.4.0+3
+  [3161d3a3] + Zstd_jll v1.5.0+0
+  [0ac62f75] + libass_jll v0.15.1+0
+  [f638f0a6] + libfdk_aac_jll v2.0.2+0
+  [b53b4c65] + libpng_jll v1.6.38+0
+  [f27f6e37] + libvorbis_jll v1.3.7+0
+  [1270edf5] + x264_jll v2021.5.5+0
+  [dfaa095f] + x265_jll v3.5.0+0
+  [d8fb68d0] + xkbcommon_jll v0.9.1+5
+    Building GR → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/30f2b340c2fff8410d89bfcdc9c0a6dd661ac5f7/build.log`
+Precompiling project...
+  86 dependencies successfully precompiled in 332 seconds (170 already precompiled)
+
+julia> plot(sol,linewidth=5,title="Solution to the linear ODE with a thick line",
+            xaxis="Time (t)",yaxis="u(t) (in μm)",label="My Thick Line!") # legend=false
+
+julia> plot!(sol.t, t->0.5*exp(1.01t),lw=3,ls=:dash,label="True Solution!")
+
+julia> sol = solve(prob,Tsit5(),reltol=1e-8,abstol=1e-8)
+
+
+
+
+
