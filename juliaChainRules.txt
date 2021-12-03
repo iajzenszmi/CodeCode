@@ -1,0 +1,134 @@
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl/src$ cd ~/julia
+ian@ian-Aspire-One-753:~/julia$ ls
+julia-1.7.0-rc2  julia-1.7.0-rc2-full.tar
+ian@ian-Aspire-One-753:~/julia$ cd julia-1.7.0-rc2
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ls
+base             etc              Make.inc                        sysimage.mk
+CITATION.bib     graph1.jl        NEWS.md                         test
+cli              HISTORY.md       ode1.jl                         THIRDPARTY.md
+contrib          julia            OrdinaryDiffEqjlrunlisting.txt  usr
+CONTRIBUTING.md  julia-1.7.0-rc2  README.md                       usr-staging
+deps             LICENSE.md       src                             VERSION
+doc              Makefile         stdlib
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ./julia ~/crt/ChainRulesTestUtils.jl/src/*.*
+ERROR: LoadError: ArgumentError: Package Compat not found in current path:
+- Run `import Pkg; Pkg.add("Compat")` to install the Compat package.
+
+tUtils.jl:1
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ import Pkg; Pkg.add("Compat")
+bash: syntax error near unexpected token `"Compat"'
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ import Pkg; Pkg.add("Compat")
+bash: syntax error near unexpected token `"Compat"'
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ./julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.7.0-rc2 (2021-10-20)
+ _/ |\__'_|_|_|\__'_|  |  
+|__/                   |
+
+julia> import Pkg; Pkg.add("Compat")
+    Updating registry at `~/.julia/registries/General`
+    Updating git-repo `https://github.com/JuliaRegistries/General.git`
+   Resolving package versions...
+   Installed Glib_jll ───── v2.68.3+1
+   Installed HarfBuzz_jll ─ v2.8.1+1
+  Downloaded artifact: HarfBuzz
+  Downloaded artifact: Glib
+    Updating `~/.julia/environments/v1.7/Project.toml`
+  [34da2185] + Compat v3.40.0
+    Updating `~/.julia/environments/v1.7/Manifest.toml`
+  [7746bdde] ↑ Glib_jll v2.68.3+0 ⇒ v2.68.3+1
+  [2e76f6c2] ↑ HarfBuzz_jll v2.8.1+0 ⇒ v2.8.1+1
+Precompiling project...
+  10 dependencies successfully precompiled in 157 seconds (249 already precompiled)
+
+julia> 
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ./julia ~/crt/ChainRulesTestUtils.jl/src/*.*
+ERROR: LoadError: ArgumentError: Package FiniteDifferences not found in current path:
+- Run `import Pkg; Pkg.add("FiniteDifferences")` to install the FiniteDifferences package.
+
+Stacktrace:
+ [1] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:967
+in expression starting at /home/ian/crt/ChainRulesTestUtils.jl/src/ChainRulesTestUtils.jl:1
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ./julia ~/crt/ChainRulesTestUtils.jl/src/*.*    
+ERROR: LoadError: ArgumentError: Package FiniteDifferences not found in current path:
+- Run `import Pkg; Pkg.add("FiniteDifferences")` to install the FiniteDifferences package.
+
+Stacktrace:
+ [1] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:967
+in expression starting at /home/ian/crt/ChainRulesTestUtils.jl/src/ChainRulesTestUtils.jl:1
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ./julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.7.0-rc2 (2021-10-20)
+ _/ |\__'_|_|_|\__'_|  |  
+|__/                   |
+
+julia> import Pkg; Pkg.add("ChainRulesTestUtils")
+    Updating registry at `~/.julia/registries/General`
+    Updating git-repo `https://github.com/JuliaRegistries/General.git`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+
+julia> ^C
+
+julia> 
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ ./julia ~/crt/ChainRulesTestUtils.jl/src/*.*    
+ERROR: LoadError: ArgumentError: Package FiniteDifferences not found in current path:
+- Run `import Pkg; Pkg.add("FiniteDifferences")` to install the FiniteDifferences package.
+
+Stacktrace:
+ [1] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:967
+in expression starting at /home/ian/crt/ChainRulesTestUtils.jl/src/ChainRulesTestUtils.jl:1
+ian@ian-Aspire-One-753:~/julia/julia-1.7.0-rc2$ cd ~/crt/ChainRulesTestUtils.jl
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl$ ls
+docs  LICENSE  Project.toml  README.md  src  test
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl$ cd test
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl/test$ ls
+check_result.jl  data_generation.jl  iterator.jl  meta_testing_tools.jl  rand_tangent.jl  runtests.jl  testers.jl
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl/test$ ~/julia/julia-1.7.0-rc2/./julia runtests.jl
+ERROR: LoadError: ArgumentError: Package FiniteDifferences not found in current path:
+- Run `import Pkg; Pkg.add("FiniteDifferences")` to install the FiniteDifferences package.
+
+Stacktrace:
+ [1] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:967
+in expression starting at /home/ian/crt/ChainRulesTestUtils.jl/test/runtests.jl:4
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl/test$ /julia/julia-1.7.0-rc2/./julia 
+bash: /julia/julia-1.7.0-rc2/./julia: No such file or directory
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl/test$ ~/julia/julia-1.7.0-rc2/./julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.7.0-rc2 (2021-10-20)
+ _/ |\__'_|_|_|\__'_|  |  
+|__/                   |
+
+julia> import Pkg; Pkg.add("FiniteDifferences")
+    Updating registry at `~/.julia/registries/General`
+    Updating git-repo `https://github.com/JuliaRegistries/General.git`
+   Resolving package versions...
+    Updating `~/.julia/environments/v1.7/Project.toml`
+  [26cc04aa] + FiniteDifferences v0.12.20
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+
+julia> 
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl/test$ ~/julia/julia-1.7.0-rc2/./julia runtests.jl
+
+Test Summary:          | Pass  Broken  Total
+ChainRulesTestUtils.jl |  946       6    952
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl/test$ 
+ian@ian-Aspire-One-753:~/crt/ChainRulesTestUtils.jl/test$ 
+
