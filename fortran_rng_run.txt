@@ -1,0 +1,82 @@
+ian@ian-Aspire-One-753:~$ mkdir rng_fortran
+ian@ian-Aspire-One-753:~$ cd rng_fortran
+ian@ian-Aspire-One-753:~/rng_fortran$ git clone https://github.com/jannisteunissen/rng_fortran.git
+Cloning into 'rng_fortran'...
+remote: Enumerating objects: 66, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 66 (delta 7), reused 12 (delta 5), pack-reused 52
+Unpacking objects: 100% (66/66), done.
+ian@ian-Aspire-One-753:~/rng_fortran$ cd rng_fortran
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ ls
+example.f90  LICENSE_XOROSHIRO128PLUS  m_random.f90       performance_test.f90
+LICENSE      Makefile                  parallel_test.f90  README.md
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ make
+gfortran -c -o m_random.o m_random.f90 -O3 -flto -g -std=f2008 -Wall -Wextra -fopenmp
+gfortran -c -o example.o example.f90 -O3 -flto -g -std=f2008 -Wall -Wextra -fopenmp
+gfortran -o example example.o m_random.o -O3 -flto -g -std=f2008 -Wall -Wextra -fopenmp
+gfortran -c -o performance_test.o performance_test.f90 -O3 -flto -g -std=f2008 -Wall -Wextra -fopenmp
+gfortran -o performance_test performance_test.o m_random.o -O3 -flto -g -std=f2008 -Wall -Wextra -fopenmp
+gfortran -c -o parallel_test.o parallel_test.f90 -O3 -flto -g -std=f2008 -Wall -Wextra -fopenmp
+gfortran -o parallel_test parallel_test.o m_random.o -O3 -flto -g -std=f2008 -Wall -Wextra -fopenmp
+rm example.o performance_test.o parallel_test.o
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ ls
+example                   Makefile      parallel_test         README.md
+example.f90               m_random.f90  parallel_test.f90
+LICENSE                   m_random.mod  performance_test
+LICENSE_XOROSHIRO128PLUS  m_random.o    performance_test.f90
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ ./example
+ Uniform random number:   0.88444966593609364     
+ 8-byte random integer:   -176225519549538323
+ 4-byte random integer:    514408481
+ Two normal numbers:      0.52354697500677183       0.81897976310319520     
+ Poisson(10.0) deviate:            9
+ Point on unit circle:   -0.63563674487357258      -0.77198829561498461     
+ Point on unit sphere:   -0.21949479758761331       0.72099716782541645       0.65725574765056338     
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ ./parralel_test
+bash: ./parralel_test: No such file or directory
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ ./parallel_test
+ Testing parallel random number generation
+ Number of threads           2
+ 
+ For uniform random numbers (unif_01), the result is:
+ nanoseconds per number (upper bound)   9.6799999999999997     
+ mean/<mean>   1.0000251757210439     
+ std dev/<std dev>  0.99998630503679531     
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ ./performance_test.f90
+bash: ./performance_test.f90: Permission denied
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ sudo ./performance_test.f90
+[sudo] password for ian: 
+sudo: ./performance_test.f90: command not found
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ ./performance_test
+ Testing implementation of m_random.f90
+ This is just checking whether everything works, and by no means
+ a test of the 'randomness' of the pseudo random number generator.
+ For these tests,     10000000  values are used
+ 
+ For uniform random numbers (built-in), the result is:
+ nanoseconds per number (upper bound)   30.671700000000001     
+ mean/<mean>  0.99964319457043971     
+ std dev/<std dev>   1.0000400105647915     
+ 
+ For uniform random numbers (unif_01), the result is:
+ nanoseconds per number (upper bound)   6.1215000000000019     
+ mean/<mean>  0.99992256482384256     
+ std dev/<std dev>  0.99982606306306698     
+ 
+ For normal/Gaussian random numbers, the result is:
+ nanoseconds per number (upper bound)   75.546399999999991     
+ mean/<mean>  0.99968169127868300     
+ std dev/<std dev>  0.99996574531842131     
+ 
+ For Poisson random numbers, the result is:
+ nanoseconds per number (upper bound)   60.224299999999985     
+ mean/<mean>   1.0002041150718486     
+ std dev/<std dev>  0.99987527269804788     
+ 
+ For exponential random numbers, the result is:
+ nanoseconds per number (upper bound)   105.56910000000001     
+ mean/<mean>  0.99977620215075347     
+ std dev/<std dev>  0.99991497999361856     
+ian@ian-Aspire-One-753:~/rng_fortran/rng_fortran$ 
+
