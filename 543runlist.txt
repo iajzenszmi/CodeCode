@@ -1,0 +1,39 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/toms543$ gfortran 543.f -std=legacy -g -o 543run4
+543.f:257:72:
+
+  257 |         CALL SETF (IBCX,IQX,WORK(IA7),INDEXD,WORK(IA8),NSID)               2570
+      |                                                                       1
+
+Warning: Type mismatch in argument ‘indexa’ at (1); passed REAL(4) to INTEGER(4) [-Wargument-mismatch]
+543.f:267:72:
+
+  267 |     1   IA10),NYD,WORK(IA7),INDEXD,WORK(IA2),NEDD,WORK(IA1),NAKXD)         2670
+      |                                                                       1
+
+Warning: Type mismatch in argument ‘index’ at (1); passed REAL(4) to INTEGER(4) [-Wargument-mismatch]
+ian@ian-HP-Stream-Laptop-11-y0XX:~/toms543$ ./543run4 < 543data.txt
+ ******* INPUT DATA ********
+ EQUATION.  CUXX*DDXU+CUYY*DDYU+CU*U=R
+ COEFFICIENTS. CUXX=     1.000CUYY=     1.000CU=     0.000
+ BOUNDARY COND. U = G
+ REGION.  0. .LE. X .LE.    1.000   0. .LE. Y .LE.    1.000
+ ******* SOLUTION ********
+ DISCRETIZATION.         4- ORDER DIFFERENCE APPROXIMATION
+ GRID.      UNIFORM X =    1     UNIFORM Y =    9
+ MAX.ABS.ERROR=      0.000E+00   AT  0.00, 0.00
+ MAX.REL.ERROR=      0.000E+00   AT 0.00, 0.00
+ GRID.      UNIFORM X =    1     UNIFORM Y =   17
+ MAX.ABS.ERROR=      0.000E+00   AT  0.00, 0.00
+ MAX.REL.ERROR=      0.000E+00   AT 0.00, 0.00
+ GRID.      UNIFORM X =    1     UNIFORM Y =   33
+ MAX.ABS.ERROR=      0.000E+00   AT  0.00, 0.00
+ MAX.REL.ERROR=      0.000E+00   AT 0.00, 0.00
+ GRID.      UNIFORM X =    1     UNIFORM Y =   65
+ MAX.ABS.ERROR=      0.000E+00   AT  0.00, 0.00
+ MAX.REL.ERROR=      0.000E+00   AT 0.00, 0.00
+ GRID.      UNIFORM X =    1     UNIFORM Y =  129
+ MAX.ABS.ERROR=      0.000E+00   AT  0.00, 0.00
+ MAX.REL.ERROR=      0.000E+00   AT 0.00, 0.00
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DIVIDE_BY_ZERO IEEE_DENORMAL
+ian@ian-HP-Stream-Laptop-11-y0XX:~/toms543$ 
+
