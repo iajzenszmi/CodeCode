@@ -1,0 +1,115 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ gfortran celsiustofahrenheit.f -o celsiustofahrenheit
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cat celsiustofahrenheit.f
+      program temp_conversition
+      implicit none
+      real ::fahrenheit,celsius
+      integer intemp      
+      do intemp = 1, 100
+      celsius = real(intemp)
+      fahrenheit=1.8*celsius+32.0
+      print*," celsius ",celsius,"fahrenheit=", fahrenheit
+      end do
+      end program  
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ ./celsiustofahrenheit
+  celsius    1.00000000     fahrenheit=   33.7999992    
+  celsius    2.00000000     fahrenheit=   35.5999985    
+  celsius    3.00000000     fahrenheit=   37.4000015    
+  celsius    4.00000000     fahrenheit=   39.2000008    
+  celsius    5.00000000     fahrenheit=   41.0000000    
+  celsius    6.00000000     fahrenheit=   42.7999992    
+  celsius    7.00000000     fahrenheit=   44.5999985    
+  celsius    8.00000000     fahrenheit=   46.4000015    
+  celsius    9.00000000     fahrenheit=   48.1999969    
+  celsius    10.0000000     fahrenheit=   50.0000000    
+  celsius    11.0000000     fahrenheit=   51.7999992    
+  celsius    12.0000000     fahrenheit=   53.5999985    
+  celsius    13.0000000     fahrenheit=   55.4000015    
+  celsius    14.0000000     fahrenheit=   57.1999969    
+  celsius    15.0000000     fahrenheit=   59.0000000    
+  celsius    16.0000000     fahrenheit=   60.7999992    
+  celsius    17.0000000     fahrenheit=   62.5999985    
+  celsius    18.0000000     fahrenheit=   64.3999939    
+  celsius    19.0000000     fahrenheit=   66.1999969    
+  celsius    20.0000000     fahrenheit=   68.0000000    
+  celsius    21.0000000     fahrenheit=   69.8000031    
+  celsius    22.0000000     fahrenheit=   71.5999985    
+  celsius    23.0000000     fahrenheit=   73.3999939    
+  celsius    24.0000000     fahrenheit=   75.1999969    
+  celsius    25.0000000     fahrenheit=   77.0000000    
+  celsius    26.0000000     fahrenheit=   78.8000031    
+  celsius    27.0000000     fahrenheit=   80.5999985    
+  celsius    28.0000000     fahrenheit=   82.3999939    
+  celsius    29.0000000     fahrenheit=   84.1999969    
+  celsius    30.0000000     fahrenheit=   86.0000000    
+  celsius    31.0000000     fahrenheit=   87.8000031    
+  celsius    32.0000000     fahrenheit=   89.5999985    
+  celsius    33.0000000     fahrenheit=   91.3999939    
+  celsius    34.0000000     fahrenheit=   93.1999969    
+  celsius    35.0000000     fahrenheit=   95.0000000    
+  celsius    36.0000000     fahrenheit=   96.7999954    
+  celsius    37.0000000     fahrenheit=   98.5999985    
+  celsius    38.0000000     fahrenheit=   100.400002    
+  celsius    39.0000000     fahrenheit=   102.199997    
+  celsius    40.0000000     fahrenheit=   104.000000    
+  celsius    41.0000000     fahrenheit=   105.799995    
+  celsius    42.0000000     fahrenheit=   107.599998    
+  celsius    43.0000000     fahrenheit=   109.400002    
+  celsius    44.0000000     fahrenheit=   111.199997    
+  celsius    45.0000000     fahrenheit=   113.000000    
+  celsius    46.0000000     fahrenheit=   114.799995    
+  celsius    47.0000000     fahrenheit=   116.599998    
+  celsius    48.0000000     fahrenheit=   118.399994    
+  celsius    49.0000000     fahrenheit=   120.199997    
+  celsius    50.0000000     fahrenheit=   122.000000    
+  celsius    51.0000000     fahrenheit=   123.799995    
+  celsius    52.0000000     fahrenheit=   125.599998    
+  celsius    53.0000000     fahrenheit=   127.399994    
+  celsius    54.0000000     fahrenheit=   129.199997    
+  celsius    55.0000000     fahrenheit=   131.000000    
+  celsius    56.0000000     fahrenheit=   132.799988    
+  celsius    57.0000000     fahrenheit=   134.600006    
+  celsius    58.0000000     fahrenheit=   136.399994    
+  celsius    59.0000000     fahrenheit=   138.199997    
+  celsius    60.0000000     fahrenheit=   140.000000    
+  celsius    61.0000000     fahrenheit=   141.799988    
+  celsius    62.0000000     fahrenheit=   143.600006    
+  celsius    63.0000000     fahrenheit=   145.399994    
+  celsius    64.0000000     fahrenheit=   147.199997    
+  celsius    65.0000000     fahrenheit=   149.000000    
+  celsius    66.0000000     fahrenheit=   150.799988    
+  celsius    67.0000000     fahrenheit=   152.600006    
+  celsius    68.0000000     fahrenheit=   154.399994    
+  celsius    69.0000000     fahrenheit=   156.199997    
+  celsius    70.0000000     fahrenheit=   158.000000    
+  celsius    71.0000000     fahrenheit=   159.799988    
+  celsius    72.0000000     fahrenheit=   161.599991    
+  celsius    73.0000000     fahrenheit=   163.399994    
+  celsius    74.0000000     fahrenheit=   165.199997    
+  celsius    75.0000000     fahrenheit=   167.000000    
+  celsius    76.0000000     fahrenheit=   168.800003    
+  celsius    77.0000000     fahrenheit=   170.599991    
+  celsius    78.0000000     fahrenheit=   172.399994    
+  celsius    79.0000000     fahrenheit=   174.199997    
+  celsius    80.0000000     fahrenheit=   176.000000    
+  celsius    81.0000000     fahrenheit=   177.800003    
+  celsius    82.0000000     fahrenheit=   179.599991    
+  celsius    83.0000000     fahrenheit=   181.399994    
+  celsius    84.0000000     fahrenheit=   183.199997    
+  celsius    85.0000000     fahrenheit=   185.000000    
+  celsius    86.0000000     fahrenheit=   186.800003    
+  celsius    87.0000000     fahrenheit=   188.599991    
+  celsius    88.0000000     fahrenheit=   190.399994    
+  celsius    89.0000000     fahrenheit=   192.199997    
+  celsius    90.0000000     fahrenheit=   194.000000    
+  celsius    91.0000000     fahrenheit=   195.800003    
+  celsius    92.0000000     fahrenheit=   197.599991    
+  celsius    93.0000000     fahrenheit=   199.399994    
+  celsius    94.0000000     fahrenheit=   201.199997    
+  celsius    95.0000000     fahrenheit=   203.000000    
+  celsius    96.0000000     fahrenheit=   204.799988    
+  celsius    97.0000000     fahrenheit=   206.599991    
+  celsius    98.0000000     fahrenheit=   208.399994    
+  celsius    99.0000000     fahrenheit=   210.199997    
+  celsius    100.000000     fahrenheit=   212.000000    
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ 
+
