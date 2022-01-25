@@ -1,7 +1,5 @@
-        integer count1
-        integer max01
-        do 20 i = 1, 20, 1
-          print *, "count = ", i
- 20     continue
-        end          
-         
+        integer icount 
+        do icount = 1,10, 1
+        print *, icount
+        end do
+        end program        
