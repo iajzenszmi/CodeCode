@@ -1,0 +1,75 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/javasin$ javac sinea.java
+ian@ian-HP-Stream-Laptop-11-y0XX:~/javasin$ java sinea
+from Ian Martin Ajzenszmidt
+Number    Sine      Cosine   Tan
+1    0.84147    0.54030    1.55741
+2    0.90930   -0.41615   -2.18504
+3    0.14112   -0.98999   -0.14255
+4   -0.75680   -0.65364    1.15782
+5   -0.95892    0.28366   -3.38052
+6   -0.27942    0.96017   -0.29101
+7    0.65699    0.75390    0.87145
+8    0.98936   -0.14550   -6.79971
+9    0.41212   -0.91113   -0.45232
+10   -0.54402   -0.83907    0.64836
+ian@ian-HP-Stream-Laptop-11-y0XX:~/javasin$ cat sinea.java
+// Java program to demonstrate working of Math.sin() Math.cos and Math.tan method.
+// by Ian Martin Ajzenszmidt 27 Jan 2022
+// Importing classes from java.lang package
+import java.lang.Math;
+public class sinea {
+	// Main driver method
+	public static void main(String[] args)
+	{
+		double sinresult;
+		double cosresult;
+		double tanresult;
+                int i;
+		char outline;
+		System.out.println("from Ian Martin Ajzenszmidt");
+		System.out.println("Number    Sine      Cosine   Tan");
+		// Here argument is negative infinity
+		  for(i=1;i<=10;i++){
+		sinresult = Math.sin(i);
+		cosresult = Math.cos(i);
+		tanresult = Math.tan(i);
+		System.out.printf("%d%s%10.5f%s%10.5f%s%10.5f\n",i," ",sinresult," ",cosresult," ",tanresult);
+
+		}
+	}
+}
+ian@ian-HP-Stream-Laptop-11-y0XX:~/javasin$ sloccount sinea.java
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/javasin/sinea.java to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+19      top_dir         java=19
+
+
+Totals grouped by language (dominant language first):
+java:            19 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 19
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.04)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.06 (0.72)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.05
+Total Estimated Cost to Develop                           = $ 421
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/javasin$ 
+
