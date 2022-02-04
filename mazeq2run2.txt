@@ -1,0 +1,362 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ python3 demo.py
+#|###############
+#._._. . . . . .#
+#  # |          #
+#. . . . . . . .#
+#    |          #
+#. . . .#. ._._._
+#          |    #
+#. . ._. . . . .#
+#    |     |    #
+#. ._. . ._. . .#
+#  |     |      #
+#. ._._._. . . .#
+#################
+
+
+run by Ian Martin Ajzenszmidt, Melbourne, Australia
+
+
+{'0,1w': 1, '0,2w': 1, '0,3w': 0, '0,4w': 0, '0,5w': 0, '0,6w': 0, '0,7w': 0, '1,0n': 0, '1,1w': 0, '1,2n': 1, '1,2w': 0, '1,3n': 0, '1,3w': 0, '1,4n': 0, '1,4w': 0, '1,5n': 0, '1,5w': 0, '1,6n': 0, '1,6w': 0, '1,7n': 0, '1,7w': 0, '2,0n': 0, '2,1n': 0, '2,1w': 0, '2,2n': 1, '2,2w': 0, '2,3n': 0, '2,3w': 0, '2,4n': 0, '2,5n': 0, '2,5w': 0, '2,6n': 0, '2,6w': 1, '2,7n': 0, '2,7w': 1, '3,0n': 0, '3,1n': 0, '3,1w': 0, '3,2n': 0, '3,2w': 0, '3,3n': 0, '3,3w': 1, '3,4n': 0, '3,4w': 0, '3,5n': 1, '3,5w': 0, '3,6n': 0, '3,6w': 0, '3,7n': 0, '3,7w': 0, '4,0n': 0, '4,1n': 0, '4,1w': 0, '4,2n': 1, '4,2w': 1, '4,3n': 0, '4,3w': 0, '4,4n': 0, '4,4w': 0, '4,5n': 1, '4,5w': 1, '4,6n': 0, '4,6w': 0, '4,7n': 0, '4,7w': 0, '5,0n': 0, '5,1n': 1, '5,1w': 0, '5,2n': 0, '5,2w': 1, '5,3n': 0, '5,3w': 1, '5,4n': 1, '5,4w': 1, '5,5n': 0, '5,5w': 0, '5,6n': 0, '5,6w': 0, '5,7n': 0, '5,7w': 0, 'aux0': 1, 'aux1': 0, 'aux10': 1, 'aux11': 1, 'aux12': 0, 'aux13': 0, 'aux14': 0, 'aux15': 0, 'aux16': 0, 'aux17': 0, 'aux18': 1, 'aux19': 0, 'aux2': 1, 'aux20': 1, 'aux21': 0, 'aux22': 1, 'aux23': 0, 'aux24': 0, 'aux25': 0, 'aux26': 0, 'aux27': 1, 'aux28': 0, 'aux29': 0, 'aux3': 1, 'aux30': 1, 'aux31': 0, 'aux32': 0, 'aux33': 1, 'aux34': 0, 'aux35': 0, 'aux36': 0, 'aux37': 1, 'aux38': 0, 'aux39': 0, 'aux4': 1, 'aux40': 0, 'aux41': 0, 'aux42': 1, 'aux43': 0, 'aux44': 0, 'aux45': 1, 'aux46': 1, 'aux47': 0, 'aux48': 0, 'aux49': 0, 'aux5': 0, 'aux50': 1, 'aux51': 1, 'aux52': 0, 'aux53': 0, 'aux54': 0, 'aux55': 1, 'aux56': 0, 'aux57': 1, 'aux58': 0, 'aux59': 1, 'aux6': 0, 'aux60': 0, 'aux61': 1, 'aux62': 1, 'aux63': 0, 'aux64': 0, 'aux65': 0, 'aux66': 1, 'aux67': 1, 'aux68': 1, 'aux69': 0, 'aux7': 1, 'aux70': 0, 'aux71': 0, 'aux72': 0, 'aux73': 0, 'aux74': 0, 'aux75': 0, 'aux76': 0, 'aux77': 0, 'aux78': 0, 'aux79': 0, 'aux8': 0, 'aux80': 1, 'aux81': 1, 'aux82': 1, 'aux83': 0, 'aux9': 0}
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ ^C
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ cat demo.py
+# Copyright 2019 D-Wave Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#run by Ian Martin Ajzenszmidt, Melbourne, Australia.
+from dwave.system.samplers import DWaveSampler
+from dwave.system.composites import EmbeddingComposite
+import re
+
+from maze import get_maze_bqm, Maze
+
+# Create maze
+n_rows = 6
+n_cols = 8
+start = '0,0n'              # maze entrance location
+end = '2,8w'              # maze exit location
+walls = ['1,1n', '2,4w'] # maze interior wall locations
+
+# Construct BQM
+m = Maze(n_rows, n_cols, start, end, walls)
+bqm = m.get_bqm()
+
+# Submit BQM to a D-Wave sampler
+sampler = EmbeddingComposite(DWaveSampler())
+result = sampler.sample(bqm,
+                        num_reads=1000,
+                        chain_strength=2,
+                        label='Example - Maze')
+
+# Interpret result
+# Note: when grabbing the path, we are only grabbing path segments that have
+#   been "selected" (i.e. indicated with a 1).
+# Note2: in order construct the BQM such that the maze solution corresponds to
+#   the ground energy, auxiliary variables
+#   may have been included in the BQM. These auxiliary variables are no longer
+#   useful once we have our result. Hence, we can just ignore them by filtering
+#   them out with regex (i.e. re.match(r"^aux(\d+)$", k)])
+path = [k for k, v in result.first.sample.items() if v==1
+            and not re.match(r"^aux(\d+)$", k)]
+
+# Visualize maze path
+m.visualize(path)
+print("\n")
+print("run by Ian Martin Ajzenszmidt, Melbourne, Australia")
+print("\n")
+print(result.first.sample)
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ cat maze.py
+# Copyright 2019 D-Wave Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from __future__ import print_function
+
+import dwavebinarycsp
+import re
+
+
+def get_maze_bqm(n_rows, n_cols, start, end, walls, penalty_per_tile=0.5):
+    """Returns a BQM that corresponds to a valid path through a maze. This maze is described by the parameters.
+
+    Specifically, it uses the parameters to build a maze constraint satisfaction problem (CSP). This maze CSP is then
+    converted into the returned BQM.
+
+    Note: If penalty_per_tile is too large, the path will be too heavily penalized and the optimal solution might
+    produce no path at all.
+
+    Args:
+        n_rows: Integer. The number of rows in the maze.
+        n_cols: Integer. The number of cols in the maze.
+        start: String. The location of the starting point of the maze. String follows the format of get_label(..).
+        end: String. The location of the end point of the maze. String follows the format of get_label(..).
+        walls: List of Strings. The list of inner wall locations. Locations follow the format of get_label(..).
+        penalty_per_tile: A number. Penalty for each tile that is included in the path; encourages shorter paths.
+
+    Returns:
+        A dimod.BinaryQuadraticModel
+    """
+    maze = Maze(n_rows, n_cols, start, end, walls)
+    return maze.get_bqm(penalty_per_tile)
+
+
+def get_label(row, col, direction):
+    """Provides a string that follows a standard format for naming constraint variables in Maze.
+    Namely, "<row_index>,<column_index><north_or_west_direction>".
+
+    Args:
+        row: Integer. Index of the row.
+        col: Integer. Index of the column.
+        direction: String in the set {'n', 'w'}. 'n' indicates north and 'w' indicates west.
+    """
+    return "{row},{col}{direction}".format(**locals())
+
+
+def assert_label_format_valid(label):
+    """Checks that label conforms with the standard format for naming constraint variables in Maze.
+    Namely, "<row_index>,<column_index><north_or_west_direction>".
+
+    Args:
+        label: String.
+    """
+    is_valid = bool(re.match(r'^(\d+),(\d+)[nw]$', label))
+    assert is_valid, ("{label} is in the incorrect format. Format is <row_index>,<column_index><north_or_west>. "
+                      "Example: '4,3w'").format(**locals())
+
+
+def sum_to_two_or_zero(*args):
+    """Checks to see if the args sum to either 0 or 2.
+    """
+    sum_value = sum(args)
+    return sum_value in [0, 2]
+
+
+class Maze:
+    """An object that stores all the attributes necessary to represent a maze as a constraint satisfaction problem.
+
+    Args:
+        n_rows: Integer. The number of rows in the maze.
+        n_cols: Integer. The number of cols in the maze.
+        start: String. The location of the starting point of the maze. String follows the format of get_label(..).
+        end: String. The location of the end point of the maze. String follows the format of get_label(..).
+        walls: List of Strings. The list of inner wall locations. Locations follow the format of get_label(..).
+    """
+    def __init__(self, n_rows, n_cols, start, end, walls):
+        assert isinstance(n_rows, int) and n_rows > 0, "'n_rows' is not a positive integer".format(n_rows)
+        assert isinstance(n_cols, int) and n_cols > 0, "'n_cols' is not a positive integer".format(n_cols)
+        assert start != end, "'start' cannot be the same as 'end'"
+
+        # Check label format
+        assert_label_format_valid(start)
+        assert_label_format_valid(end)
+
+        for wall in walls:
+            assert_label_format_valid(wall)
+
+        # Instantiate
+        self.n_rows = n_rows
+        self.n_cols = n_cols
+        self.start = start
+        self.end = end
+        self.walls = walls
+        self.csp = dwavebinarycsp.ConstraintSatisfactionProblem(dwavebinarycsp.BINARY)
+
+    def _apply_valid_move_constraint(self):
+        """Applies a sum to either 0 or 2 constraint on each tile of the maze.
+
+        Note: This constraint ensures that a tile is either not entered at all (0), or is entered and exited (2).
+        """
+        # Grab the four directions of each maze tile and apply two-or-zero constraint
+        for i in range(self.n_rows):
+            for j in range(self.n_cols):
+                directions = {get_label(i, j, 'n'), get_label(i, j, 'w'), get_label(i+1, j, 'n'),
+                              get_label(i, j+1, 'w')}
+                self.csp.add_constraint(sum_to_two_or_zero, directions)
+
+    def _set_start_and_end(self):
+        """Sets the values of the start and end locations of the maze.
+        """
+        self.csp.fix_variable(self.start, 1)  # start location
+        self.csp.fix_variable(self.end, 1)  # end location
+
+    def _set_borders(self):
+        """Sets the values of the outer border of the maze; prevents a path from forming over the border.
+        """
+        for j in range(self.n_cols):
+            top_border = get_label(0, j, 'n')
+            bottom_border = get_label(self.n_rows, j, 'n')
+
+            try:
+                self.csp.fix_variable(top_border, 0)
+            except ValueError:
+                if not top_border in [self.start, self.end]:
+                    raise ValueError
+
+            try:
+                self.csp.fix_variable(bottom_border, 0)
+            except ValueError:
+                if not bottom_border in [self.start, self.end]:
+                    raise ValueError
+
+        for i in range(self.n_rows):
+            left_border = get_label(i, 0, 'w')
+            right_border = get_label(i, self.n_cols, 'w')
+
+            try:
+                self.csp.fix_variable(left_border, 0)
+            except ValueError:
+                if not left_border in [self.start, self.end]:
+                    raise ValueError
+
+            try:
+                self.csp.fix_variable(right_border, 0)
+            except ValueError:
+                if not right_border in [self.start, self.end]:
+                    raise ValueError
+
+    def _set_inner_walls(self):
+        """Sets the values of the inner walls of the maze; prevents a path from forming over an inner wall.
+        """
+        for wall in self.walls:
+            self.csp.fix_variable(wall, 0)
+
+    def get_bqm(self, penalty_per_tile=0.5):
+        """Applies the constraints necessary to form a maze and returns a BQM that would correspond to a valid path
+        through said maze.
+
+        Note: If penalty_per_tile is too large, the path will be too heavily penalized and the optimal solution might
+          no path at all.
+
+        Args:
+            penalty_per_tile: A number. Penalty for each tile that is included in the path; encourages shorter paths.
+
+        Returns:
+            A dimod.BinaryQuadraticModel
+        """
+        # Apply constraints onto self.csp
+        self._apply_valid_move_constraint()
+        self._set_start_and_end()
+        self._set_borders()
+        self._set_inner_walls()
+
+        # Grab bqm constrained for valid solutions
+        bqm = dwavebinarycsp.stitch(self.csp)
+
+        # Edit bqm to favour optimal solutions
+        for v in bqm.variables:
+            # Ignore auxiliary variables
+            if isinstance(v, str) and re.match(r'^aux\d+$', v):
+                continue
+
+            # Add a penalty to every tile of the path
+            bqm.add_variable(v, penalty_per_tile)
+
+        return bqm
+
+    def visualize(self, solution=None):
+        def get_visual_coords(coords):
+            coord_pattern = "^(\d+),(\d+)([nw])$"
+            row, col, dir = re.findall(coord_pattern, coords)[0]
+            new_row, new_col = map(lambda x: int(x) * 2 + 1, [row, col])
+            new_row, new_col = (new_row-1, new_col) if dir == "n" else (new_row, new_col-1)
+
+            return new_row, new_col, dir
+
+        # Constants for maze symbols
+        WALL = "#"      # maze wall
+        NS = "|"        # path going in north-south direction
+        EW = "_"        # path going in east-west direction
+        POS = "."       # coordinate position
+        EMPTY = " "     # whitespace; indicates no path drawn
+
+        # Check parameters
+        if solution is None:
+            solution = []
+
+        # Construct empty maze visual
+        # Note: the maze visual is (2 * original-maze-dimension + 1) because
+        #   each position has an associated north-edge and an associated
+        #   west-edge. This requires two rows and two columns to draw,
+        #   respectively. Thus, the "2 * original-maze-dimension" is needed.
+        #      |      <-- north edge
+        #     _.      <-- west edge and position
+        #   To get a south-edge or an east-edge, the north-edge from the row
+        #   below or the west-edge from the column on the right can be used
+        #   respectively. This trick, however, cannot be used for the last row
+        #   nor for the rightmost column, hence the "+ 1" in the equation.
+        width = 2*self.n_cols + 1       # maze visual's width
+        height = 2*self.n_rows + 1      # maze visual's height
+
+        empty_row = [EMPTY] * (width-2)
+        empty_row = [WALL] + empty_row + [WALL]   # add left and right borders
+
+        visual = [list(empty_row) for _ in range(height)]
+        visual[0] = [WALL] * width      # top border
+        visual[-1] = [WALL] * width     # bottom border
+
+        # Add coordinate positions in maze visual
+        # Note: the symbol POS appears at every other position because there
+        #   could potentially be a path segment sitting between the two
+        #   positions.
+        for position_row in visual[1::2]:
+            position_row[1::2] = [POS] * self.n_cols
+
+        # Add maze start and end to visual
+        start_row, start_col, start_dir = get_visual_coords(self.start)
+        end_row, end_col, end_dir = get_visual_coords(self.end)
+        visual[start_row][start_col] = NS if start_dir=="n" else EW
+        visual[end_row][end_col] = NS if end_dir=="n" else EW
+
+        # Add interior walls to visual
+        for w in self.walls:
+            row, col, _ = get_visual_coords(w)
+            visual[row][col] = WALL
+
+        # Add solution path to visual
+        for s in solution:
+            row, col, dir = get_visual_coords(s)
+            visual[row][col] = NS if dir=="n" else EW
+
+        # Print solution
+        for s in visual:
+            print("".join(s))
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq2/maze$ 
+
