@@ -1,0 +1,172 @@
+ian@ian-HP-Stream-Laptop-11-y0XX:~/mazeq3/maze/dwave-tsp/dwave-tsp$ cd
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ mkdir qwt
+ian@ian-HP-Stream-Laptop-11-y0XX:~$ cd qwt
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt$ git clone https://github.com/novice108/qTSP.git
+Cloning into 'qTSP'...
+remote: Enumerating objects: 104, done.
+remote: Counting objects: 100% (104/104), done.
+remote: Compressing objects: 100% (102/102), done.
+remote: Total 104 (delta 51), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (104/104), 33.01 KiB | 3.67 MiB/s, done.
+Resolving deltas: 100% (51/51), done.
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt$ cd qTSP
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ LS
+LS: command not found
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ ls
+ 11-09_Kerberos_subproblem_45.py   2021-12-09_Kerb.py               dt.py                                  TraditionalAlgs105Time.py
+ 2021-09-11_KerberosTSP.py         2021-12-09_PT.py                 InstrucExecTime.py                     TraditionalAlgTime105.txt
+ 2021-11-06_hybTSP.py              2021-12-10_Tabu.py               Kerb105_2iterSubProb15.txt             tspHybrid.py
+ 2021-11-29_Kerb.py                2021-12-16_SimAnn.py             Kerb2iterSubP15_2iter.py               TSPonQuantum_2021-11-29.py
+ 2021-12-04_KerbDecomp3.py         2021-12-16_TabuOnlySampl.py     'Kerberos route 2021-11-29 10-56.txt'   TSPonQuantum.py
+ 2021-12-04_KerbDecomp.py          2021-12-17_eid.py                KerberosTSP80.py
+ 2021-12-07_inspect.py             2021-12-17-TSPbyEmbedCompst.py   KerbRoute105.txt
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ python3 dt.py
+Current Time = 19:41:09
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ python3  2021-11-29_Kerb.py 
+Field problem is of type: <class 'dimod.binary.binary_quadratic_model.BinaryQuadraticModel'>
+Field samples is of type: <class 'hybrid.core.SampleSet'>
+Updated state has 1 sample sets with lowest energy -400.499998803949.
+Best energy found is -400.4999988041236.
+Current Time = 19:43:04
+Kerberos route  [26, 6, 9, 18, 43, 38, 1, 2, 33, 10, 21, 11, 32, 24, 44, 30, 14, 7, 4, 20, 0, 22, 31, 41, 39, 12, 25, 27, 17, 8, 19, 42, 5, 34, 36, 40, 28, 13, 23, 16, 15, 37, 3, 29, 35]
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ python3 11-09_Kerberos_subproblem_45.py
+Kerberos route  [27, 42, 38, 44, 24, 5, 4, 1, 40, 29, 19, 2, 21, 33, 7, 16, 43, 39, 28, 36, 31, 25, 3, 6, 12, 11, 20, 34, 30, 32, 10, 0, 18, 14, 35, 13, 26, 17, 37, 22, 15, 41, 9, 8, 23]
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ python3 2021-11-06_hybTSP.py 
+D-wave Hybrid Route  [22, 2, 0, 6, 26, 3, 7, 9, 17, 11, 19, 4, 8, 5, 12, 24, 14, 15, 10, 23, 25, 28, 16, 21, 18, 13, 1, 29, 20, 27]
+time of D-wave Hybrid  0:00:21.727504
+path greedy_tsp [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 0]
+time of greedy_tsp  0:00:00.001003
+path by christofides  [0, 29, 15, 14, 16, 13, 17, 12, 18, 11, 19, 10, 20, 9, 21, 8, 22, 7, 23, 6, 24, 5, 25, 4, 26, 3, 27, 2, 28, 1, 0]
+time of christofides  0:00:00.022250
+path by traveling_salesman_problem  [29, 15, 14, 16, 13, 17, 12, 18, 11, 19, 10, 20, 9, 21, 8, 22, 7, 23, 6, 24, 5, 25, 4, 26, 3, 27, 2, 28, 1, 0]
+time of traveling_salesman_problem  0:00:00.058147
+path by threshold_accepting_tsp  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 0]
+time of threshold_accepting_tsp  0:00:00.134100
+path simulated_annealing_tsp  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 0]
+time of simulated_annealing_tsp  0:00:00.130749
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ cat 2021-11-06_hybTSP.py 
+from collections import defaultdict
+from dwave.system.samplers import DWaveSampler
+from dwave.system.composites import EmbeddingComposite
+from dwave_networkx.utils import binary_quadratic_model_sampler
+import networkx as nx
+import dwave_networkx
+import dwave.inspector
+
+# Create empty graph
+G = nx.Graph()
+
+nbr = 30
+H=nx.gnp_random_graph(nbr,nbr)
+G.add_edges_from(H.edges())
+
+import random
+for u,v,a in G.edges(data=True):
+    G[u][v]['weight'] = 0.1
+
+
+# ------- Run our QUBO on the QPU -------
+# Set up QPU parameters
+
+from datetime import datetime
+
+startDW=datetime.now()
+Q= defaultdict(float)
+Q = dwave_networkx.algorithms.tsp.traveling_salesperson_qubo(G, weight='weight')
+#print(Q)
+
+
+import dimod
+#import dwave_networkx as dnx
+#rex = dnx.traveling_salesperson(G, dimod.ExactSolver(), start=0)
+#print("Exact Solution ", rex)
+
+bqm = dimod.dimod.BQM.from_qubo(Q)
+#print(bqm)
+
+from dwave.system import LeapHybridSampler
+import numpy as np
+
+result = LeapHybridSampler().sample(bqm, label='TSP Hybrid')
+#print("Found solution with {} nodes at energy {}.".format(np.sum(result.record.sample), 
+#                                                          result.first.energy))
+
+# use the sampler to find low energy states
+
+sample = result.first.sample
+
+route = [None]*len(G)
+for (city, time), val in sample.items():
+    if val:
+        route[time] = city
+
+start = None
+if start is not None and route[0] != start:
+    # rotate to put the start in front
+    idx = route.index(start)
+    route = route[-idx:] + route[:-idx]
+print("D-wave Hybrid Route ", route)
+print("time of D-wave Hybrid ", datetime.now()-startDW)
+
+from networkx.algorithms import approximation as approx
+from datetime import datetime
+
+start = datetime.now()
+cycle = approx.greedy_tsp(G)
+print("path greedy_tsp", cycle)
+print("time of greedy_tsp ", datetime.now()-start)
+
+start=datetime.now()
+path1 = approx.christofides(G)
+print("path by christofides ", path1)
+print("time of christofides ", datetime.now()-start)
+
+start=datetime.now()
+path2 = approx.traveling_salesman_problem(G, weight='weight', nodes=None, cycle=False, method=None)
+print("path by traveling_salesman_problem ", path2)
+print("time of traveling_salesman_problem ", datetime.now()-start)
+
+start=datetime.now()
+path3 = approx.threshold_accepting_tsp(G, "greedy", weight='weight', source=None, threshold=1, move='1-1', max_iterations=10, N_inner=100, alpha=0.1, seed=None)
+print("path by threshold_accepting_tsp ", path3)
+print("time of threshold_accepting_tsp ", datetime.now()-start)
+
+start=datetime.now()
+sym_anng = approx.simulated_annealing_tsp(G, (list(G) + [next(iter(G))]))
+print("path simulated_annealing_tsp ", sym_anng)
+print("time of simulated_annealing_tsp ", datetime.now()-start)
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ sloccount 2021-11-06_hybTSP.py 
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/qwt/qTSP/2021-11-06_hybTSP.py to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+56      top_dir         python=56
+
+
+Totals grouped by language (dominant language first):
+python:          56 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 56
+Development Effort Estimate, Person-Years (Person-Months) = 0.01 (0.12)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.09 (1.10)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.11
+Total Estimated Cost to Develop                           = $ 1,310
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-HP-Stream-Laptop-11-y0XX:~/qwt/qTSP$ 
+
