@@ -1,0 +1,787 @@
+.ian@ian-Aspire-One-753:~/Downloads$ cd arb_master
+ian@ian-Aspire-One-753:~/Downloads/arb_master$ ls
+bin  doc  examples  install  licence  misc  src  templates
+ian@ian-Aspire-One-753:~/Downloads/arb_master$ cd examples
+ian@ian-Aspire-One-753:~/Downloads/arb_master/examples$ ls
+1d_advection_periodic
+1d_fully_developed_flow
+1d_nonuniform_diffusion
+advection_2d_box_test
+assess_mesh_quality
+asymptote_sensor
+automatic_interpolation
+bouncing_ball
+bouncing_ball_with_timesteprewind
+channel_flow_with_reflect
+charged_particle_interaction_force
+chemical_reaction_ode
+cube_laplacian_dhctac10_2012
+droplet_with_surfactant_stop_rise_shear_gradp
+dynamic_region_test
+electrokinetic_channel_flow
+embedded_perl_code
+empty
+flow_around_2d_cylinder
+flow_around_sphere
+glue_1d_tests
+glue_2d_tests
+heat_conduction_around_ellipse
+heat_conduction_with_glued_faces
+heat_conduction_with_linked_regions
+impacting_volume_of_fluid_drop_in_halfplane
+inviscid_burgers_equation
+iterative_solver_1d_test
+language_features
+laplacian_in_square
+maxima_functions
+minimal_kernel_example
+oscillating_level_set_drop_with_reflect
+oscillating_volume_of_fluid_drop_in_quadrant
+oscillating_volume_of_fluid_drop_in_quadrant_v0.54
+separation_syntax
+slit_flow_with_structured_mesh_xy_plane
+slit_flow_with_structured_mesh_xz_plane
+steady_state_channel_flow_with_cylinder
+steady_state_stokes_channel_flow_with_cylinder
+stokes_flow_through_cylinder
+string_code_demonstration
+string_code_test_legacy
+syntax_test
+transient_explicit_stokes_channel_flow_with_cylinder
+transient_flow_around_cylinder_with_species
+turbulent_channel_containing_cylinder_2d
+tutorial_1
+tutorial_2
+tutorial_3
+vector_tensor_algebra
+vof_advection_streamtest
+ian@ian-Aspire-One-753:~/Downloads/arb_master/examples$ cd minimal_kernel_example
+ian@ian-Aspire-One-753:~/Downloads/arb_master/examples/minimal_kernel_example$ ls
+latest_output               surface.geo  unwrapped_input
+minimal_kernel_example.arb  surface.msh
+ian@ian-Aspire-One-753:~/Downloads/arb_master/examples/minimal_kernel_example$  ~/Downloads/arb_master/bin/arb minimal_kernel_example.arb
+WARNING: previous build directory /home/ian/Downloads/arb_master/examples/minimal_kernel_example/latest_output/build does not exist.  Not using previous build data.
+arb finite volume solver (see http://people.eng.unimelb.edu.au/daltonh/downloads/arb/)
+
+INFO: for usage options, try arb --help
+INFO: for licence see /home/ian/Downloads/arb_master/licence
+INFO: script run with options: clean=0, clean-setup=0, clean-compile=0, setup=1, compile=1, run=1, quiet=0, continue=0, debug=0, compiler=default, debugger=none, omp=0, opt=1, process-logging=0
+INFO: arb_dir = /home/ian/Downloads/arb_master
+INFO: working_dir = /home/ian/Downloads/arb_master/examples/minimal_kernel_example
+INFO: output_dir = /home/ian/Downloads/arb_master/examples/minimal_kernel_example/output
+INFO: previous_output_dir = /home/ian/Downloads/arb_master/examples/minimal_kernel_example/latest_output
+INFO: environment variable DYLD_LIBRARY_PATH = :/home/ian/Downloads/arb_master/src/contributed/pardiso
+INFO: environment variable OMP_NUM_THREADS = 
+INFO: pardiso licence not found
+INFO: arb input files to be used: minimal_kernel_example.arb
+INFO: the file /home/ian/Downloads/arb_master/examples/minimal_kernel_example/output/build/root_input.arb has been created
+INFO: moving to build directory
+INFO: compiling or setting up the arb executable
+INFO: intel compiler is not available
+INFO: found gfortran compiler at /usr/bin/gfortran
+INFO: cleaning of compilation files required as compile options different from previous run
+rm -f arb *.o *.mod make.log last_compile_had_* last_compiler_was_*
+INFO: found maxima at /usr/bin/maxima
+INFO: running make using commands: make opt=1 ilp=off pardiso_from_arb="present" suitesparse_from_arb="present" mgmres_from_arb="not present" sparse_from_arb="not present" arb_dir="/home/ian/Downloads/arb_master" working_dir="/home/ian/Downloads/arb_master/examples/minimal_kernel_example" output_dir="/home/ian/Downloads/arb_master/examples/minimal_kernel_example/output" compiler=gnu
+
+Compiling arb with options:
+ os_type is: Linux
+ compiler is: gnu
+ mach_type is: intel64
+ intel mkl is: not available as the intel compiler is not in use
+ lapack is: present
+ numerical recipes routines are: not present
+ intel pardiso linear solver is: not present
+ pardiso (native) linear solver is: not present
+ pardisolicencedir is: /home/ian/Downloads/arb_master/examples/minimal_kernel_example
+ hsl_ma28d linear solver is: not present
+ suitesparse linear solver is: present
+ mgmres linear solver is: not present
+ sparse linear solver is: not present
+ higham88 one norm estimator (donest) is: not present
+ mklpath is: not relevant as the intel compiler is not in use
+ openmp is: off
+ optimisation level is: 1
+ intel version is: not relevant as gnu compiler in use
+ intel link line version is: 
+ intel long integer (ilp64) support is: off
+rm -f make.log pardiso_module.o intel_pardiso_module.o lapack_dummy_module.o numerical_recipes_module.o dludcmp.o dlubksb.o dsvdcmp.o dpythag.o dsimp1.o dsimp2.o dsimp3.o dsimplx.o mgmres_solver.o mgmres_module.o sparse_module.o hsl_ma28d_ddeps.o hsl_ma28d.o hsl_ma28d_module.o suitesparse_dummy_module.o donest.o donest_module.o
+/home/ian/Downloads/arb_master/src/setup_equations/setup_equations.pl "/home/ian/Downloads/arb_master" "/home/ian/Downloads/arb_master/examples/minimal_kernel_example" "/home/ian/Downloads/arb_master/examples/minimal_kernel_example/output"
+
+perl setup_equations script to create f90 subroutines for arb
+dalton harvie, v0.60
+
+INFO: external file /home/ian/Downloads/arb_master/src/free_surface_functions.f90 contains the following operators: cellvofd facevofphi cellvofphishape cellvofphiadjust
+INFO: found the following include file minimal_kernel_example.arb at /home/ian/Downloads/arb_master/examples/minimal_kernel_example/minimal_kernel_example.arb
+WARNING: version mismatch between minimal_kernel_example.arb and the current version (of setup_equations.pl)
+  You should be able to increase the version number in minimal_kernel_example.arb (from 0.51 to 0.60) safely without altering the input file syntax, however this error indicates that additional language features are now available: file = minimal_kernel_example.arb: linenumber = 1: line = 'VERSION 0.51 # the version of syntax used in this file': raw_buffer = ''
+INFO: a primary definition statement for variable <phi_c> has been found in file = minimal_kernel_example.arb
+INFO: a primary definition statement for variable <phi_c equation> has been found in file = minimal_kernel_example.arb
+INFO: a primary definition statement for variable <phi_c error> has been found in file = minimal_kernel_example.arb
+INFO: a primary definition statement for variable <phi_n> has been found in file = minimal_kernel_example.arb
+INFO: a primary definition statement for variable <phi_n equation> has been found in file = minimal_kernel_example.arb
+INFO: found the following include directory general at /home/ian/Downloads/arb_master/templates/general
+INFO: found the following include file element_information at /home/ian/Downloads/arb_master/templates/general/element_information.arb
+INFO: found the following include file element_coordinates.arb at /home/ian/Downloads/arb_master/templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <cellx output[l=1]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <cellx output[l=2]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <cellx output[l=3]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <facex output[l=1]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <facex output[l=2]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <facex output[l=3]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <nodex output[l=1]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <nodex output[l=2]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: a primary definition statement for variable <nodex output[l=3]> has been found in file = ../../templates/general/element_coordinates.arb
+INFO: found the following include file element_counts.arb at /home/ian/Downloads/arb_master/templates/general/element_counts.arb
+INFO: a primary definition statement for variable <face_nodes> has been found in file = ../../templates/general/element_counts.arb
+INFO: a primary definition statement for variable <cell_nodes> has been found in file = ../../templates/general/element_counts.arb
+INFO: a primary definition statement for variable <cell_faces> has been found in file = ../../templates/general/element_counts.arb
+INFO: found the following include file element_dimensions.arb at /home/ian/Downloads/arb_master/templates/general/element_dimensions.arb
+INFO: a primary definition statement for variable <celldx output[l=1]> has been found in file = ../../templates/general/element_dimensions.arb
+INFO: a primary definition statement for variable <celldx output[l=2]> has been found in file = ../../templates/general/element_dimensions.arb
+INFO: a primary definition statement for variable <celldx output[l=3]> has been found in file = ../../templates/general/element_dimensions.arb
+INFO: a primary definition statement for variable <celldxmax output> has been found in file = ../../templates/general/element_dimensions.arb
+INFO: a primary definition statement for variable <cellvol output> has been found in file = ../../templates/general/element_dimensions.arb
+INFO: a primary definition statement for variable <facedx output> has been found in file = ../../templates/general/element_dimensions.arb
+INFO: a primary definition statement for variable <facearea output> has been found in file = ../../templates/general/element_dimensions.arb
+INFO: found the following include file element_indices.arb at /home/ian/Downloads/arb_master/templates/general/element_indices.arb
+INFO: a primary definition statement for variable <icell output> has been found in file = ../../templates/general/element_indices.arb
+INFO: a primary definition statement for variable <jface output> has been found in file = ../../templates/general/element_indices.arb
+INFO: a primary definition statement for variable <knode output> has been found in file = ../../templates/general/element_indices.arb
+INFO: found the following include file face_normals.arb at /home/ian/Downloads/arb_master/templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facenorm output[l=1]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facetang1 output[l=1]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facetang2 output[l=1]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facenorm output[l=2]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facetang1 output[l=2]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facetang2 output[l=2]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facenorm output[l=3]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facetang1 output[l=3]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <facetang2 output[l=3]> has been found in file = ../../templates/general/face_normals.arb
+INFO: a primary definition statement for variable <dot_facenorm_facedxunit> has been found in file = ../../templates/general/face_normals.arb
+INFO: found operator dot in dot(<facenorm[l=:]>,<facedxunit[l=:]>)
+INFO: adding options to variable: name = <dot_facenorm_facedxunit>: masread = 36: options = output
+INFO: found the following include file kernel_information at /home/ian/Downloads/arb_master/templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <crosskernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <centralkernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <kernelsum output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <cell deriv kernel elements output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <face deriv kernel elements output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <node deriv kernel elements output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <celldxkernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <facedxkernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a primary definition statement for variable <nodedxkernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: found the following include file mesh_quality at /home/ian/Downloads/arb_master/templates/general/mesh_quality.arb
+INFO: found the following include file cell_aspect_ratio at /home/ian/Downloads/arb_master/templates/general/cell_aspect_ratio.arb
+INFO: a primary definition statement for variable <cell aspect ratio> has been found in file = ../../templates/general/cell_aspect_ratio.arb
+INFO: a primary definition statement for variable <maximum cell aspect ratio> has been found in file = ../../templates/general/cell_aspect_ratio.arb
+INFO: found the following include file cell_adjacent_volume_ratio at /home/ian/Downloads/arb_master/templates/general/cell_adjacent_volume_ratio.arb
+INFO: a primary definition statement for variable <cell adjacent volume ratio> has been found in file = ../../templates/general/cell_adjacent_volume_ratio.arb
+INFO: a primary definition statement for variable <maximum cell adjacent volume ratio> has been found in file = ../../templates/general/cell_adjacent_volume_ratio.arb
+INFO: found the following include file kernel_information at /home/ian/Downloads/arb_master/templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <crosskernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <centralkernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <kernelsum output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <cell deriv kernel elements output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <face deriv kernel elements output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <node deriv kernel elements output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <celldxkernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <facedxkernel output> has been found in file = ../../templates/general/kernel_information.arb
+INFO: a secondary definition statement (repeat number 1) for variable <nodedxkernel output> has been found in file = ../../templates/general/kernel_information.arb
+SIMULATION INFO: RUNDATE = Thu Apr  7 13:46:18 2022
+SIMULATION INFO: TITLE = Simple file containing equations that only need minimal kernels to be calculated
+SIMULATION INFO: DATE = 11/2/15
+SIMULATION INFO: FILENAME = minimal_kernel_example.arb
+SIMULATION INFO: AUTHOR = Dalton Harvie
+SIMULATION INFO: VERSION = 
+SIMULATION INFO: RUNHOST = ian-Aspire-One-753
+SIMULATION INFO: ABSFILENAME = /home/ian/Downloads/arb_master/examples/minimal_kernel_example/minimal_kernel_example.arb
+SIMULATION INFO: RUNVERSION = 0.60
+INFO: unknown <phi_c> has cell region = <allcells>
+INFO: formed user variable unknown [1]: name = <phi_c>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for unknown <phi_c>
+INFO: equation <phi_c equation> has cell region = <allcells>
+INFO: formed user variable equation [1]: name = <phi_c equation>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for equation <phi_c equation>
+INFO: output <phi_c error> has cell region = <allcells>
+INFO: formed user variable output [1]: name = <phi_c error>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <phi_c error>
+INFO: unknown <phi_n> has node region = <allnodes>
+INFO: formed user variable unknown [2]: name = <phi_n>: centring = node: rindex = 0: region = <allnodes>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for unknown <phi_n>
+INFO: equation <phi_n equation> has node region = <allnodes>
+INFO: formed user variable equation [2]: name = <phi_n equation>: centring = node: rindex = 0: region = <allnodes>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for equation <phi_n equation>
+INFO: output <cellx output[l=1]> has cell region = <allcells>
+INFO: formed user variable output [2]: name = <cellx output[l=1]>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cellx output[l=1]>
+INFO: output <cellx output[l=2]> has cell region = <allcells>
+INFO: formed user variable output [3]: name = <cellx output[l=2]>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cellx output[l=2]>
+INFO: output <cellx output[l=3]> has cell region = <allcells>
+INFO: formed user variable output [4]: name = <cellx output[l=3]>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cellx output[l=3]>
+INFO: output <facex output[l=1]> has face region = <allfaces>
+INFO: formed user variable output [5]: name = <facex output[l=1]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facex output[l=1]>
+INFO: output <facex output[l=2]> has face region = <allfaces>
+INFO: formed user variable output [6]: name = <facex output[l=2]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facex output[l=2]>
+INFO: output <facex output[l=3]> has face region = <allfaces>
+INFO: formed user variable output [7]: name = <facex output[l=3]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facex output[l=3]>
+INFO: output <nodex output[l=1]> has node region = <allnodes>
+INFO: formed user variable output [8]: name = <nodex output[l=1]>: centring = node: rindex = 0: region = <allnodes>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <nodex output[l=1]>
+INFO: output <nodex output[l=2]> has node region = <allnodes>
+INFO: formed user variable output [9]: name = <nodex output[l=2]>: centring = node: rindex = 0: region = <allnodes>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <nodex output[l=2]>
+INFO: output <nodex output[l=3]> has node region = <allnodes>
+INFO: formed user variable output [10]: name = <nodex output[l=3]>: centring = node: rindex = 0: region = <allnodes>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <nodex output[l=3]>
+INFO: output <face_nodes> has face region = <allfaces>
+INFO: formed user variable output [11]: name = <face_nodes>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <face_nodes>
+INFO: output <cell_nodes> has cell region = <allcells>
+INFO: formed user variable output [12]: name = <cell_nodes>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cell_nodes>
+INFO: output <cell_faces> has cell region = <allcells>
+INFO: formed user variable output [13]: name = <cell_faces>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cell_faces>
+INFO: output <celldx output[l=1]> has cell region = <allcells>
+INFO: formed user variable output [14]: name = <celldx output[l=1]>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <celldx output[l=1]>
+INFO: output <celldx output[l=2]> has cell region = <allcells>
+INFO: formed user variable output [15]: name = <celldx output[l=2]>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <celldx output[l=2]>
+INFO: output <celldx output[l=3]> has cell region = <allcells>
+INFO: formed user variable output [16]: name = <celldx output[l=3]>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <celldx output[l=3]>
+INFO: output <celldxmax output> has cell region = <allcells>
+INFO: formed user variable output [17]: name = <celldxmax output>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <celldxmax output>
+INFO: output <cellvol output> has cell region = <allcells>
+INFO: formed user variable output [18]: name = <cellvol output>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cellvol output>
+INFO: output <facedx output> has face region = <allfaces>
+INFO: formed user variable output [19]: name = <facedx output>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facedx output>
+INFO: output <facearea output> has face region = <allfaces>
+INFO: formed user variable output [20]: name = <facearea output>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facearea output>
+INFO: output <icell output> has cell region = <allcells>
+INFO: formed user variable output [21]: name = <icell output>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <icell output>
+INFO: output <jface output> has face region = <allfaces>
+INFO: formed user variable output [22]: name = <jface output>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <jface output>
+INFO: output <knode output> has node region = <allnodes>
+INFO: formed user variable output [23]: name = <knode output>: centring = node: rindex = 0: region = <allnodes>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <knode output>
+INFO: output <facenorm output[l=1]> has face region = <allfaces>
+INFO: formed user variable output [24]: name = <facenorm output[l=1]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facenorm output[l=1]>
+INFO: output <facetang1 output[l=1]> has face region = <allfaces>
+INFO: formed user variable output [25]: name = <facetang1 output[l=1]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facetang1 output[l=1]>
+INFO: output <facetang2 output[l=1]> has face region = <allfaces>
+INFO: formed user variable output [26]: name = <facetang2 output[l=1]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facetang2 output[l=1]>
+INFO: output <facenorm output[l=2]> has face region = <allfaces>
+INFO: formed user variable output [27]: name = <facenorm output[l=2]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facenorm output[l=2]>
+INFO: output <facetang1 output[l=2]> has face region = <allfaces>
+INFO: formed user variable output [28]: name = <facetang1 output[l=2]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facetang1 output[l=2]>
+INFO: output <facetang2 output[l=2]> has face region = <allfaces>
+INFO: formed user variable output [29]: name = <facetang2 output[l=2]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facetang2 output[l=2]>
+INFO: output <facenorm output[l=3]> has face region = <allfaces>
+INFO: formed user variable output [30]: name = <facenorm output[l=3]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facenorm output[l=3]>
+INFO: output <facetang1 output[l=3]> has face region = <allfaces>
+INFO: formed user variable output [31]: name = <facetang1 output[l=3]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facetang1 output[l=3]>
+INFO: output <facetang2 output[l=3]> has face region = <allfaces>
+INFO: formed user variable output [32]: name = <facetang2 output[l=3]>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facetang2 output[l=3]>
+INFO: constant <dot_facenorm_facedxunit> has face region = <allfaces>
+INFO: formed user variable constant [1]: name = <dot_facenorm_facedxunit>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: options read in for constant <dot_facenorm_facedxunit> = output
+INFO: output <crosskernel output> has cell region = <allcells>
+INFO: formed user variable output [33]: name = <crosskernel output>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <crosskernel output>
+INFO: output <centralkernel output> has cell region = <allcells>
+INFO: formed user variable output [34]: name = <centralkernel output>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <centralkernel output>
+INFO: output <kernelsum output> has cell region = <allcells>
+INFO: formed user variable output [35]: name = <kernelsum output>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <kernelsum output>
+INFO: output <cell deriv kernel elements output> has cell region = <allcells>
+INFO: formed user variable output [36]: name = <cell deriv kernel elements output>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cell deriv kernel elements output>
+INFO: output <face deriv kernel elements output> has face region = <allfaces>
+INFO: formed user variable output [37]: name = <face deriv kernel elements output>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <face deriv kernel elements output>
+INFO: output <node deriv kernel elements output> has node region = <allnodes>
+INFO: formed user variable output [38]: name = <node deriv kernel elements output>: centring = node: rindex = 0: region = <allnodes>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <node deriv kernel elements output>
+INFO: output <celldxkernel output> has cell region = <allcells>
+INFO: formed user variable output [39]: name = <celldxkernel output>: centring = cell: rindex = 0: region = <allcells>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <celldxkernel output>
+INFO: output <facedxkernel output> has face region = <allfaces>
+INFO: formed user variable output [40]: name = <facedxkernel output>: centring = face: rindex = 0: region = <allfaces>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <facedxkernel output>
+INFO: output <nodedxkernel output> has node region = <allnodes>
+INFO: formed user variable output [41]: name = <nodedxkernel output>: centring = node: rindex = 0: region = <allnodes>: multiplier = 1.d0: units = 1: redefinitions = 1: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <nodedxkernel output>
+INFO: output <cell aspect ratio> has cell region = <domain>
+INFO: formed user variable output [42]: name = <cell aspect ratio>: centring = cell: rindex = 0: region = <domain>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cell aspect ratio>
+INFO: formed user variable output [43]: name = <maximum cell aspect ratio>: centring = none: rindex = 0: region = : multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <maximum cell aspect ratio>
+INFO: output <cell adjacent volume ratio> has face region = <domainfaces>
+INFO: formed user variable output [44]: name = <cell adjacent volume ratio>: centring = face: rindex = 0: region = <domainfaces>: multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <cell adjacent volume ratio>
+INFO: formed user variable output [45]: name = <maximum cell adjacent volume ratio>: centring = none: rindex = 0: region = : multiplier = 1.d0: units = 1: redefinitions = 0: typechanges = 0: centringchanges = 0: selfreferences = 0
+INFO: no options read in for output <maximum cell adjacent volume ratio>
+NOTE: the following variables had redefinitions - make sure that this is what you intended:
+  output <crosskernel output> had 1 redefinitions
+  output <centralkernel output> had 1 redefinitions
+  output <kernelsum output> had 1 redefinitions
+  output <cell deriv kernel elements output> had 1 redefinitions
+  output <face deriv kernel elements output> had 1 redefinitions
+  output <node deriv kernel elements output> had 1 redefinitions
+  output <celldxkernel output> had 1 redefinitions
+  output <facedxkernel output> had 1 redefinitions
+  output <nodedxkernel output> had 1 redefinitions
+INFO: creating new scalar compound with name = <dot_facenorm_facedxunit> and centring = face for component <dot_facenorm_facedxunit>
+INFO: creating new scalar compound with name = <phi_c> and centring = cell for component <phi_c>
+INFO: creating new scalar compound with name = <phi_n> and centring = node for component <phi_n>
+INFO: creating new scalar compound with name = <phi_c equation> and centring = cell for component <phi_c equation>
+INFO: creating new scalar compound with name = <phi_n equation> and centring = node for component <phi_n equation>
+INFO: creating new scalar compound with name = <phi_c error> and centring = cell for component <phi_c error>
+INFO: creating new vector compound with name = <cellx output> and centring = cell for component <cellx output[l=1]>
+INFO: found existing vector compound with name = <cellx output> for component <cellx output[l=2]>
+INFO: found existing vector compound with name = <cellx output> for component <cellx output[l=3]>
+INFO: creating new vector compound with name = <facex output> and centring = face for component <facex output[l=1]>
+INFO: found existing vector compound with name = <facex output> for component <facex output[l=2]>
+INFO: found existing vector compound with name = <facex output> for component <facex output[l=3]>
+INFO: creating new vector compound with name = <nodex output> and centring = node for component <nodex output[l=1]>
+INFO: found existing vector compound with name = <nodex output> for component <nodex output[l=2]>
+INFO: found existing vector compound with name = <nodex output> for component <nodex output[l=3]>
+INFO: creating new scalar compound with name = <face_nodes> and centring = face for component <face_nodes>
+INFO: creating new scalar compound with name = <cell_nodes> and centring = cell for component <cell_nodes>
+INFO: creating new scalar compound with name = <cell_faces> and centring = cell for component <cell_faces>
+INFO: creating new vector compound with name = <celldx output> and centring = cell for component <celldx output[l=1]>
+INFO: found existing vector compound with name = <celldx output> for component <celldx output[l=2]>
+INFO: found existing vector compound with name = <celldx output> for component <celldx output[l=3]>
+INFO: creating new scalar compound with name = <celldxmax output> and centring = cell for component <celldxmax output>
+INFO: creating new scalar compound with name = <cellvol output> and centring = cell for component <cellvol output>
+INFO: creating new scalar compound with name = <facedx output> and centring = face for component <facedx output>
+INFO: creating new scalar compound with name = <facearea output> and centring = face for component <facearea output>
+INFO: creating new scalar compound with name = <icell output> and centring = cell for component <icell output>
+INFO: creating new scalar compound with name = <jface output> and centring = face for component <jface output>
+INFO: creating new scalar compound with name = <knode output> and centring = node for component <knode output>
+INFO: creating new vector compound with name = <facenorm output> and centring = face for component <facenorm output[l=1]>
+INFO: creating new vector compound with name = <facetang1 output> and centring = face for component <facetang1 output[l=1]>
+INFO: creating new vector compound with name = <facetang2 output> and centring = face for component <facetang2 output[l=1]>
+INFO: found existing vector compound with name = <facenorm output> for component <facenorm output[l=2]>
+INFO: found existing vector compound with name = <facetang1 output> for component <facetang1 output[l=2]>
+INFO: found existing vector compound with name = <facetang2 output> for component <facetang2 output[l=2]>
+INFO: found existing vector compound with name = <facenorm output> for component <facenorm output[l=3]>
+INFO: found existing vector compound with name = <facetang1 output> for component <facetang1 output[l=3]>
+INFO: found existing vector compound with name = <facetang2 output> for component <facetang2 output[l=3]>
+INFO: creating new scalar compound with name = <crosskernel output> and centring = cell for component <crosskernel output>
+INFO: creating new scalar compound with name = <centralkernel output> and centring = cell for component <centralkernel output>
+INFO: creating new scalar compound with name = <kernelsum output> and centring = cell for component <kernelsum output>
+INFO: creating new scalar compound with name = <cell deriv kernel elements output> and centring = cell for component <cell deriv kernel elements output>
+INFO: creating new scalar compound with name = <face deriv kernel elements output> and centring = face for component <face deriv kernel elements output>
+INFO: creating new scalar compound with name = <node deriv kernel elements output> and centring = node for component <node deriv kernel elements output>
+INFO: creating new scalar compound with name = <celldxkernel output> and centring = cell for component <celldxkernel output>
+INFO: creating new scalar compound with name = <facedxkernel output> and centring = face for component <facedxkernel output>
+INFO: creating new scalar compound with name = <nodedxkernel output> and centring = node for component <nodedxkernel output>
+INFO: creating new scalar compound with name = <cell aspect ratio> and centring = cell for component <cell aspect ratio>
+INFO: creating new scalar compound with name = <maximum cell aspect ratio> and centring = none for component <maximum cell aspect ratio>
+INFO: creating new scalar compound with name = <cell adjacent volume ratio> and centring = face for component <cell adjacent volume ratio>
+INFO: creating new scalar compound with name = <maximum cell adjacent volume ratio> and centring = none for component <maximum cell adjacent volume ratio>
+INFO: the compound <dot_facenorm_facedxunit> has the final compound-specific options of: output
+INFO: compound 1 <dot_facenorm_facedxunit> has components: [ 37 ]
+INFO: compound 2 <phi_c> has components: [ 1 ]
+INFO: compound 3 <phi_n> has components: [ 4 ]
+INFO: compound 4 <phi_c equation> has components: [ 2 ]
+INFO: compound 5 <phi_n equation> has components: [ 5 ]
+INFO: compound 6 <phi_c error> has components: [ 3 ]
+INFO: compound 7 <cellx output> has components: [ 6 , 7 , 8 ]
+INFO: compound 8 <facex output> has components: [ 9 , 10 , 11 ]
+INFO: compound 9 <nodex output> has components: [ 12 , 13 , 14 ]
+INFO: compound 10 <face_nodes> has components: [ 15 ]
+INFO: compound 11 <cell_nodes> has components: [ 16 ]
+INFO: compound 12 <cell_faces> has components: [ 17 ]
+INFO: compound 13 <celldx output> has components: [ 18 , 19 , 20 ]
+INFO: compound 14 <celldxmax output> has components: [ 21 ]
+INFO: compound 15 <cellvol output> has components: [ 22 ]
+INFO: compound 16 <facedx output> has components: [ 23 ]
+INFO: compound 17 <facearea output> has components: [ 24 ]
+INFO: compound 18 <icell output> has components: [ 25 ]
+INFO: compound 19 <jface output> has components: [ 26 ]
+INFO: compound 20 <knode output> has components: [ 27 ]
+INFO: compound 21 <facenorm output> has components: [ 28 , 31 , 34 ]
+INFO: compound 22 <facetang1 output> has components: [ 29 , 32 , 35 ]
+INFO: compound 23 <facetang2 output> has components: [ 30 , 33 , 36 ]
+INFO: compound 24 <crosskernel output> has components: [ 38 ]
+INFO: compound 25 <centralkernel output> has components: [ 39 ]
+INFO: compound 26 <kernelsum output> has components: [ 40 ]
+INFO: compound 27 <cell deriv kernel elements output> has components: [ 41 ]
+INFO: compound 28 <face deriv kernel elements output> has components: [ 42 ]
+INFO: compound 29 <node deriv kernel elements output> has components: [ 43 ]
+INFO: compound 30 <celldxkernel output> has components: [ 44 ]
+INFO: compound 31 <facedxkernel output> has components: [ 45 ]
+INFO: compound 32 <nodedxkernel output> has components: [ 46 ]
+INFO: compound 33 <cell aspect ratio> has components: [ 47 ]
+INFO: compound 34 <maximum cell aspect ratio> has components: [ 48 ]
+INFO: compound 35 <cell adjacent volume ratio> has components: [ 49 ]
+INFO: compound 36 <maximum cell adjacent volume ratio> has components: [ 50 ]
+INFO: setup_equations data has changed since the last run: recreating fortran
+INFO: unable to read maxima_simplify_results from file for possible reuse
+INFO: unable to read maxima_fortran_results from file for possible reuse
+INFO: doing maxima name substitutions for user-supplied variables to create mequations
+INFO: doing mequation interpolation for constant 1 <dot_facenorm_facedxunit>
+INFO: doing mequation interpolation for unknown 1 <phi_c>
+INFO: doing mequation interpolation for unknown 2 <phi_n>
+INFO: doing mequation interpolation for equation 1 <phi_c equation>
+INFO: doing mequation interpolation for equation 2 <phi_n equation>
+INFO: doing mequation interpolation for output 1 <phi_c error>
+INFO: doing mequation interpolation for output 2 <cellx output[l=1]>
+INFO: doing mequation interpolation for output 3 <cellx output[l=2]>
+INFO: doing mequation interpolation for output 4 <cellx output[l=3]>
+INFO: doing mequation interpolation for output 5 <facex output[l=1]>
+INFO: doing mequation interpolation for output 6 <facex output[l=2]>
+INFO: doing mequation interpolation for output 7 <facex output[l=3]>
+INFO: doing mequation interpolation for output 8 <nodex output[l=1]>
+INFO: doing mequation interpolation for output 9 <nodex output[l=2]>
+INFO: doing mequation interpolation for output 10 <nodex output[l=3]>
+INFO: doing mequation interpolation for output 11 <face_nodes>
+INFO: doing mequation interpolation for output 12 <cell_nodes>
+INFO: doing mequation interpolation for output 13 <cell_faces>
+INFO: doing mequation interpolation for output 14 <celldx output[l=1]>
+INFO: doing mequation interpolation for output 15 <celldx output[l=2]>
+INFO: doing mequation interpolation for output 16 <celldx output[l=3]>
+INFO: doing mequation interpolation for output 17 <celldxmax output>
+INFO: doing mequation interpolation for output 18 <cellvol output>
+INFO: doing mequation interpolation for output 19 <facedx output>
+INFO: doing mequation interpolation for output 20 <facearea output>
+INFO: doing mequation interpolation for output 21 <icell output>
+INFO: doing mequation interpolation for output 22 <jface output>
+INFO: doing mequation interpolation for output 23 <knode output>
+INFO: doing mequation interpolation for output 24 <facenorm output[l=1]>
+INFO: doing mequation interpolation for output 25 <facetang1 output[l=1]>
+INFO: doing mequation interpolation for output 26 <facetang2 output[l=1]>
+INFO: doing mequation interpolation for output 27 <facenorm output[l=2]>
+INFO: doing mequation interpolation for output 28 <facetang1 output[l=2]>
+INFO: doing mequation interpolation for output 29 <facetang2 output[l=2]>
+INFO: doing mequation interpolation for output 30 <facenorm output[l=3]>
+INFO: doing mequation interpolation for output 31 <facetang1 output[l=3]>
+INFO: doing mequation interpolation for output 32 <facetang2 output[l=3]>
+INFO: doing mequation interpolation for output 33 <crosskernel output>
+INFO: doing mequation interpolation for output 34 <centralkernel output>
+INFO: doing mequation interpolation for output 35 <kernelsum output>
+INFO: doing mequation interpolation for output 36 <cell deriv kernel elements output>
+INFO: doing mequation interpolation for output 37 <face deriv kernel elements output>
+INFO: doing mequation interpolation for output 38 <node deriv kernel elements output>
+INFO: doing mequation interpolation for output 39 <celldxkernel output>
+INFO: doing mequation interpolation for output 40 <facedxkernel output>
+INFO: doing mequation interpolation for output 41 <nodedxkernel output>
+INFO: doing mequation interpolation for output 42 <cell aspect ratio>
+INFO: default location of <noloop> has been applied to cellmax operator used in output variable <cell aspect ratio>
+INFO: doing mequation interpolation for output 43 <maximum cell aspect ratio>
+INFO: doing mequation interpolation for output 44 <cell adjacent volume ratio>
+INFO: doing mequation interpolation for output 45 <maximum cell adjacent volume ratio>
+INFO: doing mequation interpolation for someloop 1 sum someloop over node region <cellkernelregion[l=4]> which is part of equation variable <phi_c equation>
+INFO: doing mequation interpolation for someloop 2 sum someloop over cell region <nodekernelregion[l=1]> which is part of equation variable <phi_n equation>
+INFO: doing mequation interpolation for someloop 3 sum someloop over node region <faceknodes> which is part of output variable <face_nodes>
+INFO: doing mequation interpolation for someloop 4 sum someloop over node region <cellknodes> which is part of output variable <cell_nodes>
+INFO: doing mequation interpolation for someloop 5 sum someloop over face region <celljfaces> which is part of output variable <cell_faces>
+INFO: doing mequation interpolation for someloop 6 sum someloop over cell region <cellkernelregion[l=1]> which is part of output variable <cell deriv kernel elements output>
+INFO: doing mequation interpolation for someloop 7 sum someloop over cell region <facekernelregion[l=1]> which is part of output variable <face deriv kernel elements output>
+INFO: doing mequation interpolation for someloop 8 sum someloop over cell region <nodekernelregion[l=1]> which is part of output variable <node deriv kernel elements output>
+INFO: doing mequation interpolation for someloop 9 max someloop over face region <celljfaces> which is part of output variable <cell aspect ratio>
+INFO: doing mequation interpolation for someloop 10 max someloop over cell region <noloop> which is part of output variable <cell aspect ratio>
+INFO: doing mequation interpolation for someloop 11 max someloop over cell region <domain> which is part of output variable <maximum cell aspect ratio>
+INFO: doing mequation interpolation for someloop 12 max someloop over cell region <adjacentfaceicells> which is part of output variable <cell adjacent volume ratio>
+INFO: doing mequation interpolation for someloop 13 min someloop over cell region <adjacentfaceicells> which is part of output variable <cell adjacent volume ratio>
+INFO: doing mequation interpolation for someloop 14 max someloop over face region <domainfaces> which is part of output variable <maximum cell adjacent volume ratio>
+INFO: doing mequation interpolation for someloop 15 min someloop over face region <celljfaces> which is part of output variable <cell aspect ratio>
+INFO: creating meta statements for type = constant
+INFO: creating meta statements for type = transient
+INFO: creating meta statements for type = newtient
+INFO: creating meta statements for type = unknown
+INFO: creating meta statements for type = derived
+INFO: creating meta statements for type = equation
+INFO: creating meta statements for type = output
+INFO: creating meta statements for type = condition
+INFO: creating meta statements for type = local
+INFO: creating meta statements for type = compound
+INFO: generating fortran equations for constant [1]: <dot_facenorm_facedxunit>: deriv = 0
+INFO: generating fortran equations for unknown [1]: <phi_c>: deriv = 0
+INFO: generating fortran equations for unknown [2]: <phi_n>: deriv = 0
+INFO: generating fortran equations for equation [1]: <phi_c equation>: deriv = 1
+INFO: generating fortran equations for equation [2]: <phi_n equation>: deriv = 1
+INFO: generating fortran equations for output [1]: <phi_c error>: deriv = 0
+INFO: generating fortran equations for output [2]: <cellx output[l=1]>: deriv = 0
+INFO: generating fortran equations for output [3]: <cellx output[l=2]>: deriv = 0
+INFO: generating fortran equations for output [4]: <cellx output[l=3]>: deriv = 0
+INFO: generating fortran equations for output [5]: <facex output[l=1]>: deriv = 0
+INFO: generating fortran equations for output [6]: <facex output[l=2]>: deriv = 0
+INFO: generating fortran equations for output [7]: <facex output[l=3]>: deriv = 0
+INFO: generating fortran equations for output [8]: <nodex output[l=1]>: deriv = 0
+INFO: generating fortran equations for output [9]: <nodex output[l=2]>: deriv = 0
+INFO: generating fortran equations for output [10]: <nodex output[l=3]>: deriv = 0
+INFO: generating fortran equations for output [11]: <face_nodes>: deriv = 0
+INFO: generating fortran equations for output [12]: <cell_nodes>: deriv = 0
+INFO: generating fortran equations for output [13]: <cell_faces>: deriv = 0
+INFO: generating fortran equations for output [14]: <celldx output[l=1]>: deriv = 0
+INFO: generating fortran equations for output [15]: <celldx output[l=2]>: deriv = 0
+INFO: generating fortran equations for output [16]: <celldx output[l=3]>: deriv = 0
+INFO: generating fortran equations for output [17]: <celldxmax output>: deriv = 0
+INFO: generating fortran equations for output [18]: <cellvol output>: deriv = 0
+INFO: generating fortran equations for output [19]: <facedx output>: deriv = 0
+INFO: generating fortran equations for output [20]: <facearea output>: deriv = 0
+INFO: generating fortran equations for output [21]: <icell output>: deriv = 0
+INFO: generating fortran equations for output [22]: <jface output>: deriv = 0
+INFO: generating fortran equations for output [23]: <knode output>: deriv = 0
+INFO: generating fortran equations for output [24]: <facenorm output[l=1]>: deriv = 0
+INFO: generating fortran equations for output [25]: <facetang1 output[l=1]>: deriv = 0
+INFO: generating fortran equations for output [26]: <facetang2 output[l=1]>: deriv = 0
+INFO: generating fortran equations for output [27]: <facenorm output[l=2]>: deriv = 0
+INFO: generating fortran equations for output [28]: <facetang1 output[l=2]>: deriv = 0
+INFO: generating fortran equations for output [29]: <facetang2 output[l=2]>: deriv = 0
+INFO: generating fortran equations for output [30]: <facenorm output[l=3]>: deriv = 0
+INFO: generating fortran equations for output [31]: <facetang1 output[l=3]>: deriv = 0
+INFO: generating fortran equations for output [32]: <facetang2 output[l=3]>: deriv = 0
+INFO: generating fortran equations for output [33]: <crosskernel output>: deriv = 0
+INFO: generating fortran equations for output [34]: <centralkernel output>: deriv = 0
+INFO: generating fortran equations for output [35]: <kernelsum output>: deriv = 0
+INFO: generating fortran equations for output [36]: <cell deriv kernel elements output>: deriv = 0
+INFO: generating fortran equations for output [37]: <face deriv kernel elements output>: deriv = 0
+INFO: generating fortran equations for output [38]: <node deriv kernel elements output>: deriv = 0
+INFO: generating fortran equations for output [39]: <celldxkernel output>: deriv = 0
+INFO: generating fortran equations for output [40]: <facedxkernel output>: deriv = 0
+INFO: generating fortran equations for output [41]: <nodedxkernel output>: deriv = 0
+INFO: generating fortran equations for output [42]: <cell aspect ratio>: deriv = 0
+INFO: generating fortran equations for output [43]: <maximum cell aspect ratio>: deriv = 0
+INFO: generating fortran equations for output [44]: <cell adjacent volume ratio>: deriv = 0
+INFO: generating fortran equations for output [45]: <maximum cell adjacent volume ratio>: deriv = 0
+INFO: generating fortran equations for someloop [1]: sum someloop over node region <cellkernelregion[l=4]> which is part of equation variable <phi_c equation>: deriv = 1
+INFO: generating fortran equations for someloop [2]: sum someloop over cell region <nodekernelregion[l=1]> which is part of equation variable <phi_n equation>: deriv = 1
+INFO: generating fortran equations for someloop [3]: sum someloop over node region <faceknodes> which is part of output variable <face_nodes>: deriv = 0
+INFO: generating fortran equations for someloop [4]: sum someloop over node region <cellknodes> which is part of output variable <cell_nodes>: deriv = 0
+INFO: generating fortran equations for someloop [5]: sum someloop over face region <celljfaces> which is part of output variable <cell_faces>: deriv = 0
+INFO: generating fortran equations for someloop [6]: sum someloop over cell region <cellkernelregion[l=1]> which is part of output variable <cell deriv kernel elements output>: deriv = 0
+INFO: generating fortran equations for someloop [7]: sum someloop over cell region <facekernelregion[l=1]> which is part of output variable <face deriv kernel elements output>: deriv = 0
+INFO: generating fortran equations for someloop [8]: sum someloop over cell region <nodekernelregion[l=1]> which is part of output variable <node deriv kernel elements output>: deriv = 0
+INFO: generating fortran equations for someloop [9]: max someloop over face region <celljfaces> which is part of output variable <cell aspect ratio>: deriv = 0
+INFO: generating fortran equations for someloop [10]: max someloop over cell region <noloop> which is part of output variable <cell aspect ratio>: deriv = 0
+INFO: generating fortran equations for someloop [11]: max someloop over cell region <domain> which is part of output variable <maximum cell aspect ratio>: deriv = 0
+INFO: generating fortran equations for someloop [12]: max someloop over cell region <adjacentfaceicells> which is part of output variable <cell adjacent volume ratio>: deriv = 0
+INFO: generating fortran equations for someloop [13]: min someloop over cell region <adjacentfaceicells> which is part of output variable <cell adjacent volume ratio>: deriv = 0
+INFO: generating fortran equations for someloop [14]: max someloop over face region <domainfaces> which is part of output variable <maximum cell adjacent volume ratio>: deriv = 0
+INFO: generating fortran equations for someloop [15]: min someloop over face region <celljfaces> which is part of output variable <cell aspect ratio>: deriv = 0
+INFO: calculated kernel_availability:
+  nodeave = 0
+  cellfromnodeave = 1
+  cellfromnodegrad = 0
+  nodegrad = 1
+  cellgrad = 0
+  facegrad = 0
+  faceave = 0
+  cellave = 0
+INFO: writing from equation src file /home/ian/Downloads/arb_master/src/equation_module_template.f90 to output file /home/ian/Downloads/arb_master/examples/minimal_kernel_example/output/build/equation_module.f90
+INFO: written maxima_simplify_results to file for possible reuse
+INFO: written maxima_fortran_results to file for possible reuse
+INFO: written setup_dependency_file for possible reuse
+NOTE: at least one variable had redefinitions.  Was this your intention?  Details are given above (or in the file /home/ian/Downloads/arb_master/examples/minimal_kernel_example/output/setup_data/debugging_info.txt).
+SUCCESS: equation_module.f90 has been created
+INFO: moving setup data from /home/ian/Downloads/arb_master/examples/minimal_kernel_example/output/setup_data_incomplete to /home/ian/Downloads/arb_master/examples/minimal_kernel_example/output/setup_data
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/general_module.f90  -o general_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/gmesh_module.f90  -o gmesh_module.o
+gfortran -c -ffree-line-length-none -O1 equation_module.f90  -o equation_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/lapack/lapack_module.f90  -o lapack_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/numerical_recipes/numerical_recipes_dummy_module.f90  -o numerical_recipes_dummy_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/kernel_module.f90  -o kernel_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/pardiso/pardiso_dummy_module.f90  -o pardiso_dummy_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/intel_pardiso/intel_pardiso_dummy_module.f90  -o intel_pardiso_dummy_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/mgmres/mgmres_dummy_module.f90  -o mgmres_dummy_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/sparse/sparse_dummy_module.f90  -o sparse_dummy_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/hsl_ma28d/hsl_ma28d_dummy_module.f90  -o hsl_ma28d_dummy_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/suitesparse/umfpack.f90  -o umfpack.o
+cp /home/ian/Downloads/arb_master/src/contributed/suitesparse/suitesparse_module.f90 suitesparse_module_arch.f90
+gfortran -c -ffree-line-length-none -O1 suitesparse_module_arch.f90  -o suitesparse_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/contributed/higham88_donest/donest_dummy_module.f90  -o donest_dummy_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/linear_module.f90  -o linear_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/solver_module.f90  -o solver_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/output_module.f90  -o output_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/region_module.f90  -o region_module.o
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/setup_module.f90  -o setup_module.o
+/home/ian/Downloads/arb_master/src/setup_module.f90:382:0:
+
+  382 |     keyword = keyword(6:len_trim(keyword)) ! remove INFO_
+      | 
+Warning: ‘__builtin_memmove’ reading 1000 bytes from a region of size 995 [-Wstringop-overflow=]
+gfortran -c -ffree-line-length-none -O1 /home/ian/Downloads/arb_master/src/main.f90  -o main.o
+gfortran -o arb -O1 equation_module.o general_module.o main.o setup_module.o solver_module.o gmesh_module.o output_module.o kernel_module.o region_module.o linear_module.o pardiso_dummy_module.o intel_pardiso_dummy_module.o lapack_module.o numerical_recipes_dummy_module.o mgmres_dummy_module.o sparse_dummy_module.o hsl_ma28d_dummy_module.o suitesparse_module.o umfpack.o donest_dummy_module.o -lblas -llapack -lumfpack 
+INFO: arb make/setup successful
+
+INFO: moving back to working directory
+INFO: running arb executable
+
+program arb, version 0.60 (roaming romesh), written by dalton harvie
+INFO: serial version running
+INFO: output_dir = /home/ian/Downloads/arb_master/examples/minimal_kernel_example/output/
+INFO: reading simulation information from arb input file
+WARNING: (safe) version mismatch between the input file (0.51) and the arb code (0.60): additional language features are now available
+INFO: gmesh created from arb input file: gmesh_number = 1: basename = surface: dirname (read location) = /home/ian/Downloads/arb_master/examples/minimal_kernel_example/: current (right prioritised) user-set options = input nooutput novtkoutput nodatoutput
+SIMULATION INFO: RUNDATE = Thu Apr  7 13:46:18 2022
+SIMULATION INFO: TITLE = Simple file containing equations that only need minimal kernels to be calculated
+SIMULATION INFO: DATE = 11/2/15
+SIMULATION INFO: FILENAME = minimal_kernel_example.arb
+SIMULATION INFO: AUTHOR = Dalton Harvie
+SIMULATION INFO: VERSION = 
+SIMULATION INFO: RUNHOST = ian-Aspire-One-753
+SIMULATION INFO: ABSFILENAME = /home/ian/Downloads/arb_master/examples/minimal_kernel_example/minimal_kernel_example.arb
+SIMULATION INFO: RUNVERSION = 0.60
+INFO: the following (right prioritised) user-set options for compound <dot_facenorm_facedxunit> have been read in: output
+INFO: performing mesh read for gmesh file (1) having basename surface based on gmesh input option input
+INFO: surface gmsh file is 2 dimensional based upon included physical names
+INFO: reading in mesh:  9%
+INFO: reading in mesh: 18%
+INFO: reading in mesh: 27%
+INFO: reading in mesh: 36%
+INFO: reading in mesh: 45%
+INFO: reading in mesh: 54%
+INFO: reading in mesh: 63%
+INFO: reading in mesh: 72%
+INFO: reading in mesh: 81%
+INFO: reading in mesh: 90%
+INFO: reading in mesh:100%
+INFO: number of mesh elements::
+ NODES: ktotal =       45: kdomain =       25: kboundary =       20
+ FACES: jtotal =      112: jdomain =       92: jboundary =       20
+ CELLS: itotal =       88: idomain =       68: iboundary =       20
+INFO: the maximum number of dimensions of any region is 2
+INFO: regions:
+ region_number = 1: name = <allcells>: static: type = system: centring = cell: dimensions = 2: (right prioritised) options =: location = system: ijk(1) = 1: ijk(88) = 88
+ region_number = 2: name = <domain>: static: type = system: centring = cell: dimensions = 2: (right prioritised) options =: location = system: ijk(1) = 1: ijk(68) = 68
+ region_number = 3: name = <boundarycells>: static: type = system: centring = cell: dimensions = 1: (right prioritised) options =: location = system: ijk(1) = 69: ijk(20) = 88
+ region_number = 4: name = <allfaces>: static: type = system: centring = face: dimensions = 1: (right prioritised) options =: location = system: ijk(1) = 1: ijk(112) = 112
+ region_number = 5: name = <domainfaces>: static: type = system: centring = face: dimensions = 1: (right prioritised) options =: location = system: ijk(1) = 21: ijk(92) = 112
+ region_number = 6: name = <boundaries>: static: type = system: centring = face: dimensions = 1: (right prioritised) options =: location = system: ijk(1) = 1: ijk(20) = 20
+ region_number = 7: name = <allnodes>: static: type = system: centring = node: dimensions = 0: (right prioritised) options =: location = system: ijk(1) = 1: ijk(45) = 45
+ region_number = 8: name = <domainnodes>: static: type = system: centring = node: dimensions = 0: (right prioritised) options =: location = system: ijk(1) = 21: ijk(25) = 45
+ region_number = 9: name = <boundarynodes>: static: type = system: centring = node: dimensions = 0: (right prioritised) options =: location = system: ijk(1) = 1: ijk(20) = 20
+ region_number = 10: name = <north>: static: type = gmsh: centring = face: dimensions = 1: (right prioritised) options =: location = gmsh physical entity number 2 from file surface.msh: ijk(1) = 11: ijk(5) = 15
+ region_number = 11: name = <south>: static: type = gmsh: centring = face: dimensions = 1: (right prioritised) options =: location = gmsh physical entity number 3 from file surface.msh: ijk(1) = 1: ijk(5) = 5
+ region_number = 12: name = <east>: static: type = gmsh: centring = face: dimensions = 1: (right prioritised) options =: location = gmsh physical entity number 4 from file surface.msh: ijk(1) = 6: ijk(5) = 10
+ region_number = 13: name = <west>: static: type = gmsh: centring = face: dimensions = 1: (right prioritised) options =: location = gmsh physical entity number 5 from file surface.msh: ijk(1) = 16: ijk(5) = 20
+ region_number = 14: name = <surface>: static: type = gmsh: centring = cell: dimensions = 2: (right prioritised) options =: location = gmsh physical entity number 1 from file surface.msh: ijk(1) = 1: ijk(68) = 68
+INFO: choosing suitesparse linear solver
+INFO: skipping constructing face kernels as none have any kernel_availability
+INFO: constructing cell kernels using optimisation method
+INFO: constructing node kernels using optimisation method
+INFO: checking kernel consistencies and printing statistics: kernel advection parameters
+INFO: overall_cross_kernel =  0.5814    
+INFO: overall_central_kernel =  0.1588E-01
+INFO: overall_kernel_sum =   1.177    
+INFO: removing small kernel elements
+INFO: checking kernel consistencies and printing statistics: kernel element signs
+INFO: checking kernel consistencies and printing statistics: completeness
+INFO: checking kernel consistencies and printing statistics: consistency
+INFO: checking kernel consistencies and printing statistics: reflection bookkeeping
+INFO: checking kernel consistencies and printing statistics: calculating statistics
+INFO: total number of kernel elements =       2148
+INFO: check minw resulted in an average separation increase across all kernel masks of  0.48120    
+INFO: the proportion of kernel masks that need more elements to satisfy the minimum_minw is  0.30075E-01
+NOTE: increasing the maximum_separation will increase the proportion of kernel masks that satisfy the minimum_minw criterion
+INFO: the average separation across all kernel masks is   2.1429    
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+subroutine setup_vars
+INFO: reading numerical constant values from arb input file
+---------------------------------------------------------------
+INFO: compound variables:
+------------------------------------
+constant
+ compound_number = 1: name = <dot_facenorm_facedxunit>: type = constant: centring = face: rank = scalar: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <dot_facenorm_facedxunit> ]: (right prioritised) options = elementdata noinput nostepoutput nooutput output
+------------------------------------
+transient
+------------------------------------
+newtient
+------------------------------------
+unknown
+ compound_number = 2: name = <phi_c>: type = unknown: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <phi_c> ]: (right prioritised) options = elementnodelimiteddata input nostepoutput output
+ compound_number = 3: name = <phi_n>: type = unknown: centring = node: rank = scalar: relstep = 0: region = <allnodes>: region_number = 7: component_list = [ <phi_n> ]: (right prioritised) options = elementdata input nostepoutput output
+------------------------------------
+derived
+------------------------------------
+equation
+ compound_number = 4: name = <phi_c equation>: type = equation: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <phi_c equation> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput nooutput
+ compound_number = 5: name = <phi_n equation>: type = equation: centring = node: rank = scalar: relstep = 0: region = <allnodes>: region_number = 7: component_list = [ <phi_n equation> ]: (right prioritised) options = elementdata noinput nostepoutput nooutput
+------------------------------------
+output
+ compound_number = 6: name = <phi_c error>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <phi_c error> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 7: name = <cellx output>: type = output: centring = cell: rank = vector: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <cellx output[l=1]> <cellx output[l=2]> <cellx output[l=3]> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 8: name = <facex output>: type = output: centring = face: rank = vector: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <facex output[l=1]> <facex output[l=2]> <facex output[l=3]> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 9: name = <nodex output>: type = output: centring = node: rank = vector: relstep = 0: region = <allnodes>: region_number = 7: component_list = [ <nodex output[l=1]> <nodex output[l=2]> <nodex output[l=3]> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 10: name = <face_nodes>: type = output: centring = face: rank = scalar: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <face_nodes> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 11: name = <cell_nodes>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <cell_nodes> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 12: name = <cell_faces>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <cell_faces> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 13: name = <celldx output>: type = output: centring = cell: rank = vector: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <celldx output[l=1]> <celldx output[l=2]> <celldx output[l=3]> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 14: name = <celldxmax output>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <celldxmax output> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 15: name = <cellvol output>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <cellvol output> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 16: name = <facedx output>: type = output: centring = face: rank = scalar: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <facedx output> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 17: name = <facearea output>: type = output: centring = face: rank = scalar: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <facearea output> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 18: name = <icell output>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <icell output> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 19: name = <jface output>: type = output: centring = face: rank = scalar: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <jface output> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 20: name = <knode output>: type = output: centring = node: rank = scalar: relstep = 0: region = <allnodes>: region_number = 7: component_list = [ <knode output> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 21: name = <facenorm output>: type = output: centring = face: rank = vector: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <facenorm output[l=1]> <facenorm output[l=2]> <facenorm output[l=3]> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 22: name = <facetang1 output>: type = output: centring = face: rank = vector: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <facetang1 output[l=1]> <facetang1 output[l=2]> <facetang1 output[l=3]> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 23: name = <facetang2 output>: type = output: centring = face: rank = vector: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <facetang2 output[l=1]> <facetang2 output[l=2]> <facetang2 output[l=3]> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 24: name = <crosskernel output>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <crosskernel output> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 25: name = <centralkernel output>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <centralkernel output> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 26: name = <kernelsum output>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <kernelsum output> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 27: name = <cell deriv kernel elements output>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <cell deriv kernel elements output> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 28: name = <face deriv kernel elements output>: type = output: centring = face: rank = scalar: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <face deriv kernel elements output> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 29: name = <node deriv kernel elements output>: type = output: centring = node: rank = scalar: relstep = 0: region = <allnodes>: region_number = 7: component_list = [ <node deriv kernel elements output> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 30: name = <celldxkernel output>: type = output: centring = cell: rank = scalar: relstep = 0: region = <allcells>: region_number = 1: component_list = [ <celldxkernel output> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 31: name = <facedxkernel output>: type = output: centring = face: rank = scalar: relstep = 0: region = <allfaces>: region_number = 4: component_list = [ <facedxkernel output> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 32: name = <nodedxkernel output>: type = output: centring = node: rank = scalar: relstep = 0: region = <allnodes>: region_number = 7: component_list = [ <nodedxkernel output> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 33: name = <cell aspect ratio>: type = output: centring = cell: rank = scalar: relstep = 0: region = <domain>: region_number = 2: component_list = [ <cell aspect ratio> ]: (right prioritised) options = elementnodelimiteddata noinput nostepoutput output
+ compound_number = 34: name = <maximum cell aspect ratio>: type = output: centring = none: rank = scalar: relstep = 0: component_list = [ <maximum cell aspect ratio> ]: (right prioritised) options = noinput stepoutput output
+ compound_number = 35: name = <cell adjacent volume ratio>: type = output: centring = face: rank = scalar: relstep = 0: region = <domainfaces>: region_number = 5: component_list = [ <cell adjacent volume ratio> ]: (right prioritised) options = elementdata noinput nostepoutput output
+ compound_number = 36: name = <maximum cell adjacent volume ratio>: type = output: centring = none: rank = scalar: relstep = 0: component_list = [ <maximum cell adjacent volume ratio> ]: (right prioritised) options = noinput stepoutput output
+------------------------------------
+condition
+------------------------------------
+local
+---------------------------------------------------------------
+subroutine setup_vars
+--------------------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+subroutine finalise_gmesh
+INFO: gmeshes:
+ gmesh_number = 0: basename = output: ngnodes = 45: ngelements = 225: ngelements_cell = 88: ngelements_face = 112: ngelements_node = 45: ngregions = 5: options (right prioritised) = noinput output novtkoutput nodatoutput
+ gmesh_number = 1: basename = surface: ngnodes = 45: ngelements = 180: ngelements_cell = 88: ngelements_face = 112: ngelements_node = 0: ngregions = 5: options (right prioritised) = input nooutput novtkoutput nodatoutput
+subroutine finalise_gmesh
+--------------------------------------------------------------------------------
+++ newtstep 1 starting ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO: found magnitude for unknown <phi_c> based on initial values: magnitude =   1.00    
+INFO: found magnitude for unknown <phi_n> based on initial values: magnitude =   1.00    
+INFO: initial newton loop newtres =  0.482     after updating variable magnitudes
+BACKSTEPPING: converged newtres =  0.177E-16: ave unknown change =  0.482    : lambda =   1.00    
+INFO: during newton loop: newtstep = 1: newtres =  0.177E-16: newtres/newtrestol =  0.177E-06
+-- newtstep 1 ending --------------------------------------------------------------------------------
+INFO: newton iterations have converged based on newtres (<= newtrestol)
+INFO: writing msh gmesh file with basename = output: output.msh
+TIMING: total wall time =  0.309    : total cpu time =  0.179    
+SUCCESS: the simulation finished gracefully
+INFO: finishing running arb
+ian@ian-Aspire-One-753:~/Downloads/arb_master/examples/minimal_kernel_example$ 
